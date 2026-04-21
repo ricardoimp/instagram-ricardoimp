@@ -1,0 +1,8 @@
+- [ ] Consolidar os dados disponíveis de Instagram e Meta Ads em uma estrutura única para o dashboard
+- [ ] Definir quais métricas reais serão exibidas e quais blocos ficarão sinalizados como indisponíveis no momento
+- [ ] Implementar a home mobile first completa com navegação, hero, visão executiva, análise profunda, inteligência de audiência e motor de decisão
+- [ ] Inserir os ativos visuais gerados e aplicar a direção de design editorial executivo cinematográfico
+- [ ] Exibir data da última atualização e status da atualização semanal no dashboard
+- [ ] Conectar os dados coletados em arquivos locais para renderização do painel
+- [ ] Validar a interface no navegador e ajustar responsividade
+- [ ] Subir a versão final no GitHub
