@@ -1,559 +1,563 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Dashboard — @ricardoimp</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0a;
-            color: #e0e0e0;
-            min-height: 100vh;
-        }
-        .header {
-            background: linear-gradient(135deg, #1a0a1e 0%, #0d1117 50%, #0a1628 100%);
-            padding: 28px 40px;
-            border-bottom: 1px solid #1e1e2e;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-        .header-left { display: flex; align-items: center; gap: 18px; }
-        .profile-pic {
-            width: 60px; height: 60px; border-radius: 50%;
-            border: 3px solid #E1306C; object-fit: cover;
-        }
-        .header h1 { font-size: 22px; font-weight: 700; color: #fff; }
-        .header h1 span { color: #E1306C; }
-        .header p { color: #888; font-size: 13px; margin-top: 4px; }
-        .update-badge {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid #2a2a3a;
-            border-radius: 20px;
-            padding: 8px 18px;
-            font-size: 12px;
-            color: #888;
-            white-space: nowrap;
-        }
-        .update-badge strong { color: #4CAF50; }
-        .container { max-width: 1400px; margin: 0 auto; padding: 28px 40px; }
-        .section-title {
-            font-size: 16px; font-weight: 700; color: #fff;
-            margin-bottom: 18px; padding-bottom: 10px;
-            border-bottom: 2px solid #E1306C;
-            display: flex; align-items: center; gap: 8px;
-        }
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 14px; margin-bottom: 36px;
-        }
-        .metric-card {
-            background: #111118;
-            border: 1px solid #1e1e2e;
-            border-radius: 12px;
-            padding: 18px;
-            text-align: center;
-            transition: all 0.2s;
-        }
-        .metric-card:hover { border-color: #333; transform: translateY(-2px); }
-        .metric-icon { font-size: 24px; margin-bottom: 8px; }
-        .metric-value { font-size: 26px; font-weight: 800; color: #fff; line-height: 1; }
-        .metric-label { font-size: 11px; color: #666; margin-top: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .metric-card.highlight { background: linear-gradient(135deg, #1a0810, #200a18); border-color: #E1306C44; }
-        .metric-card.highlight .metric-value { color: #E1306C; }
-        .charts-grid {
-            display: grid; grid-template-columns: 2fr 1fr;
-            gap: 20px; margin-bottom: 36px;
-        }
-        .chart-card {
-            background: #111118; border: 1px solid #1e1e2e;
-            border-radius: 12px; padding: 22px;
-        }
-        .chart-title { font-size: 13px; font-weight: 600; color: #aaa; margin-bottom: 14px; }
-        .chart-container { position: relative; height: 220px; }
-        .charts-grid-2 {
-            display: grid; grid-template-columns: 1fr 1fr;
-            gap: 20px; margin-bottom: 36px;
-        }
-        .type-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 14px; margin-bottom: 36px;
-        }
-        .type-card {
-            background: #111118; border: 1px solid #1e1e2e;
-            border-radius: 12px; padding: 18px;
-        }
-        .type-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
-        .type-card h4 { font-size: 15px; font-weight: 700; }
-        .type-count { font-size: 11px; color: #666; background: #1e1e2e; padding: 3px 8px; border-radius: 10px; }
-        .type-stat {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 7px 0; border-bottom: 1px solid #1a1a28;
-        }
-        .type-stat:last-child { border-bottom: none; }
-        .type-label { font-size: 11px; color: #666; }
-        .type-value { font-size: 13px; font-weight: 600; color: #ddd; }
-        .table-card {
-            background: #111118; border: 1px solid #1e1e2e;
-            border-radius: 12px; padding: 22px;
-            margin-bottom: 36px; overflow-x: auto;
-        }
-        table { width: 100%; border-collapse: collapse; font-size: 13px; }
-        th {
-            text-align: left; padding: 10px 14px; color: #666;
-            font-weight: 600; font-size: 11px; text-transform: uppercase;
-            letter-spacing: 0.5px; border-bottom: 1px solid #1e1e2e;
-        }
-        td { padding: 11px 14px; border-bottom: 1px solid #161622; color: #ccc; }
-        tr:last-child td { border-bottom: none; }
-        tr:hover td { background: #14141e; }
-        .metric-highlight { color: #E1306C !important; font-weight: 700; }
-        .caption-cell a { color: #ccc; text-decoration: none; }
-        .caption-cell a:hover { color: #E1306C; }
-        .badge {
-            display: inline-block; padding: 3px 10px;
-            border-radius: 20px; font-size: 11px; font-weight: 600;
-        }
-        .badge-reels { background: rgba(225,48,108,0.15); color: #E1306C; }
-        .badge-carousel { background: rgba(131,58,180,0.15); color: #a855f7; }
-        .badge-video { background: rgba(247,119,55,0.15); color: #F77737; }
-        .badge-image { background: rgba(64,93,230,0.15); color: #6b8ef7; }
-        .insights-grid {
-            display: grid; grid-template-columns: 1fr 1fr;
-            gap: 14px; margin-bottom: 36px;
-        }
-        .insight-card {
-            background: #111118; border: 1px solid #1e1e2e;
-            border-radius: 12px; padding: 18px;
-            display: flex; gap: 14px; align-items: flex-start;
-        }
-        .insight-icon { font-size: 26px; flex-shrink: 0; margin-top: 2px; }
-        .insight-content h4 { font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 6px; }
-        .insight-content p { font-size: 12px; color: #999; line-height: 1.5; margin-bottom: 10px; }
-        .insight-action {
-            font-size: 11px; color: #4CAF50;
-            background: rgba(76,175,80,0.08);
-            border-radius: 6px; padding: 7px 10px;
-        }
-        .progress-bar-container {
-            background: #1e1e2e; border-radius: 6px; height: 8px;
-            margin-top: 8px; overflow: hidden;
-        }
-        .progress-bar {
-            height: 100%; border-radius: 6px;
-            background: linear-gradient(90deg, #E1306C, #833AB4);
-        }
-        .footer {
-            text-align: center; padding: 24px;
-            color: #444; font-size: 11px;
-            border-top: 1px solid #1a1a28;
-        }
-        @media (max-width: 900px) {
-            .charts-grid, .charts-grid-2, .insights-grid { grid-template-columns: 1fr; }
-            .container { padding: 16px 20px; }
-            .header { padding: 20px; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Instagram — @ricardoimp</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    :root{--bg:#0a0a14;--card:#13131f;--border:#252540;--purple:#a78bfa;--pink:#f472b6;--cyan:#22d3ee;--green:#4ade80;--red:#f87171;--yellow:#fbbf24;--text:#e2e8f0;--muted:#64748b;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;padding:20px 24px 40px;max-width:1200px;margin:0 auto;}
+    .header{margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border);}
+    .header h1{font-size:1.6rem;font-weight:700;color:var(--purple);}
+    .header .meta{color:var(--muted);font-size:.85rem;margin-top:4px;}
+    .header .update{color:var(--cyan);font-size:.8rem;margin-top:6px;}
+    .grid{display:grid;gap:14px;}.grid-4{grid-template-columns:repeat(4,1fr);}.grid-2{grid-template-columns:repeat(2,1fr);}
+    @media(max-width:900px){.grid-4{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:600px){.grid-4,.grid-2{grid-template-columns:1fr;}}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px 20px;}
+    .kpi-label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;}
+    .kpi-value{font-size:1.9rem;font-weight:700;color:var(--text);line-height:1;}
+    .kpi-sub{font-size:.75rem;color:var(--muted);margin-top:5px;}
+    .kpi-delta{display:inline-flex;align-items:center;gap:4px;font-size:.78rem;font-weight:600;margin-top:6px;padding:2px 8px;border-radius:20px;}
+    .kpi-delta.up{background:rgba(74,222,128,.12);color:var(--green);}
+    .kpi-delta.down{background:rgba(248,113,113,.12);color:var(--red);}
+    .kpi-delta.neutral{background:rgba(100,116,139,.12);color:var(--muted);}
+    .section-title{font-size:1rem;font-weight:600;color:var(--purple);margin:28px 0 12px;display:flex;align-items:center;gap:8px;}
+    .section-title::before{content:'';display:block;width:3px;height:18px;background:var(--purple);border-radius:2px;}
+    /* Tabelas desktop */
+    .table-wrap{overflow-x:auto;}
+    table{width:100%;border-collapse:collapse;font-size:.82rem;min-width:420px;}
+    th{text-align:left;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--border);font-weight:500;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;}
+    td{padding:9px 10px;border-bottom:1px solid var(--border);}
+    tr:last-child td{border-bottom:none;}tr:hover td{background:rgba(167,139,250,.04);}
+    .badge{background:rgba(167,139,250,.12);color:var(--purple);padding:2px 8px;border-radius:20px;font-size:.72rem;white-space:nowrap;}
+    /* Post cards mobile (substitui tabela em telas pequenas) */
+    .post-list{display:none;}
+    @media(max-width:640px){
+      .table-wrap{display:none;}
+      .post-list{display:flex;flex-direction:column;gap:10px;}
+    }
+    .post-card{display:flex;align-items:flex-start;gap:10px;padding:12px 0;border-bottom:1px solid var(--border);}
+    .post-card:last-child{border-bottom:none;}
+    .post-rank{font-size:.8rem;color:var(--muted);min-width:18px;font-weight:700;}
+    .post-info{flex:1;min-width:0;}
+    .post-caption{font-size:.82rem;color:var(--purple);text-decoration:none;display:block;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .post-meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+    .post-date{font-size:.7rem;color:var(--muted);}
+    .post-metric{font-size:.88rem;font-weight:700;color:var(--text);min-width:48px;text-align:right;}
+    .chart-wrap{position:relative;height:240px;}
+    .chart-wrap-lg{position:relative;height:280px;}
+    .format-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);}
+    .format-row:last-child{border-bottom:none;}
+    .format-label{width:130px;font-size:.82rem;color:var(--text);}
+    .format-bar-bg{flex:1;background:var(--border);border-radius:3px;height:8px;}
+    .format-bar-fill{height:8px;border-radius:3px;}
+    .format-val{width:80px;text-align:right;font-size:.82rem;color:var(--muted);}
+    .insight-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+    @media(max-width:700px){.insight-grid{grid-template-columns:1fr;}}
+    .insight-item{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--purple);border-radius:8px;padding:14px 16px;}
+    .insight-title{font-weight:600;font-size:.88rem;color:var(--text);margin-bottom:5px;}
+    .insight-action{font-size:.8rem;color:var(--cyan);}
+    .footer{text-align:center;color:var(--muted);font-size:.72rem;margin-top:40px;padding-top:20px;border-top:1px solid var(--border);padding-bottom:72px;}
+    /* ── Bottom Nav Mobile ── */
+    .bottom-nav{display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;background:#0a0a14;border-top:1px solid var(--border);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+    .bottom-nav::-webkit-scrollbar{display:none;}
+    .bottom-nav-inner{display:flex;min-width:max-content;}
+    .bottom-nav a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 14px;font-size:.6rem;color:var(--muted);text-decoration:none;white-space:nowrap;border-top:2px solid transparent;transition:color .15s,border-color .15s;}
+    .bottom-nav a:hover{color:var(--purple);border-top-color:var(--purple);}
+    .bottom-nav a .nav-icon{font-size:1rem;}
+    @media(max-width:900px){.bottom-nav{display:block;}body{padding-bottom:68px;}}
+    /* ── Urgency badges ── */
+    .urgency-imediato{background:rgba(248,113,113,.15);color:#f87171;padding:2px 8px;border-radius:20px;font-size:.7rem;font-weight:600;}
+    .urgency-semana{background:rgba(251,191,36,.15);color:#fbbf24;padding:2px 8px;border-radius:20px;font-size:.7rem;font-weight:600;}
+    .urgency-mes{background:rgba(74,222,128,.12);color:var(--green);padding:2px 8px;border-radius:20px;font-size:.7rem;font-weight:600;}
+    .action-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:12px;}
+    .action-card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px;}
+    .action-num{display:flex;align-items:center;justify-content:center;width:26px;height:26px;min-width:26px;background:rgba(167,139,250,.15);border-radius:50%;font-size:.78rem;font-weight:700;color:var(--purple);}
+    .action-title{font-weight:600;font-size:.88rem;color:var(--text);}
+    .action-detail{font-size:.8rem;color:var(--muted);line-height:1.5;margin-bottom:8px;}
+    .action-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+    .action-meta-item{background:#0a0a14;border-radius:8px;padding:8px 10px;border:1px solid var(--border);}
+    .action-meta-label{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;}
+    .action-meta-value{font-size:.78rem;color:var(--cyan);font-weight:600;margin-top:2px;}
+    .grade-box{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:center;margin-bottom:16px;}
+    .grade-value{font-size:3.5rem;font-weight:800;color:var(--purple);line-height:1;}
+    .grade-label{font-size:.78rem;color:var(--muted);margin-top:6px;}
+    .grade-summary{font-size:.82rem;color:var(--text);margin-top:10px;line-height:1.5;}
+    .stories-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:10px;}
+    .stories-card-title{font-weight:600;font-size:.85rem;color:var(--text);margin-bottom:4px;display:flex;align-items:center;gap:6px;}
+    .stories-card-sub{font-size:.78rem;color:var(--muted);line-height:1.5;}
+    .stories-kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
+    @media(max-width:600px){.stories-kpi-grid{grid-template-columns:1fr;}}
+    .sponsor-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:10px;}
+    .sponsor-header{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px;}
+    .sponsor-num{font-size:1.4rem;font-weight:800;color:var(--purple);min-width:28px;line-height:1;}
+    .sponsor-title{font-weight:600;font-size:.88rem;color:var(--text);margin-bottom:3px;}
+    .sponsor-why{font-size:.78rem;color:var(--muted);line-height:1.4;}
+    .sponsor-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;}
+    .sponsor-tag{background:rgba(167,139,250,.1);color:var(--purple);border-radius:20px;padding:2px 8px;font-size:.7rem;}
+    .sponsor-tag.green{background:rgba(74,222,128,.1);color:var(--green);}
+    .sponsor-tag.cyan{background:rgba(34,211,238,.1);color:var(--cyan);}
+    .budget-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
+    @media(max-width:600px){.budget-grid{grid-template-columns:1fr;}}
+    .budget-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;}
+    .budget-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;margin-bottom:6px;}
+    .budget-value{font-size:1.3rem;font-weight:700;color:var(--text);}
+    .budget-note{font-size:.7rem;color:var(--muted);margin-top:4px;}
+    .step-list{list-style:none;}
+    .step-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);}
+    .step-item:last-child{border-bottom:none;}
+    .step-num{display:flex;align-items:center;justify-content:center;width:26px;height:26px;min-width:26px;background:rgba(167,139,250,.15);border-radius:50%;font-size:.78rem;font-weight:700;color:var(--purple);}
+    .step-content{flex:1;}
+    .step-title{font-weight:600;font-size:.85rem;color:var(--text);margin-bottom:3px;}
+    .step-detail{font-size:.78rem;color:var(--muted);line-height:1.5;}
+    .problem-box{background:rgba(248,113,113,.06);border:1px solid rgba(248,113,113,.2);border-radius:10px;padding:14px 16px;margin-bottom:12px;}
+    .problem-title{font-weight:600;font-size:.85rem;color:#f87171;margin-bottom:6px;}
+    .problem-text{font-size:.8rem;color:var(--muted);line-height:1.5;}
+    .tip-box{background:rgba(34,211,238,.06);border:1px solid rgba(34,211,238,.2);border-radius:10px;padding:14px 16px;margin-bottom:12px;}
+    .tip-title{font-weight:600;font-size:.85rem;color:var(--cyan);margin-bottom:6px;}
+    .tip-text{font-size:.8rem;color:var(--muted);line-height:1.5;}
+    .checklist{list-style:none;}
+    .checklist li{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:.82rem;color:var(--muted);}
+    .checklist li:last-child{border-bottom:none;}
+    .checklist li strong{color:var(--text);min-width:50px;}
+    .heatmap-grid{display:grid;grid-template-columns:80px repeat(7,1fr);gap:3px;font-size:.72rem;}
+    .heatmap-header{text-align:center;color:var(--muted);padding:4px 2px;font-weight:600;}
+    .heatmap-label{color:var(--muted);display:flex;align-items:center;font-size:.7rem;}
+    .heatmap-cell{border-radius:4px;height:32px;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:600;color:rgba(255,255,255,.8);cursor:default;transition:transform .1s;}
+    .heatmap-cell:hover{transform:scale(1.08);}
+    .best-slot{border:1px solid var(--yellow);}
+    @media(max-width:600px){.heatmap-grid{grid-template-columns:60px repeat(7,1fr);gap:2px;}.heatmap-cell{height:26px;font-size:.6rem;}}
+  </style>
 </head>
 <body>
-
 <div class="header">
-    <div class="header-left">
-        <img src="https://scontent-iad3-1.cdninstagram.com/v/t51.82787-19/525133170_18517094281003575_6664242147350708789_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=104&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=3qNRlrHUhTcQ7kNvwGfLsEq&_nc_oc=AdraGtQgB5ynJkRG5S2FkeJPtQrI6DB-j5u0gkRR6hCM-0Q1fkCcOWthfrOgnQWRWPc&_nc_zt=24&_nc_ht=scontent-iad3-1.cdninstagram.com&edm=AP4hL3IEAAAA&_nc_gid=J8fjV13BCIlwNRaUj_Ud0w&_nc_tpa=Q5bMBQFjr8K-iMlS5yF26Num7Ak9cz6mgdoyQDTFNk3qDv6aspqZDUPF5kIFytrg5UhyE0S9RHpy5u9p-g&oh=00_Af1ulkc7IjKKAaL-Q4PRtDj3KW5k4v5JwpPEKUiMlVCX5w&oe=69F3F6D3"
-             alt="@ricardoimp" class="profile-pic" onerror="this.style.display='none'">
-        <div>
-            <h1>Instagram Dashboard — <span>@ricardoimp</span></h1>
-            <p>Ricardo Impellizieri &nbsp;·&nbsp; 62.213 seguidores &nbsp;·&nbsp; 3.001 posts &nbsp;·&nbsp; http://saiba-mais.ai</p>
-        </div>
-    </div>
-    <div class="update-badge">
-        Última atualização: <strong>26/04/2026 às 10:12</strong>
-    </div>
+  <h1>📊 Dashboard Instagram</h1>
+  <p class="meta">@ricardoimp — Ricardo Impellizieri · 62,224 seguidores</p>
+  <p class="update">🕐 Última atualização: 24/04/2026 às 12:00</p>
 </div>
 
-<div class="container">
-
-    <!-- Performance Geral -->
-    <div class="section-title">📊 Performance Geral — 11 Posts Analisados (Últimos 60 Dias)</div>
-
-    <div class="metrics-grid">
-        <div class="metric-card highlight">
-            <div class="metric-icon">👥</div>
-            <div class="metric-value">62.213</div>
-            <div class="metric-label">Seguidores</div>
-            <div class="progress-bar-container">
-                <div class="progress-bar" style="width: 95.7%"></div>
-            </div>
-            <div style="font-size:10px; color:#666; margin-top:4px">2.787 para 65k</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-icon">👁️</div>
-            <div class="metric-value">3.585</div>
-            <div class="metric-label">Alcance Total</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-icon">🎬</div>
-            <div class="metric-value">6.727</div>
-            <div class="metric-label">Visualizações</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-icon">❤️</div>
-            <div class="metric-value">194</div>
-            <div class="metric-label">Curtidas</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-icon">💬</div>
-            <div class="metric-value">22</div>
-            <div class="metric-label">Comentários</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-icon">💾</div>
-            <div class="metric-value">6</div>
-            <div class="metric-label">Salvamentos</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-icon">↗️</div>
-            <div class="metric-value">5</div>
-            <div class="metric-label">Compartilhamentos</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-icon">📈</div>
-            <div class="metric-value">6.42%</div>
-            <div class="metric-label">Taxa de Engajamento</div>
-        </div>
-    </div>
-
-    <!-- Gráficos -->
-    <div class="charts-grid">
-        <div class="chart-card">
-            <div class="chart-title">📉 Alcance por Post (Cronológico)</div>
-            <div class="chart-container">
-                <canvas id="reachChart"></canvas>
-            </div>
-        </div>
-        <div class="chart-card">
-            <div class="chart-title">🎯 Alcance Médio por Tipo</div>
-            <div class="chart-container">
-                <canvas id="typeChart"></canvas>
-            </div>
-        </div>
-    </div>
-
-    <div class="charts-grid-2">
-        <div class="chart-card">
-            <div class="chart-title">📅 Alcance Médio por Dia da Semana</div>
-            <div class="chart-container">
-                <canvas id="dayChart"></canvas>
-            </div>
-        </div>
-        <div class="chart-card">
-            <div class="chart-title">🔢 Quantidade de Posts por Dia</div>
-            <div class="chart-container">
-                <canvas id="dayCountChart"></canvas>
-            </div>
-        </div>
-    </div>
-
-    <!-- Performance por Formato -->
-    <div class="section-title">🎨 Performance por Formato de Conteúdo</div>
-    <div class="type-grid">
-        
-        <div class="type-card" style="border-top: 3px solid #833AB4">
-            <div class="type-header">
-                <h4 style="color: #833AB4">Carrossel</h4>
-                <span class="type-count">4 posts</span>
-            </div>
-            <div class="type-stat">
-                <span class="type-label">Alcance Médio</span>
-                <span class="type-value">283</span>
-            </div>
-            <div class="type-stat">
-                <span class="type-label">Interações Médias</span>
-                <span class="type-value">23.8</span>
-            </div>
-            <div class="type-stat">
-                <span class="type-label">Salvamentos Médios</span>
-                <span class="type-value">0.5</span>
-            </div>
-            <div class="type-stat">
-                <span class="type-label">Compartilhamentos Médios</span>
-                <span class="type-value">0.0</span>
-            </div>
-        </div>
-        <div class="type-card" style="border-top: 3px solid #E1306C">
-            <div class="type-header">
-                <h4 style="color: #E1306C">Reels</h4>
-                <span class="type-count">2 posts</span>
-            </div>
-            <div class="type-stat">
-                <span class="type-label">Alcance Médio</span>
-                <span class="type-value">320</span>
-            </div>
-            <div class="type-stat">
-                <span class="type-label">Interações Médias</span>
-                <span class="type-value">16.5</span>
-            </div>
-            <div class="type-stat">
-                <span class="type-label">Salvamentos Médios</span>
-                <span class="type-value">2.0</span>
-            </div>
-            <div class="type-stat">
-                <span class="type-label">Compartilhamentos Médios</span>
-                <span class="type-value">2.5</span>
-            </div>
-        </div>
-        <div class="type-card" style="border-top: 3px solid #405DE6">
-            <div class="type-header">
-                <h4 style="color: #405DE6">Imagem</h4>
-                <span class="type-count">5 posts</span>
-            </div>
-            <div class="type-stat">
-                <span class="type-label">Alcance Médio</span>
-                <span class="type-value">363</span>
-            </div>
-            <div class="type-stat">
-                <span class="type-label">Interações Médias</span>
-                <span class="type-value">20.4</span>
-            </div>
-            <div class="type-stat">
-                <span class="type-label">Salvamentos Médios</span>
-                <span class="type-value">0.0</span>
-            </div>
-            <div class="type-stat">
-                <span class="type-label">Compartilhamentos Médios</span>
-                <span class="type-value">0.0</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Top Posts -->
-    <div class="section-title">🏆 Top 5 Posts por Alcance</div>
-    <div class="table-card">
-        <table>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Tipo</th>
-                    <th>Caption</th>
-                    <th>Data</th>
-                    <th>Alcance</th>
-                    <th>Interações</th>
-                    <th>Eng. Rate</th>
-                    <th>Salvamentos</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-        <tr>
-            <td style="color:#888">1</td>
-            <td><span class="badge badge-image">Imagem</span></td>
-            <td class="caption-cell"><a href="https://www.instagram.com/p/DVy89NQAKj5/" target="_blank">Quem acha que os grandes negócios acontecem apenas em s...</a></td>
-            <td style="color:#888">12/03/2026</td>
-            <td class="metric-highlight">517</td>
-            <td>19</td>
-            <td style="color:#4CAF50">3.7%</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td style="color:#888">2</td>
-            <td><span class="badge badge-image">Imagem</span></td>
-            <td class="caption-cell"><a href="https://www.instagram.com/p/DVj99DeAOWE/" target="_blank">Construindo. Celebrando. Repetindo.</a></td>
-            <td style="color:#888">06/03/2026</td>
-            <td class="metric-highlight">476</td>
-            <td>25</td>
-            <td style="color:#4CAF50">5.3%</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td style="color:#888">3</td>
-            <td><span class="badge badge-reels">Reels</span></td>
-            <td class="caption-cell"><a href="https://www.instagram.com/reel/DV6GWSqlZUq/" target="_blank">Eu achei que era apenas uma loja de sardinhas 🐟 Mas na ...</a></td>
-            <td style="color:#888">15/03/2026</td>
-            <td class="metric-highlight">412</td>
-            <td>21</td>
-            <td style="color:#4CAF50">5.1%</td>
-            <td>3</td>
-        </tr>
-        <tr>
-            <td style="color:#888">4</td>
-            <td><span class="badge badge-carousel">Carrossel</span></td>
-            <td class="caption-cell"><a href="https://www.instagram.com/p/DVn61LdgLHu/" target="_blank">Tranquilidade… paz… um ambiente confortável e a gratidã...</a></td>
-            <td style="color:#888">08/03/2026</td>
-            <td class="metric-highlight">387</td>
-            <td>29</td>
-            <td style="color:#4CAF50">7.5%</td>
-            <td>0</td>
-        </tr>
-        <tr>
-            <td style="color:#888">5</td>
-            <td><span class="badge badge-image">Imagem</span></td>
-            <td class="caption-cell"><a href="https://www.instagram.com/p/DVwukC_gGc9/" target="_blank">O mundo pertence a quem tem coragem de sair do chão.</a></td>
-            <td style="color:#888">11/03/2026</td>
-            <td class="metric-highlight">359</td>
-            <td>9</td>
-            <td style="color:#4CAF50">2.5%</td>
-            <td>0</td>
-        </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- Insights -->
-    <div class="section-title">💡 Insights Automáticos e Recomendações</div>
-    <div class="insights-grid">
-        
-        <div class="insight-card">
-            <div class="insight-icon">🚀</div>
-            <div class="insight-content">
-                <h4>Imagem Lidera com 363 de Alcance Médio</h4>
-                <p>O formato Imagem tem o maior alcance médio entre todos os formatos analisados nos últimos 11 posts.</p>
-                <div class="insight-action">
-                    <strong>Ação:</strong> Aumentar frequência de Imagem para 3-4x por semana
-                </div>
-            </div>
-        </div>
-        <div class="insight-card">
-            <div class="insight-icon">📅</div>
-            <div class="insight-content">
-                <h4>Dom é o Melhor Dia — 400 de Alcance Médio</h4>
-                <p>Posts publicados na Dom têm o maior alcance médio. Consistência nesse dia maximiza distribuição orgânica.</p>
-                <div class="insight-action">
-                    <strong>Ação:</strong> Garantir pelo menos 1 post de qualidade toda Dom
-                </div>
-            </div>
-        </div>
-        <div class="insight-card">
-            <div class="insight-icon">📊</div>
-            <div class="insight-content">
-                <h4>Taxa de Engajamento: 6.42%</h4>
-                <p>A taxa atual de 6.42% está acima do benchmark para contas de 60k+ (1-3% para lifestyle/empreendedorismo).</p>
-                <div class="insight-action">
-                    <strong>Ação:</strong> Adicionar CTAs diretos (pergunta ou enquete) em todos os posts desta semana
-                </div>
-            </div>
-        </div>
-        <div class="insight-card">
-            <div class="insight-icon">💾</div>
-            <div class="insight-content">
-                <h4>6 Salvamentos — Conteúdo de Valor</h4>
-                <p>Posts com dicas práticas e conteúdo educativo sobre empreendedorismo geram mais salvamentos, indicando audiência qualificada.</p>
-                <div class="insight-action">
-                    <strong>Ação:</strong> Criar 1 post educativo por semana com checklist ou passo a passo
-                </div>
-            </div>
-        </div>
-        <div class="insight-card">
-            <div class="insight-icon">👥</div>
-            <div class="insight-content">
-                <h4>62.213 Seguidores — A 2.787 dos 65k</h4>
-                <p>A marca de 65k é um milestone importante para parcerias premium. Com a frequência atual, você pode atingi-la em 14 semanas.</p>
-                <div class="insight-action">
-                    <strong>Ação:</strong> Aumentar frequência de posts para 5-6x/semana nos próximos 30 dias
-                </div>
-            </div>
-        </div>
-        <div class="insight-card">
-            <div class="insight-icon">↗️</div>
-            <div class="insight-content">
-                <h4>5 Compartilhamentos — Distribuição Orgânica</h4>
-                <p>Compartilhamentos são o principal motor de crescimento orgânico. Conteúdo inspiracional e de valor prático gera mais shares.</p>
-                <div class="insight-action">
-                    <strong>Ação:</strong> Criar 1 post por semana com frase de impacto visualmente forte
-                </div>
-            </div>
-        </div>
-    </div>
-
+<!-- KPIs principais -->
+<div class="grid grid-4">
+      <div class="card">
+    <div class="kpi-label">Seguidores</div>
+    <div class="kpi-value">62,224</div>
+    <div><span class="kpi-delta down">▼ 39 vs anterior</span></div>
+    <div class="kpi-sub" style="margin-top:4px">Anterior: 62,263</div>
+  </div>
+      <div class="card">
+    <div class="kpi-label">Alcance Total (90d)</div>
+    <div class="kpi-value">7,150</div>
+    <div><span class="kpi-delta up">▲ +54 vs anterior</span></div>
+    <div class="kpi-sub" style="margin-top:4px">Anterior: 7,096</div>
+  </div>
+      <div class="card">
+    <div class="kpi-label">Taxa de Engajamento</div>
+    <div class="kpi-value">6.06%</div>
+    <div><span class="kpi-delta up">▲ +0.47pp vs anterior</span></div>
+    <div class="kpi-sub" style="margin-top:4px">Anterior: 5.59%</div>
+  </div>
+      <div class="card">
+    <div class="kpi-label">Salvamentos</div>
+    <div class="kpi-value">14</div>
+    <div><span class="kpi-delta neutral">= sem alteração</span></div>
+    <div class="kpi-sub" style="margin-top:4px">Anterior: 14</div>
+  </div>
+</div>
+<div class="grid grid-4" style="margin-top:14px">
+  <div class="card"><div class="kpi-label">Total de Posts</div><div class="kpi-value">3,001</div><div class="kpi-sub">No perfil</div></div>
+  <div class="card"><div class="kpi-label">Curtidas</div><div class="kpi-value">366 posts (90d)</div></div>
+  <div class="card"><div class="kpi-label">Comentários</div><div class="kpi-value">53 posts (90d)</div></div>
+  <div class="card"><div class="kpi-label">Compartilhamentos</div><div class="kpi-value">15 posts (90d)</div></div>
 </div>
 
-<div class="footer">
-    Dashboard gerado automaticamente &nbsp;·&nbsp; @ricardoimp &nbsp;·&nbsp; Atualizado em 26/04/2026 às 10:12
+<!-- Gráfico alcance por post -->
+<p class="section-title">Alcance por Post (últimos 20 — 90 dias)</p>
+<div class="card"><div class="chart-wrap"><canvas id="reachChart"></canvas></div></div>
+
+<!-- Performance por formato -->
+<p class="section-title">Performance por Formato</p>
+<div class="card">
+  <div class="format-row"><span class="format-label">🎬 Reels (6)</span><div class="format-bar-bg"><div class="format-bar-fill" style="width:100%;background:var(--purple)"></div></div><span class="format-val">441 alcance</span></div>
+  <div class="format-row"><span class="format-label">📷 Foto (8)</span><div class="format-bar-bg"><div class="format-bar-fill" style="width:81%;background:var(--cyan)"></div></div><span class="format-val">358 alcance</span></div>
+  <div class="format-row"><span class="format-label">🖼️ Carrossel (6)</span><div class="format-bar-bg"><div class="format-bar-fill" style="width:62%;background:var(--pink)"></div></div><span class="format-val">273 alcance</span></div>
 </div>
+
+<!-- Gráficos de dias e horários -->
+<p class="section-title">Melhores Dias para Postar</p>
+<div class="card"><div class="chart-wrap-lg"><canvas id="daysChart"></canvas></div></div>
+
+<p class="section-title">Melhores Horários para Postar</p>
+<div class="card"><div class="chart-wrap-lg"><canvas id="hoursChart"></canvas></div></div>
+
+<p class="section-title">Heatmap: Dia × Horário (alcance médio)</p>
+<div class="card" style="overflow-x:auto;">
+  <div style="min-width:480px;">
+    <div class="heatmap-grid" id="heatmapGrid"></div>
+    <div style="margin-top:12px;display:flex;align-items:center;gap:16px;font-size:.72rem;color:var(--muted);">
+      <span>Intensidade:</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:14px;height:14px;border-radius:3px;background:rgba(167,139,250,.1);display:inline-block;"></span> Baixo</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:14px;height:14px;border-radius:3px;background:rgba(167,139,250,.5);display:inline-block;"></span> Médio</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:14px;height:14px;border-radius:3px;background:rgba(167,139,250,1);display:inline-block;"></span> Alto</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:14px;height:14px;border-radius:3px;background:rgba(167,139,250,1);border:1px solid var(--yellow);display:inline-block;"></span> Top slot</span>
+    </div>
+  </div>
+</div>
+
+<!-- Top 5 posts -->
+<p class="section-title">Top 5 Posts por Alcance</p>
+<div class="card">
+  <!-- Desktop -->
+  <div class="table-wrap"><table><thead><tr><th>#</th><th>Legenda</th><th>Tipo</th><th>Data</th><th>Alcance</th></tr></thead><tbody>
+  <tr><td style="color:#94a3b8;font-size:.8rem">1</td><td><a href="https://www.instagram.com/reel/DWTwL0igM_t/" target="_blank" style="color:#a78bfa;text-decoration:none">Eu achei que era apenas uma loja de sardinhas…</a></td><td><span class="badge">🎬 Reel</span></td><td style="color:#94a3b8;font-size:.8rem">25/03</td><td><strong>1,187</strong></td></tr>
+<tr><td style="color:#94a3b8;font-size:.8rem">2</td><td><a href="https://www.instagram.com/p/DVy89NQAKj5/" target="_blank" style="color:#a78bfa;text-decoration:none">Quem acha que os grandes negócios acontecem apenas em s...</a></td><td><span class="badge">📷 Foto</span></td><td style="color:#94a3b8;font-size:.8rem">12/03</td><td><strong>512</strong></td></tr>
+<tr><td style="color:#94a3b8;font-size:.8rem">3</td><td><a href="https://www.instagram.com/p/DWr8mKBgN2J/" target="_blank" style="color:#a78bfa;text-decoration:none">Tem lugares que impressionam. Nova York te emana energi...</a></td><td><span class="badge">📷 Foto</span></td><td style="color:#94a3b8;font-size:.8rem">03/04</td><td><strong>471</strong></td></tr>
+<tr><td style="color:#94a3b8;font-size:.8rem">4</td><td><a href="https://www.instagram.com/p/DVj99DeAOWE/" target="_blank" style="color:#a78bfa;text-decoration:none">Construindo. Celebrando. Repetindo.</a></td><td><span class="badge">📷 Foto</span></td><td style="color:#94a3b8;font-size:.8rem">06/03</td><td><strong>470</strong></td></tr>
+<tr><td style="color:#94a3b8;font-size:.8rem">5</td><td><a href="https://www.instagram.com/reel/DV6GWSqlZUq/" target="_blank" style="color:#a78bfa;text-decoration:none">Eu achei que era apenas uma loja de sardinhas 🐟</a></td><td><span class="badge">🎬 Reel</span></td><td style="color:#94a3b8;font-size:.8rem">15/03</td><td><strong>398</strong></td></tr>
+</tbody></table></div>
+  <!-- Mobile -->
+  <div class="post-list"><div class="post-card"><span class="post-rank">1</span><div class="post-info"><a href="https://www.instagram.com/reel/DWTwL0igM_t/" target="_blank" class="post-caption">Eu achei que era apenas uma loja de sardinhas…</a><div class="post-meta"><span class="badge">🎬 Reel</span><span class="post-date">25/03</span></div></div><span class="post-metric">1,187</span></div>
+<div class="post-card"><span class="post-rank">2</span><div class="post-info"><a href="https://www.instagram.com/p/DVy89NQAKj5/" target="_blank" class="post-caption">Quem acha que os grandes negócios acontecem apenas em salas ...</a><div class="post-meta"><span class="badge">📷 Foto</span><span class="post-date">12/03</span></div></div><span class="post-metric">512</span></div>
+<div class="post-card"><span class="post-rank">3</span><div class="post-info"><a href="https://www.instagram.com/p/DWr8mKBgN2J/" target="_blank" class="post-caption">Tem lugares que impressionam. Nova York te emana energia.</a><div class="post-meta"><span class="badge">📷 Foto</span><span class="post-date">03/04</span></div></div><span class="post-metric">471</span></div>
+<div class="post-card"><span class="post-rank">4</span><div class="post-info"><a href="https://www.instagram.com/p/DVj99DeAOWE/" target="_blank" class="post-caption">Construindo. Celebrando. Repetindo.</a><div class="post-meta"><span class="badge">📷 Foto</span><span class="post-date">06/03</span></div></div><span class="post-metric">470</span></div>
+<div class="post-card"><span class="post-rank">5</span><div class="post-info"><a href="https://www.instagram.com/reel/DV6GWSqlZUq/" target="_blank" class="post-caption">Eu achei que era apenas uma loja de sardinhas 🐟</a><div class="post-meta"><span class="badge">🎬 Reel</span><span class="post-date">15/03</span></div></div><span class="post-metric">398</span></div>
+</div>
+</div>
+</div>
+
+<p class="section-title">Top 5 Posts por Curtidas</p>
+<div class="card">
+  <!-- Desktop -->
+  <div class="table-wrap"><table><thead><tr><th>#</th><th>Legenda</th><th>Tipo</th><th>Data</th><th>Curtidas</th></tr></thead><tbody>
+  <tr><td style="color:#94a3b8;font-size:.8rem">1</td><td><a href="https://www.instagram.com/p/DW2O1nsAExw/" target="_blank" style="color:#a78bfa;text-decoration:none">No fim… tudo se conecta. Prêmio Govtech 2026</a></td><td><span class="badge">📷 Foto</span></td><td style="color:#94a3b8;font-size:.8rem">08/04</td><td><strong>41</strong></td></tr>
+<tr><td style="color:#94a3b8;font-size:.8rem">2</td><td><a href="https://www.instagram.com/reel/DWTwL0igM_t/" target="_blank" style="color:#a78bfa;text-decoration:none">Eu achei que era apenas uma loja de sardinhas…</a></td><td><span class="badge">🎬 Reel</span></td><td style="color:#94a3b8;font-size:.8rem">25/03</td><td><strong>31</strong></td></tr>
+<tr><td style="color:#94a3b8;font-size:.8rem">3</td><td><a href="https://www.instagram.com/p/DXSbwQcFF0V/" target="_blank" style="color:#a78bfa;text-decoration:none">O mundo não é só destino. É contraste.</a></td><td><span class="badge">🖼️ Carrossel</span></td><td style="color:#94a3b8;font-size:.8rem">18/04</td><td><strong>29</strong></td></tr>
+<tr><td style="color:#94a3b8;font-size:.8rem">4</td><td><a href="https://www.instagram.com/p/DVn61LdgLHu/" target="_blank" style="color:#a78bfa;text-decoration:none">Tranquilidade… paz… um ambiente confortável e a gratidã...</a></td><td><span class="badge">🖼️ Carrossel</span></td><td style="color:#94a3b8;font-size:.8rem">08/03</td><td><strong>29</strong></td></tr>
+<tr><td style="color:#94a3b8;font-size:.8rem">5</td><td><a href="https://www.instagram.com/p/DXhReNcAJlQ/" target="_blank" style="color:#a78bfa;text-decoration:none">No meio de tudo que eu construo… é aqui que eu lembro o...</a></td><td><span class="badge">📷 Foto</span></td><td style="color:#94a3b8;font-size:.8rem">24/04</td><td><strong>27</strong></td></tr>
+</tbody></table></div>
+  <!-- Mobile -->
+  <div class="post-list"><div class="post-card"><span class="post-rank">1</span><div class="post-info"><a href="https://www.instagram.com/p/DW2O1nsAExw/" target="_blank" class="post-caption">No fim… tudo se conecta. Prêmio Govtech 2026</a><div class="post-meta"><span class="badge">📷 Foto</span><span class="post-date">08/04</span></div></div><span class="post-metric">41</span></div>
+<div class="post-card"><span class="post-rank">2</span><div class="post-info"><a href="https://www.instagram.com/reel/DWTwL0igM_t/" target="_blank" class="post-caption">Eu achei que era apenas uma loja de sardinhas…</a><div class="post-meta"><span class="badge">🎬 Reel</span><span class="post-date">25/03</span></div></div><span class="post-metric">31</span></div>
+<div class="post-card"><span class="post-rank">3</span><div class="post-info"><a href="https://www.instagram.com/p/DXSbwQcFF0V/" target="_blank" class="post-caption">O mundo não é só destino. É contraste.</a><div class="post-meta"><span class="badge">🖼️ Carrossel</span><span class="post-date">18/04</span></div></div><span class="post-metric">29</span></div>
+<div class="post-card"><span class="post-rank">4</span><div class="post-info"><a href="https://www.instagram.com/p/DVn61LdgLHu/" target="_blank" class="post-caption">Tranquilidade… paz… um ambiente confortável e a gratidão.</a><div class="post-meta"><span class="badge">🖼️ Carrossel</span><span class="post-date">08/03</span></div></div><span class="post-metric">29</span></div>
+<div class="post-card"><span class="post-rank">5</span><div class="post-info"><a href="https://www.instagram.com/p/DXhReNcAJlQ/" target="_blank" class="post-caption">No meio de tudo que eu construo… é aqui que eu lembro o porq...</a><div class="post-meta"><span class="badge">📷 Foto</span><span class="post-date">24/04</span></div></div><span class="post-metric">27</span></div>
+</div>
+</div>
+</div>
+
+<!-- Insights -->
+<p class="section-title">Insights & Recomendações</p>
+<div class="insight-grid">
+  <div class="insight-item"><div class="insight-title">🎬 Reels têm maior alcance médio (441/post)</div><div class="insight-action">→ Priorize Reels. Meta: 3–4 Reels/semana para escalar alcance.</div></div>
+  <div class="insight-item"><div class="insight-title">📅 Melhor dia: Ter (alcance médio 470)</div><div class="insight-action">→ Concentre seus melhores conteúdos nas Ters.</div></div>
+  <div class="insight-item"><div class="insight-title">🕐 Melhor horário: 18–20 (alcance médio 512)</div><div class="insight-action">→ Publique entre 13h e 15h para maximizar alcance orgânico.</div></div>
+  <div class="insight-item"><div class="insight-title">📊 Engajamento atual: 5.90%</div><div class="insight-action">→ Acima de 3% é saudável. Use CTAs diretos para manter o nível.</div></div>
+  <div class="insight-item"><div class="insight-title">🔖 Salvamentos baixos (11 em 23 posts)</div><div class="insight-action">→ Crie mais listas, frameworks e conteúdo educativo para aumentar saves.</div></div>
+  <div class="insight-item"><div class="insight-title">🏆 Post viral: 1,187 alcance (Eu achei que era apenas uma loja de sard...)</div><div class="insight-action">→ Padrão: experiência + surpresa + local icônico. Replique o formato.</div></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════ -->
+<!-- SEÇÃO: STORIES ──────────────────────────────────────────────────── -->
+<p class="section-title" id="sec-stories">📱 Stories — Monitoramento & Estratégia</p>
+<div class="stories-kpi-grid">
+  <div class="card"><div class="kpi-label">Status</div><div class="kpi-value" style="font-size:1.3rem;color:#fbbf24">Não monitorado</div><div class="kpi-sub">API só retorna stories ativos (24h)</div></div>
+  <div class="card"><div class="kpi-label">Meta de alcance</div><div class="kpi-value" style="font-size:1.3rem">3.1k–6.2k</div><div class="kpi-sub">5–10% dos 62k seguidores por Story</div></div>
+  <div class="card"><div class="kpi-label">Exit rate alvo</div><div class="kpi-value" style="font-size:1.3rem">&lt; 20%</div><div class="kpi-sub">Conteúdo que retém atenção</div></div>
+</div>
+<div class="stories-card"><div class="stories-card-title">📌 Recomendações estratégicas</div><div class="stories-card-sub">1. <strong>Publique Stories diariamente</strong> — o algoritmo prioriza contas ativas. Mínimo 3 Stories/dia.<br>2. <strong>Use enquetes e caixinhas de perguntas</strong> — geram resposta e aumentam o alcance orgânico.<br>3. <strong>Mostre bastidores reais</strong> — viagens, trabalho, família. Seu perfil tem âncora emocional forte.<br>4. <strong>Reposte seus melhores posts nos Stories</strong> — aumenta o alcance de cada publicação em até 40%.<br>5. <strong>CTA direto no último frame</strong> — "Salva esse post", "Me manda DM" ou "Clica no link da bio".</div></div>
+<div class="insight-grid">
+  <div class="insight-item"><div class="insight-title">🎬 Story tipo: Bastidores de viagem</div><div class="insight-action">→ 3x/semana · Vídeo curto 15s · Mostra o que não aparece no feed</div></div>
+  <div class="insight-item"><div class="insight-title">💼 Story tipo: Decisão de negócio</div><div class="insight-action">→ 2x/semana · Enquete ou caixinha · "Qual você escolheria?"</div></div>
+  <div class="insight-item"><div class="insight-title">👨‍👧 Story tipo: Família & momentos reais</div><div class="insight-action">→ 1x/semana · Foto ou vídeo espontâneo · Maior engajamento emocional</div></div>
+  <div class="insight-item"><div class="insight-title">📊 Story tipo: Dado ou insight rápido</div><div class="insight-action">→ 2x/semana · Texto + fundo sólido · Fácil de salvar e compartilhar</div></div>
+</div>
+
+<!-- SEÇÃO: INSIGHTS ESTRATÉGICOS ─────────────────────────────────────── -->
+<p class="section-title" id="sec-insights">🧠 Insights — Estrategista de Redes Sociais</p>
+<div class="grade-box">
+  <div class="grade-value">C+</div>
+  <div class="grade-label">Nota geral do perfil (escala A–F)</div>
+  <div class="grade-summary">Perfil com autoridade real e vida autêntica. O problema não é o conteúdo — é a <strong>inconsistência e a ausência de estratégia editorial</strong>. Você publica quando tem vontade, não quando o algoritmo e a audiência pedem. Com disciplina de 90 dias, a nota vai para B+.</div>
+</div>
+<div class="problem-box">
+  <div class="problem-title">⚠️ Problema principal identificado</div>
+  <div class="problem-text">Frequência irregular: média de 1 post/semana, com gaps de até 13 dias. O algoritmo penaliza inatividade. Você tem 62k seguidores mas alcança apenas 7.150 pessoas (11.5%) — isso é sinal de penalização por baixa frequência, não de conteúdo ruim.</div>
+</div>
+<div class="tip-box">
+  <div class="tip-title">✅ Fórmula que funciona para você</div>
+  <div class="tip-text"><strong>Experiência real + âncora emocional + local icônico = viral.</strong> Prova: Reel da loja de sardinhas em Lisboa (1.187 alcance). Padrão: você estava lá, foi surpreendido, filmou o momento. Replique isso em cada viagem.</div>
+</div>
+<p style="font-size:.88rem;font-weight:600;color:var(--purple);margin:20px 0 12px;">⚡ 6 Ações críticas — em ordem de prioridade</p>
+<div class="action-card">
+  <div class="action-card-header"><div style="display:flex;align-items:center;gap:8px"><span class="action-num">1</span><span class="action-title">Publique 4x/semana sem exceção</span></div><span class="urgency-imediato">IMEDIATO</span></div>
+  <div class="action-detail">Hoje você publica 1x/semana. O algoritmo do Instagram penaliza contas com menos de 3 posts/semana reduzindo o alcance orgânico em até 60%. Não precisa ser perfeito — precisa ser consistente.</div>
+  <div class="action-meta"><div class="action-meta-item"><div class="action-meta-label">Impacto esperado</div><div class="action-meta-value">+40–60% alcance em 30 dias</div></div><div class="action-meta-item"><div class="action-meta-label">Como fazer</div><div class="action-meta-value">Seg+Qua+Sex+Sáb · Use conteúdo de viagens já feitas</div></div></div>
+</div>
+<div class="action-card">
+  <div class="action-card-header"><div style="display:flex;align-items:center;gap:8px"><span class="action-num">2</span><span class="action-title">Crie 2 Reels por semana</span></div><span class="urgency-imediato">IMEDIATO</span></div>
+  <div class="action-detail">Reels têm alcance médio 441 vs 273 dos carrosséis. São o único formato que o Instagram distribui para não-seguidores. Você tem material de 37 países — use.</div>
+  <div class="action-meta"><div class="action-meta-item"><div class="action-meta-label">Impacto esperado</div><div class="action-meta-value">+200–400 novos seguidores/mês</div></div><div class="action-meta-item"><div class="action-meta-label">Como fazer</div><div class="action-meta-value">30s · música trending · legenda com gancho nos 3s iniciais</div></div></div>
+</div>
+<div class="action-card">
+  <div class="action-card-header"><div style="display:flex;align-items:center;gap:8px"><span class="action-num">3</span><span class="action-title">Adicione CTA em todo post</span></div><span class="urgency-semana">ESTA SEMANA</span></div>
+  <div class="action-detail">Nenhum dos seus posts analisados tem CTA explícito na legenda. "Salva esse post", "Comenta aqui" ou "Manda DM" aumentam salvamentos e comentários em 2–3x — e esses são os sinais que mais pesam no algoritmo.</div>
+  <div class="action-meta"><div class="action-meta-item"><div class="action-meta-label">Impacto esperado</div><div class="action-meta-value">+150% em salvamentos</div></div><div class="action-meta-item"><div class="action-meta-label">Como fazer</div><div class="action-meta-value">Última linha da legenda sempre com pergunta ou pedido direto</div></div></div>
+</div>
+<div class="action-card">
+  <div class="action-card-header"><div style="display:flex;align-items:center;gap:8px"><span class="action-num">4</span><span class="action-title">Stories diários (mínimo 3/dia)</span></div><span class="urgency-semana">ESTA SEMANA</span></div>
+  <div class="action-detail">Stories diários mantêm você no topo da lista de seguidores. Cada Story publicado aumenta a probabilidade de seus posts aparecerem no feed. É o motor invisível do algoritmo.</div>
+  <div class="action-meta"><div class="action-meta-item"><div class="action-meta-label">Impacto esperado</div><div class="action-meta-value">+25% alcance nos posts do feed</div></div><div class="action-meta-item"><div class="action-meta-label">Como fazer</div><div class="action-meta-value">Manhã: bastidores · Tarde: enquete · Noite: repost do feed</div></div></div>
+</div>
+<div class="action-card">
+  <div class="action-card-header"><div style="display:flex;align-items:center;gap:8px"><span class="action-num">5</span><span class="action-title">Defina 3 pilares de conteúdo</span></div><span class="urgency-mes">ESTE MÊS</span></div>
+  <div class="action-detail">Seu perfil mistura viagem, negócios, família e reflexão sem hierarquia. Isso confunde o algoritmo sobre quem te seguir. Defina: 1) Vida de empreendedor viajante, 2) Bastidores de negócios, 3) Família & momentos reais.</div>
+  <div class="action-meta"><div class="action-meta-item"><div class="action-meta-label">Impacto esperado</div><div class="action-meta-value">Audiência mais qualificada e fiel</div></div><div class="action-meta-item"><div class="action-meta-label">Como fazer</div><div class="action-meta-value">Alterne os pilares: 2 viagem + 1 negócio + 1 família por semana</div></div></div>
+</div>
+<div class="action-card">
+  <div class="action-card-header"><div style="display:flex;align-items:center;gap:8px"><span class="action-num">6</span><span class="action-title">Reative e corrija a campanha Meta Ads</span></div><span class="urgency-mes">ESTE MÊS</span></div>
+  <div class="action-detail">Campanha "Las Vegas" ativa com R$35/dia mas zero entrega mensurável nos últimos 90 dias. Objetivo LINK_CLICKS não faz sentido para crescimento de perfil. Troque para REACH ou PROFILE_VISITS.</div>
+  <div class="action-meta"><div class="action-meta-item"><div class="action-meta-label">Impacto esperado</div><div class="action-meta-value">ROI real sobre o budget investido</div></div><div class="action-meta-item"><div class="action-meta-label">Como fazer</div><div class="action-meta-value">Pause campanha atual · Crie nova com objetivo REACH · Patrocine o Reel da sardinha</div></div></div>
+</div>
+<div class="insight-grid" style="margin-top:16px">
+  <div class="insight-item"><div class="insight-title">🎯 Meta 30 dias</div><div class="insight-action">Alcance médio por post: 350→600 · Engajamento: 6%→8% · Novos seguidores: +300</div></div>
+  <div class="insight-item"><div class="insight-title">🎯 Meta 90 dias</div><div class="insight-action">Seguidores: 62k→65k · Alcance total: 7k→15k · 1 post viral/mês (+1k alcance)</div></div>
+  <div class="insight-item"><div class="insight-title">📅 Checklist semanal</div><div class="insight-action">Seg: Reel de viagem · Qua: Foto/carrossel de negócios · Sex: Reflexão/família · Sáb: Reel leve</div></div>
+  <div class="insight-item"><div class="insight-title">📊 KPI para acompanhar</div><div class="insight-action">Alcance/post · Taxa de salvamento · Crescimento semanal de seguidores · Reach de Stories</div></div>
+</div>
+
+<!-- SEÇÃO: PATROCINADO ───────────────────────────────────────────────── -->
+<p class="section-title" id="sec-patrocinado">💰 Patrocinado — Guia de Mídia Paga</p>
+<div class="problem-box">
+  <div class="problem-title">⚠️ Campanha atual com problema identificado</div>
+  <div class="problem-text"><strong>Campanha:</strong> "Las Vegas do alto" · <strong>Status:</strong> ATIVA · <strong>Budget:</strong> R$35/dia · <strong>Objetivo:</strong> LINK_CLICKS<br><strong>Problema:</strong> Zero insights de entrega nos últimos 90 dias. Objetivo LINK_CLICKS não é adequado para crescimento de perfil pessoal. O dinheiro está sendo gasto sem retorno mensurável.<br><strong>Ação imediata:</strong> Pause essa campanha. Crie uma nova com objetivo REACH apontando para o Reel da sardinha.</div>
+</div>
+<p style="font-size:.88rem;font-weight:600;color:var(--purple);margin:16px 0 10px;">🏆 O que patrocinar — ranking por potencial</p>
+<div class="sponsor-item"><div class="sponsor-header"><span class="sponsor-num">#1</span><div><div class="sponsor-title">Reel: "Eu achei que era apenas uma loja de sardinhas" (1.187 alcance orgânico)</div><div class="sponsor-why">Já provou que funciona. Patrocinar um post que já performou bem é a estratégia mais segura. Custo por resultado cai 40–60% vs conteúdo novo.</div></div></div><div class="sponsor-tags"><span class="sponsor-tag">Objetivo: REACH</span><span class="sponsor-tag green">Budget: R$20–30/dia</span><span class="sponsor-tag cyan">Resultado: 5k–15k alcance/dia</span></div></div>
+<div class="sponsor-item"><div class="sponsor-header"><span class="sponsor-num">#2</span><div><div class="sponsor-title">Reel de viagem com âncora emocional (próximo a ser criado)</div><div class="sponsor-why">Reels têm CPM mais baixo no Instagram. Com âncora emocional (família, conquista, surpresa), o custo por engajamento cai ainda mais. Crie antes de patrocinar.</div></div></div><div class="sponsor-tags"><span class="sponsor-tag">Objetivo: REACH</span><span class="sponsor-tag green">Budget: R$15–25/dia</span><span class="sponsor-tag cyan">Resultado: 3k–10k alcance/dia</span></div></div>
+<div class="sponsor-item"><div class="sponsor-header"><span class="sponsor-num">#3</span><div><div class="sponsor-title">Post de negócios/conquista (ex: Prêmio Govtech)</div><div class="sponsor-why">Para audiência de empreendedores e investidores. Segmentar por interesse em "empreendedorismo", "startups" e "investimentos" no Brasil. Constrói autoridade profissional.</div></div></div><div class="sponsor-tags"><span class="sponsor-tag">Objetivo: PROFILE_VISITS</span><span class="sponsor-tag green">Budget: R$20/dia</span><span class="sponsor-tag cyan">Resultado: +50–150 seguidores qualificados</span></div></div>
+<div class="sponsor-item"><div class="sponsor-header"><span class="sponsor-num">#4</span><div><div class="sponsor-title">Carrossel educativo sobre empreendedorismo ou viagem</div><div class="sponsor-why">Carrosséis têm o maior tempo de visualização. Patrocinar um carrossel com dicas práticas gera salvamentos — o sinal mais forte para o algoritmo.</div></div></div><div class="sponsor-tags"><span class="sponsor-tag">Objetivo: ENGAGEMENT</span><span class="sponsor-tag green">Budget: R$10–15/dia</span><span class="sponsor-tag cyan">Resultado: +200–500 salvamentos</span></div></div>
+<p style="font-size:.88rem;font-weight:600;color:var(--purple);margin:20px 0 10px;">💵 Budget mensal sugerido</p>
+<div class="budget-grid">
+  <div class="budget-item"><div class="budget-label">Conservador</div><div class="budget-value">R$ 300/mês</div><div class="budget-note">R$10/dia · 1 campanha ativa</div></div>
+  <div class="budget-item" style="border-color:var(--yellow)"><div class="budget-label">Moderado ⭐</div><div class="budget-value" style="color:var(--yellow)">R$ 700/mês</div><div class="budget-note">R$23/dia · 2 campanhas rotativas</div></div>
+  <div class="budget-item"><div class="budget-label">Agressivo</div><div class="budget-value">R$ 1.500/mês</div><div class="budget-note">R$50/dia · 3 campanhas simultâneas</div></div>
+</div>
+<div class="tip-box">
+  <div class="tip-title">💡 Recomendação: R$700/mês (moderado)</div>
+  <div class="tip-text">Com R$700/mês você consegue patrocinar 2 conteúdos em rodízio (15 dias cada). Priorize sempre conteúdo que já performou organicamente. Nunca patrocine conteúdo novo sem validação orgânica primeiro.</div>
+</div>
+<p style="font-size:.88rem;font-weight:600;color:var(--purple);margin:20px 0 10px;">📋 Como patrocinar — passo a passo</p>
+<ul class="step-list">
+  <li class="step-item"><span class="step-num">1</span><div class="step-content"><div class="step-title">Escolha o conteúdo certo</div><div class="step-detail">Patrocine apenas posts com engajamento orgânico acima da média. Nunca patrocine posts com menos de 20 curtidas.</div></li>
+  <li class="step-item"><span class="step-num">2</span><div class="step-content"><div class="step-title">Defina o objetivo correto</div><div class="step-detail">Para crescimento de perfil: REACH ou PROFILE_VISITS. Para vendas: LINK_CLICKS (mas você precisa ter uma landing page). Nunca misture objetivos.</div></li>
+  <li class="step-item"><span class="step-num">3</span><div class="step-content"><div class="step-title">Configure a audiência</div><div class="step-detail">Brasil · Homens e mulheres 28–50 anos · Interesses: empreendedorismo, viagens, tecnologia, investimentos. Raio: nacional (não limite por cidade).</div></li>
+  <li class="step-item"><span class="step-num">4</span><div class="step-content"><div class="step-title">Defina budget e duração</div><div class="step-detail">Mínimo 7 dias para o algoritmo otimizar. Budget mínimo R$15/dia. Abaixo disso o alcance é muito limitado para gerar dados úteis.</div></li>
+  <li class="step-item"><span class="step-num">5</span><div class="step-content"><div class="step-title">Monitore após 48h</div><div class="step-detail">Se CPM > R$25 ou CTR < 1%, pause e ajuste a audiência ou o criativo. Se estiver performando bem, aumente o budget em 20%.</div></li>
+  <li class="step-item"><span class="step-num">6</span><div class="step-content"><div class="step-title">Analise e replique</div><div class="step-detail">Após cada campanha, anote: qual conteúdo, qual audiência, qual resultado. Em 3 meses você terá um playbook próprio de mídia paga.</div></li>
+</ul>
+
+<div class="footer">Dashboard gerado automaticamente · @ricardoimp · Atualizado em 01/05/2026 às 12:00</div>
+
+<!-- ── Bottom Nav Mobile ── -->
+<nav class="bottom-nav">
+  <div class="bottom-nav-inner">
+    <a href="#top"><span class="nav-icon">📊</span>Resumo</a>
+    <a href="#sec-stories"><span class="nav-icon">📱</span>Stories</a>
+    <a href="#sec-insights"><span class="nav-icon">🧠</span>Insights</a>
+    <a href="#sec-patrocinado"><span class="nav-icon">💰</span>Patrocinado</a>
+  </div>
+</nav>
 
 <script>
-const chartDefaults = {
-    plugins: { legend: { labels: { color: '#888', font: { size: 11 } } } },
-    scales: {
-        x: { grid: { color: '#1a1a28' }, ticks: { color: '#666', font: { size: 10 } } },
-        y: { grid: { color: '#1a1a28' }, ticks: { color: '#666', font: { size: 10 } } }
+// ── Dados dos posts (90 dias) ──────────────────────────────────────────────
+const posts = [
+  {label:"18/04 CAR", date:"2026-04-18", dow:5, hour:21, reach:263, likes:28},
+  {label:"16/04 VID", date:"2026-04-16", dow:3, hour:22, reach:209, likes:9},
+  {label:"15/04 IMA", date:"2026-04-15", dow:2, hour:21, reach:121, likes:10},
+  {label:"11/04 CAR", date:"2026-04-11", dow:5, hour:16, reach:236, likes:14},
+  {label:"10/04 VID", date:"2026-04-10", dow:4, hour:14, reach:312, likes:9},
+  {label:"08/04 IMA", date:"2026-04-08", dow:2, hour:10, reach:337, likes:41},
+  {label:"03/04 CAR", date:"2026-04-03", dow:4, hour:14, reach:237, likes:15},
+  {label:"31/03 CAR", date:"2026-03-31", dow:1, hour:15, reach:298, likes:24},
+  {label:"27/03 VID", date:"2026-03-27", dow:4, hour:0, reach:128, likes:4},
+  {label:"26/03 VID", date:"2026-03-26", dow:3, hour:22, reach:393, likes:19},
+  {label:"25/03 VID", date:"2026-03-25", dow:2, hour:13, reach:1185, likes:31},
+  {label:"24/03 IMA", date:"2026-03-24", dow:1, hour:14, reach:337, likes:16},
+  {label:"11/03 IMA", date:"2026-03-11", dow:2, hour:22, reach:350, likes:8},
+  {label:"08/03 CAR", date:"2026-03-08", dow:6, hour:12, reach:380, likes:29},
+  {label:"06/03 IMA", date:"2026-03-06", dow:4, hour:23, reach:470, likes:19},
+  {label:"27/02 VID", date:"2026-02-27", dow:4, hour:15, reach:335, likes:4},
+  {label:"27/02 CAR", date:"2026-02-27", dow:4, hour:12, reach:434, likes:26},
+  {label:"12/02 VID", date:"2026-02-12", dow:3, hour:11, reach:263, likes:14},
+  {label:"11/02 CAR", date:"2026-02-11", dow:2, hour:22, reach:235, likes:6},
+  {label:"06/02 IMA", date:"2026-02-06", dow:4, hour:15, reach:254, likes:13},
+  {label:"04/02 VID", date:"2026-02-04", dow:2, hour:23, reach:264, likes:6},
+  {label:"04/02 CAR", date:"2026-02-04", dow:2, hour:11, reach:204, likes:11},
+  {label:"28/01 IMA", date:"2026-01-28", dow:2, hour:9, reach:283, likes:10},
+];
+
+// ── Gráfico de alcance por post ────────────────────────────────────────────
+const ctxReach = document.getElementById('reachChart').getContext('2d');
+new Chart(ctxReach, {
+  type:'bar',
+  data:{
+    labels: posts.map(p=>p.label),
+    datasets:[
+      {label:'Alcance', data:posts.map(p=>p.reach), backgroundColor:'rgba(167,139,250,0.65)', borderColor:'rgba(167,139,250,1)', borderWidth:1, borderRadius:3},
+      {label:'Curtidas', data:posts.map(p=>p.likes), backgroundColor:'rgba(244,114,182,0.65)', borderColor:'rgba(244,114,182,1)', borderWidth:1, borderRadius:3}
+    ]
+  },
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:'#64748b',font:{size:11}}}},scales:{x:{ticks:{color:'#64748b',font:{size:9},maxRotation:50},grid:{color:'#252540'}},y:{ticks:{color:'#64748b',font:{size:10}},grid:{color:'#252540'}}}}
+});
+
+// ── Dados por dia da semana (0=Dom, 1=Seg, ..., 6=Sab) ────────────────────
+const dayNames = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+const dayReach = [0,0,0,0,0,0,0];
+const dayCount = [0,0,0,0,0,0,0];
+posts.forEach(p => {
+  dayReach[p.dow] += p.reach;
+  dayCount[p.dow]++;
+});
+const dayAvg = dayReach.map((r,i) => dayCount[i] > 0 ? Math.round(r/dayCount[i]) : 0);
+const dayCountLabel = dayCount.map((c,i) => `${dayNames[i]} (${c})`);
+
+// Cores: destaca o melhor dia
+const maxDay = Math.max(...dayAvg);
+const dayColors = dayAvg.map(v => v === maxDay ? 'rgba(251,191,36,0.85)' : 'rgba(167,139,250,0.65)');
+const dayBorders = dayAvg.map(v => v === maxDay ? 'rgba(251,191,36,1)' : 'rgba(167,139,250,1)');
+
+const ctxDays = document.getElementById('daysChart').getContext('2d');
+new Chart(ctxDays, {
+  type:'bar',
+  data:{
+    labels: dayCountLabel,
+    datasets:[{
+      label:'Alcance Médio',
+      data: dayAvg,
+      backgroundColor: dayColors,
+      borderColor: dayBorders,
+      borderWidth:1,
+      borderRadius:5
+    }]
+  },
+  options:{
+    responsive:true,maintainAspectRatio:false,
+    plugins:{
+      legend:{display:false},
+      tooltip:{callbacks:{label:ctx=>`Alcance médio: ${ctx.parsed.y}`}}
+    },
+    scales:{
+      x:{ticks:{color:'#94a3b8',font:{size:11}},grid:{color:'#252540'}},
+      y:{ticks:{color:'#64748b',font:{size:10}},grid:{color:'#252540'},beginAtZero:true}
     }
-};
-
-new Chart(document.getElementById('reachChart').getContext('2d'), {
-    type: 'line',
-    data: {
-        labels: ["03/06", "03/08", "03/11", "03/12", "03/15", "03/25", "04/15", "04/16", "04/18", "04/21", "04/24"],
-        datasets: [{
-            label: 'Alcance',
-            data: [476, 387, 359, 517, 412, 247, 143, 228, 298, 199, 319],
-            borderColor: '#E1306C',
-            backgroundColor: 'rgba(225,48,108,0.1)',
-            borderWidth: 2,
-            pointRadius: 3,
-            pointBackgroundColor: '#E1306C',
-            fill: true,
-            tension: 0.3
-        }]
-    },
-    options: { responsive: true, maintainAspectRatio: false, ...chartDefaults }
+  }
 });
 
-new Chart(document.getElementById('typeChart').getContext('2d'), {
-    type: 'doughnut',
-    data: {
-        labels: ["Carrossel", "Reels", "Imagem"],
-        datasets: [{
-            data: [283, 320, 363],
-            backgroundColor: ['#833AB4', '#E1306C', '#405DE6'],
-            borderWidth: 0,
-            hoverOffset: 4
-        }]
+// ── Dados por horário ──────────────────────────────────────────────────────
+const hourBuckets = [
+  {label:'00–05', hours:[0,1,2,3,4,5]},
+  {label:'06–08', hours:[6,7,8]},
+  {label:'09–11', hours:[9,10,11]},
+  {label:'12–14', hours:[12,13,14]},
+  {label:'15–17', hours:[15,16,17]},
+  {label:'18–20', hours:[18,19,20]},
+  {label:'21–23', hours:[21,22,23]},
+];
+const hourReach = {};
+const hourCnt = {};
+posts.forEach(p => {
+  const h = p.hour;
+  hourReach[h] = (hourReach[h]||0) + p.reach;
+  hourCnt[h] = (hourCnt[h]||0) + 1;
+});
+const bucketAvg = hourBuckets.map(b => {
+  let total=0, cnt=0;
+  b.hours.forEach(h => { total += hourReach[h]||0; cnt += hourCnt[h]||0; });
+  return cnt > 0 ? Math.round(total/cnt) : 0;
+});
+const maxHour = Math.max(...bucketAvg);
+const hourColors = bucketAvg.map(v => v === maxHour ? 'rgba(34,211,238,0.85)' : 'rgba(167,139,250,0.65)');
+const hourBorders = bucketAvg.map(v => v === maxHour ? 'rgba(34,211,238,1)' : 'rgba(167,139,250,1)');
+
+const ctxHours = document.getElementById('hoursChart').getContext('2d');
+new Chart(ctxHours, {
+  type:'bar',
+  data:{
+    labels: hourBuckets.map(b=>b.label),
+    datasets:[{
+      label:'Alcance Médio',
+      data: bucketAvg,
+      backgroundColor: hourColors,
+      borderColor: hourBorders,
+      borderWidth:1,
+      borderRadius:5
+    }]
+  },
+  options:{
+    responsive:true,maintainAspectRatio:false,
+    plugins:{
+      legend:{display:false},
+      tooltip:{callbacks:{label:ctx=>`Alcance médio: ${ctx.parsed.y}`}}
     },
-    options: {
-        responsive: true, maintainAspectRatio: false,
-        plugins: { legend: { position: 'bottom', labels: { color: '#888', padding: 14, font: { size: 11 } } } }
+    scales:{
+      x:{ticks:{color:'#94a3b8',font:{size:11}},grid:{color:'#252540'}},
+      y:{ticks:{color:'#64748b',font:{size:10}},grid:{color:'#252540'},beginAtZero:true}
     }
+  }
 });
 
-new Chart(document.getElementById('dayChart').getContext('2d'), {
-    type: 'bar',
-    data: {
-        labels: ["Seg", "Ter", "Qua", "Qui", "Sex", "S\u00e1b", "Dom"],
-        datasets: [{
-            label: 'Alcance M\u00e9dio',
-            data: [0, 199, 250, 372, 398, 298, 400],
-            backgroundColor: 'rgba(225,48,108,0.7)',
-            borderColor: '#E1306C',
-            borderWidth: 1,
-            borderRadius: 5
-        }]
-    },
-    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, ...chartDefaults }
+// ── Heatmap Dia × Horário ──────────────────────────────────────────────────
+const heatDays = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+const heatHours = [
+  {label:'00–05', hours:[0,1,2,3,4,5]},
+  {label:'06–11', hours:[6,7,8,9,10,11]},
+  {label:'12–14', hours:[12,13,14]},
+  {label:'15–17', hours:[15,16,17]},
+  {label:'18–20', hours:[18,19,20]},
+  {label:'21–23', hours:[21,22,23]},
+];
+
+// Calcular alcance médio por [dow][hourBucket]
+const heatData = heatHours.map(hb => {
+  return heatDays.map((_, d) => {
+    let total=0, cnt=0;
+    posts.forEach(p => {
+      if(p.dow === d && hb.hours.includes(p.hour)){
+        total += p.reach; cnt++;
+      }
+    });
+    return cnt > 0 ? Math.round(total/cnt) : null;
+  });
 });
 
-new Chart(document.getElementById('dayCountChart').getContext('2d'), {
-    type: 'bar',
-    data: {
-        labels: ["Seg", "Ter", "Qua", "Qui", "Sex", "S\u00e1b", "Dom"],
-        datasets: [{
-            label: 'N\u00ba de Posts',
-            data: [0, 1, 3, 2, 2, 1, 2],
-            backgroundColor: 'rgba(131,58,180,0.7)',
-            borderColor: '#833AB4',
-            borderWidth: 1,
-            borderRadius: 5
-        }]
-    },
-    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, ...chartDefaults }
+// Encontrar max para normalizar
+let globalMax = 0;
+heatData.forEach(row => row.forEach(v => { if(v && v > globalMax) globalMax = v; }));
+
+// Encontrar top slot
+let topVal = 0, topRow = 0, topCol = 0;
+heatData.forEach((row, ri) => row.forEach((v, ci) => { if(v && v > topVal){ topVal=v; topRow=ri; topCol=ci; }}));
+
+const grid = document.getElementById('heatmapGrid');
+// Header
+grid.innerHTML = '<div class="heatmap-label"></div>' + heatDays.map(d=>`<div class="heatmap-header">${d}</div>`).join('');
+
+heatHours.forEach((hb, ri) => {
+  grid.innerHTML += `<div class="heatmap-label">${hb.label}</div>`;
+  heatDays.forEach((_, ci) => {
+    const v = heatData[ri][ci];
+    const intensity = v ? v/globalMax : 0;
+    const alpha = v ? Math.max(0.08, intensity) : 0.03;
+    const isTop = (ri===topRow && ci===topCol);
+    const cls = isTop ? 'heatmap-cell best-slot' : 'heatmap-cell';
+    const bg = `rgba(167,139,250,${alpha.toFixed(2)})`;
+    const txt = v ? v : '–';
+    const title = v ? `${heatDays[ci]} ${hb.label}: alcance médio ${v}` : 'Sem dados';
+    grid.innerHTML += `<div class="${cls}" style="background:${bg}" title="${title}">${txt}</div>`;
+  });
 });
 </script>
-
 </body>
 </html>
