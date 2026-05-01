@@ -880,6 +880,69 @@ export default function Home() {
             title="Quando publicar para maximizar alcance e engajamento"
             description="Análise baseada nos timestamps reais dos posts com maior engajamento. Os dados são do seu perfil — não benchmarks genéricos."
           />
+
+          {/* ── Card: Melhor Momento Agora (tempo real) ── */}
+          {(() => {
+            const now = new Date();
+            const diasPT = ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
+            const diaAtual = diasPT[now.getDay()];
+            const horaAtual = now.getHours();
+            const bestDay = timingAnalysis.bestDays[0];
+            const bestHour = timingAnalysis.bestHours[0];
+            const optWindow = timingAnalysis.optimalWindows[0];
+            const bestHourNum = bestHour ? parseInt(String(bestHour.hour).replace('h','').split(':')[0]) : -1;
+            const isNowBestDay = bestDay ? diaAtual.toLowerCase().startsWith(bestDay.day.toLowerCase().slice(0,3)) : false;
+            const isNowBestHour = bestHourNum >= 0 && Math.abs(horaAtual - bestHourNum) <= 1;
+            const isIdeal = isNowBestDay && isNowBestHour;
+            const isGood = isNowBestDay || isNowBestHour;
+            const borderClass = isIdeal ? 'border-emerald-400/40 bg-emerald-400/6' : isGood ? 'border-amber-400/30 bg-amber-400/5' : 'border-[#d4b08b]/20 bg-[#d4b08b]/4';
+            const statusLabel = isIdeal ? '🟢 AGORA É O MOMENTO IDEAL — PUBLIQUE JÁ' : isGood ? '🟡 BOM MOMENTO — QUASE LÁ' : '📅 PRÓXIMO MELHOR MOMENTO';
+            const statusColor = isIdeal ? 'text-emerald-300' : isGood ? 'text-amber-300' : 'text-[#d4b08b]';
+            return (
+              <article className={`rounded-[1.6rem] border p-5 sm:p-6 ${borderClass}`}>
+                <div className="flex flex-wrap items-center justify-between gap-3 mb-5">
+                  <div className="flex items-center gap-2">
+                    <Zap className="h-5 w-5 text-[#d4b08b]" />
+                    <span className="text-[0.68rem] uppercase tracking-[0.2em] font-semibold text-[#d4b08b]">Melhor Momento — Agora</span>
+                  </div>
+                  <span className={`text-xs font-bold uppercase tracking-wide ${statusColor}`}>{statusLabel}</span>
+                </div>
+                <div className="grid gap-3 sm:grid-cols-3">
+                  <div className="rounded-[1.2rem] border border-white/8 bg-white/4 p-4 text-center">
+                    <p className="text-[0.62rem] uppercase tracking-[0.18em] text-white/40 mb-2">Hoje (BRT)</p>
+                    <p className="text-2xl font-black text-white">{diaAtual}</p>
+                    <p className={`mt-1 text-xs font-semibold ${isNowBestDay ? 'text-emerald-300' : 'text-white/40'}`}>
+                      {isNowBestDay ? '✓ Dia top' : `Top: ${bestDay?.day ?? '—'}`}
+                    </p>
+                  </div>
+                  <div className="rounded-[1.2rem] border border-white/8 bg-white/4 p-4 text-center">
+                    <p className="text-[0.62rem] uppercase tracking-[0.18em] text-white/40 mb-2">Hora atual (BRT)</p>
+                    <p className="text-2xl font-black text-white">{String(horaAtual).padStart(2,'0')}h</p>
+                    <p className={`mt-1 text-xs font-semibold ${isNowBestHour ? 'text-emerald-300' : 'text-white/40'}`}>
+                      {isNowBestHour ? '✓ Hora top' : `Top: ${bestHour?.hour ?? '—'}`}
+                    </p>
+                  </div>
+                  <div className="rounded-[1.2rem] border border-[#d4b08b]/20 bg-[#d4b08b]/8 p-4 text-center">
+                    <p className="text-[0.62rem] uppercase tracking-[0.18em] text-[#d4b08b]/60 mb-2">Janela #1 recomendada</p>
+                    <p className="text-base font-black text-white leading-tight">{optWindow?.day ?? '—'}</p>
+                    <p className="text-[#d4b08b] font-bold text-sm mt-1">{optWindow?.hour ?? '—'}</p>
+                  </div>
+                </div>
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  <div className="rounded-[1.1rem] border border-white/6 bg-white/3 px-4 py-3">
+                    <p className="text-[0.62rem] uppercase tracking-[0.16em] text-white/36 mb-1">Melhor dia geral</p>
+                    <p className="text-sm font-bold text-white">{bestDay?.day ?? '—'} <span className="text-[#d4b08b] font-normal text-xs">· eng. médio {bestDay?.avgEngagement.toFixed(1) ?? '—'}</span></p>
+                  </div>
+                  <div className="rounded-[1.1rem] border border-white/6 bg-white/3 px-4 py-3">
+                    <p className="text-[0.62rem] uppercase tracking-[0.16em] text-white/36 mb-1">Melhor hora geral</p>
+                    <p className="text-sm font-bold text-white">{bestHour?.hour ?? '—'} <span className="text-[#d4b08b] font-normal text-xs">· {bestHour?.label ?? ''}</span></p>
+                  </div>
+                </div>
+                <p className="mt-3 text-[0.68rem] text-white/32 text-center">Baseado em {timingAnalysis.bestDays.reduce((a,d)=>a+d.postsAnalyzed,0)} posts · Atualiza em tempo real com o relógio do seu dispositivo</p>
+              </article>
+            );
+          })()}
+
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {timingAnalysis.bestDays.slice(0,3).map((d) => (
               <article key={d.day} className="panel p-5">
