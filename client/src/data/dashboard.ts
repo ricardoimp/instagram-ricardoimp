@@ -1,7 +1,7 @@
 // Script Mestre — Auditoria Completa de Perfil @ricardoimp
 // Estrutura de 4 camadas: raw_data | analytics_tables | executive_summary | scorecards
-// Última coleta: 28 abr 2026 — Instagram MCP + Meta Marketing MCP
-// 19 posts analisados | 16 com insights completos
+// Última coleta: 01 mai 2026 — Instagram MCP + Meta Marketing MCP
+// 20 posts analisados | 18 com insights completos
 
 // ─────────────────────────────────────────────────────────────
 // TIPOS
@@ -71,10 +71,15 @@ export const profileIdentity = {
   social_proof_presence: true,
   commercial_offer_presence: false,
   website: 'http://saiba-mais.ai',
-  collected_at: '2026-04-28T18:00:00Z',
+  collected_at: '2026-05-01T13:00:00Z',
 };
 
 export const postsRaw: PostRaw[] = [
+  { id: '18101215795990406', date: '2026-04-28T15:01:05Z', type: 'VIDEO', media_product_type: 'REELS',
+    caption: 'Toda viagem revela 3 versões suas:\nA que você sustenta hoje.\nA que já não faz mais sentido.\nE a que está esperando uma decisão sua.\n#canada #instagram #trip #photography #paz',
+    likes: 1, comments: 0, reach: null, views: null, saved: null, total_interactions: 1,
+    hashtags: ['canada','instagram','trip','photography','paz'], mentions: [],
+    permalink: 'https://www.instagram.com/reel/DXrfolmgNUe/' },
   { id: '18338572129171422', date: '2026-04-28T14:58:39Z', type: 'VIDEO', media_product_type: 'REELS',
     caption: 'Toda viagem revela 3 versões suas:\nA que você sustenta hoje.\nA que já não faz mais sentido.\nE a que está esperando uma decisão sua.\n#canada #instagram #trip #photography #paz',
     likes: 8, comments: 1, reach: 221, views: 290, saved: 0, total_interactions: 9,
@@ -166,25 +171,25 @@ export const postsRaw: PostRaw[] = [
 // CAMADA 2 — ANALYTICS TABLES
 // ─────────────────────────────────────────────────────────────
 export const profileMetrics = {
-  followers: 62223,
+  followers: 62189,
   following: 330,
-  posts_total: 3002,
-  follower_following_ratio: 188.6,
-  posts_per_week_estimated: 2.3,
-  reels_share_pct: 47.4,
-  feed_image_share_pct: 26.3,
-  carousel_share_pct: 26.3,
+  posts_total: 3004,
+  follower_following_ratio: 188.5,
+  posts_per_week_estimated: 2.5,
+  reels_share_pct: 50.0,
+  feed_image_share_pct: 25.0,
+  carousel_share_pct: 25.0,
   source: 'observed',
-  collected_at: '2026-04-28T18:00:00Z',
+  collected_at: '2026-05-01T13:00:00Z',
 };
 
 export const calculatedFields = {
-  avg_likes_last_20: 18.6,
-  avg_comments_last_20: 2.0,
-  avg_views_last_20: 573.4,
-  avg_reach_last_20: 344.6,
-  avg_interactions_last_20: 19.2,
-  median_likes: 15,
+  avg_likes_last_20: 17.9,
+  avg_comments_last_20: 2.1,
+  avg_views_last_20: 578.2,
+  avg_reach_last_20: 349.3,
+  avg_interactions_last_20: 20.1,
+  median_likes: 16,
   median_comments: 1,
   avg_caption_length: 152,
   avg_hashtags_per_post: 2.4,
@@ -432,8 +437,8 @@ export const metaAds = {
 // DATA QUALITY
 // ─────────────────────────────────────────────────────────────
 export const dataQuality = {
-  posts_analyzed: 17,
-  posts_with_full_insights: 16,
+  posts_analyzed: 20,
+  posts_with_insights: 18,
   completeness_pct: 94.1,
   confidence_global: 'medium-high',
   limitations: [
@@ -443,8 +448,8 @@ export const dataQuality = {
     'Comentários individuais não coletados',
     'Meta Ads sem dados de entrega (last_30d e last_90d)',
   ],
-  collection_notes: 'Coleta via Instagram MCP oficial. 17 posts com insights. Meta Ads consultado — zero entrega registrada.',
-  collected_at: '2026-04-28T18:00:00Z',
+  collection_notes: 'Coleta via Instagram MCP oficial. 18 posts com insights. Meta Ads consultado — zero entrega registrada.',
+  collected_at: '2026-05-01T13:00:00Z',
 };
 
 // ─────────────────────────────────────────────────────────────

@@ -830,7 +830,7 @@ export default function Home() {
                     <p className="text-xs text-white/44">Posts analisados</p>
                   </div>
                   <div className="rounded-2xl border border-white/6 bg-white/4 p-3 text-center">
-                    <p className="text-xl font-bold text-white">{dataQuality.posts_with_full_insights}</p>
+                    <p className="text-xl font-bold text-white">{dataQuality.posts_with_insights}</p>
                     <p className="text-xs text-white/44">Com insights completos</p>
                   </div>
                 </div>
