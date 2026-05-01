@@ -552,3 +552,269 @@ export const dashboardData = {
 };
 
 export type DashboardData = typeof dashboardData;
+
+// ─────────────────────────────────────────────────────────────
+// BLOCO 11 — ANÁLISE DE HORÁRIOS
+// Calculado a partir dos timestamps reais dos posts com insights
+// ─────────────────────────────────────────────────────────────
+export const timingAnalysis = {
+  note: 'Baseado em 18 posts com timestamps reais — BRT (UTC-3)',
+  bestDays: [
+    { day: 'Sábado', avgEngagement: 24.0, postsAnalyzed: 2, score: 10, label: 'MELHOR DIA', color: 'gold' },
+    { day: 'Quarta', avgEngagement: 24.0, postsAnalyzed: 2, score: 10, label: 'MELHOR DIA', color: 'gold' },
+    { day: 'Sexta', avgEngagement: 23.7, postsAnalyzed: 3, score: 9, label: 'ÓTIMO', color: 'green' },
+    { day: 'Domingo', avgEngagement: 21.0, postsAnalyzed: 1, score: 8, label: 'BOM', color: 'green' },
+    { day: 'Terça', avgEngagement: 13.8, postsAnalyzed: 5, score: 5, label: 'MÉDIO', color: 'yellow' },
+    { day: 'Quinta', avgEngagement: 12.3, postsAnalyzed: 3, score: 4, label: 'FRACO', color: 'orange' },
+    { day: 'Segunda', avgEngagement: 10.5, postsAnalyzed: 2, score: 3, label: 'EVITAR', color: 'red' },
+  ],
+  bestHours: [
+    { hour: '14h', avgEngagement: 39.0, postsAnalyzed: 1, score: 10, label: 'PICO MÁXIMO', color: 'gold' },
+    { hour: '10h', avgEngagement: 21.3, postsAnalyzed: 3, score: 8, label: 'MANHÃ FORTE', color: 'green' },
+    { hour: '19h', avgEngagement: 21.0, postsAnalyzed: 1, score: 8, label: 'NOITE FORTE', color: 'green' },
+    { hour: '11h', avgEngagement: 18.2, postsAnalyzed: 5, score: 7, label: 'MANHÃ BOA', color: 'green' },
+    { hour: '12h', avgEngagement: 13.3, postsAnalyzed: 6, score: 5, label: 'ALMOÇO MÉDIO', color: 'yellow' },
+    { hour: '21h', avgEngagement: 10.0, postsAnalyzed: 2, score: 4, label: 'NOITE FRACA', color: 'orange' },
+  ],
+  optimalWindows: [
+    { label: 'Janela #1 — Ouro', day: 'Sábado ou Quarta', hour: '14h', expectedEng: '35-45', rationale: 'Combinação do melhor dia + melhor hora. Máximo potencial de alcance.' },
+    { label: 'Janela #2 — Prata', day: 'Sexta', hour: '10h–11h', expectedEng: '20-30', rationale: 'Sexta de manhã captura audiência antes do fim de semana. Boa retenção.' },
+    { label: 'Janela #3 — Bronze', day: 'Quarta', hour: '11h', expectedEng: '18-25', rationale: 'Meio de semana com manhã ativa. Consistente para carrosséis e imagens.' },
+  ],
+  weeklyCalendar: [
+    { day: 'Segunda', recommended: false, reason: 'Menor engajamento médio (10.5). Reservar para Stories apenas.' },
+    { day: 'Terça', recommended: false, reason: 'Engajamento médio (13.8). Usar apenas se o conteúdo for urgente.' },
+    { day: 'Quarta', recommended: true, reason: 'Top 1 por engajamento médio (24.0). Ideal para Reels e carrosséis.' },
+    { day: 'Quinta', recommended: false, reason: 'Fraco (12.3). Evitar posts principais.' },
+    { day: 'Sexta', recommended: true, reason: 'Top 3 (23.7). Ótimo para imagens e posts emocionais.' },
+    { day: 'Sábado', recommended: true, reason: 'Top 1 (24.0). Audiência mais disponível. Melhor para Reels premium.' },
+    { day: 'Domingo', recommended: true, reason: 'Bom (21.0). Conteúdo reflexivo e âncora emocional performam bem.' },
+  ],
+  postingFrequency: {
+    current: '2.3 posts/semana',
+    recommended: '4-5 posts/semana',
+    gap: 'Você está publicando menos da metade do ideal. Cada post a menos é alcance perdido.',
+    storiesRecommended: '1-2 Stories/dia',
+    storiesCurrent: 'Não monitorado',
+  },
+};
+
+// ─────────────────────────────────────────────────────────────
+// BLOCO 12 — STORIES
+// API Instagram não retorna insights de Stories expirados.
+// Estrutura preparada para receber dados quando disponíveis.
+// ─────────────────────────────────────────────────────────────
+export const storiesData = {
+  apiNote: 'Stories expiram em 24h. A API do Instagram só retorna insights de Stories ativos. Dados históricos não disponíveis via API pública.',
+  activeStories: [] as Array<{
+    id: string;
+    timestamp: string;
+    media_type: string;
+    reach: number;
+    impressions: number;
+    replies: number;
+    exits: number;
+    taps_forward: number;
+    taps_back: number;
+  }>,
+  recommendations: [
+    { priority: 1, action: 'Publicar 1-2 Stories por dia', rationale: 'Stories diários mantêm o perfil ativo no feed de seguidores e aumentam visibilidade orgânica em até 40%.' },
+    { priority: 2, action: 'Usar caixa de perguntas toda quarta-feira', rationale: 'Gera respostas diretas, aumenta DMs e sinaliza para o algoritmo que sua audiência está engajada.' },
+    { priority: 3, action: 'Criar Story de bastidor de cada post publicado', rationale: 'Amplifica o alcance do post principal e cria contexto. Formato: "Por que publiquei isso hoje".' },
+    { priority: 4, action: 'Story de enquete sobre próximo destino/decisão', rationale: 'Enquetes têm taxa de resposta 3x maior que posts. Gera dados sobre o que sua audiência quer ver.' },
+    { priority: 5, action: 'Criar Destaque "Empresas" e "Bastidores"', rationale: 'Destaques são a vitrine do perfil. Novos visitantes decidem seguir ou não em 8 segundos — destaques com prova social convertem.' },
+  ],
+  contentIdeas: [
+    { type: 'Bastidor', format: 'Vídeo curto 15s', idea: '"Tomei essa decisão hoje — veja o raciocínio"', frequency: 'Após cada post de negócios' },
+    { type: 'Pergunta', format: 'Caixa de texto', idea: '"Qual é o maior obstáculo que você enfrenta para ter liberdade financeira?"', frequency: 'Toda quarta' },
+    { type: 'Enquete', format: 'Enquete 2 opções', idea: '"Próximo destino: Ásia ou Oriente Médio?"', frequency: 'Toda sexta' },
+    { type: 'Contagem', format: 'Sticker de contagem', idea: '"Em X dias vou revelar minha nova empresa"', frequency: 'Antes de lançamentos' },
+    { type: 'Repost', format: 'Compartilhar post', idea: 'Repostar feed no Story com "Você viu esse?"', frequency: 'Todo post publicado' },
+  ],
+  kpis: {
+    targetReach: '5-10% dos seguidores por Story (3.111–6.222)',
+    targetReplies: '0.5% de replies (311)',
+    targetExitRate: 'Abaixo de 30%',
+    targetTapsForward: 'Abaixo de 50% (conteúdo retém atenção)',
+  },
+};
+
+// ─────────────────────────────────────────────────────────────
+// BLOCO 13 — INSIGHTS ESTRATÉGICOS
+// Análise direta de um estrategista de redes sociais sênior
+// ─────────────────────────────────────────────────────────────
+export const strategistInsights = {
+  overallDiagnosis: {
+    grade: 'C+',
+    summary: 'Perfil com autoridade real e estética forte, mas conversão próxima de zero. Você tem o produto, falta o funil.',
+    mainProblem: 'Você está construindo audiência passiva. 62k seguidores que admiram mas não agem. O problema não é alcance — é ausência de CTA, funil e consistência estratégica.',
+  },
+  criticalActions: [
+    {
+      priority: 1,
+      urgency: 'IMEDIATO',
+      action: 'Adicionar CTA em 100% dos posts',
+      detail: 'Hoje menos de 30% dos seus posts têm chamada para ação. Isso significa que 70% do seu conteúdo não gera nenhum movimento. CTA mínimo: "Comenta X", "Salva para quando precisar", "Link na bio para Y".',
+      expectedImpact: '+40-60% em comentários e cliques',
+      howTo: 'Última linha de toda legenda = CTA. Sem exceção. Teste 3 formatos: pergunta direta, comando de salvar, link na bio.',
+    },
+    {
+      priority: 2,
+      urgency: 'ESTA SEMANA',
+      action: 'Criar série semanal recorrente',
+      detail: 'Perfis que crescem têm séries. Você precisa de um formato que sua audiência espere toda semana. Sugestão: "Decisão da semana" — toda quarta, um bastidor de uma decisão empresarial real.',
+      expectedImpact: '+25-35% em seguidores/mês por consistência',
+      howTo: 'Escolha um formato. Publique 4 semanas seguidas. Meça. Ajuste. Não mude o formato antes de 4 semanas.',
+    },
+    {
+      priority: 3,
+      urgency: 'ESTA SEMANA',
+      action: 'Ativar Stories diários',
+      detail: 'Você não tem presença em Stories. Isso é invisibilidade no algoritmo. Perfis sem Stories diários perdem posição no feed de seguidores. Mínimo: 1 Story/dia.',
+      expectedImpact: '+15-20% de alcance orgânico nos posts',
+      howTo: 'Regra simples: toda vez que publicar um post, publique 1 Story relacionado. Bastidor, contexto ou enquete.',
+    },
+    {
+      priority: 4,
+      urgency: 'PRÓXIMOS 7 DIAS',
+      action: 'Mencionar o link da bio em todo Reel',
+      detail: 'O link saiba-mais.ai não aparece em nenhum post analisado. Você tem um ativo de conversão invisível. Cada Reel sem menção ao link é receita desperdiçada.',
+      expectedImpact: '+50-100 cliques/semana no link da bio',
+      howTo: 'Nos últimos 3 segundos de todo Reel: "Acessa o link na bio para [benefício específico]". Nos carrosséis: último slide = CTA com link.',
+    },
+    {
+      priority: 5,
+      urgency: 'PRÓXIMOS 14 DIAS',
+      action: 'Criar carrossel manifesto sobre liberdade estratégica',
+      detail: 'Você tem a tese mais forte do seu nicho — "liberdade é estratégia" — mas ela não está em nenhum post. Um carrossel de 8-10 slides explicando sua filosofia pode viralizar e atrair seguidores qualificados.',
+      expectedImpact: 'Potencial de 3-5x o alcance médio. Conteúdo evergreen que continua gerando seguidores por meses.',
+      howTo: 'Slide 1: "A maioria das pessoas acha que liberdade é sorte. Errado." → Slides 2-9: seus 7 princípios → Slide 10: CTA + link.',
+    },
+    {
+      priority: 6,
+      urgency: 'PRÓXIMOS 30 DIAS',
+      action: 'Criar destaque "Prova Social" no perfil',
+      detail: 'Novos visitantes decidem seguir em 8 segundos. Você tem 7 empresas, 2 vendidas, govtech, 37 países — mas isso não aparece de forma visual no perfil. Um destaque com prints, resultados e conquistas converte visitante em seguidor.',
+      expectedImpact: '+10-15% na taxa de conversão de visitante para seguidor',
+      howTo: 'Criar 5-8 Stories com: empresa, resultado, número, foto. Salvar em destaque "Resultados" ou "Empresas".',
+    },
+  ],
+  contentFormula: {
+    title: 'Fórmula que funciona para @ricardoimp',
+    formula: 'Cenário premium + âncora emocional real + tese de negócio + CTA direto',
+    proof: 'Sardinha Lisboa (49 interações, 1197 alcance) e Post do Neto (39 interações) confirmam: quando você combina lugar/momento real com tese de construção, o engajamento triplica.',
+    antiFormula: 'Reel de movimento puro sem argumento = views sem ação. LA→LV e Canadá provam isso.',
+  },
+  growthTargets: {
+    followers30d: '+500 seguidores em 30 dias (meta conservadora com estratégia ativa)',
+    followers90d: '+2.000 seguidores em 90 dias (com série semanal + Stories diários)',
+    erTarget: '0.08% ER médio (hoje 0.031% — meta realista em 60 dias)',
+    reachTarget: '600 alcance médio por post (hoje 344)',
+  },
+  weeklyChecklist: [
+    { day: 'Domingo', task: 'Planejar 4-5 posts da semana. Definir CTA de cada um.' },
+    { day: 'Segunda', task: 'Story de bastidor ou enquete. Sem post de feed.' },
+    { day: 'Quarta', task: 'Post principal da semana (Reel ou carrossel). Melhor dia.' },
+    { day: 'Quinta', task: 'Story de engajamento (caixa de perguntas).' },
+    { day: 'Sexta', task: 'Post emocional ou de autoridade. Segundo melhor dia.' },
+    { day: 'Sábado', task: 'Reel premium ou carrossel de viagem com tese. Melhor dia para Reels.' },
+    { day: 'Domingo', task: 'Story reflexivo + análise rápida do que performou na semana.' },
+  ],
+};
+
+// ─────────────────────────────────────────────────────────────
+// BLOCO 14 — GUIA DE PATROCINADO
+// O que, como e quanto patrocinar — baseado no seu conteúdo
+// ─────────────────────────────────────────────────────────────
+export const sponsoredGuide = {
+  currentStatus: {
+    campaign: 'Las Vegas do alto',
+    status: 'ATIVA — SEM ENTREGA',
+    budget: 'R$35/dia',
+    objective: 'LINK_CLICKS',
+    problem: 'Campanha com objetivo errado para o estágio atual do perfil. LINK_CLICKS pressupõe audiência quente. Você precisa primeiro de alcance e engajamento.',
+    recommendation: 'PAUSAR esta campanha. Recriar com objetivo REACH ou VIDEO_VIEWS.',
+  },
+  whatToSponsor: [
+    {
+      rank: 1,
+      content: 'Sardinha Lisboa (melhor Reel — 1197 alcance orgânico)',
+      why: 'Já provou que funciona organicamente. Patrocinar conteúdo que já performa é 3x mais eficiente que criar novo.',
+      objective: 'REACH',
+      budget: 'R$25-50/dia por 5-7 dias',
+      expectedResult: '15.000-30.000 alcance adicional',
+      audience: 'Empreendedores 30-50 anos, Brasil + Portugal + Argentina',
+    },
+    {
+      rank: 2,
+      content: 'Post do Neto (âncora emocional — 39 interações)',
+      why: 'Conteúdo emocional com alta taxa de comentários. Ideal para engajamento e novos seguidores.',
+      objective: 'ENGAGEMENT',
+      budget: 'R$20-35/dia por 5 dias',
+      expectedResult: '+200-400 interações, +50-100 seguidores',
+      audience: 'Homens 35-55, empreendedores, pais, Brasil',
+    },
+    {
+      rank: 3,
+      content: 'Carrossel manifesto (a criar — "Liberdade é estratégia")',
+      why: 'Conteúdo de autoridade evergreen. Ideal para atrair seguidores qualificados que se identificam com a tese.',
+      objective: 'REACH + FOLLOWS',
+      budget: 'R$50-100/dia por 7-10 dias',
+      expectedResult: '+500-1.000 seguidores qualificados',
+      audience: 'Empreendedores 28-50, interesse em liberdade financeira, negócios, viagens',
+    },
+    {
+      rank: 4,
+      content: 'Reel de bastidor empresarial (a criar)',
+      why: 'Conteúdo de bastidor com prova de resultado converte melhor para tráfego qualificado para o link da bio.',
+      objective: 'TRAFFIC (link na bio)',
+      budget: 'R$30-60/dia por 7 dias',
+      expectedResult: '300-600 cliques no link da bio',
+      audience: 'Interessados em empreendedorismo, IA, govtech, 25-45 anos',
+    },
+  ],
+  howToSponsor: [
+    {
+      step: 1,
+      title: 'Escolha o conteúdo certo',
+      detail: 'Nunca patrocine conteúdo que não performou organicamente. Se não funcionou de graça, dinheiro não resolve. Regra: só patrocinar post com ER acima da média do perfil (>0.031%).',
+    },
+    {
+      step: 2,
+      title: 'Defina o objetivo correto',
+      detail: 'REACH: para novos seguidores e visibilidade. ENGAGEMENT: para comentários e interações. TRAFFIC: para cliques no link. Nunca use LINK_CLICKS em conteúdo de topo de funil.',
+    },
+    {
+      step: 3,
+      title: 'Configure a audiência certa',
+      detail: 'Público principal: Homens 30-50, Brasil, interesse em empreendedorismo + viagens + tecnologia. Público lookalike: similar aos seus atuais seguidores (criar no Ads Manager).',
+    },
+    {
+      step: 4,
+      title: 'Defina orçamento e duração',
+      detail: 'Mínimo R$20/dia por 5 dias para ter dados suficientes. Nunca pausar antes de 3 dias — o algoritmo precisa de tempo para otimizar. Budget ideal para teste: R$150-300 por campanha.',
+    },
+    {
+      step: 5,
+      title: 'Meça os resultados certos',
+      detail: 'Para REACH: CPM (custo por mil). Para ENGAGEMENT: custo por interação. Para TRAFFIC: CPC (custo por clique). Benchmark: CPM < R$8, CPC < R$1,50.',
+    },
+    {
+      step: 6,
+      title: 'Escale o que funciona',
+      detail: 'Se uma campanha tiver CPM < R$6 ou CPC < R$1, dobre o orçamento. Se estiver acima de R$12 CPM, pause e teste nova criativa ou audiência.',
+    },
+  ],
+  monthlyBudgetSuggestion: {
+    conservative: 'R$300/mês — 2 campanhas de R$150 cada',
+    moderate: 'R$600/mês — 3-4 campanhas rotativas',
+    aggressive: 'R$1.200/mês — campanha sempre ativa + testes A/B',
+    recommendation: 'Começar com R$300/mês. Testar 2 conteúdos diferentes. Escalar o que funcionar no mês seguinte.',
+  },
+  audienceSegments: [
+    { name: 'Core', description: 'Empreendedores brasileiros 30-50 anos', size: '2-5M', priority: 'Alta' },
+    { name: 'Viajantes premium', description: 'Viajantes frequentes, renda alta, 28-50 anos', size: '1-3M', priority: 'Alta' },
+    { name: 'Lusófono internacional', description: 'PT + BR + AO — empreendedores', size: '3-8M', priority: 'Média' },
+    { name: 'Lookalike seguidores', description: 'Similar aos 62k atuais', size: 'Calculado pelo Meta', priority: 'Muito Alta' },
+  ],
+};

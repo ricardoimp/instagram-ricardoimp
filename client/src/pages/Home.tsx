@@ -1,7 +1,7 @@
 // Design philosophy: editorial executivo cinematográfico.
 // Regra do arquivo: leitura mobile first, assimetria controlada, atmosfera premium e decisão estratégica acima de decoração.
 
-import { dashboardData, scorecards, postingPatterns, captionAnalysis, contentTaxonomy, topPostsByReach, topReelsByViews, calculatedFields, commercialSignals, brandPositioning, dataQuality } from '@/data/dashboard';
+import { dashboardData, scorecards, postingPatterns, captionAnalysis, contentTaxonomy, topPostsByReach, topReelsByViews, calculatedFields, commercialSignals, brandPositioning, dataQuality, timingAnalysis, storiesData, strategistInsights, sponsoredGuide } from '@/data/dashboard';
 import {
   ArrowRight,
   BarChart3,
@@ -27,6 +27,17 @@ import {
   Star,
   TrendingDown,
   Video,
+  Clock,
+  Camera,
+  Lightbulb,
+  Megaphone,
+  Calendar,
+  CheckCircle,
+  AlertTriangle,
+  DollarSign,
+  Users,
+  Play,
+  Zap,
 } from 'lucide-react';
 
 function SectionHeader({
@@ -184,6 +195,10 @@ export default function Home() {
                 <NavPill href="#profundo" label="Análise" icon={Radar} />
                 <NavPill href="#audiencia" label="Audiência" icon={UserRound} />
                 <NavPill href="#decisao" label="Ação" icon={Target} />
+                <NavPill href="#horarios" label="Horários" icon={Clock} />
+                <NavPill href="#stories" label="Stories" icon={Camera} />
+                <NavPill href="#insights" label="Insights" icon={Lightbulb} />
+                <NavPill href="#patrocinado" label="Patrocinado" icon={Megaphone} />
                 <NavPill href="#metaads" label="Meta Ads" icon={WalletCards} />
               </div>
             </div>
@@ -858,6 +873,398 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── BLOCO: HORÁRIOS ── */}
+        <section id="horarios" className="space-y-8">
+          <SectionHeader
+            eyebrow="Horários · Timing estratégico"
+            title="Quando publicar para maximizar alcance e engajamento"
+            description="Análise baseada nos timestamps reais dos posts com maior engajamento. Os dados são do seu perfil — não benchmarks genéricos."
+          />
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            {timingAnalysis.bestDays.slice(0,3).map((d) => (
+              <article key={d.day} className="panel p-5">
+                <div className="flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-3">
+                    <Calendar className="h-5 w-5 text-[#d4b08b]" />
+                    <h3 className="text-base font-semibold text-white">{d.day}</h3>
+                  </div>
+                  <span className={`rounded-full px-3 py-1 text-[0.68rem] uppercase tracking-[0.18em] font-medium ${
+                    d.color === 'gold' ? 'bg-amber-400/15 text-amber-200 border border-amber-400/20' :
+                    d.color === 'green' ? 'bg-emerald-400/15 text-emerald-300 border border-emerald-400/20' :
+                    'bg-white/6 text-white/60 border border-white/8'
+                  }`}>{d.label}</span>
+                </div>
+                <p className="mt-4 text-3xl font-bold text-white">{d.avgEngagement.toFixed(1)}</p>
+                <p className="mt-1 text-xs text-white/44">eng. médio · {d.postsAnalyzed} posts analisados</p>
+              </article>
+            ))}
+          </div>
+          <div className="grid gap-4 lg:grid-cols-[1fr_1fr]">
+            <article className="panel p-5 sm:p-6">
+              <div className="flex items-center gap-3">
+                <Clock className="h-5 w-5 text-[#d4b08b]" />
+                <h3 className="text-base font-semibold text-white">Melhores horários (BRT)</h3>
+              </div>
+              <div className="mt-5 space-y-3">
+                {timingAnalysis.bestHours.map((h) => (
+                  <div key={h.hour} className="flex items-center gap-4 rounded-[1.4rem] border border-white/8 bg-white/4 px-4 py-3">
+                    <span className="text-lg font-bold text-[#d4b08b] w-12 shrink-0">{h.hour}</span>
+                    <div className="flex-1">
+                      <div className="flex justify-between text-xs text-white/60 mb-1">
+                        <span>{h.label}</span>
+                        <span>eng. {h.avgEngagement.toFixed(1)}</span>
+                      </div>
+                      <div className="h-1.5 w-full rounded-full bg-white/8">
+                        <div className="h-1.5 rounded-full bg-[#d4b08b]" style={{ width: `${(h.score/10)*100}%` }} />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </article>
+            <article className="panel p-5 sm:p-6">
+              <div className="flex items-center gap-3">
+                <Zap className="h-5 w-5 text-[#d4b08b]" />
+                <h3 className="text-base font-semibold text-white">Janelas ideais de publicação</h3>
+              </div>
+              <div className="mt-5 space-y-4">
+                {timingAnalysis.optimalWindows.map((w) => (
+                  <div key={w.label} className="rounded-[1.4rem] border border-white/8 bg-white/4 p-4">
+                    <p className="text-[0.68rem] uppercase tracking-[0.18em] text-[#d4b08b] font-medium">{w.label}</p>
+                    <p className="mt-2 text-sm font-semibold text-white">{w.day} · {w.hour}</p>
+                    <p className="mt-1 text-xs text-white/56">{w.rationale}</p>
+                    <p className="mt-2 text-xs font-medium text-emerald-300">Eng. esperado: {w.expectedEng}</p>
+                  </div>
+                ))}
+              </div>
+            </article>
+          </div>
+          <article className="panel p-5 sm:p-6">
+            <div className="flex items-center gap-3">
+              <Calendar className="h-5 w-5 text-[#d4b08b]" />
+              <h3 className="text-base font-semibold text-white">Calendário semanal recomendado</h3>
+            </div>
+            <div className="mt-5 grid gap-2 sm:grid-cols-7">
+              {timingAnalysis.weeklyCalendar.map((d) => (
+                <div key={d.day} className={`rounded-[1.2rem] border p-3 text-center ${
+                  d.recommended ? 'border-emerald-400/20 bg-emerald-400/8' : 'border-white/6 bg-white/3'
+                }`}>
+                  <p className={`text-xs font-semibold ${
+                    d.recommended ? 'text-emerald-300' : 'text-white/40'
+                  }`}>{d.day.slice(0,3)}</p>
+                  <p className="mt-1 text-[0.6rem] text-white/44 leading-4">{d.reason.slice(0,30)}...</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-[1.4rem] border border-amber-400/20 bg-amber-400/8 p-4">
+                <p className="text-[0.68rem] uppercase tracking-[0.18em] text-amber-300">Frequência atual</p>
+                <p className="mt-2 text-lg font-bold text-white">{timingAnalysis.postingFrequency.current}</p>
+                <p className="mt-1 text-xs text-white/56">{timingAnalysis.postingFrequency.gap}</p>
+              </div>
+              <div className="rounded-[1.4rem] border border-emerald-400/20 bg-emerald-400/8 p-4">
+                <p className="text-[0.68rem] uppercase tracking-[0.18em] text-emerald-300">Meta recomendada</p>
+                <p className="mt-2 text-lg font-bold text-white">{timingAnalysis.postingFrequency.recommended}</p>
+                <p className="mt-1 text-xs text-white/56">+ {timingAnalysis.postingFrequency.storiesRecommended}</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        {/* ── BLOCO: STORIES ── */}
+        <section id="stories" className="space-y-8">
+          <SectionHeader
+            eyebrow="Stories · Monitoramento"
+            title="Stories diários são o motor invisível do algoritmo"
+            description="A API do Instagram só retorna insights de Stories ativos (últimas 24h). Dados históricos não estão disponíveis. O bloco abaixo mostra o plano estratégico e as recomendações baseadas no seu perfil."
+          />
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <article className="panel p-5">
+              <div className="flex items-center gap-3">
+                <Camera className="h-5 w-5 text-[#d4b08b]" />
+                <h3 className="text-sm font-semibold text-white">Status atual</h3>
+              </div>
+              <p className="mt-4 text-2xl font-bold text-amber-300">Não monitorado</p>
+              <p className="mt-2 text-xs text-white/44">Stories expiram em 24h. Dados históricos indisponíveis via API.</p>
+            </article>
+            <article className="panel p-5">
+              <div className="flex items-center gap-3">
+                <Target className="h-5 w-5 text-[#d4b08b]" />
+                <h3 className="text-sm font-semibold text-white">Meta de alcance</h3>
+              </div>
+              <p className="mt-4 text-lg font-bold text-white">{storiesData.kpis.targetReach}</p>
+              <p className="mt-2 text-xs text-white/44">5-10% dos seguidores por Story</p>
+            </article>
+            <article className="panel p-5">
+              <div className="flex items-center gap-3">
+                <Play className="h-5 w-5 text-[#d4b08b]" />
+                <h3 className="text-sm font-semibold text-white">Exit rate alvo</h3>
+              </div>
+              <p className="mt-4 text-lg font-bold text-white">{storiesData.kpis.targetExitRate}</p>
+              <p className="mt-2 text-xs text-white/44">Conteúdo que retém atenção</p>
+            </article>
+          </div>
+          <div className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
+            <article className="panel p-5 sm:p-6">
+              <div className="flex items-center gap-3">
+                <CheckCircle className="h-5 w-5 text-[#d4b08b]" />
+                <h3 className="text-base font-semibold text-white">Recomendações estratégicas</h3>
+              </div>
+              <div className="mt-5 space-y-3">
+                {storiesData.recommendations.map((r) => (
+                  <div key={r.priority} className="rounded-[1.4rem] border border-white/8 bg-white/4 p-4">
+                    <div className="flex items-center gap-2">
+                      <span className="rounded-full bg-[#d4b08b]/20 px-2 py-0.5 text-[0.65rem] font-bold text-[#d4b08b]">#{r.priority}</span>
+                      <p className="text-sm font-semibold text-white">{r.action}</p>
+                    </div>
+                    <p className="mt-2 text-xs leading-5 text-white/56">{r.rationale}</p>
+                  </div>
+                ))}
+              </div>
+            </article>
+            <article className="panel p-5 sm:p-6">
+              <div className="flex items-center gap-3">
+                <Sparkles className="h-5 w-5 text-[#d4b08b]" />
+                <h3 className="text-base font-semibold text-white">Ideias de conteúdo para Stories</h3>
+              </div>
+              <div className="mt-5 space-y-3">
+                {storiesData.contentIdeas.map((idea) => (
+                  <div key={idea.type} className="rounded-[1.4rem] border border-white/8 bg-white/4 p-4">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-xs font-bold text-[#d4b08b]">{idea.type}</span>
+                      <span className="text-[0.6rem] text-white/40">{idea.frequency}</span>
+                    </div>
+                    <p className="mt-1 text-sm text-white/80">{idea.idea}</p>
+                    <p className="mt-1 text-[0.68rem] text-white/40">{idea.format}</p>
+                  </div>
+                ))}
+              </div>
+            </article>
+          </div>
+        </section>
+
+        {/* ── BLOCO: INSIGHTS ESTRATÉGICOS ── */}
+        <section id="insights" className="space-y-8">
+          <SectionHeader
+            eyebrow="Insights · Estrategista"
+            title="O que está errado, o que funciona e o que fazer agora"
+            description="Análise direta de um estrategista de redes sociais sênior. Sem rodeios. Baseado exclusivamente nos seus dados reais."
+          />
+          <div className="grid gap-4 sm:grid-cols-3">
+            <article className="panel p-5 sm:col-span-1">
+              <p className="text-[0.68rem] uppercase tracking-[0.22em] text-white/40">Nota geral do perfil</p>
+              <p className="mt-4 text-6xl font-bold text-[#d4b08b]">{strategistInsights.overallDiagnosis.grade}</p>
+              <p className="mt-3 text-sm leading-6 text-white/68">{strategistInsights.overallDiagnosis.summary}</p>
+            </article>
+            <article className="panel p-5 sm:col-span-2">
+              <div className="flex items-center gap-3">
+                <AlertTriangle className="h-5 w-5 text-amber-300" />
+                <h3 className="text-base font-semibold text-white">Problema principal</h3>
+              </div>
+              <p className="mt-4 text-base leading-7 text-white/80">{strategistInsights.overallDiagnosis.mainProblem}</p>
+              <div className="mt-5 rounded-[1.4rem] border border-[#d4b08b]/20 bg-[#d4b08b]/6 p-4">
+                <p className="text-[0.68rem] uppercase tracking-[0.18em] text-[#d4b08b]">Fórmula que funciona para você</p>
+                <p className="mt-2 text-sm font-semibold text-white">{strategistInsights.contentFormula.formula}</p>
+                <p className="mt-2 text-xs text-white/56">{strategistInsights.contentFormula.proof}</p>
+              </div>
+            </article>
+          </div>
+          <article className="panel p-5 sm:p-6">
+            <div className="flex items-center gap-3">
+              <Zap className="h-5 w-5 text-[#d4b08b]" />
+              <h3 className="text-base font-semibold text-white">6 ações críticas — em ordem de prioridade</h3>
+            </div>
+            <div className="mt-5 space-y-4">
+              {strategistInsights.criticalActions.map((a) => (
+                <div key={a.priority} className={`rounded-[1.4rem] border p-4 sm:p-5 ${
+                  a.urgency === 'IMEDIATO' ? 'border-red-400/20 bg-red-400/6' :
+                  a.urgency === 'ESTA SEMANA' ? 'border-amber-400/20 bg-amber-400/6' :
+                  'border-white/8 bg-white/4'
+                }`}>
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#d4b08b]/20 text-xs font-bold text-[#d4b08b]">{a.priority}</span>
+                      <h4 className="text-sm font-semibold text-white">{a.action}</h4>
+                    </div>
+                    <span className={`shrink-0 rounded-full px-2.5 py-1 text-[0.6rem] uppercase tracking-[0.16em] font-medium ${
+                      a.urgency === 'IMEDIATO' ? 'bg-red-400/20 text-red-300' :
+                      a.urgency === 'ESTA SEMANA' ? 'bg-amber-400/20 text-amber-300' :
+                      'bg-white/8 text-white/50'
+                    }`}>{a.urgency}</span>
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-white/68">{a.detail}</p>
+                  <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                    <div className="rounded-2xl border border-emerald-400/15 bg-emerald-400/6 px-3 py-2">
+                      <p className="text-[0.6rem] uppercase tracking-[0.16em] text-emerald-400/80">Impacto esperado</p>
+                      <p className="mt-1 text-xs font-medium text-emerald-300">{a.expectedImpact}</p>
+                    </div>
+                    <div className="rounded-2xl border border-white/8 bg-white/4 px-3 py-2">
+                      <p className="text-[0.6rem] uppercase tracking-[0.16em] text-white/40">Como fazer</p>
+                      <p className="mt-1 text-xs text-white/60">{a.howTo}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </article>
+          <div className="grid gap-4 lg:grid-cols-[1fr_1fr]">
+            <article className="panel p-5 sm:p-6">
+              <div className="flex items-center gap-3">
+                <TrendingUp className="h-5 w-5 text-[#d4b08b]" />
+                <h3 className="text-base font-semibold text-white">Metas de crescimento</h3>
+              </div>
+              <div className="mt-5 space-y-3">
+                {Object.entries(strategistInsights.growthTargets).map(([k, v]) => (
+                  <div key={k} className="flex items-start justify-between gap-3 rounded-2xl border border-white/6 bg-white/4 px-4 py-3">
+                    <p className="text-xs text-white/50 capitalize">{k.replace(/([A-Z])/g,' $1').toLowerCase()}</p>
+                    <p className="text-right text-xs font-medium text-emerald-300 max-w-[55%]">{v}</p>
+                  </div>
+                ))}
+              </div>
+            </article>
+            <article className="panel p-5 sm:p-6">
+              <div className="flex items-center gap-3">
+                <Calendar className="h-5 w-5 text-[#d4b08b]" />
+                <h3 className="text-base font-semibold text-white">Checklist semanal</h3>
+              </div>
+              <div className="mt-5 space-y-2">
+                {strategistInsights.weeklyChecklist.map((item) => (
+                  <div key={item.day} className="flex items-start gap-3 rounded-2xl border border-white/6 bg-white/4 px-4 py-3">
+                    <span className="shrink-0 text-[0.68rem] font-bold text-[#d4b08b] w-14">{item.day}</span>
+                    <p className="text-xs leading-5 text-white/60">{item.task}</p>
+                  </div>
+                ))}
+              </div>
+            </article>
+          </div>
+        </section>
+
+        {/* ── BLOCO: PATROCINADO ── */}
+        <section id="patrocinado" className="space-y-8">
+          <SectionHeader
+            eyebrow="Patrocinado · Guia de mídia paga"
+            title="O que patrocinar, como configurar e quanto investir"
+            description="Recomendações baseadas no seu conteúdo real. Campanha atual com problema identificado. Plano de ação para transformar R$35/dia em resultado mensurável."
+          />
+          <div className="grid gap-4 lg:grid-cols-[1fr_1fr]">
+            <article className="panel p-5 sm:p-6 border-red-400/20">
+              <div className="flex items-center gap-3">
+                <AlertTriangle className="h-5 w-5 text-red-300" />
+                <h3 className="text-base font-semibold text-white">Campanha atual — problema identificado</h3>
+              </div>
+              <div className="mt-5 space-y-3">
+                {[
+                  { label: 'Campanha', value: sponsoredGuide.currentStatus.campaign },
+                  { label: 'Status', value: sponsoredGuide.currentStatus.status },
+                  { label: 'Budget', value: sponsoredGuide.currentStatus.budget },
+                  { label: 'Objetivo', value: sponsoredGuide.currentStatus.objective },
+                ].map((item) => (
+                  <div key={item.label} className="flex justify-between gap-3 rounded-2xl border border-white/6 bg-white/4 px-4 py-3">
+                    <p className="text-xs text-white/50">{item.label}</p>
+                    <p className="text-xs font-medium text-white">{item.value}</p>
+                  </div>
+                ))}
+                <div className="rounded-[1.4rem] border border-red-400/20 bg-red-400/8 p-4">
+                  <p className="text-xs font-semibold text-red-300">Problema</p>
+                  <p className="mt-1 text-xs leading-5 text-white/68">{sponsoredGuide.currentStatus.problem}</p>
+                  <p className="mt-2 text-xs font-semibold text-amber-300">{sponsoredGuide.currentStatus.recommendation}</p>
+                </div>
+              </div>
+            </article>
+            <article className="panel p-5 sm:p-6">
+              <div className="flex items-center gap-3">
+                <DollarSign className="h-5 w-5 text-[#d4b08b]" />
+                <h3 className="text-base font-semibold text-white">Budget mensal sugerido</h3>
+              </div>
+              <div className="mt-5 space-y-3">
+                {[
+                  { label: 'Conservador', value: sponsoredGuide.monthlyBudgetSuggestion.conservative, color: 'text-white/70' },
+                  { label: 'Moderado', value: sponsoredGuide.monthlyBudgetSuggestion.moderate, color: 'text-amber-300' },
+                  { label: 'Agressivo', value: sponsoredGuide.monthlyBudgetSuggestion.aggressive, color: 'text-emerald-300' },
+                ].map((b) => (
+                  <div key={b.label} className="flex justify-between gap-3 rounded-2xl border border-white/6 bg-white/4 px-4 py-3">
+                    <p className="text-xs text-white/50">{b.label}</p>
+                    <p className={`text-xs font-semibold ${b.color}`}>{b.value}</p>
+                  </div>
+                ))}
+                <div className="rounded-[1.4rem] border border-[#d4b08b]/20 bg-[#d4b08b]/6 p-4">
+                  <p className="text-[0.68rem] uppercase tracking-[0.18em] text-[#d4b08b]">Recomendação</p>
+                  <p className="mt-2 text-xs leading-5 text-white/68">{sponsoredGuide.monthlyBudgetSuggestion.recommendation}</p>
+                </div>
+              </div>
+              <div className="mt-5">
+                <p className="text-[0.68rem] uppercase tracking-[0.22em] text-white/40 mb-3">Segmentos de audiência</p>
+                <div className="space-y-2">
+                  {sponsoredGuide.audienceSegments.map((seg) => (
+                    <div key={seg.name} className="flex items-center gap-3 rounded-2xl border border-white/6 bg-white/4 px-4 py-2">
+                      <Users className="h-3.5 w-3.5 shrink-0 text-[#d4b08b]" />
+                      <div className="flex-1">
+                        <p className="text-xs font-medium text-white">{seg.name}</p>
+                        <p className="text-[0.6rem] text-white/44">{seg.description} · {seg.size}</p>
+                      </div>
+                      <span className={`text-[0.6rem] font-medium ${
+                        seg.priority === 'Muito Alta' ? 'text-emerald-300' :
+                        seg.priority === 'Alta' ? 'text-amber-300' : 'text-white/40'
+                      }`}>{seg.priority}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </article>
+          </div>
+          <article className="panel p-5 sm:p-6">
+            <div className="flex items-center gap-3">
+              <Megaphone className="h-5 w-5 text-[#d4b08b]" />
+              <h3 className="text-base font-semibold text-white">O que patrocinar — ranking por potencial</h3>
+            </div>
+            <div className="mt-5 space-y-4">
+              {sponsoredGuide.whatToSponsor.map((item) => (
+                <div key={item.rank} className="rounded-[1.4rem] border border-white/8 bg-white/4 p-4 sm:p-5">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#d4b08b]/20 text-xs font-bold text-[#d4b08b]">#{item.rank}</span>
+                      <h4 className="text-sm font-semibold text-white">{item.content}</h4>
+                    </div>
+                    <span className="shrink-0 rounded-full border border-white/8 bg-white/6 px-2.5 py-1 text-[0.6rem] uppercase tracking-[0.14em] text-white/60">{item.objective}</span>
+                  </div>
+                  <p className="mt-3 text-xs leading-5 text-white/60">{item.why}</p>
+                  <div className="mt-3 grid gap-2 sm:grid-cols-3">
+                    <div className="rounded-2xl border border-white/6 bg-white/4 px-3 py-2">
+                      <p className="text-[0.6rem] uppercase text-white/40">Budget</p>
+                      <p className="mt-0.5 text-xs font-medium text-amber-300">{item.budget}</p>
+                    </div>
+                    <div className="rounded-2xl border border-emerald-400/15 bg-emerald-400/6 px-3 py-2">
+                      <p className="text-[0.6rem] uppercase text-emerald-400/80">Resultado esperado</p>
+                      <p className="mt-0.5 text-xs font-medium text-emerald-300">{item.expectedResult}</p>
+                    </div>
+                    <div className="rounded-2xl border border-white/6 bg-white/4 px-3 py-2">
+                      <p className="text-[0.6rem] uppercase text-white/40">Audiência</p>
+                      <p className="mt-0.5 text-xs text-white/60">{item.audience}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </article>
+          <article className="panel p-5 sm:p-6">
+            <div className="flex items-center gap-3">
+              <Lightbulb className="h-5 w-5 text-[#d4b08b]" />
+              <h3 className="text-base font-semibold text-white">Como patrocinar — passo a passo</h3>
+            </div>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {sponsoredGuide.howToSponsor.map((step) => (
+                <div key={step.step} className="rounded-[1.4rem] border border-white/8 bg-white/4 p-4">
+                  <div className="flex items-center gap-2">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#d4b08b]/20 text-xs font-bold text-[#d4b08b]">{step.step}</span>
+                    <p className="text-xs font-semibold text-white">{step.title}</p>
+                  </div>
+                  <p className="mt-2 text-xs leading-5 text-white/56">{step.detail}</p>
+                </div>
+              ))}
+            </div>
+          </article>
+        </section>
+
         <section id="metaads" className="space-y-8">
           <SectionHeader
             eyebrow="Camada paga · Meta Ads"
@@ -935,13 +1342,19 @@ export default function Home() {
         </div>
       </footer>
 
-      <nav className="fixed inset-x-0 bottom-3 z-50 px-3 lg:hidden">
-        <div className="mx-auto grid max-w-xl grid-cols-5 gap-1 rounded-[1.8rem] border border-white/10 bg-black/55 p-2 shadow-[0_18px_60px_rgba(0,0,0,0.45)] backdrop-blur-2xl">
-          <a href="#executivo" className="mobile-nav-link"><BarChart3 className="h-4 w-4" /><span>Resumo</span></a>
-          <a href="#profundo" className="mobile-nav-link"><Radar className="h-4 w-4" /><span>Análise</span></a>
-          <a href="#audiencia" className="mobile-nav-link"><UserRound className="h-4 w-4" /><span>Audiência</span></a>
-          <a href="#decisao" className="mobile-nav-link"><Target className="h-4 w-4" /><span>Ação</span></a>
-          <a href="#metaads" className="mobile-nav-link"><WalletCards className="h-4 w-4" /><span>Ads</span></a>
+      <nav className="fixed inset-x-0 bottom-0 z-50 lg:hidden">
+        <div className="border-t border-white/10 bg-black/80 backdrop-blur-2xl shadow-[0_-8px_40px_rgba(0,0,0,0.5)]">
+          <div className="flex overflow-x-auto scrollbar-hide">
+            <a href="#executivo" className="mobile-nav-link flex-shrink-0"><BarChart3 className="h-4 w-4" /><span>Resumo</span></a>
+            <a href="#profundo" className="mobile-nav-link flex-shrink-0"><Radar className="h-4 w-4" /><span>Análise</span></a>
+            <a href="#audiencia" className="mobile-nav-link flex-shrink-0"><UserRound className="h-4 w-4" /><span>Audiência</span></a>
+            <a href="#decisao" className="mobile-nav-link flex-shrink-0"><Target className="h-4 w-4" /><span>Ação</span></a>
+            <a href="#horarios" className="mobile-nav-link flex-shrink-0"><Clock className="h-4 w-4" /><span>Horários</span></a>
+            <a href="#stories" className="mobile-nav-link flex-shrink-0"><Camera className="h-4 w-4" /><span>Stories</span></a>
+            <a href="#insights" className="mobile-nav-link flex-shrink-0"><Lightbulb className="h-4 w-4" /><span>Insights</span></a>
+            <a href="#patrocinado" className="mobile-nav-link flex-shrink-0"><Megaphone className="h-4 w-4" /><span>Patrocinado</span></a>
+            <a href="#metaads" className="mobile-nav-link flex-shrink-0"><WalletCards className="h-4 w-4" /><span>Meta Ads</span></a>
+          </div>
         </div>
       </nav>
     </div>
