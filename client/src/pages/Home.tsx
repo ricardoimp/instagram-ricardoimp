@@ -662,16 +662,15 @@ export default function Home() {
         {/* ── BLOCO 8: TOP POSTS POR ALCANCE ── */}
         <section id="topconteudo" className="space-y-8">
           <SectionHeader
-            eyebrow="8 · Top conteúdo por alcance e views"
-            title="Os posts que mais chegaram longe e os Reels que mais foram assistidos"
-            description="Ranking baseado em dados reais de alcance e views coletados via API oficial do Instagram. Use estes padrões para replicar o que funciona."
+            eyebrow="8 · Top conteúdo por interações disponíveis"
+            title="Os posts e Reels que mais geraram resposta mensurável nesta coleta"
+            description="Ranking baseado nos dados reais disponíveis nesta rodada: likes e comentários. Alcance, views e salvamentos por post não retornaram pelo conector e ficam explicitamente marcados como indisponíveis."
           />
           <div className="grid gap-4 lg:grid-cols-[1fr_1fr]">
             <article className="panel p-5 sm:p-6">
               <div className="flex items-center gap-3">
                 <Globe className="h-5 w-5 text-[#d4b08b]" />
-                <h3 className="text-base font-semibold text-white">Top 5 por alcance</h3>
-              </div>
+               <h3 className="text-base font-semibold text-white">Top posts por interações disponíveis</h3>            </div>
               <div className="mt-5 space-y-3">
                 {topPostsByReach.map((p, i) => (
                   <div key={p.id} className="rounded-[1.4rem] border border-white/8 bg-white/4 p-4">
@@ -680,11 +679,11 @@ export default function Home() {
                         <span className="text-[0.68rem] font-bold text-[#d4b08b]">#{i+1}</span>
                         <p className="text-sm font-medium text-white">{p.caption_preview}</p>
                       </div>
-                      <span className="shrink-0 text-sm font-semibold text-emerald-300">{p.reach}</span>
+                      <span className="shrink-0 text-sm font-semibold text-emerald-300">{p.total_interactions}</span>
                     </div>
                     <div className="mt-2 flex gap-4 text-xs text-white/44">
                       <span>Views: {p.views}</span>
-                      <span>Interações: {p.total_interactions}</span>
+                      <span>Interações disponíveis: {p.total_interactions}</span>
                       <span>{p.type}</span>
                     </div>
                   </div>
@@ -694,7 +693,7 @@ export default function Home() {
             <article className="panel p-5 sm:p-6">
               <div className="flex items-center gap-3">
                 <Video className="h-5 w-5 text-[#d4b08b]" />
-                <h3 className="text-base font-semibold text-white">Top Reels por views</h3>
+                <h3 className="text-base font-semibold text-white">Top Reels por interações disponíveis</h3>
               </div>
               <div className="mt-5 space-y-3">
                 {topReelsByViews.map((p, i) => (
@@ -704,7 +703,7 @@ export default function Home() {
                         <span className="text-[0.68rem] font-bold text-[#d4b08b]">#{i+1}</span>
                         <p className="text-sm font-medium text-white">{p.caption_preview}</p>
                       </div>
-                      <span className="shrink-0 text-sm font-semibold text-purple-300">{p.views}</span>
+                      <span className="shrink-0 text-sm font-semibold text-purple-300">{p.total_interactions}</span>
                     </div>
                     <div className="mt-2 flex gap-4 text-xs text-white/44">
                       <span>Alcance: {p.reach}</span>
