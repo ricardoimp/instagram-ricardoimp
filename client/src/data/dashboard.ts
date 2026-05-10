@@ -1,7 +1,7 @@
 // Script Mestre — Auditoria Completa de Perfil @ricardoimp
 // Estrutura de 4 camadas: raw_data | analytics_tables | executive_summary | scorecards
-// Última coleta: 08/05/2026 às 10:09 — Instagram MCP
-// 38 posts analisados | insights por post coletados quando disponíveis
+// Última coleta: 10/05/2026 às 10:20 — Instagram MCP
+// 39 posts analisados | insights por post coletados quando disponíveis
 
 // ─────────────────────────────────────────────────────────────
 // TIPOS
@@ -54,7 +54,10 @@ export const profileIdentity = {
   username: "@ricardoimp",
   name: "Ricardo Impellizieri",
   account_type: 'business/creator',
-  bio_full: "Construo empresas enquanto viajo o mundo ✈️\n🏆7 empresas • 2 vendidas\n🌎37 países visitados\n👇🏼Liberdade é estratégia!",
+  bio_full: "Construo empresas enquanto viajo o mundo ✈️
+🏆7 empresas • 2 vendidas
+🌎37 países visitados
+👇🏼Liberdade é estratégia!",
   bio_summary: 'Empreendedor serial com 7 empresas, 2 vendidas, 37 países visitados. Posicionamento: liberdade como estratégia.',
   link_bio: "http://saiba-mais.ai",
   bio_emojis: ['✈️', '🏆', '🌎', '👇🏼'],
@@ -71,13 +74,20 @@ export const profileIdentity = {
   social_proof_presence: true,
   commercial_offer_presence: false,
   website: "http://saiba-mais.ai",
-  collected_at: "2026-05-08T14:09:30Z",
+  collected_at: "2026-05-10T14:20:15Z",
 };
 
 export const postsRaw: PostRaw[] = [
+  { id: "18048556742591637", date: "2026-05-09T23:09:56Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
+    caption: "Por algum bar de Seattle.
+
+#seattle #bar #drink #instagood #photography",
+    likes: 3, comments: 1, reach: null, views: null, saved: null, total_interactions: 4,
+    hashtags: ["seattle", "bar", "drink", "instagood", "photography"], mentions: [],
+    permalink: "https://www.instagram.com/p/DYIsYvTgDhM/" },
   { id: "18004667222739565", date: "2026-05-08T11:45:12Z", type: "IMAGE", media_product_type: "FEED",
     caption: "Bad Boys 😎🐕",
-    likes: 9, comments: 0, reach: null, views: null, saved: null, total_interactions: 9,
+    likes: 20, comments: 1, reach: null, views: null, saved: null, total_interactions: 21,
     hashtags: [], mentions: [],
     permalink: "https://www.instagram.com/p/DYE47hCgDvZ/" },
   { id: "18462194005101879", date: "2026-05-07T02:30:26Z", type: "VIDEO", media_product_type: "REELS",
@@ -87,161 +97,349 @@ export const postsRaw: PostRaw[] = [
     permalink: "https://www.instagram.com/reel/DYBU6ocA2uP/" },
   { id: "18099295883038166", date: "2026-05-07T02:22:21Z", type: "VIDEO", media_product_type: "REELS",
     caption: "✈️",
-    likes: 8, comments: 0, reach: null, views: null, saved: null, total_interactions: 8,
+    likes: 9, comments: 0, reach: null, views: null, saved: null, total_interactions: 9,
     hashtags: [], mentions: [],
     permalink: "https://www.instagram.com/reel/DYBT8_HgM6C/" },
   { id: "18079469021558783", date: "2026-05-04T15:20:37Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Margem + Renda Recorrente + Crescimento (Escala)\neu olho sempre para esses 3 principais pontos 👀\n\n#empresa #empreendedorismo #crescimento #sucesso #instagood",
+    caption: "Margem + Renda Recorrente + Crescimento (Escala)
+eu olho sempre para esses 3 principais pontos 👀
+
+#empresa #empreendedorismo #crescimento #sucesso #instagood",
     likes: 7, comments: 0, reach: null, views: null, saved: null, total_interactions: 7,
     hashtags: ["empresa", "empreendedorismo", "crescimento", "sucesso", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/reel/DX6-WRRAvZq/" },
   { id: "18101215795990406", date: "2026-04-28T15:01:05Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Toda viagem revela 3 versões suas:\n\nA que você sustenta hoje.\nA que já não faz mais sentido.\nE a que está esperando uma decisão sua.\n\n#canada #instagram #trip #photography #paz",
+    caption: "Toda viagem revela 3 versões suas:
+
+A que você sustenta hoje.
+A que já não faz mais sentido.
+E a que está esperando uma decisão sua.
+
+#canada #instagram #trip #photography #paz",
     likes: 1, comments: 0, reach: null, views: null, saved: null, total_interactions: 1,
     hashtags: ["canada", "instagram", "trip", "photography", "paz"], mentions: [],
     permalink: "https://www.instagram.com/reel/DXrfolmgNUe/" },
   { id: "18338572129171422", date: "2026-04-28T14:58:39Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Toda viagem revela 3 versões suas:\n\nA que você sustenta hoje.\nA que já não faz mais sentido.\nE a que está esperando uma decisão sua.\n\n#canada #instagram #trip #photography #paz",
+    caption: "Toda viagem revela 3 versões suas:
+
+A que você sustenta hoje.
+A que já não faz mais sentido.
+E a que está esperando uma decisão sua.
+
+#canada #instagram #trip #photography #paz",
     likes: 9, comments: 1, reach: null, views: null, saved: null, total_interactions: 10,
     hashtags: ["canada", "instagram", "trip", "photography", "paz"], mentions: [],
     permalink: "https://www.instagram.com/reel/DXrfHHGgO3d/" },
   { id: "18098472605102842", date: "2026-04-27T15:11:10Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Entrei achando que era só um mercado\nsaí entendendo por que lugares assim duram séculos, um dos mercados mais antigos de istambul 🇹🇷\n\n#turquia #trip #viajar #instagood #reels",
+    caption: "Entrei achando que era só um mercado
+saí entendendo por que lugares assim duram séculos, um dos mercados mais antigos de istambul 🇹🇷
+
+#turquia #trip #viajar #instagood #reels",
     likes: 2, comments: 0, reach: null, views: null, saved: null, total_interactions: 2,
     hashtags: ["turquia", "trip", "viajar", "instagood", "reels"], mentions: [],
     permalink: "https://www.instagram.com/reel/DXo7_qRgCfA/" },
   { id: "18110982055878581", date: "2026-04-27T15:07:43Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Entrei achando que era só um mercado\nsaí entendendo por que lugares assim duram séculos, um dos mercados mais antigos de istambul 🇹🇷\n\n#turquia #trip #viajar #instagood #reels",
+    caption: "Entrei achando que era só um mercado
+saí entendendo por que lugares assim duram séculos, um dos mercados mais antigos de istambul 🇹🇷
+
+#turquia #trip #viajar #instagood #reels",
     likes: 21, comments: 4, reach: null, views: null, saved: null, total_interactions: 25,
     hashtags: ["turquia", "trip", "viajar", "instagood", "reels"], mentions: [],
     permalink: "https://www.instagram.com/reel/DXo7KozAHJr/" },
   { id: "18115128127783856", date: "2026-04-26T15:35:43Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "Quanto mais eu vou…\nmais eu entendo que não é sobre ir.",
-    likes: 21, comments: 1, reach: null, views: null, saved: null, total_interactions: 22,
+    caption: "Quanto mais eu vou…
+mais eu entendo que não é sobre ir.",
+    likes: 22, comments: 1, reach: null, views: null, saved: null, total_interactions: 23,
     hashtags: [], mentions: [],
     permalink: "https://www.instagram.com/p/DXmaEoSFKsK/" },
   { id: "18591759310050140", date: "2026-04-24T15:49:40Z", type: "IMAGE", media_product_type: "FEED",
-    caption: "No meio de tudo que eu construo…\né aqui que eu lembro o porquê.\n\n🇺🇸\nIn the middle of everything I build…\nthis is where I remember why.\n\n🇪🇸\nEn medio de todo lo que construyo…\nes aquí donde recuerdo el porqué.\n\n#grandson #photography #família #family #instagood",
+    caption: "No meio de tudo que eu construo…
+é aqui que eu lembro o porquê.
+
+🇺🇸
+In the middle of everything I build…
+this is where I remember why.
+
+🇪🇸
+En medio de todo lo que construyo…
+es aquí donde recuerdo el porqué.
+
+#grandson #photography #família #family #instagood",
     likes: 35, comments: 5, reach: null, views: null, saved: null, total_interactions: 40,
     hashtags: ["grandson", "photography", "família", "family", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/p/DXhReNcAJlQ/" },
   { id: "17943920478168349", date: "2026-04-21T16:58:33Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "Se a conta é sua…faça valer a vida que escolheu.\n\n🇪🇸\n\nSi la cuenta es tuya…\nhaz que valga la vida que elegiste.\n\n🇺🇸\n\nIf you’re the one paying the price…\nmake the life you chose worth it.\n\n#live #vivalavida #seattle #photography #market",
+    caption: "Se a conta é sua…faça valer a vida que escolheu.
+
+🇪🇸
+
+Si la cuenta es tuya…
+haz que valga la vida que elegiste.
+
+🇺🇸
+
+If you’re the one paying the price…
+make the life you chose worth it.
+
+#live #vivalavida #seattle #photography #market",
     likes: 13, comments: 7, reach: null, views: null, saved: null, total_interactions: 20,
     hashtags: ["live", "vivalavida", "seattle", "photography", "market"], mentions: [],
     permalink: "https://www.instagram.com/p/DXZrk7RADRP/" },
   { id: "18118097605678754", date: "2026-04-18T21:25:36Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "O mundo não é só destino.\nÉ contraste.\n\n#marrocos #desert #trip #vivendo #mundo",
+    caption: "O mundo não é só destino.
+É contraste.
+
+#marrocos #desert #trip #vivendo #mundo",
     likes: 29, comments: 2, reach: null, views: null, saved: null, total_interactions: 31,
     hashtags: ["marrocos", "desert", "trip", "vivendo", "mundo"], mentions: [],
     permalink: "https://www.instagram.com/p/DXSbwQcFF0V/" },
   { id: "17866159815613734", date: "2026-04-16T22:52:16Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "O mundo é de quem se move.\nNão espere permissão.\n\nLos Angeles → Las Vegas\n\n#losangeles #lasvegas #movimento #viagem #empreendedorismo",
+    caption: "O mundo é de quem se move.
+Não espere permissão.
+
+Los Angeles → Las Vegas
+
+#losangeles #lasvegas #movimento #viagem #empreendedorismo",
     likes: 11, comments: 1, reach: null, views: null, saved: null, total_interactions: 12,
     hashtags: ["losangeles", "lasvegas", "movimento", "viagem", "empreendedorismo"], mentions: [],
     permalink: "https://www.instagram.com/reel/DXNbns2j4Kl/" },
   { id: "18117398149663032", date: "2026-04-15T21:47:22Z", type: "IMAGE", media_product_type: "FEED",
-    caption: "Conheço o preço da liberdade.Eu pago.\n\n#mundo #liberdade #vivendo #life #good",
+    caption: "Conheço o preço da liberdade.Eu pago.
+
+#mundo #liberdade #vivendo #life #good",
     likes: 12, comments: 1, reach: null, views: null, saved: null, total_interactions: 13,
     hashtags: ["mundo", "liberdade", "vivendo", "life", "good"], mentions: [],
     permalink: "https://www.instagram.com/p/DXKvqEJiZ6p/" },
   { id: "18223237996314109", date: "2026-04-11T16:28:14Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "Ninguém fala muito da Croácia…\nmas deveria.\n\nÁgua transparente de verdade.\nCidade histórica colada no mar.\nE uma paz que você não encontra fácil.\n\nTem lugar que é bonito.\nE tem lugar que te faz parar.\n\nEsse aqui é a segunda opção.\n\n#croacia #paradise #photographer #instagood #europa",
+    caption: "Ninguém fala muito da Croácia…
+mas deveria.
+
+Água transparente de verdade.
+Cidade histórica colada no mar.
+E uma paz que você não encontra fácil.
+
+Tem lugar que é bonito.
+E tem lugar que te faz parar.
+
+Esse aqui é a segunda opção.
+
+#croacia #paradise #photographer #instagood #europa",
     likes: 14, comments: 1, reach: null, views: null, saved: null, total_interactions: 15,
     hashtags: ["croacia", "paradise", "photographer", "instagood", "europa"], mentions: [],
     permalink: "https://www.instagram.com/p/DW_4KJtAPQA/" },
   { id: "18084408851056630", date: "2026-04-10T14:46:38Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Tudo que você constrói te traz pra momentos assim.\n\nAlmoçar no Rio Sena navegando por Paris é uma experiência incrível… um belo menu … passando pelos principais pontos turísticos da cidade com aquela champa 🥂 geladinha. Not a price 😉\n\n#paris #trip #viagem #europa #photography",
+    caption: "Tudo que você constrói te traz pra momentos assim.
+
+Almoçar no Rio Sena navegando por Paris é uma experiência incrível… um belo menu … passando pelos principais pontos turísticos da cidade com aquela champa 🥂 geladinha. Not a price 😉
+
+#paris #trip #viagem #europa #photography",
     likes: 9, comments: 2, reach: null, views: null, saved: null, total_interactions: 11,
     hashtags: ["paris", "trip", "viagem", "europa", "photography"], mentions: [],
     permalink: "https://www.instagram.com/reel/DW9HKuGgMmr/" },
   { id: "18081224582118555", date: "2026-04-07T22:39:52Z", type: "IMAGE", media_product_type: "FEED",
-    caption: "No fim… tudo se conecta.\nO que você vive em silêncio… aparece no palco.\n\nEsse ano será incrível 🏆\n\n2024 10º Lugar Brasil Govtech\n2025 3º Lugar Govtech\n2026 Agora é 1º 🥇\n\nEsse é um prêmio de melhores empresas do Brasil em seus segmentos e agora quero o 1º lugar 🙌🏼\n\n#govtech #tecnologia #governo #saude #instagood",
+    caption: "No fim… tudo se conecta.
+O que você vive em silêncio… aparece no palco.
+
+Esse ano será incrível 🏆
+
+2024 10º Lugar Brasil Govtech
+2025 3º Lugar Govtech
+2026 Agora é 1º 🥇
+
+Esse é um prêmio de melhores empresas do Brasil em seus segmentos e agora quero o 1º lugar 🙌🏼
+
+#govtech #tecnologia #governo #saude #instagood",
     likes: 42, comments: 15, reach: null, views: null, saved: null, total_interactions: 57,
     hashtags: ["govtech", "tecnologia", "governo", "saude", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/p/DW2O1nsAExw/" },
   { id: "18088641608186963", date: "2026-04-03T22:45:55Z", type: "IMAGE", media_product_type: "FEED",
-    caption: "Tem lugares que impressionam.\n\nE tem lugares que te lembram\ndo tamanho do jogo que você está jogando.\n\nNova York te emana essa energia ⚡️\n\n#nyc #business #growth #evolucao #photographer",
+    caption: "Tem lugares que impressionam.
+
+E tem lugares que te lembram
+do tamanho do jogo que você está jogando.
+
+Nova York te emana essa energia ⚡️
+
+#nyc #business #growth #evolucao #photographer",
     likes: 20, comments: 1, reach: null, views: null, saved: null, total_interactions: 21,
     hashtags: ["nyc", "business", "growth", "evolucao", "photographer"], mentions: [],
     permalink: "https://www.instagram.com/p/DWr8mKBgN2J/" },
   { id: "18573299488004222", date: "2026-04-03T14:03:36Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "Esse virou um lugar especial. 🤩\n\nTem algo aqui que não dá pra explicar…\né sentir.\n\nA vista, o silêncio, o cheiro de café pela manhã…\ne um cuidado em cada detalhe.\n\nDaqueles lugares que te fazem desacelerar\ne simplesmente estar.\n\n@villacoracaoguesthouse vocês estão de parabéns 👏🏼\n\n#descanso #natureza #pazmental #instago #retiro",
+    caption: "Esse virou um lugar especial. 🤩
+
+Tem algo aqui que não dá pra explicar…
+é sentir.
+
+A vista, o silêncio, o cheiro de café pela manhã…
+e um cuidado em cada detalhe.
+
+Daqueles lugares que te fazem desacelerar
+e simplesmente estar.
+
+@villacoracaoguesthouse vocês estão de parabéns 👏🏼
+
+#descanso #natureza #pazmental #instago #retiro",
     likes: 16, comments: 6, reach: null, views: null, saved: null, total_interactions: 22,
     hashtags: ["descanso", "natureza", "pazmental", "instago", "retiro"], mentions: ["villacoracaoguesthouse"],
     permalink: "https://www.instagram.com/p/DWrBPuzAMIw/" },
   { id: "17911774722356878", date: "2026-03-31T15:14:46Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "Dubrovnik é conhecida pelas muralhas, pelo mar e pela história, mas poucos sabem que aqui também está a University of Dubrovnik.\n\nE é um dos centros acadêmicos mais relevantes da região em tecnologia e inovação.\n\nUma cidade que parece parada no tempo,\ne, ao mesmo tempo, forma mentes que constroem o futuro.\n\nSilêncio e estratégia sempre andaram juntos.\nOs melhores movimentos que fiz na vida não vieram da pressa…\n\nvieram da clareza que só o silêncio traz.Eu acredito muito que o movimento gera tração e a tração gera resultados 🔥\n\nPense… construa… evolua.\n\n#evolucao #crescimento #estudos #mundo #conhecimento",
+    caption: "Dubrovnik é conhecida pelas muralhas, pelo mar e pela história, mas poucos sabem que aqui também está a University of Dubrovnik.
+
+E é um dos centros acadêmicos mais relevantes da região em tecnologia e inovação.
+
+Uma cidade que parece parada no tempo,
+e, ao mesmo tempo, forma mentes que constroem o futuro.
+
+Silêncio e estratégia sempre andaram juntos.
+Os melhores movimentos que fiz na vida não vieram da pressa…
+
+vieram da clareza que só o silêncio traz.Eu acredito muito que o movimento gera tração e a tração gera resultados 🔥
+
+Pense… construa… evolua.
+
+#evolucao #crescimento #estudos #mundo #conhecimento",
     likes: 25, comments: 1, reach: null, views: null, saved: null, total_interactions: 26,
     hashtags: ["evolucao", "crescimento", "estudos", "mundo", "conhecimento"], mentions: [],
     permalink: "https://www.instagram.com/p/DWjbAYOAOsG/" },
   { id: "18092030957147327", date: "2026-03-27T00:48:13Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Não é sobre parecer que vive.\nÉ sobre estar vivendo de verdade.",
+    caption: "Não é sobre parecer que vive.
+É sobre estar vivendo de verdade.",
     likes: 4, comments: 0, reach: null, views: null, saved: null, total_interactions: 4,
     hashtags: [], mentions: [],
     permalink: "https://www.instagram.com/reel/DWXkocZgP7v/" },
   { id: "18001864238860156", date: "2026-03-26T22:23:11Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Não é sobre parecer que vive.\nÉ sobre estar vivendo de verdade. 🌍",
+    caption: "Não é sobre parecer que vive.
+É sobre estar vivendo de verdade. 🌍",
     likes: 19, comments: 2, reach: null, views: null, saved: null, total_interactions: 21,
     hashtags: [], mentions: [],
     permalink: "https://www.instagram.com/reel/DWXT-QhAEcA/" },
   { id: "18587161180034708", date: "2026-03-25T13:14:10Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Eu achei que era apenas uma loja de sardinhas\nMas na verdade é quase um espetáculo.\n\nO Mundo Fantástico da Sardinha Portuguesa @portuguesesardine, em Lisboa, transformou algo simples em uma experiência visual incrível.\n\nCada lata representa um ano da história de Portugal.\nUm produto comum...\n\ntransformado em cultura, memória e curiosidade.\nÀs vezes viajar é exatamente isso: descobrir beleza onde ninguém imaginaria.\n\nVocê entraria nessa loja?\n\n#lisboa #europa #novidade #instagood #loveit",
+    caption: "Eu achei que era apenas uma loja de sardinhas
+Mas na verdade é quase um espetáculo.
+
+O Mundo Fantástico da Sardinha Portuguesa @portuguesesardine, em Lisboa, transformou algo simples em uma experiência visual incrível.
+
+Cada lata representa um ano da história de Portugal.
+Um produto comum...
+
+transformado em cultura, memória e curiosidade.
+Às vezes viajar é exatamente isso: descobrir beleza onde ninguém imaginaria.
+
+Você entraria nessa loja?
+
+#lisboa #europa #novidade #instagood #loveit",
     likes: 31, comments: 4, reach: null, views: null, saved: null, total_interactions: 35,
     hashtags: ["lisboa", "europa", "novidade", "instagood", "loveit"], mentions: ["portuguesesardine"],
     permalink: "https://www.instagram.com/reel/DWTwL0igM_t/" },
   { id: "18083718791367809", date: "2026-03-25T00:13:27Z", type: "IMAGE", media_product_type: "FEED",
-    caption: "Não tenho um escritório.\nTenho uma sala de operações. 👨🏻‍💻\n\nDaqui saem decisões. Não tarefas.\n\nA IA está criando uma nova onda de oportunidades maior que a dos cursos, maior que a dos ads. 🚀\n\nA diferença é que dessa vez quem chega primeiro não precisa gritar mais alto… precisa construir melhor.\n\nVocê está construindo ou ainda está assistindo? \n\n#onda #ai #futuro #tecnologia #instagood",
+    caption: "Não tenho um escritório.
+Tenho uma sala de operações. 👨🏻‍💻
+
+Daqui saem decisões. Não tarefas.
+
+A IA está criando uma nova onda de oportunidades maior que a dos cursos, maior que a dos ads. 🚀
+
+A diferença é que dessa vez quem chega primeiro não precisa gritar mais alto… precisa construir melhor.
+
+Você está construindo ou ainda está assistindo? 
+
+#onda #ai #futuro #tecnologia #instagood",
     likes: 16, comments: 0, reach: null, views: null, saved: null, total_interactions: 16,
     hashtags: ["onda", "ai", "futuro", "tecnologia", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/p/DWSWTVwgODK/" },
   { id: "18107565679641223", date: "2026-03-15T14:05:00Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Eu achei que era apenas uma loja de sardinhas 🐟\n\nMas na verdade é quase um espetáculo 🤩\n\nO Mundo Fantástico da Sardinha Portuguesa @portuguesesardine , em Lisboa, transformou algo simples em uma experiência visual incrível.\n\n😍Cada lata representa um ano da história de Portugal.\n\nUm produto comum…\ntransformado em cultura, memória e curiosidade.\n\nÀs vezes viajar é exatamente isso:\ndescobrir beleza onde ninguém imaginaria.\n\nVocê entraria nessa loja?\n\n#lisboa #europa #novidade #instagood #loveit",
+    caption: "Eu achei que era apenas uma loja de sardinhas 🐟
+
+Mas na verdade é quase um espetáculo 🤩
+
+O Mundo Fantástico da Sardinha Portuguesa @portuguesesardine , em Lisboa, transformou algo simples em uma experiência visual incrível.
+
+😍Cada lata representa um ano da história de Portugal.
+
+Um produto comum…
+transformado em cultura, memória e curiosidade.
+
+Às vezes viajar é exatamente isso:
+descobrir beleza onde ninguém imaginaria.
+
+Você entraria nessa loja?
+
+#lisboa #europa #novidade #instagood #loveit",
     likes: 11, comments: 0, reach: null, views: null, saved: null, total_interactions: 11,
     hashtags: ["lisboa", "europa", "novidade", "instagood", "loveit"], mentions: ["portuguesesardine"],
     permalink: "https://www.instagram.com/reel/DV6GWSqlZUq/" },
   { id: "17879123688488066", date: "2026-03-12T19:29:22Z", type: "IMAGE", media_product_type: "FEED",
-    caption: "Quem acha que os grandes negócios acontecem apenas em salas de reunião… nunca entendeu como eles realmente nascem.\n\n#businessmindset #business #networking #life #instagood",
+    caption: "Quem acha que os grandes negócios acontecem apenas em salas de reunião… nunca entendeu como eles realmente nascem.
+
+#businessmindset #business #networking #life #instagood",
     likes: 19, comments: 0, reach: null, views: null, saved: null, total_interactions: 19,
     hashtags: ["businessmindset", "business", "networking", "life", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/p/DVy89NQAKj5/" },
   { id: "17875028724542272", date: "2026-03-11T22:46:51Z", type: "IMAGE", media_product_type: "FEED",
-    caption: "O mundo pertence a quem tem coragem de sair do chão.\n\nMuitas vezes mudar de rota te leva a novos e incríveis lugares…. aperte o cinto ✈️\n\n#airbus #flight #instagram #photography #route",
+    caption: "O mundo pertence a quem tem coragem de sair do chão.
+
+Muitas vezes mudar de rota te leva a novos e incríveis lugares…. aperte o cinto ✈️
+
+#airbus #flight #instagram #photography #route",
     likes: 8, comments: 1, reach: null, views: null, saved: null, total_interactions: 9,
     hashtags: ["airbus", "flight", "instagram", "photography", "route"], mentions: [],
     permalink: "https://www.instagram.com/p/DVwukC_gGc9/" },
   { id: "18095251325061078", date: "2026-03-08T12:38:25Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "Tranquilidade… paz… um ambiente confortável e a gratidão de que existe alguém por nós.\n\n#montanha #life #god #vivendo #instagood",
+    caption: "Tranquilidade… paz… um ambiente confortável e a gratidão de que existe alguém por nós.
+
+#montanha #life #god #vivendo #instagood",
     likes: 30, comments: 0, reach: null, views: null, saved: null, total_interactions: 30,
     hashtags: ["montanha", "life", "god", "vivendo", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/p/DVn61LdgLHu/" },
   { id: "18073296557439826", date: "2026-03-06T23:51:25Z", type: "IMAGE", media_product_type: "FEED",
-    caption: "Construindo.\nCelebrando.\nRepetindo.\n\n#brinde #wine #lifestyle #celebration #instagood",
+    caption: "Construindo.
+Celebrando.
+Repetindo.
+
+#brinde #wine #lifestyle #celebration #instagood",
     likes: 19, comments: 6, reach: null, views: null, saved: null, total_interactions: 25,
     hashtags: ["brinde", "wine", "lifestyle", "celebration", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/p/DVj99DeAOWE/" },
   { id: "18095218777975373", date: "2026-02-27T15:09:09Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Trabalhar com as maiores lideranças do governo revela uma coisa: \n\nNão é a velocidade que te destaca. É a estrutura!\n\n#governo #govtech #lideranca #estrutura #gov",
+    caption: "Trabalhar com as maiores lideranças do governo revela uma coisa: 
+
+Não é a velocidade que te destaca. É a estrutura!
+
+#governo #govtech #lideranca #estrutura #gov",
     likes: 4, comments: 0, reach: null, views: null, saved: null, total_interactions: 4,
     hashtags: ["governo", "govtech", "lideranca", "estrutura", "gov"], mentions: [],
     permalink: "https://www.instagram.com/reel/DVRAdHNAEae/" },
   { id: "17843399397693823", date: "2026-02-27T12:59:57Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "Você quer estabilidade…ou histórias para contar?\n\n#cancún #caribe #viagem #instagood #loveit",
+    caption: "Você quer estabilidade…ou histórias para contar?
+
+#cancún #caribe #viagem #instagood #loveit",
     likes: 26, comments: 3, reach: null, views: null, saved: null, total_interactions: 29,
     hashtags: ["cancún", "caribe", "viagem", "instagood", "loveit"], mentions: [],
     permalink: "https://www.instagram.com/p/DVQyI-HgCik/" },
   { id: "18309309439286598", date: "2026-02-19T22:13:46Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "Nem toda porta leva para fora 🇲🇦\n\n#marrocos #trip #viagem #vivendo #instagood",
+    caption: "Nem toda porta leva para fora 🇲🇦
+
+#marrocos #trip #viagem #vivendo #instagood",
     likes: 10, comments: 0, reach: null, views: null, saved: null, total_interactions: 10,
     hashtags: ["marrocos", "trip", "viagem", "vivendo", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/p/DU9LKR8AK29/" },
   { id: "17979414452985483", date: "2026-02-19T11:12:10Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Eu não trouxe só um tapete 🇲🇦\nTrouxe a história de um povo para dentro da minha casa.\n\nUma cidade milenar, uma cultura forte, uma história contada fio a fio em um dos tapetes mais íconicos que já vi 👀\n\n#marrocos #história #tapete #instagood",
+    caption: "Eu não trouxe só um tapete 🇲🇦
+Trouxe a história de um povo para dentro da minha casa.
+
+Uma cidade milenar, uma cultura forte, uma história contada fio a fio em um dos tapetes mais íconicos que já vi 👀
+
+#marrocos #história #tapete #instagood",
     likes: 4, comments: 0, reach: null, views: null, saved: null, total_interactions: 4,
     hashtags: ["marrocos", "história", "tapete", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/reel/DU7_TQtABJ8/" },
   { id: "18108083959685505", date: "2026-02-19T11:09:33Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Eu não trouxe só um tapete 🇲🇦\nTrouxe a história de um povo para dentro da minha casa.\n\nUma cidade milenar, uma cultura forte, uma história contada fio a fio em um dos tapetes mais íconicos que já vi 👀\n\n#marrocos #história #tapete #instagood #instagram",
+    caption: "Eu não trouxe só um tapete 🇲🇦
+Trouxe a história de um povo para dentro da minha casa.
+
+Uma cidade milenar, uma cultura forte, uma história contada fio a fio em um dos tapetes mais íconicos que já vi 👀
+
+#marrocos #história #tapete #instagood #instagram",
     likes: 12, comments: 5, reach: null, views: null, saved: null, total_interactions: 17,
     hashtags: ["marrocos", "história", "tapete", "instagood", "instagram"], mentions: [],
     permalink: "https://www.instagram.com/reel/DU7-mPDgMQz/" },
@@ -251,17 +449,35 @@ export const postsRaw: PostRaw[] = [
     hashtags: [], mentions: [],
     permalink: "https://www.instagram.com/reel/DU0mGMxgIYG/" },
   { id: "18015763214651506", date: "2026-02-16T13:01:57Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "@lumatosinhos e não é que concordo plenamente com você 👏🏼\n\n#nome #destino #você #instagram",
+    caption: "@lumatosinhos e não é que concordo plenamente com você 👏🏼
+
+#nome #destino #você #instagram",
     likes: 8, comments: 4, reach: null, views: null, saved: null, total_interactions: 12,
     hashtags: ["nome", "destino", "você", "instagram"], mentions: ["lumatosinhos"],
     permalink: "https://www.instagram.com/reel/DU0dTRGgN_N/" },
   { id: "18095489332787686", date: "2026-02-12T11:02:01Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Talento ajuda.\n\nMas quem você escolhe estar perto…\nacelera tudo.\n\nQuando você fala, você aprende.\nQuando você ouve, você evolui.\n\n@ricardo.eder @carecadomkt @ocopyqvende @macmasi \n\n#talento #crescimento #networking #instagram #loveit",
+    caption: "Talento ajuda.
+
+Mas quem você escolhe estar perto…
+acelera tudo.
+
+Quando você fala, você aprende.
+Quando você ouve, você evolui.
+
+@ricardo.eder @carecadomkt @ocopyqvende @macmasi 
+
+#talento #crescimento #networking #instagram #loveit",
     likes: 14, comments: 10, reach: null, views: null, saved: null, total_interactions: 24,
     hashtags: ["talento", "crescimento", "networking", "instagram", "loveit"], mentions: ["ricardo.eder", "carecadomkt", "ocopyqvende", "macmasi"],
     permalink: "https://www.instagram.com/reel/DUp8j8cgL82/" },
   { id: "17949140610092825", date: "2026-02-11T22:23:20Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "🫵🏻 Você viaja para tirar foto…\nou para mudar a forma de ver o mundo? 🌍 \n\nPorque no fim,\né o mundo que muda você.\n\n#trip #conexão #photography #experience #vivendo",
+    caption: "🫵🏻 Você viaja para tirar foto…
+ou para mudar a forma de ver o mundo? 🌍 
+
+Porque no fim,
+é o mundo que muda você.
+
+#trip #conexão #photography #experience #vivendo",
     likes: 7, comments: 0, reach: null, views: null, saved: null, total_interactions: 7,
     hashtags: ["trip", "conexão", "photography", "experience", "vivendo"], mentions: [],
     permalink: "https://www.instagram.com/p/DUol5RHAGOK/" }
@@ -271,37 +487,37 @@ export const postsRaw: PostRaw[] = [
 // CAMADA 2 — ANALYTICS TABLES
 // ─────────────────────────────────────────────────────────────
 export const profileMetrics = {
-  followers: 61239,
-  following: 330,
-  posts_total: 3007,
-  follower_following_ratio: 185.6,
-  posts_per_week_estimated: 2.9,
-  reels_share_pct: 50.0,
-  feed_image_share_pct: 23.7,
-  carousel_share_pct: 26.3,
+  followers: 61241,
+  following: 331,
+  posts_total: 3008,
+  follower_following_ratio: 185.0,
+  posts_per_week_estimated: 3.0,
+  reels_share_pct: 48.7,
+  feed_image_share_pct: 23.1,
+  carousel_share_pct: 28.2,
   source: 'Instagram MCP',
-  collected_at: "2026-05-08T14:09:30Z",
+  collected_at: "2026-05-10T14:20:15Z",
 };
 
 export const calculatedFields = {
-  avg_likes_last_20: 15.3,
-  avg_comments_last_20: 2.4,
+  avg_likes_last_20: 14.8,
+  avg_comments_last_20: 2.5,
   avg_views_last_20: "indisponível",
   avg_reach_last_20: "indisponível",
-  avg_interactions_last_20: 17.7,
-  median_likes: 12.5,
-  median_comments: 1.0,
-  avg_caption_length: 186,
-  avg_hashtags_per_post: 4.03,
+  avg_interactions_last_20: 17.3,
+  median_likes: 12,
+  median_comments: 1,
+  avg_caption_length: 183.0,
+  avg_hashtags_per_post: 4.05,
   avg_mentions_per_post: 0.21,
-  posting_frequency_per_week: 2.9,
-  follower_following_ratio: 185.6,
+  posting_frequency_per_week: 3.0,
+  follower_following_ratio: 185.0,
   engagement_rate_avg_pct: 0.027,
   top_3_content_formats: ["REELS", "CAROUSEL_ALBUM", "IMAGE"],
   top_5_content_topics: ['Viagem & Lifestyle', 'Empreendedorismo', 'Autoridade', 'Tecnologia/IA', 'Reflexão & Propósito'],
-  top_5_words: ["instagood", "mundo", "história", "trip", "está"],
+  top_5_words: [],
   best_post_by_interactions: { id: "18081224582118555", interactions: 57, caption_preview: "No fim… tudo se conecta. O que você vive em silêncio… aparece no palco. Esse ano será incrível …", reach: null },
-  best_reel_by_views: { id: "18587161180034708", views: null, caption_preview: "Eu achei que era apenas uma loja de sardinhas Mas na verdade é quase um espetáculo. O Mundo Fan…", reach: null },
+  best_reel_by_views: { id: "18081224582118555", views: null, caption_preview: "No fim… tudo se conecta. O que você vive em silêncio… aparece no palco. Esse ano será incrível …", reach: null },
   worst_post_by_interactions: { id: "17874991773416016", interactions: 0, caption_preview: "" },
   most_common_posting_day: "Sexta",
   most_common_posting_hour: "15:00",
@@ -315,13 +531,13 @@ export const calculatedFields = {
 export const postingPatterns = {
   most_active_day: "Sexta",
   most_active_hour: "15:00",
-  posts_per_week_estimated: 2.9,
-  days_distribution: { "Sexta": 9, "Quinta": 9, "Segunda": 5, "Terça": 5, "Domingo": 3, "Sábado": 2, "Quarta": 5 },
-  format_distribution: { IMAGE: 9, REELS: 19, CAROUSEL_ALBUM: 10 },
-  format_distribution_pct: { IMAGE: 23.7, REELS: 50.0, CAROUSEL_ALBUM: 26.3 },
-  funnel_distribution: { topo: 34, meio: 4, fundo: 0 },
-  content_temp_distribution: { frio: 10, morno: 21, quente: 7 },
-  consistency: "2.9 posts/semana nos últimos 90 dias analisados",
+  posts_per_week_estimated: 3.0,
+  days_distribution: { Sábado: 3, Sexta: 9, Quinta: 9, Segunda: 5, Terça: 5, Domingo: 3, Quarta: 5 },
+  format_distribution: { CAROUSEL_ALBUM: 11, IMAGE: 9, REELS: 19 },
+  format_distribution_pct: { CAROUSEL_ALBUM: 28.2, IMAGE: 23.1, REELS: 48.7 },
+  funnel_distribution: { topo: 35, meio: 4, fundo: 0 },
+  content_temp_distribution: { frio: 10, morno: 21, quente: 8 },
+  consistency: "3.0 posts/semana nos últimos 90 dias analisados",
   seasonality: 'Publicação ligada a viagens, bastidores e marcos de autoridade',
 };
 
@@ -539,12 +755,12 @@ export const metaAds = {
 // ─────────────────────────────────────────────────────────────
 export const dataQuality = {
   source: 'Instagram MCP',
-  collection_date: "08/05/2026 às 10:09",
-  posts_analyzed: 38,
+  collection_date: "10/05/2026 às 10:20",
+  posts_analyzed: 39,
   period: 'Últimos 90 dias',
   limitations: [
     'Métricas de stories e demografia não estavam disponíveis nesta integração',
-    'Insights por post coletados quando autorizados pela API',
+    'Insights por post foram limitados pelo conector nesta execução; likes e comentários foram atualizados',
     'Análise qualitativa inferida por caption, formato e sinais públicos',
   ],
   confidence_level: 'Alta para perfil/posts; média para recomendações qualitativas',
@@ -556,7 +772,7 @@ export const dataQuality = {
 export const dashboardData = {
   meta: {
     profile: profileIdentity,
-    lastUpdated: "03/05/2026 às 13:08",
+    lastUpdated: "10/05/2026 às 10:20",
     dashboardCadence: 'Atualização semanal aos domingos',
     designPhilosophy: 'Editorial executivo cinematográfico',
   },
@@ -568,13 +784,13 @@ export const dashboardData = {
       criticalPoint: 'Gap crítico permanece: conteúdo tem autoridade, mas CTA explícito ainda é baixo. Sem CTA e sem rastreamento consistente, alcance vira vaidade e cliques não viram receita medida.',
     },
     kpis: [
-      { label: 'Seguidores', value: '62,152'.replace(',', '.'), delta: 'coleta atual', tone: 'positive' as const },
-      { label: 'Seguindo', value: '330', delta: 'ratio 188:1', tone: 'positive' as const },
-      { label: 'Publicações', value: '3,004'.replace(',', '.'), delta: '4,0 posts/semana', tone: 'positive' as const },
+      { label: 'Seguidores', value: '61.241', delta: 'coleta atual', tone: 'positive' as const },
+      { label: 'Seguindo', value: '331', delta: 'ratio 185.0:1', tone: 'positive' as const },
+      { label: 'Publicações', value: '3.008', delta: '3.0 posts/semana', tone: 'positive' as const },
       { label: 'Anúncios Meta', value: '35,4 mil impr.', delta: '671 cliques · spend R$0', tone: 'warning' as const },
     ],
     conversion: [
-      { label: 'ER disponível', value: '0.032%', note: 'Likes + comentários / seguidores' },
+      { label: 'ER disponível', value: '0.027%', note: 'Likes + comentários / seguidores' },
       { label: 'Alcance médio', value: 'N/D', note: 'Insight por post indisponível nesta coleta' },
       { label: 'Views médias', value: 'N/D', note: 'Insight por post indisponível nesta coleta' },
     ],
