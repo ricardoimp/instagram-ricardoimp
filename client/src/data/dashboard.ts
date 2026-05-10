@@ -1,7 +1,7 @@
 // Script Mestre — Auditoria Completa de Perfil @ricardoimp
 // Estrutura de 4 camadas: raw_data | analytics_tables | executive_summary | scorecards
-// Última coleta: 10/05/2026 às 10:20 — Instagram MCP
-// 39 posts analisados | insights por post coletados quando disponíveis
+// Última coleta: 10/05/2026 às 12:00 — Instagram MCP + Meta Ads MCP
+// 20 posts recentes analisados | alcance, views e salvos coletados quando disponíveis
 
 // ─────────────────────────────────────────────────────────────
 // TIPOS
@@ -54,10 +54,10 @@ export const profileIdentity = {
   username: "@ricardoimp",
   name: "Ricardo Impellizieri",
   account_type: 'business/creator',
-  bio_full: "Construo empresas enquanto viajo o mundo ✈️
+  bio_full: `Construo empresas enquanto viajo o mundo ✈️
 🏆7 empresas • 2 vendidas
 🌎37 países visitados
-👇🏼Liberdade é estratégia!",
+👇🏼Liberdade é estratégia!`,
   bio_summary: 'Empreendedor serial com 7 empresas, 2 vendidas, 37 países visitados. Posicionamento: liberdade como estratégia.',
   link_bio: "http://saiba-mais.ai",
   bio_emojis: ['✈️', '🏆', '🌎', '👇🏼'],
@@ -74,86 +74,86 @@ export const profileIdentity = {
   social_proof_presence: true,
   commercial_offer_presence: false,
   website: "http://saiba-mais.ai",
-  collected_at: "2026-05-10T14:20:15Z",
+  collected_at: "2026-05-10T12:00:00Z",
 };
 
 export const postsRaw: PostRaw[] = [
   { id: "18048556742591637", date: "2026-05-09T23:09:56Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "Por algum bar de Seattle.
+    caption: `Por algum bar de Seattle.
 
-#seattle #bar #drink #instagood #photography",
-    likes: 3, comments: 1, reach: null, views: null, saved: null, total_interactions: 4,
+#seattle #bar #drink #instagood #photography`,
+    likes: 3, comments: 1, reach: 101, views: 273, saved: 0, total_interactions: 4,
     hashtags: ["seattle", "bar", "drink", "instagood", "photography"], mentions: [],
     permalink: "https://www.instagram.com/p/DYIsYvTgDhM/" },
   { id: "18004667222739565", date: "2026-05-08T11:45:12Z", type: "IMAGE", media_product_type: "FEED",
-    caption: "Bad Boys 😎🐕",
-    likes: 20, comments: 1, reach: null, views: null, saved: null, total_interactions: 21,
+    caption: `Bad Boys 😎🐕`,
+    likes: 20, comments: 1, reach: 199, views: 410, saved: 0, total_interactions: 21,
     hashtags: [], mentions: [],
     permalink: "https://www.instagram.com/p/DYE47hCgDvZ/" },
   { id: "18462194005101879", date: "2026-05-07T02:30:26Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "✈️",
-    likes: 2, comments: 0, reach: null, views: null, saved: null, total_interactions: 2,
+    caption: `✈️`,
+    likes: 2, comments: 0, reach: 100, views: 115, saved: 0, total_interactions: 2,
     hashtags: [], mentions: [],
     permalink: "https://www.instagram.com/reel/DYBU6ocA2uP/" },
   { id: "18099295883038166", date: "2026-05-07T02:22:21Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "✈️",
-    likes: 9, comments: 0, reach: null, views: null, saved: null, total_interactions: 9,
+    caption: `✈️`,
+    likes: 9, comments: 0, reach: 235, views: 366, saved: 0, total_interactions: 9,
     hashtags: [], mentions: [],
     permalink: "https://www.instagram.com/reel/DYBT8_HgM6C/" },
   { id: "18079469021558783", date: "2026-05-04T15:20:37Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Margem + Renda Recorrente + Crescimento (Escala)
+    caption: `Margem + Renda Recorrente + Crescimento (Escala)
 eu olho sempre para esses 3 principais pontos 👀
 
-#empresa #empreendedorismo #crescimento #sucesso #instagood",
-    likes: 7, comments: 0, reach: null, views: null, saved: null, total_interactions: 7,
+#empresa #empreendedorismo #crescimento #sucesso #instagood`,
+    likes: 7, comments: 0, reach: 225, views: 332, saved: 0, total_interactions: 7,
     hashtags: ["empresa", "empreendedorismo", "crescimento", "sucesso", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/reel/DX6-WRRAvZq/" },
   { id: "18101215795990406", date: "2026-04-28T15:01:05Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Toda viagem revela 3 versões suas:
+    caption: `Toda viagem revela 3 versões suas:
 
 A que você sustenta hoje.
 A que já não faz mais sentido.
 E a que está esperando uma decisão sua.
 
-#canada #instagram #trip #photography #paz",
-    likes: 1, comments: 0, reach: null, views: null, saved: null, total_interactions: 1,
+#canada #instagram #trip #photography #paz`,
+    likes: 1, comments: 0, reach: 120, views: 125, saved: 0, total_interactions: 1,
     hashtags: ["canada", "instagram", "trip", "photography", "paz"], mentions: [],
     permalink: "https://www.instagram.com/reel/DXrfolmgNUe/" },
   { id: "18338572129171422", date: "2026-04-28T14:58:39Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Toda viagem revela 3 versões suas:
+    caption: `Toda viagem revela 3 versões suas:
 
 A que você sustenta hoje.
 A que já não faz mais sentido.
 E a que está esperando uma decisão sua.
 
-#canada #instagram #trip #photography #paz",
-    likes: 9, comments: 1, reach: null, views: null, saved: null, total_interactions: 10,
+#canada #instagram #trip #photography #paz`,
+    likes: 9, comments: 1, reach: 245, views: 324, saved: 0, total_interactions: 10,
     hashtags: ["canada", "instagram", "trip", "photography", "paz"], mentions: [],
     permalink: "https://www.instagram.com/reel/DXrfHHGgO3d/" },
   { id: "18098472605102842", date: "2026-04-27T15:11:10Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Entrei achando que era só um mercado
+    caption: `Entrei achando que era só um mercado
 saí entendendo por que lugares assim duram séculos, um dos mercados mais antigos de istambul 🇹🇷
 
-#turquia #trip #viajar #instagood #reels",
-    likes: 2, comments: 0, reach: null, views: null, saved: null, total_interactions: 2,
+#turquia #trip #viajar #instagood #reels`,
+    likes: 2, comments: 0, reach: 235, views: 265, saved: 0, total_interactions: 2,
     hashtags: ["turquia", "trip", "viajar", "instagood", "reels"], mentions: [],
     permalink: "https://www.instagram.com/reel/DXo7_qRgCfA/" },
   { id: "18110982055878581", date: "2026-04-27T15:07:43Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Entrei achando que era só um mercado
+    caption: `Entrei achando que era só um mercado
 saí entendendo por que lugares assim duram séculos, um dos mercados mais antigos de istambul 🇹🇷
 
-#turquia #trip #viajar #instagood #reels",
-    likes: 21, comments: 4, reach: null, views: null, saved: null, total_interactions: 25,
+#turquia #trip #viajar #instagood #reels`,
+    likes: 21, comments: 4, reach: 381, views: 538, saved: 0, total_interactions: 25,
     hashtags: ["turquia", "trip", "viajar", "instagood", "reels"], mentions: [],
     permalink: "https://www.instagram.com/reel/DXo7KozAHJr/" },
   { id: "18115128127783856", date: "2026-04-26T15:35:43Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "Quanto mais eu vou…
-mais eu entendo que não é sobre ir.",
-    likes: 22, comments: 1, reach: null, views: null, saved: null, total_interactions: 23,
+    caption: `Quanto mais eu vou…
+mais eu entendo que não é sobre ir.`,
+    likes: 22, comments: 1, reach: 185, views: 456, saved: 0, total_interactions: 23,
     hashtags: [], mentions: [],
     permalink: "https://www.instagram.com/p/DXmaEoSFKsK/" },
   { id: "18591759310050140", date: "2026-04-24T15:49:40Z", type: "IMAGE", media_product_type: "FEED",
-    caption: "No meio de tudo que eu construo…
+    caption: `No meio de tudo que eu construo…
 é aqui que eu lembro o porquê.
 
 🇺🇸
@@ -164,12 +164,12 @@ this is where I remember why.
 En medio de todo lo que construyo…
 es aquí donde recuerdo el porqué.
 
-#grandson #photography #família #family #instagood",
-    likes: 35, comments: 5, reach: null, views: null, saved: null, total_interactions: 40,
+#grandson #photography #família #family #instagood`,
+    likes: 35, comments: 5, reach: 429, views: 803, saved: 0, total_interactions: 40,
     hashtags: ["grandson", "photography", "família", "family", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/p/DXhReNcAJlQ/" },
   { id: "17943920478168349", date: "2026-04-21T16:58:33Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "Se a conta é sua…faça valer a vida que escolheu.
+    caption: `Se a conta é sua…faça valer a vida que escolheu.
 
 🇪🇸
 
@@ -181,37 +181,37 @@ haz que valga la vida que elegiste.
 If you’re the one paying the price…
 make the life you chose worth it.
 
-#live #vivalavida #seattle #photography #market",
-    likes: 13, comments: 7, reach: null, views: null, saved: null, total_interactions: 20,
+#live #vivalavida #seattle #photography #market`,
+    likes: 13, comments: 7, reach: 241, views: 524, saved: 0, total_interactions: 20,
     hashtags: ["live", "vivalavida", "seattle", "photography", "market"], mentions: [],
     permalink: "https://www.instagram.com/p/DXZrk7RADRP/" },
   { id: "18118097605678754", date: "2026-04-18T21:25:36Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "O mundo não é só destino.
+    caption: `O mundo não é só destino.
 É contraste.
 
-#marrocos #desert #trip #vivendo #mundo",
-    likes: 29, comments: 2, reach: null, views: null, saved: null, total_interactions: 31,
+#marrocos #desert #trip #vivendo #mundo`,
+    likes: 29, comments: 2, reach: 328, views: 841, saved: 1, total_interactions: 31,
     hashtags: ["marrocos", "desert", "trip", "vivendo", "mundo"], mentions: [],
     permalink: "https://www.instagram.com/p/DXSbwQcFF0V/" },
   { id: "17866159815613734", date: "2026-04-16T22:52:16Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "O mundo é de quem se move.
+    caption: `O mundo é de quem se move.
 Não espere permissão.
 
 Los Angeles → Las Vegas
 
-#losangeles #lasvegas #movimento #viagem #empreendedorismo",
-    likes: 11, comments: 1, reach: null, views: null, saved: null, total_interactions: 12,
+#losangeles #lasvegas #movimento #viagem #empreendedorismo`,
+    likes: 11, comments: 1, reach: 248, views: 333, saved: 1, total_interactions: 12,
     hashtags: ["losangeles", "lasvegas", "movimento", "viagem", "empreendedorismo"], mentions: [],
     permalink: "https://www.instagram.com/reel/DXNbns2j4Kl/" },
   { id: "18117398149663032", date: "2026-04-15T21:47:22Z", type: "IMAGE", media_product_type: "FEED",
-    caption: "Conheço o preço da liberdade.Eu pago.
+    caption: `Conheço o preço da liberdade.Eu pago.
 
-#mundo #liberdade #vivendo #life #good",
-    likes: 12, comments: 1, reach: null, views: null, saved: null, total_interactions: 13,
+#mundo #liberdade #vivendo #life #good`,
+    likes: 12, comments: 1, reach: 169, views: 269, saved: 0, total_interactions: 13,
     hashtags: ["mundo", "liberdade", "vivendo", "life", "good"], mentions: [],
     permalink: "https://www.instagram.com/p/DXKvqEJiZ6p/" },
   { id: "18223237996314109", date: "2026-04-11T16:28:14Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "Ninguém fala muito da Croácia…
+    caption: `Ninguém fala muito da Croácia…
 mas deveria.
 
 Água transparente de verdade.
@@ -223,21 +223,21 @@ E tem lugar que te faz parar.
 
 Esse aqui é a segunda opção.
 
-#croacia #paradise #photographer #instagood #europa",
-    likes: 14, comments: 1, reach: null, views: null, saved: null, total_interactions: 15,
+#croacia #paradise #photographer #instagood #europa`,
+    likes: 14, comments: 1, reach: 256, views: 512, saved: 1, total_interactions: 15,
     hashtags: ["croacia", "paradise", "photographer", "instagood", "europa"], mentions: [],
     permalink: "https://www.instagram.com/p/DW_4KJtAPQA/" },
   { id: "18084408851056630", date: "2026-04-10T14:46:38Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Tudo que você constrói te traz pra momentos assim.
+    caption: `Tudo que você constrói te traz pra momentos assim.
 
 Almoçar no Rio Sena navegando por Paris é uma experiência incrível… um belo menu … passando pelos principais pontos turísticos da cidade com aquela champa 🥂 geladinha. Not a price 😉
 
-#paris #trip #viagem #europa #photography",
-    likes: 9, comments: 2, reach: null, views: null, saved: null, total_interactions: 11,
+#paris #trip #viagem #europa #photography`,
+    likes: 9, comments: 2, reach: 335, views: 414, saved: 0, total_interactions: 11,
     hashtags: ["paris", "trip", "viagem", "europa", "photography"], mentions: [],
     permalink: "https://www.instagram.com/reel/DW9HKuGgMmr/" },
   { id: "18081224582118555", date: "2026-04-07T22:39:52Z", type: "IMAGE", media_product_type: "FEED",
-    caption: "No fim… tudo se conecta.
+    caption: `No fim… tudo se conecta.
 O que você vive em silêncio… aparece no palco.
 
 Esse ano será incrível 🏆
@@ -248,24 +248,24 @@ Esse ano será incrível 🏆
 
 Esse é um prêmio de melhores empresas do Brasil em seus segmentos e agora quero o 1º lugar 🙌🏼
 
-#govtech #tecnologia #governo #saude #instagood",
-    likes: 42, comments: 15, reach: null, views: null, saved: null, total_interactions: 57,
+#govtech #tecnologia #governo #saude #instagood`,
+    likes: 42, comments: 15, reach: 363, views: 739, saved: 0, total_interactions: 57,
     hashtags: ["govtech", "tecnologia", "governo", "saude", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/p/DW2O1nsAExw/" },
   { id: "18088641608186963", date: "2026-04-03T22:45:55Z", type: "IMAGE", media_product_type: "FEED",
-    caption: "Tem lugares que impressionam.
+    caption: `Tem lugares que impressionam.
 
 E tem lugares que te lembram
 do tamanho do jogo que você está jogando.
 
 Nova York te emana essa energia ⚡️
 
-#nyc #business #growth #evolucao #photographer",
-    likes: 20, comments: 1, reach: null, views: null, saved: null, total_interactions: 21,
+#nyc #business #growth #evolucao #photographer`,
+    likes: 20, comments: 1, reach: 495, views: 824, saved: 0, total_interactions: 21,
     hashtags: ["nyc", "business", "growth", "evolucao", "photographer"], mentions: [],
     permalink: "https://www.instagram.com/p/DWr8mKBgN2J/" },
   { id: "18573299488004222", date: "2026-04-03T14:03:36Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "Esse virou um lugar especial. 🤩
+    caption: `Esse virou um lugar especial. 🤩
 
 Tem algo aqui que não dá pra explicar…
 é sentir.
@@ -278,12 +278,12 @@ e simplesmente estar.
 
 @villacoracaoguesthouse vocês estão de parabéns 👏🏼
 
-#descanso #natureza #pazmental #instago #retiro",
-    likes: 16, comments: 6, reach: null, views: null, saved: null, total_interactions: 22,
+#descanso #natureza #pazmental #instago #retiro`,
+    likes: 16, comments: 6, reach: 260, views: 618, saved: 0, total_interactions: 22,
     hashtags: ["descanso", "natureza", "pazmental", "instago", "retiro"], mentions: ["villacoracaoguesthouse"],
     permalink: "https://www.instagram.com/p/DWrBPuzAMIw/" },
   { id: "17911774722356878", date: "2026-03-31T15:14:46Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "Dubrovnik é conhecida pelas muralhas, pelo mar e pela história, mas poucos sabem que aqui também está a University of Dubrovnik.
+    caption: `Dubrovnik é conhecida pelas muralhas, pelo mar e pela história, mas poucos sabem que aqui também está a University of Dubrovnik.
 
 E é um dos centros acadêmicos mais relevantes da região em tecnologia e inovação.
 
@@ -297,24 +297,24 @@ vieram da clareza que só o silêncio traz.Eu acredito muito que o movimento ger
 
 Pense… construa… evolua.
 
-#evolucao #crescimento #estudos #mundo #conhecimento",
+#evolucao #crescimento #estudos #mundo #conhecimento`,
     likes: 25, comments: 1, reach: null, views: null, saved: null, total_interactions: 26,
     hashtags: ["evolucao", "crescimento", "estudos", "mundo", "conhecimento"], mentions: [],
     permalink: "https://www.instagram.com/p/DWjbAYOAOsG/" },
   { id: "18092030957147327", date: "2026-03-27T00:48:13Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Não é sobre parecer que vive.
-É sobre estar vivendo de verdade.",
+    caption: `Não é sobre parecer que vive.
+É sobre estar vivendo de verdade.`,
     likes: 4, comments: 0, reach: null, views: null, saved: null, total_interactions: 4,
     hashtags: [], mentions: [],
     permalink: "https://www.instagram.com/reel/DWXkocZgP7v/" },
   { id: "18001864238860156", date: "2026-03-26T22:23:11Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Não é sobre parecer que vive.
-É sobre estar vivendo de verdade. 🌍",
+    caption: `Não é sobre parecer que vive.
+É sobre estar vivendo de verdade. 🌍`,
     likes: 19, comments: 2, reach: null, views: null, saved: null, total_interactions: 21,
     hashtags: [], mentions: [],
     permalink: "https://www.instagram.com/reel/DWXT-QhAEcA/" },
   { id: "18587161180034708", date: "2026-03-25T13:14:10Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Eu achei que era apenas uma loja de sardinhas
+    caption: `Eu achei que era apenas uma loja de sardinhas
 Mas na verdade é quase um espetáculo.
 
 O Mundo Fantástico da Sardinha Portuguesa @portuguesesardine, em Lisboa, transformou algo simples em uma experiência visual incrível.
@@ -327,12 +327,12 @@ transformado em cultura, memória e curiosidade.
 
 Você entraria nessa loja?
 
-#lisboa #europa #novidade #instagood #loveit",
+#lisboa #europa #novidade #instagood #loveit`,
     likes: 31, comments: 4, reach: null, views: null, saved: null, total_interactions: 35,
     hashtags: ["lisboa", "europa", "novidade", "instagood", "loveit"], mentions: ["portuguesesardine"],
     permalink: "https://www.instagram.com/reel/DWTwL0igM_t/" },
   { id: "18083718791367809", date: "2026-03-25T00:13:27Z", type: "IMAGE", media_product_type: "FEED",
-    caption: "Não tenho um escritório.
+    caption: `Não tenho um escritório.
 Tenho uma sala de operações. 👨🏻‍💻
 
 Daqui saem decisões. Não tarefas.
@@ -343,12 +343,12 @@ A diferença é que dessa vez quem chega primeiro não precisa gritar mais alto�
 
 Você está construindo ou ainda está assistindo? 
 
-#onda #ai #futuro #tecnologia #instagood",
+#onda #ai #futuro #tecnologia #instagood`,
     likes: 16, comments: 0, reach: null, views: null, saved: null, total_interactions: 16,
     hashtags: ["onda", "ai", "futuro", "tecnologia", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/p/DWSWTVwgODK/" },
   { id: "18107565679641223", date: "2026-03-15T14:05:00Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Eu achei que era apenas uma loja de sardinhas 🐟
+    caption: `Eu achei que era apenas uma loja de sardinhas 🐟
 
 Mas na verdade é quase um espetáculo 🤩
 
@@ -364,99 +364,99 @@ descobrir beleza onde ninguém imaginaria.
 
 Você entraria nessa loja?
 
-#lisboa #europa #novidade #instagood #loveit",
+#lisboa #europa #novidade #instagood #loveit`,
     likes: 11, comments: 0, reach: null, views: null, saved: null, total_interactions: 11,
     hashtags: ["lisboa", "europa", "novidade", "instagood", "loveit"], mentions: ["portuguesesardine"],
     permalink: "https://www.instagram.com/reel/DV6GWSqlZUq/" },
   { id: "17879123688488066", date: "2026-03-12T19:29:22Z", type: "IMAGE", media_product_type: "FEED",
-    caption: "Quem acha que os grandes negócios acontecem apenas em salas de reunião… nunca entendeu como eles realmente nascem.
+    caption: `Quem acha que os grandes negócios acontecem apenas em salas de reunião… nunca entendeu como eles realmente nascem.
 
-#businessmindset #business #networking #life #instagood",
+#businessmindset #business #networking #life #instagood`,
     likes: 19, comments: 0, reach: null, views: null, saved: null, total_interactions: 19,
     hashtags: ["businessmindset", "business", "networking", "life", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/p/DVy89NQAKj5/" },
   { id: "17875028724542272", date: "2026-03-11T22:46:51Z", type: "IMAGE", media_product_type: "FEED",
-    caption: "O mundo pertence a quem tem coragem de sair do chão.
+    caption: `O mundo pertence a quem tem coragem de sair do chão.
 
 Muitas vezes mudar de rota te leva a novos e incríveis lugares…. aperte o cinto ✈️
 
-#airbus #flight #instagram #photography #route",
+#airbus #flight #instagram #photography #route`,
     likes: 8, comments: 1, reach: null, views: null, saved: null, total_interactions: 9,
     hashtags: ["airbus", "flight", "instagram", "photography", "route"], mentions: [],
     permalink: "https://www.instagram.com/p/DVwukC_gGc9/" },
   { id: "18095251325061078", date: "2026-03-08T12:38:25Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "Tranquilidade… paz… um ambiente confortável e a gratidão de que existe alguém por nós.
+    caption: `Tranquilidade… paz… um ambiente confortável e a gratidão de que existe alguém por nós.
 
-#montanha #life #god #vivendo #instagood",
+#montanha #life #god #vivendo #instagood`,
     likes: 30, comments: 0, reach: null, views: null, saved: null, total_interactions: 30,
     hashtags: ["montanha", "life", "god", "vivendo", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/p/DVn61LdgLHu/" },
   { id: "18073296557439826", date: "2026-03-06T23:51:25Z", type: "IMAGE", media_product_type: "FEED",
-    caption: "Construindo.
+    caption: `Construindo.
 Celebrando.
 Repetindo.
 
-#brinde #wine #lifestyle #celebration #instagood",
+#brinde #wine #lifestyle #celebration #instagood`,
     likes: 19, comments: 6, reach: null, views: null, saved: null, total_interactions: 25,
     hashtags: ["brinde", "wine", "lifestyle", "celebration", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/p/DVj99DeAOWE/" },
   { id: "18095218777975373", date: "2026-02-27T15:09:09Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Trabalhar com as maiores lideranças do governo revela uma coisa: 
+    caption: `Trabalhar com as maiores lideranças do governo revela uma coisa: 
 
 Não é a velocidade que te destaca. É a estrutura!
 
-#governo #govtech #lideranca #estrutura #gov",
+#governo #govtech #lideranca #estrutura #gov`,
     likes: 4, comments: 0, reach: null, views: null, saved: null, total_interactions: 4,
     hashtags: ["governo", "govtech", "lideranca", "estrutura", "gov"], mentions: [],
     permalink: "https://www.instagram.com/reel/DVRAdHNAEae/" },
   { id: "17843399397693823", date: "2026-02-27T12:59:57Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "Você quer estabilidade…ou histórias para contar?
+    caption: `Você quer estabilidade…ou histórias para contar?
 
-#cancún #caribe #viagem #instagood #loveit",
+#cancún #caribe #viagem #instagood #loveit`,
     likes: 26, comments: 3, reach: null, views: null, saved: null, total_interactions: 29,
     hashtags: ["cancún", "caribe", "viagem", "instagood", "loveit"], mentions: [],
     permalink: "https://www.instagram.com/p/DVQyI-HgCik/" },
   { id: "18309309439286598", date: "2026-02-19T22:13:46Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "Nem toda porta leva para fora 🇲🇦
+    caption: `Nem toda porta leva para fora 🇲🇦
 
-#marrocos #trip #viagem #vivendo #instagood",
+#marrocos #trip #viagem #vivendo #instagood`,
     likes: 10, comments: 0, reach: null, views: null, saved: null, total_interactions: 10,
     hashtags: ["marrocos", "trip", "viagem", "vivendo", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/p/DU9LKR8AK29/" },
   { id: "17979414452985483", date: "2026-02-19T11:12:10Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Eu não trouxe só um tapete 🇲🇦
+    caption: `Eu não trouxe só um tapete 🇲🇦
 Trouxe a história de um povo para dentro da minha casa.
 
 Uma cidade milenar, uma cultura forte, uma história contada fio a fio em um dos tapetes mais íconicos que já vi 👀
 
-#marrocos #história #tapete #instagood",
+#marrocos #história #tapete #instagood`,
     likes: 4, comments: 0, reach: null, views: null, saved: null, total_interactions: 4,
     hashtags: ["marrocos", "história", "tapete", "instagood"], mentions: [],
     permalink: "https://www.instagram.com/reel/DU7_TQtABJ8/" },
   { id: "18108083959685505", date: "2026-02-19T11:09:33Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Eu não trouxe só um tapete 🇲🇦
+    caption: `Eu não trouxe só um tapete 🇲🇦
 Trouxe a história de um povo para dentro da minha casa.
 
 Uma cidade milenar, uma cultura forte, uma história contada fio a fio em um dos tapetes mais íconicos que já vi 👀
 
-#marrocos #história #tapete #instagood #instagram",
+#marrocos #história #tapete #instagood #instagram`,
     likes: 12, comments: 5, reach: null, views: null, saved: null, total_interactions: 17,
     hashtags: ["marrocos", "história", "tapete", "instagood", "instagram"], mentions: [],
     permalink: "https://www.instagram.com/reel/DU7-mPDgMQz/" },
   { id: "17874991773416016", date: "2026-02-16T14:16:42Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "",
+    caption: ``,
     likes: 0, comments: 0, reach: null, views: null, saved: null, total_interactions: 0,
     hashtags: [], mentions: [],
     permalink: "https://www.instagram.com/reel/DU0mGMxgIYG/" },
   { id: "18015763214651506", date: "2026-02-16T13:01:57Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "@lumatosinhos e não é que concordo plenamente com você 👏🏼
+    caption: `@lumatosinhos e não é que concordo plenamente com você 👏🏼
 
-#nome #destino #você #instagram",
+#nome #destino #você #instagram`,
     likes: 8, comments: 4, reach: null, views: null, saved: null, total_interactions: 12,
     hashtags: ["nome", "destino", "você", "instagram"], mentions: ["lumatosinhos"],
     permalink: "https://www.instagram.com/reel/DU0dTRGgN_N/" },
   { id: "18095489332787686", date: "2026-02-12T11:02:01Z", type: "VIDEO", media_product_type: "REELS",
-    caption: "Talento ajuda.
+    caption: `Talento ajuda.
 
 Mas quem você escolhe estar perto…
 acelera tudo.
@@ -466,18 +466,18 @@ Quando você ouve, você evolui.
 
 @ricardo.eder @carecadomkt @ocopyqvende @macmasi 
 
-#talento #crescimento #networking #instagram #loveit",
+#talento #crescimento #networking #instagram #loveit`,
     likes: 14, comments: 10, reach: null, views: null, saved: null, total_interactions: 24,
     hashtags: ["talento", "crescimento", "networking", "instagram", "loveit"], mentions: ["ricardo.eder", "carecadomkt", "ocopyqvende", "macmasi"],
     permalink: "https://www.instagram.com/reel/DUp8j8cgL82/" },
   { id: "17949140610092825", date: "2026-02-11T22:23:20Z", type: "CAROUSEL_ALBUM", media_product_type: "FEED",
-    caption: "🫵🏻 Você viaja para tirar foto…
+    caption: `🫵🏻 Você viaja para tirar foto…
 ou para mudar a forma de ver o mundo? 🌍 
 
 Porque no fim,
 é o mundo que muda você.
 
-#trip #conexão #photography #experience #vivendo",
+#trip #conexão #photography #experience #vivendo`,
     likes: 7, comments: 0, reach: null, views: null, saved: null, total_interactions: 7,
     hashtags: ["trip", "conexão", "photography", "experience", "vivendo"], mentions: [],
     permalink: "https://www.instagram.com/p/DUol5RHAGOK/" }
@@ -491,19 +491,19 @@ export const profileMetrics = {
   following: 331,
   posts_total: 3008,
   follower_following_ratio: 185.0,
-  posts_per_week_estimated: 3.0,
+  posts_per_week_estimated: 4.2,
   reels_share_pct: 48.7,
   feed_image_share_pct: 23.1,
   carousel_share_pct: 28.2,
-  source: 'Instagram MCP',
-  collected_at: "2026-05-10T14:20:15Z",
+  source: 'Instagram MCP + Meta Ads MCP',
+  collected_at: "2026-05-10T12:00:00Z",
 };
 
 export const calculatedFields = {
   avg_likes_last_20: 14.8,
   avg_comments_last_20: 2.5,
-  avg_views_last_20: "indisponível",
-  avg_reach_last_20: "indisponível",
+  avg_views_last_20: 454.1,
+  avg_reach_last_20: 257.5,
   avg_interactions_last_20: 17.3,
   median_likes: 12,
   median_comments: 1,
@@ -512,7 +512,7 @@ export const calculatedFields = {
   avg_mentions_per_post: 0.21,
   posting_frequency_per_week: 3.0,
   follower_following_ratio: 185.0,
-  engagement_rate_avg_pct: 0.027,
+  engagement_rate_avg_pct: 0.028,
   top_3_content_formats: ["REELS", "CAROUSEL_ALBUM", "IMAGE"],
   top_5_content_topics: ['Viagem & Lifestyle', 'Empreendedorismo', 'Autoridade', 'Tecnologia/IA', 'Reflexão & Propósito'],
   top_5_words: [],
@@ -531,13 +531,13 @@ export const calculatedFields = {
 export const postingPatterns = {
   most_active_day: "Sexta",
   most_active_hour: "15:00",
-  posts_per_week_estimated: 3.0,
-  days_distribution: { Sábado: 3, Sexta: 9, Quinta: 9, Segunda: 5, Terça: 5, Domingo: 3, Quarta: 5 },
-  format_distribution: { CAROUSEL_ALBUM: 11, IMAGE: 9, REELS: 19 },
-  format_distribution_pct: { CAROUSEL_ALBUM: 28.2, IMAGE: 23.1, REELS: 48.7 },
-  funnel_distribution: { topo: 35, meio: 4, fundo: 0 },
-  content_temp_distribution: { frio: 10, morno: 21, quente: 8 },
-  consistency: "3.0 posts/semana nos últimos 90 dias analisados",
+  posts_per_week_estimated: 4.2,
+  days_distribution: { Sábado: 3, Sexta: 5, Quarta: 3, Segunda: 3, Terça: 4, Domingo: 1, Quinta: 1 },
+  format_distribution: { CAROUSEL_ALBUM: 6, IMAGE: 5, REELS: 9 },
+  format_distribution_pct: { CAROUSEL_ALBUM: 30.0, IMAGE: 25.0, REELS: 45.0 },
+  funnel_distribution: { topo: 17, meio: 3, fundo: 0 },
+  content_temp_distribution: { frio: 5, morno: 11, quente: 4 },
+  consistency: "4,2 posts/semana nos 20 posts recentes",
   seasonality: 'Publicação ligada a viagens, bastidores e marcos de autoridade',
 };
 
@@ -562,25 +562,25 @@ export const contentTaxonomy: ContentTaxonomy[] = [
 ];
 
 export const topPostsByInteractions = [
-  { id: "18081224582118555", date: "2026-04-07", type: "IMAGE", caption_preview: "No fim… tudo se conecta. O que você vive em silêncio… aparece no palco. Esse ano será incrível …", total_interactions: 57, reach: "indisponível", views: "indisponível", saved: 0 },
-  { id: "18591759310050140", date: "2026-04-24", type: "IMAGE", caption_preview: "No meio de tudo que eu construo… é aqui que eu lembro o porquê. 🇺🇸 In the middle of everything …", total_interactions: 40, reach: "indisponível", views: "indisponível", saved: 0 },
-  { id: "18587161180034708", date: "2026-03-25", type: "VIDEO", caption_preview: "Eu achei que era apenas uma loja de sardinhas Mas na verdade é quase um espetáculo. O Mundo Fan…", total_interactions: 35, reach: "indisponível", views: "indisponível", saved: 0 },
-  { id: "18118097605678754", date: "2026-04-18", type: "CAROUSEL_ALBUM", caption_preview: "O mundo não é só destino. É contraste. #marrocos #desert #trip #vivendo #mundo", total_interactions: 31, reach: "indisponível", views: "indisponível", saved: 0 },
-  { id: "18095251325061078", date: "2026-03-08", type: "CAROUSEL_ALBUM", caption_preview: "Tranquilidade… paz… um ambiente confortável e a gratidão de que existe alguém por nós. #montanh…", total_interactions: 30, reach: "indisponível", views: "indisponível", saved: 0 }
+  { id: "18081224582118555", date: "2026-04-07", type: "IMAGE", caption_preview: "No fim… tudo se conecta. O que você vive em silêncio… aparece no palco. Esse ano será incrível 🏆 2024 10º Lu…", total_interactions: 57, reach: "363", views: "739", saved: 0 },
+  { id: "18591759310050140", date: "2026-04-24", type: "IMAGE", caption_preview: "No meio de tudo que eu construo… é aqui que eu lembro o porquê. 🇺🇸 In the middle of everything I build… this…", total_interactions: 40, reach: "429", views: "803", saved: 0 },
+  { id: "18118097605678754", date: "2026-04-18", type: "CAROUSEL_ALBUM", caption_preview: "O mundo não é só destino. É contraste. #marrocos #desert #trip #vivendo #mundo", total_interactions: 31, reach: "328", views: "841", saved: 1 },
+  { id: "18110982055878581", date: "2026-04-27", type: "VIDEO", caption_preview: "Entrei achando que era só um mercado saí entendendo por que lugares assim duram séculos, um dos mercados mai…", total_interactions: 25, reach: "381", views: "538", saved: 0 },
+  { id: "18115128127783856", date: "2026-04-26", type: "CAROUSEL_ALBUM", caption_preview: "Quanto mais eu vou… mais eu entendo que não é sobre ir.", total_interactions: 23, reach: "185", views: "456", saved: 0 }
 ];
 
 export const topPostsByReach = [
-  { id: "18081224582118555", date: "2026-04-07", type: "IMAGE", caption_preview: "No fim… tudo se conecta. O que você vive em silêncio… aparece no palco. Esse ano será incrível …", total_interactions: 57, reach: "indisponível", views: "indisponível", saved: 0 },
-  { id: "18591759310050140", date: "2026-04-24", type: "IMAGE", caption_preview: "No meio de tudo que eu construo… é aqui que eu lembro o porquê. 🇺🇸 In the middle of everything …", total_interactions: 40, reach: "indisponível", views: "indisponível", saved: 0 },
-  { id: "18587161180034708", date: "2026-03-25", type: "VIDEO", caption_preview: "Eu achei que era apenas uma loja de sardinhas Mas na verdade é quase um espetáculo. O Mundo Fan…", total_interactions: 35, reach: "indisponível", views: "indisponível", saved: 0 },
-  { id: "18118097605678754", date: "2026-04-18", type: "CAROUSEL_ALBUM", caption_preview: "O mundo não é só destino. É contraste. #marrocos #desert #trip #vivendo #mundo", total_interactions: 31, reach: "indisponível", views: "indisponível", saved: 0 },
-  { id: "18095251325061078", date: "2026-03-08", type: "CAROUSEL_ALBUM", caption_preview: "Tranquilidade… paz… um ambiente confortável e a gratidão de que existe alguém por nós. #montanh…", total_interactions: 30, reach: "indisponível", views: "indisponível", saved: 0 }
+  { id: "18088641608186963", date: "2026-04-03", type: "IMAGE", caption_preview: "Tem lugares que impressionam. E tem lugares que te lembram do tamanho do jogo que você está jogando. Nova Yo…", total_interactions: 21, reach: "495", views: "824", saved: 0 },
+  { id: "18591759310050140", date: "2026-04-24", type: "IMAGE", caption_preview: "No meio de tudo que eu construo… é aqui que eu lembro o porquê. 🇺🇸 In the middle of everything I build… this…", total_interactions: 40, reach: "429", views: "803", saved: 0 },
+  { id: "18110982055878581", date: "2026-04-27", type: "VIDEO", caption_preview: "Entrei achando que era só um mercado saí entendendo por que lugares assim duram séculos, um dos mercados mai…", total_interactions: 25, reach: "381", views: "538", saved: 0 },
+  { id: "18081224582118555", date: "2026-04-07", type: "IMAGE", caption_preview: "No fim… tudo se conecta. O que você vive em silêncio… aparece no palco. Esse ano será incrível 🏆 2024 10º Lu…", total_interactions: 57, reach: "363", views: "739", saved: 0 },
+  { id: "18084408851056630", date: "2026-04-10", type: "VIDEO", caption_preview: "Tudo que você constrói te traz pra momentos assim. Almoçar no Rio Sena navegando por Paris é uma experiência…", total_interactions: 11, reach: "335", views: "414", saved: 0 }
 ];
 
 export const topReelsByViews = [
-  { id: "18587161180034708", date: "2026-03-25", type: "VIDEO", caption_preview: "Eu achei que era apenas uma loja de sardinhas Mas na verdade é quase um espetáculo. O Mundo Fan…", total_interactions: 35, reach: "indisponível", views: "indisponível", saved: 0 },
-  { id: "18110982055878581", date: "2026-04-27", type: "VIDEO", caption_preview: "Entrei achando que era só um mercado saí entendendo por que lugares assim duram séculos, um dos…", total_interactions: 25, reach: "indisponível", views: "indisponível", saved: 0 },
-  { id: "18095489332787686", date: "2026-02-12", type: "VIDEO", caption_preview: "Talento ajuda. Mas quem você escolhe estar perto… acelera tudo. Quando você fala, você aprende.…", total_interactions: 24, reach: "indisponível", views: "indisponível", saved: 0 }
+  { id: "18110982055878581", date: "2026-04-27", type: "VIDEO", caption_preview: "Entrei achando que era só um mercado saí entendendo por que lugares assim duram séculos, um dos mercados mai…", total_interactions: 25, reach: "381", views: "538", saved: 0 },
+  { id: "18084408851056630", date: "2026-04-10", type: "VIDEO", caption_preview: "Tudo que você constrói te traz pra momentos assim. Almoçar no Rio Sena navegando por Paris é uma experiência…", total_interactions: 11, reach: "335", views: "414", saved: 0 },
+  { id: "18099295883038166", date: "2026-05-07", type: "VIDEO", caption_preview: "✈️", total_interactions: 9, reach: "235", views: "366", saved: 0 }
 ];
 
 export const captionAnalysis = {
@@ -659,10 +659,10 @@ export const brandPositioning = {
 // CAMADA 3 — EXECUTIVE SUMMARY
 // ─────────────────────────────────────────────────────────────
 export const executiveSummary = {
-  overview: 'Perfil creator/business de empreendedor serial com posicionamento de autoridade aspiracional. Nicho: empreendedorismo + lifestyle premium + viagens. 62.152 seguidores. 4.0 posts/semana estimados e ER disponível de 0.032% calculado apenas por likes+comentários.',
+  overview: 'Perfil creator/business de empreendedor serial com posicionamento de autoridade aspiracional. Nicho: empreendedorismo + lifestyle premium + viagens. 61.241 seguidores. 4,2 posts/semana estimados e ER disponível de 0.028% calculado apenas por likes+comentários.',
   positioning: 'Combinação de mobilidade global + construção empresarial real + prova de conquista (govtech, empresas vendidas). Promessa central: liberdade como resultado de estrutura.',
-  content_pattern: 'Inspiração + autoridade + lifestyle. Falta pilar de conversão explícito. 45% Reels e 55% Feed nos 20 posts recentes; carrossel e imagem aparecem agregados como FEED no conector.',
-  best_format: 'Imagem/autoridade Govtech lidera interações disponíveis (56); Reel de Sardinha lidera entre Reels por likes+comentários (35).',
+  content_pattern: 'Inspiração + autoridade + lifestyle. Falta pilar de conversão explícito. 45% Reels, 30% carrossel e 25% imagem nos 20 posts recentes; carrossel e imagem aparecem agregados como FEED no conector.',
+  best_format: 'Imagem/autoridade Govtech lidera com 57 interações, 363 de alcance e 739 views; entre Reels, Istambul lidera com 25 interações, 381 de alcance e 538 views.',
   best_topics: ['Conexão emocional real (neto/família)', 'Negócios/autoridade (sala de operações, govtech)', 'Viagem com tese (Marrocos contraste, Croácia paz)'],
   strengths: [
     'Posicionamento único: empreendedor que viaja o mundo com lastro real e verificável',
@@ -673,10 +673,10 @@ export const executiveSummary = {
   ],
   weaknesses: [
     'Ausência de CTA consistente — menos de 30% dos posts têm chamada para ação',
-    'Reels com estética forte, mas sem dados de views nesta coleta para medir tração real',
+    'Reels com estética forte, mas views recentes ainda variam muito; o maior sinal veio de tese clara + contexto de viagem',
     'Funil comercial subaproveitado — saiba-mais.ai não mencionado nos posts',
-    'Meta Ads voltou com entrega mensurável: 35.399 impressões e 671 cliques, mas spend retornou R$0 e precisa validação',
-    'Frequência estimada em 4,0 posts/semana, ainda sem série recorrente clara',
+    'Meta Ads voltou com entrega mensurável: 36.188 impressões e 671 Cliques (todos), mas spend retornou R$0 e precisa validação',
+    'Frequência estimada em 4,2 posts/semana, ainda sem série recorrente clara',
   ],
   opportunities: [
     'Criar CTA fixo em todos os posts: "Link na bio para [benefício específico]"',
@@ -692,15 +692,15 @@ export const executiveSummary = {
   ],
   recommended_kpis: [
     'Taxa de engajamento por post (meta: >0.1%)',
-    'Alcance médio semanal (indisponível nesta coleta)',
-    'Views de Reels (meta: >500/reel quando o insight voltar a estar disponível)',
+    'Alcance médio por post recente: 258',
+    'Views por post recente: média 454; meta >500 em Reels com tese forte',
     'Salvamentos por post (indicador de conteúdo de valor)',
     'Crescimento líquido de seguidores por semana',
     'Shares por post (amplificação orgânica)',
     'Cliques no link da bio (indisponível no conector atual)',
   ],
   risks: [
-    'Seguidores em 62.152 nesta coleta — monitorar variação semanal',
+    'Seguidores em 61.241 nesta coleta — monitorar variação semanal',
     'Dependência de conteúdo orgânico sem estratégia de mídia paga funcional',
     'Conteúdo de viagem sem tese pode atrair audiência que não converte',
     'Ausência de série recorrente reduz fidelização e expectativa da audiência',
@@ -713,11 +713,11 @@ export const executiveSummary = {
 export const scorecards: Scorecard[] = [
   { key: 'clareza_bio', label: 'Clareza da Bio', value: 8, interpretation: 'Bio clara, com proposta de valor, números reais e CTA implícito. Falta CTA mais direto.', tone: 'positive' },
   { key: 'branding', label: 'Branding', value: 7, interpretation: 'Estética visual premium e consistente. Paleta e tom reconhecíveis. Falta assinatura intelectual fixa.', tone: 'positive' },
-  { key: 'consistencia_editorial', label: 'Consistência Editorial', value: 6, interpretation: 'Temas coerentes mas sem série recorrente. Frequência estimada em 4,0 posts/semana.', tone: 'neutral' },
-  { key: 'frequencia', label: 'Frequência', value: 7, interpretation: '4,0 posts/semana estimados nos 20 posts recentes. Meta: manter cadência com Stories diários.', tone: 'positive' },
-  { key: 'diversidade_formatos', label: 'Diversidade de Formatos', value: 7, interpretation: 'Boa distribuição: 45% Reels e 55% Feed nos 20 posts recentes; carrossel e imagem aparecem agregados como FEED no conector. Stories ausentes na análise.', tone: 'positive' },
+  { key: 'consistencia_editorial', label: 'Consistência Editorial', value: 6, interpretation: 'Temas coerentes mas sem série recorrente. Frequência estimada em 4,2 posts/semana.', tone: 'neutral' },
+  { key: 'frequencia', label: 'Frequência', value: 7, interpretation: '4,2 posts/semana estimados nos 20 posts recentes. Meta: manter cadência com Stories diários.', tone: 'positive' },
+  { key: 'diversidade_formatos', label: 'Diversidade de Formatos', value: 7, interpretation: 'Boa distribuição: 45% Reels, 30% carrossel e 25% imagem nos 20 posts recentes; carrossel e imagem aparecem agregados como FEED no conector. Stories ausentes na análise.', tone: 'positive' },
   { key: 'uso_cta', label: 'Uso de CTA', value: 5, interpretation: 'Gap crítico — menos de 30% dos posts têm CTA explícito. Maior oportunidade de melhoria imediata.', tone: 'warning' },
-  { key: 'potencial_conversao', label: 'Potencial de Conversão', value: 5, interpretation: 'Funil subaproveitado. Link na bio ativo mas pouco mencionado nos posts. ER disponível de 0.032% por likes+comentários.', tone: 'warning' },
+  { key: 'potencial_conversao', label: 'Potencial de Conversão', value: 5, interpretation: 'Funil subaproveitado. Link na bio ativo mas pouco mencionado nos posts. ER disponível de 0.028% por likes+comentários.', tone: 'warning' },
   { key: 'autoridade', label: 'Autoridade', value: 8, interpretation: 'Forte — govtech, 7 empresas, 37 países, prova social real. Quando aparece, converte bem.', tone: 'positive' },
   { key: 'prova_social', label: 'Prova Social', value: 6, interpretation: 'Presente mas subutilizada. Depoimentos e bastidores de conquista poderiam aparecer mais.', tone: 'neutral' },
   { key: 'profissionalizacao', label: 'Profissionalização', value: 8, interpretation: 'Perfil profissional, visual coerente, bio estruturada, website ativo.', tone: 'positive' },
@@ -730,9 +730,9 @@ export const scorecards: Scorecard[] = [
 // ─────────────────────────────────────────────────────────────
 export const metaAds = {
   accounts: [
-    { accountId: 'act_1158819016166775', name: 'Ricardo Impellizieri / MM Lite', businessName: 'Conta com insights retornados', currency: 'BRL', status: 'ACTIVE', last30d: '35.399 impressões · 671 cliques · gasto R$0 retornado pela API' },
-    { accountId: 'act_9525474394174655', name: 'Ricardo Impellizieri', businessName: 'loggica intermediacoes de negócios', currency: 'BRL', status: 'ACTIVE', last30d: 'Conector retornou os mesmos insights vinculados ao act_1158819016166775' },
-    { accountId: 'act_265574476787926', name: '265574476787926', businessName: 'SANDRO JOSE RICARDO IMPELLIZIERI DE OLIVEIRA', currency: 'BRL', status: 'ACTIVE', last30d: 'Conector retornou os mesmos insights vinculados ao act_1158819016166775' },
+    { accountId: 'act_1158819016166775', name: 'Ricardo Impellizieri / MM Lite', businessName: 'Conta com insights retornados', currency: 'BRL', status: 'ACTIVE', last30d: '36.188 Impressões · 671 Cliques (todos) · 669 Link clicks · Valor usado R$0 retornado pela API' },
+    { accountId: 'act_9525474394174655', name: 'Ricardo Impellizieri', businessName: 'loggica intermediacoes de negócios', currency: 'BRL', status: 'ACTIVE', last30d: 'Sem insights nos últimos 30 dias retornados pelo conector' },
+    { accountId: 'act_265574476787926', name: '265574476787926', businessName: 'SANDRO JOSE RICARDO IMPELLIZIERI DE OLIVEIRA', currency: 'BRL', status: 'ACTIVE', last30d: 'Sem insights nos últimos 30 dias retornados pelo conector' },
   ],
   activeCampaign: {
     name: 'Traffic Campaign',
@@ -740,7 +740,7 @@ export const metaAds = {
     status: 'ACTIVE',
     dailyBudget: 'Não retornado',
     createdAt: '22 set 2025',
-    reading: 'Últimos 30 dias com entrega real retornada: Traffic Campaign gerou 26.259 impressões, 12.391 de alcance e 664 link clicks, CTR 2,53%, com spend R$0 informado pela API. A campanha MM_LITE_DEFAULT_AD_CAMPAIGN_GROUP gerou 9.140 impressões, 6.055 de alcance e apenas 5 cliques, CTR 0,055%.',
+    reading: 'Últimos 30 dias com entrega real retornada: Traffic Campaign gerou 29.545 impressões, 14.773 de alcance, 666 Cliques (todos), 664 Link clicks e CTR (todos) 2,25%, com spend R$0 informado pela API. A campanha MM_LITE_DEFAULT_AD_CAMPAIGN_GROUP gerou 6.643 impressões, 4.398 de alcance e 5 Cliques (todos), CTR (todos) 0,075%.',
   },
   nextSteps: [
     'Validar no Ads Manager por que o gasto retornou R$0 mesmo com impressões e cliques registrados.',
@@ -754,13 +754,13 @@ export const metaAds = {
 // DATA QUALITY
 // ─────────────────────────────────────────────────────────────
 export const dataQuality = {
-  source: 'Instagram MCP',
-  collection_date: "10/05/2026 às 10:20",
-  posts_analyzed: 39,
-  period: 'Últimos 90 dias',
+  source: 'Instagram MCP + Meta Ads MCP',
+  collection_date: "10/05/2026 às 12:00",
+  posts_analyzed: 20,
+  period: '20 posts recentes',
   limitations: [
     'Métricas de stories e demografia não estavam disponíveis nesta integração',
-    'Insights por post foram limitados pelo conector nesta execução; likes e comentários foram atualizados',
+    'Insights por post retornaram alcance, views e salvos para os 20 posts recentes; stories e demografia seguem indisponíveis',
     'Análise qualitativa inferida por caption, formato e sinais públicos',
   ],
   confidence_level: 'Alta para perfil/posts; média para recomendações qualitativas',
@@ -772,32 +772,32 @@ export const dataQuality = {
 export const dashboardData = {
   meta: {
     profile: profileIdentity,
-    lastUpdated: "10/05/2026 às 10:20",
+    lastUpdated: "10/05/2026 às 12:00",
     dashboardCadence: 'Atualização semanal aos domingos',
     designPhilosophy: 'Editorial executivo cinematográfico',
   },
   executive: {
     summary: {
       profileStrength: executiveSummary.overview,
-      instagramReading: 'Nos 20 posts recentes, a leitura confiável nesta coleta é likes + comentários. O post Govtech lidera com 56 interações disponíveis; o post do neto vem com 39; Sardinha Lisboa lidera entre Reels com 35. Alcance, views e salvamentos por post não retornaram.',
-      adsReading: 'Meta Ads retornou entrega real nos últimos 30 dias: 35.399 impressões e 671 cliques somando Traffic Campaign e MM Lite. O ponto crítico é a API retornar spend R$0, o que exige validação no Ads Manager antes de escalar.',
+      instagramReading: 'Nos 20 posts recentes, a leitura confiável nesta coleta é likes + comentários. O post Govtech lidera com 57 interações, 363 de alcance e 739 views. O post do neto vem com 40 interações, 429 de alcance e 803 views. Alcance, views e salvos retornaram para os 20 posts recentes.',
+      adsReading: 'Meta Ads retornou entrega real nos últimos 30 dias: 36.188 impressões e 671 Cliques (todos) somando Traffic Campaign e MM Lite. O ponto crítico é a API retornar spend R$0, o que exige validação no Ads Manager antes de escalar.',
       criticalPoint: 'Gap crítico permanece: conteúdo tem autoridade, mas CTA explícito ainda é baixo. Sem CTA e sem rastreamento consistente, alcance vira vaidade e cliques não viram receita medida.',
     },
     kpis: [
       { label: 'Seguidores', value: '61.241', delta: 'coleta atual', tone: 'positive' as const },
       { label: 'Seguindo', value: '331', delta: 'ratio 185.0:1', tone: 'positive' as const },
-      { label: 'Publicações', value: '3.008', delta: '3.0 posts/semana', tone: 'positive' as const },
-      { label: 'Anúncios Meta', value: '35,4 mil impr.', delta: '671 cliques · spend R$0', tone: 'warning' as const },
+      { label: 'Publicações', value: '3.008', delta: '4,2 posts/semana', tone: 'positive' as const },
+      { label: 'Anúncios Meta', value: '36,2 mil impr.', delta: '671 cliques · spend R$0', tone: 'warning' as const },
     ],
     conversion: [
-      { label: 'ER disponível', value: '0.027%', note: 'Likes + comentários / seguidores' },
-      { label: 'Alcance médio', value: 'N/D', note: 'Insight por post indisponível nesta coleta' },
-      { label: 'Views médias', value: 'N/D', note: 'Insight por post indisponível nesta coleta' },
+      { label: 'ER disponível', value: '0.028%', note: 'Likes + comentários / seguidores' },
+      { label: 'Alcance médio', value: '258', note: 'Média dos 20 posts recentes com insight retornado' },
+      { label: 'Views médias', value: '454', note: 'Média dos 20 posts recentes com insight retornado' },
     ],
     alerts: [
       'Gap de CTA: menos de 30% dos posts têm chamada para ação — maior oportunidade imediata.',
-      'Sardinha Lisboa lidera entre Reels nas interações disponíveis; alcance/views não retornaram nesta coleta.',
-      'Seguidores em leve queda (−38). Monitorar consistência nas próximas semanas.',
+      'Govtech e neto lideram em interação; views e alcance já retornaram nesta coleta para os 20 posts recentes.',
+      'Monitorar variação semanal de seguidores para separar oscilação normal de perda estrutural.',
       'Meta Ads tem entrega e cliques; validar por que a API retorna spend R$0 antes de escalar.',
     ],
   },
@@ -808,25 +808,25 @@ export const dashboardData = {
       misalignment: 'A proposta central (liberdade como estratégia) está na bio mas não nos posts. Menos de 30% dos posts têm CTA explícito. O link da bio (saiba-mais.ai) não é mencionado em nenhum post analisado.',
     },
     formatPerformance: [
-      { format: 'Reels', reach: '221–1197', depth: 'Alta variação — depende do argumento', engagement: 'Sardinha Lisboa: 49 interações · 1197 alcance · 1398 views', followers: 'N/A', clicks: 'N/A', signal: 'Melhor formato para alcance quando há experiência premium ou argumento forte. Média: 573 views.' },
-      { format: 'Posts estáticos (Imagem)', reach: '144–479', depth: 'Alta quando há âncora emocional ou autoridade', engagement: 'Neto (24/abr): 39 interações · Construindo/Celebrando: 25 interações', followers: 'N/A', clicks: 'N/A', signal: 'Melhor formato para engajamento profundo. Sala de operações: 353 alcance, 2 salvamentos.' },
-      { format: 'Carrosséis', reach: '155–479', depth: 'Consistente quando há tese visual', engagement: 'Marrocos: 32 interações · Montanha: 29 · Construindo: 25', followers: 'N/A', clicks: 'N/A', signal: 'Bom para atmosfera e narrativa visual. Marrocos (793 views) e Montanha (944 views) lideram em views.' },
+      { format: 'Reels', reach: '100–381', depth: 'Alta variação — depende do argumento', engagement: 'Istambul: 25 interações · 381 alcance · 538 views', followers: 'N/A', clicks: 'N/A', signal: 'Melhor formato para escala quando a tese aparece cedo. Média recente: 454 views no conjunto analisado.' },
+      { format: 'Posts estáticos (Imagem)', reach: '199–495', depth: 'Alta quando há âncora emocional ou autoridade', engagement: 'Govtech: 57 interações · Neto: 40 interações', followers: 'N/A', clicks: 'N/A', signal: 'Melhor formato para engajamento profundo quando há prova real ou vínculo humano.' },
+      { format: 'Carrosséis', reach: '101–328', depth: 'Consistente quando há tese visual', engagement: 'Marrocos: 31 interações · 328 alcance · 841 views', followers: 'N/A', clicks: 'N/A', signal: 'Bom para atmosfera e narrativa visual; precisa CTA de salvamento para virar ativo de valor.' },
       { format: 'Stories', reach: 'N/A', depth: 'Dados indisponíveis no conector atual', engagement: 'N/A', followers: 'N/A', clicks: 'N/A', signal: 'Bloco preparado para receber dados. Recomendação: Stories diários para aumentar frequência sem sobrecarregar feed.' },
     ],
     rankings: topPostsByInteractions.map((p, i) => ({
       title: `#${i + 1} por engajamento`,
       item: p.caption_preview,
       metric: `${p.total_interactions} interações · alcance ${p.reach} · views ${p.views}`,
-      why: i === 0 ? 'Experiência premium + storytelling de descoberta. Melhor Reel do período — prova que contexto de surpresa e lugar único gera alcance 3x acima da média.'
+      why: i === 0 ? 'Autoridade concreta + ambição declarada. Melhor engajamento do período e prova de que negócios/Govtech ativam audiência qualificada.'
         : i === 1 ? 'Âncora emocional real (neto). Melhor post de imagem do período — prova que conexão humana supera estética de viagem.'
-        : i === 2 ? 'Carrossel de paz e gratidão com 944 views — maior views de carrossel. Conteúdo espiritual/emocional retém atenção.'
-        : i === 3 ? 'Carrossel Marrocos com tese de contraste. 793 views — segundo maior em views de carrossel.'
-        : 'Imagem de celebração com disciplina. 479 alcance — melhor alcance de imagem do período.',
+        : i === 2 ? 'Viagem com tese simples de contraste. Carrossel com maior tração visual: 841 views.'
+        : i === 3 ? 'Reel de viagem com descoberta clara. Melhor Reel por interação e alcance no recorte recente.'
+        : 'Reflexão curta com boa resposta para carrossel; oportunidade de incluir CTA de comentário/salvamento.',
     })),
   },
   audience: {
     layers: [
-      { title: 'Quem responde melhor', text: 'Conteúdo com âncora emocional real (família, conquista, bastidor) concentra o melhor sinal. Sardinha Lisboa (49 interações) e post do neto (39 interações) confirmam que surpresa e conexão humana superam viagem pura.' },
+      { title: 'Quem responde melhor', text: 'Conteúdo com âncora emocional real (família, conquista, bastidor) concentra o melhor sinal. Govtech (57 interações) e post do neto (40 interações) confirmam que surpresa e conexão humana superam viagem pura.' },
       { title: 'Quem consome sem avançar', text: 'Reels de movimento puro (LA→LV, Canadá) atraem views mas geram poucas interações. Audiência assiste mas não comenta, não salva, não compartilha — consumo passivo.' },
       { title: 'Padrão oculto confirmado', text: 'Quando o conteúdo combina cenário forte com tese emocional ou âncora de construção, o engajamento sobe. Trilinguismo (PT/EN/ES) pode estar ampliando alcance — monitorar.' },
     ],
@@ -837,7 +837,7 @@ export const dashboardData = {
     whatIsWrong: executiveSummary.weaknesses,
     opportunities: executiveSummary.opportunities,
     weeklyPlan: [
-      { type: 'Reel', title: 'Experiência premium com tese', hook: 'Entrei achando que era X. Saí entendendo Y.', concept: 'Replicar estrutura da Sardinha Lisboa: descoberta + surpresa + aprendizado de negócio.', structure: 'Abertura de descoberta → surpresa → tese de negócio → fechamento.', cta: '"Qual foi sua última descoberta que mudou sua perspectiva? Comenta."' },
+      { type: 'Reel', title: 'Experiência premium com tese', hook: 'Entrei achando que era X. Saí entendendo Y.', concept: 'Replicar estrutura do Reel de Istambul: descoberta + surpresa + aprendizado de negócio.', structure: 'Abertura de descoberta → surpresa → tese de negócio → fechamento.', cta: '"Qual foi sua última descoberta que mudou sua perspectiva? Comenta."' },
       { type: 'Image', title: 'Âncora emocional real', hook: 'No meio de tudo que construo…', concept: 'Replicar estrutura do post do neto: momento humano real + âncora de construção empresarial.', structure: 'Foto forte → legenda emocional → conexão com propósito → CTA de engajamento.', cta: '"O que te lembra o porquê de tudo isso? Comenta."' },
       { type: 'Carrossel', title: 'Contraste + tese', hook: '[Lugar] não é sobre [o óbvio]. É sobre [a tese].', concept: 'Replicar estrutura do Marrocos: visual impactante + frase de contraste + tese de vida/negócio.', structure: 'Slide 1: visual forte → Slide 2-4: desenvolvimento → Slide final: CTA.', cta: '"Salva para lembrar quando precisar de perspectiva."' },
       { type: 'Stories', title: 'Bastidor de decisão diário', hook: 'Uma decisão que parece pequena e muda o ano inteiro.', concept: 'Stories diários com bastidores de decisão, viagem ou empresa.', structure: 'Story 1: contexto → Story 2: decisão → Story 3: consequência + CTA.', cta: '"Quer ver mais bastidores assim?"' },
@@ -845,14 +845,14 @@ export const dashboardData = {
     ],
     abTests: [
       { name: 'CTA explícito vs sem CTA', hypothesis: 'Posts com CTA explícito ("link na bio", "comenta X") geram mais cliques e comentários do que posts sem CTA. Hipótese baseada no gap atual: <30% dos posts têm CTA.', measure: 'Comparar comentários, cliques e salvamentos entre posts com e sem CTA nos próximos 30 dias.' },
-      { name: 'Âncora emocional real vs viagem pura', hypothesis: 'Posts com âncora emocional real (família, conquista, bastidor) geram mais interações do que posts de viagem pura. Confirmado: post do neto (39) vs Reel LA→LV (12).', measure: 'Comparar total_interactions, comentários e reach nos próximos 3 ciclos.' },
+      { name: 'Âncora emocional real vs viagem pura', hypothesis: 'Posts com âncora emocional real ou prova concreta geram mais interações do que viagem pura. Confirmado: Govtech (57) e neto (40) acima dos Reels de movimento simples.', measure: 'Comparar total_interactions, comentários e reach nos próximos 3 ciclos.' },
       { name: 'Trilinguismo vs português apenas', hypothesis: 'Posts com legenda em PT/EN/ES ampliam alcance internacional. Testar sistematicamente.', measure: 'Comparar reach médio entre posts trilíngues e posts apenas em português nos próximos 30 dias.' },
     ],
     autoAlerts: [
-      'ATIVO: Seguidores em leve queda (−38 no ciclo). Monitorar tendência nas próximas 2 semanas.',
-      'ATIVO: Campanha Meta sem entrega mensurável. Verificar antes de novo investimento.',
+      'ATIVO: Monitorar variação semanal de seguidores nas próximas 2 semanas.',
+      'ATIVO: Campanha Meta com entrega mensurável, mas Valor usado retornou R$0. Validar cobrança/rastreamento antes de novo investimento.',
       'Alerta quando ER médio cair abaixo de 0.02% por duas semanas seguidas.',
-      'Alerta quando Reel ficar abaixo de 300 views — abaixo da média atual.',
+      'Alerta quando Reel ficar abaixo de 300 views — abaixo do patamar mínimo saudável atual.',
       'Alerta quando post sem CTA superar post com CTA em interações (validar hipótese).',
     ],
   },
@@ -1021,14 +1021,14 @@ export const strategistInsights = {
   contentFormula: {
     title: 'Fórmula que funciona para @ricardoimp',
     formula: 'Cenário premium + âncora emocional real + tese de negócio + CTA direto',
-    proof: 'Sardinha Lisboa (49 interações, 1197 alcance) e Post do Neto (39 interações) confirmam: quando você combina lugar/momento real com tese de construção, o engajamento triplica.',
+    proof: 'Govtech (57 interações, 363 alcance) e Post do Neto (40 interações, 429 alcance) confirmam: quando você combina prova real ou âncora emocional com tese de construção, o engajamento sobe.',
     antiFormula: 'Reel de movimento puro sem argumento = views sem ação. LA→LV e Canadá provam isso.',
   },
   growthTargets: {
     followers30d: '+500 seguidores em 30 dias (meta conservadora com estratégia ativa)',
     followers90d: '+2.000 seguidores em 90 dias (com série semanal + Stories diários)',
-    erTarget: '0.08% ER médio (hoje 0.031% — meta realista em 60 dias)',
-    reachTarget: '600 alcance médio por post (hoje 344)',
+    erTarget: '0,08% ER médio (hoje 0,028% — meta realista em 60 dias)',
+    reachTarget: '600 alcance médio por post (hoje 258)',
   },
   weeklyChecklist: [
     { day: 'Domingo', task: 'Planejar 4-5 posts da semana. Definir CTA de cada um.' },
@@ -1047,18 +1047,18 @@ export const strategistInsights = {
 // ─────────────────────────────────────────────────────────────
 export const sponsoredGuide = {
   currentStatus: {
-    campaign: 'Las Vegas do alto',
-    status: 'ATIVA — SEM ENTREGA',
-    budget: 'R$35/dia',
-    objective: 'LINK_CLICKS',
-    problem: 'Campanha com objetivo errado para o estágio atual do perfil. LINK_CLICKS pressupõe audiência quente. Você precisa primeiro de alcance e engajamento.',
-    recommendation: 'PAUSAR esta campanha. Recriar com objetivo REACH ou VIDEO_VIEWS.',
+    campaign: 'Traffic Campaign',
+    status: 'ATIVA — COM ENTREGA, MAS VALOR USADO R$0 NA API',
+    budget: 'Não retornado',
+    objective: 'OUTCOME_TRAFFIC',
+    problem: 'A campanha entregou 29.545 impressões e 666 Cliques (todos), mas o Valor usado retornou R$0. Antes de escalar, é preciso validar cobrança, evento de destino, UTMs e consistência do Ads Manager.',
+    recommendation: 'MANTER EM OBSERVAÇÃO. Não escalar orçamento antes de validar gasto, rastreamento e qualidade do tráfego.',
   },
   whatToSponsor: [
     {
       rank: 1,
-      content: 'Sardinha Lisboa (melhor Reel — 1197 alcance orgânico)',
-      why: 'Já provou que funciona organicamente. Patrocinar conteúdo que já performa é 3x mais eficiente que criar novo.',
+      content: 'Post Govtech (melhor engajamento — 57 interações)',
+      why: 'Já provou autoridade e intenção de negócio organicamente. Patrocinar prova real tende a atrair audiência mais qualificada do que viagem pura.',
       objective: 'REACH',
       budget: 'R$25-50/dia por 5-7 dias',
       expectedResult: '15.000-30.000 alcance adicional',
@@ -1066,7 +1066,7 @@ export const sponsoredGuide = {
     },
     {
       rank: 2,
-      content: 'Post do Neto (âncora emocional — 39 interações)',
+      content: 'Post do Neto (âncora emocional — 40 interações)',
       why: 'Conteúdo emocional com alta taxa de comentários. Ideal para engajamento e novos seguidores.',
       objective: 'ENGAGEMENT',
       budget: 'R$20-35/dia por 5 dias',

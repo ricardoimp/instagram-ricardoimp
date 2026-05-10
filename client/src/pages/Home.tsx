@@ -1330,8 +1330,8 @@ export default function Home() {
         <section id="metaads" className="space-y-8">
           <SectionHeader
             eyebrow="Camada paga · Meta Ads"
-            title="O problema atual da mídia é falta de leitura, não excesso de gasto"
-            description="As contas conectadas existem e há pelo menos uma campanha ativa cadastrada. Mas, nos últimos 30 dias, os conectores não retornaram insights do período. Isso impede separar o que está funcionando do que desperdiça orçamento com precisão financeira. Hoje a prioridade é reativar mensuração confiável."
+            title="A mídia voltou a ter leitura, mas o gasto precisa validação"
+            description="Nos últimos 30 dias, a conta Notifica retornou 36.188 Impressões e 671 Cliques (todos). O ponto crítico é o Valor usado aparecer como R$0 na API; antes de escalar, valide cobrança, objetivo e rastreamento no Ads Manager."
           />
 
           <div className="grid gap-4 lg:grid-cols-[1fr_1fr]">
