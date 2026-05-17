@@ -1,6 +1,6 @@
 // Script Mestre — Auditoria Completa de Perfil @ricardoimp
 // Estrutura de 4 camadas: raw_data | analytics_tables | executive_summary | scorecards
-// Última coleta: 15/05/2026 às 11:10 — Instagram MCP
+// Última coleta: 17/05/2026 às 14:09 — Instagram MCP
 // 20 posts recentes analisados | alcance, views e salvos coletados quando disponíveis
 
 // ─────────────────────────────────────────────────────────────
@@ -61,24 +61,30 @@ export const profileIdentity = {
   value_proposition: 'Construir empresas enquanto vive o mundo — liberdade como resultado de estrutura', cta_bio: 'Link na bio (👇🏼)',
   languages: ['PT', 'EN', 'ES'], verification: false, niche_primary: 'Empreendedorismo & Lifestyle Premium', sub_niches: ['Viagens', 'Tecnologia/IA', 'Govtech', 'Liberdade financeira'],
   persona_apparent: 'Empreendedor aspiracional com lastro real de conquista', funnel_stage_predominant: 'awareness' as const, authority_presence: true, social_proof_presence: true, commercial_offer_presence: false,
-  website: "http://saiba-mais.ai", collected_at: "2026-05-15T14:10:19Z",
+  website: "http://saiba-mais.ai", collected_at: "2026-05-17T14:09:24Z"
 };
 
 export const postsRaw: PostRaw[] = [
+  {
+    id: "18216707638322293",
+    date: "2026-05-15T19:49:21Z",
+    type: "IMAGE",
+    media_product_type: "FEED",
+    caption: "Nem sempre o que é restrito dever ser obedecido.\nVá além! 🔥 \n\nWhat is restricted should not always be obeyed.\nGo further! 🔥\n\nNo siempre se debe obedecer lo restringido.\n¡Ve más allá! 🔥",
+    likes: 4, comments: 1, reach: null, views: null, saved: null, total_interactions: 5,
+    hashtags: [],
+    mentions: [],
+    permalink: "https://www.instagram.com/p/DYXyJHUBycO/"
+  },
   {
     id: "18077326622537902",
     date: "2026-05-14T22:13:04Z",
     type: "VIDEO",
     media_product_type: "REELS",
     caption: "Existem países que parecem secretos. \nEscondidos entre montanhas, silêncio, história e mar.\n\nMontenegro foi um deles pra mim.\n\nUm pequeno país dos Bálcãs, no sudeste da Europa, entre a Croácia, Sérvia, Bósnia e o mar Adriático.\n\nUm lugar que mistura vilas medievais, montanhas gigantes e um litoral que parece cenário de filme.\n\nE o mais curioso:\nquase ninguém fala sobre ele... mas eu falo!\n\n#trip #photography #instagood #loveit #europa",
-    likes: 7, comments: 0, reach: 220, views: 244, saved: 0, total_interactions: 7,
-    hashtags: [
-  "trip",
-  "photography",
-  "instagood",
-  "loveit",
-  "europa"
-], mentions: [],
+    likes: 8, comments: 1, reach: null, views: null, saved: null, total_interactions: 9,
+    hashtags: ["trip", "photography", "instagood", "loveit", "europa"],
+    mentions: [],
     permalink: "https://www.instagram.com/reel/DYVdle8gJRX/"
   },
   {
@@ -87,14 +93,9 @@ export const postsRaw: PostRaw[] = [
     type: "IMAGE",
     media_product_type: "FEED",
     caption: "Pequenos detalhes contam grandes histórias.\n\n#jornada #negocios #historia #aprendizado #photography",
-    likes: 5, comments: 0, reach: 149, views: 246, saved: 1, total_interactions: 6,
-    hashtags: [
-  "jornada",
-  "negocios",
-  "historia",
-  "aprendizado",
-  "photography"
-], mentions: [],
+    likes: 5, comments: 0, reach: null, views: null, saved: null, total_interactions: 5,
+    hashtags: ["jornada", "negocios", "historia", "aprendizado", "photography"],
+    mentions: [],
     permalink: "https://www.instagram.com/p/DYSJJs5gnQT/"
   },
   {
@@ -103,16 +104,9 @@ export const postsRaw: PostRaw[] = [
     type: "IMAGE",
     media_product_type: "FEED",
     caption: "Clássicos são clássicos.\n\nSe foi para os E.U.A e não provou um @fiveguys você não conheceu os E.U.A.\n\n#hamburg #fiveguys #eua #food #photography",
-    likes: 0, comments: 0, reach: 112, views: 179, saved: 0, total_interactions: 0,
-    hashtags: [
-  "hamburg",
-  "fiveguys",
-  "eua",
-  "food",
-  "photography"
-], mentions: [
-  "fiveguys"
-],
+    likes: 0, comments: 0, reach: null, views: null, saved: null, total_interactions: 0,
+    hashtags: ["hamburg", "fiveguys", "eua", "food", "photography"],
+    mentions: ["fiveguys"],
     permalink: "https://www.instagram.com/p/DYPinOHxG7X/"
   },
   {
@@ -121,8 +115,9 @@ export const postsRaw: PostRaw[] = [
     type: "IMAGE",
     media_product_type: "FEED",
     caption: "O silêncio te reorganiza.",
-    likes: 13, comments: 1, reach: 147, views: 259, saved: 0, total_interactions: 14,
-    hashtags: [], mentions: [],
+    likes: 13, comments: 1, reach: null, views: null, saved: null, total_interactions: 14,
+    hashtags: [],
+    mentions: [],
     permalink: "https://www.instagram.com/p/DYMj9kKgBsF/"
   },
   {
@@ -132,13 +127,8 @@ export const postsRaw: PostRaw[] = [
     media_product_type: "FEED",
     caption: "Por algum bar de Seattle.\n\n#seattle #bar #drink #instagood #photography",
     likes: 3, comments: 1, reach: null, views: null, saved: null, total_interactions: 4,
-    hashtags: [
-  "seattle",
-  "bar",
-  "drink",
-  "instagood",
-  "photography"
-], mentions: [],
+    hashtags: ["seattle", "bar", "drink", "instagood", "photography"],
+    mentions: [],
     permalink: "https://www.instagram.com/p/DYIsYvTgDhM/"
   },
   {
@@ -147,8 +137,9 @@ export const postsRaw: PostRaw[] = [
     type: "IMAGE",
     media_product_type: "FEED",
     caption: "Bad Boys 😎🐕",
-    likes: 22, comments: 1, reach: null, views: null, saved: null, total_interactions: 23,
-    hashtags: [], mentions: [],
+    likes: 23, comments: 1, reach: null, views: null, saved: null, total_interactions: 24,
+    hashtags: [],
+    mentions: [],
     permalink: "https://www.instagram.com/p/DYE47hCgDvZ/"
   },
   {
@@ -158,7 +149,8 @@ export const postsRaw: PostRaw[] = [
     media_product_type: "REELS",
     caption: "✈️",
     likes: 2, comments: 0, reach: null, views: null, saved: null, total_interactions: 2,
-    hashtags: [], mentions: [],
+    hashtags: [],
+    mentions: [],
     permalink: "https://www.instagram.com/reel/DYBU6ocA2uP/"
   },
   {
@@ -168,7 +160,8 @@ export const postsRaw: PostRaw[] = [
     media_product_type: "REELS",
     caption: "✈️",
     likes: 9, comments: 0, reach: null, views: null, saved: null, total_interactions: 9,
-    hashtags: [], mentions: [],
+    hashtags: [],
+    mentions: [],
     permalink: "https://www.instagram.com/reel/DYBT8_HgM6C/"
   },
   {
@@ -178,13 +171,8 @@ export const postsRaw: PostRaw[] = [
     media_product_type: "REELS",
     caption: "Toda viagem revela 3 versões suas:\n\nA que você sustenta hoje.\nA que já não faz mais sentido.\nE a que está esperando uma decisão sua.\n\n#canada #instagram #trip #photography #paz",
     likes: 1, comments: 0, reach: null, views: null, saved: null, total_interactions: 1,
-    hashtags: [
-  "canada",
-  "instagram",
-  "trip",
-  "photography",
-  "paz"
-], mentions: [],
+    hashtags: ["canada", "instagram", "trip", "photography", "paz"],
+    mentions: [],
     permalink: "https://www.instagram.com/reel/DXrfolmgNUe/"
   },
   {
@@ -194,13 +182,8 @@ export const postsRaw: PostRaw[] = [
     media_product_type: "REELS",
     caption: "Toda viagem revela 3 versões suas:\n\nA que você sustenta hoje.\nA que já não faz mais sentido.\nE a que está esperando uma decisão sua.\n\n#canada #instagram #trip #photography #paz",
     likes: 10, comments: 1, reach: null, views: null, saved: null, total_interactions: 11,
-    hashtags: [
-  "canada",
-  "instagram",
-  "trip",
-  "photography",
-  "paz"
-], mentions: [],
+    hashtags: ["canada", "instagram", "trip", "photography", "paz"],
+    mentions: [],
     permalink: "https://www.instagram.com/reel/DXrfHHGgO3d/"
   },
   {
@@ -210,13 +193,8 @@ export const postsRaw: PostRaw[] = [
     media_product_type: "REELS",
     caption: "Entrei achando que era só um mercado\nsaí entendendo por que lugares assim duram séculos, um dos mercados mais antigos de istambul 🇹🇷\n\n#turquia #trip #viajar #instagood #reels",
     likes: 3, comments: 0, reach: null, views: null, saved: null, total_interactions: 3,
-    hashtags: [
-  "turquia",
-  "trip",
-  "viajar",
-  "instagood",
-  "reels"
-], mentions: [],
+    hashtags: ["turquia", "trip", "viajar", "instagood", "reels"],
+    mentions: [],
     permalink: "https://www.instagram.com/reel/DXo7_qRgCfA/"
   },
   {
@@ -226,13 +204,8 @@ export const postsRaw: PostRaw[] = [
     media_product_type: "REELS",
     caption: "Entrei achando que era só um mercado\nsaí entendendo por que lugares assim duram séculos, um dos mercados mais antigos de istambul 🇹🇷\n\n#turquia #trip #viajar #instagood #reels",
     likes: 21, comments: 4, reach: null, views: null, saved: null, total_interactions: 25,
-    hashtags: [
-  "turquia",
-  "trip",
-  "viajar",
-  "instagood",
-  "reels"
-], mentions: [],
+    hashtags: ["turquia", "trip", "viajar", "instagood", "reels"],
+    mentions: [],
     permalink: "https://www.instagram.com/reel/DXo7KozAHJr/"
   },
   {
@@ -242,7 +215,8 @@ export const postsRaw: PostRaw[] = [
     media_product_type: "FEED",
     caption: "Quanto mais eu vou…\nmais eu entendo que não é sobre ir.",
     likes: 22, comments: 1, reach: null, views: null, saved: null, total_interactions: 23,
-    hashtags: [], mentions: [],
+    hashtags: [],
+    mentions: [],
     permalink: "https://www.instagram.com/p/DXmaEoSFKsK/"
   },
   {
@@ -252,13 +226,8 @@ export const postsRaw: PostRaw[] = [
     media_product_type: "FEED",
     caption: "No meio de tudo que eu construo…\né aqui que eu lembro o porquê.\n\n🇺🇸\nIn the middle of everything I build…\nthis is where I remember why.\n\n🇪🇸\nEn medio de todo lo que construyo…\nes aquí donde recuerdo el porqué.\n\n#grandson #photography #família #family #instagood",
     likes: 35, comments: 5, reach: null, views: null, saved: null, total_interactions: 40,
-    hashtags: [
-  "grandson",
-  "photography",
-  "família",
-  "family",
-  "instagood"
-], mentions: [],
+    hashtags: ["grandson", "photography", "família", "family", "instagood"],
+    mentions: [],
     permalink: "https://www.instagram.com/p/DXhReNcAJlQ/"
   },
   {
@@ -268,13 +237,8 @@ export const postsRaw: PostRaw[] = [
     media_product_type: "FEED",
     caption: "Se a conta é sua…faça valer a vida que escolheu.\n\n🇪🇸\n\nSi la cuenta es tuya…\nhaz que valga la vida que elegiste.\n\n🇺🇸\n\nIf you’re the one paying the price…\nmake the life you chose worth it.\n\n#live #vivalavida #seattle #photography #market",
     likes: 13, comments: 7, reach: null, views: null, saved: null, total_interactions: 20,
-    hashtags: [
-  "live",
-  "vivalavida",
-  "seattle",
-  "photography",
-  "market"
-], mentions: [],
+    hashtags: ["live", "vivalavida", "seattle", "photography", "market"],
+    mentions: [],
     permalink: "https://www.instagram.com/p/DXZrk7RADRP/"
   },
   {
@@ -284,13 +248,8 @@ export const postsRaw: PostRaw[] = [
     media_product_type: "FEED",
     caption: "O mundo não é só destino.\nÉ contraste.\n\n#marrocos #desert #trip #vivendo #mundo",
     likes: 29, comments: 2, reach: null, views: null, saved: null, total_interactions: 31,
-    hashtags: [
-  "marrocos",
-  "desert",
-  "trip",
-  "vivendo",
-  "mundo"
-], mentions: [],
+    hashtags: ["marrocos", "desert", "trip", "vivendo", "mundo"],
+    mentions: [],
     permalink: "https://www.instagram.com/p/DXSbwQcFF0V/"
   },
   {
@@ -300,13 +259,8 @@ export const postsRaw: PostRaw[] = [
     media_product_type: "REELS",
     caption: "O mundo é de quem se move.\nNão espere permissão.\n\nLos Angeles → Las Vegas\n\n#losangeles #lasvegas #movimento #viagem #empreendedorismo",
     likes: 11, comments: 1, reach: null, views: null, saved: null, total_interactions: 12,
-    hashtags: [
-  "losangeles",
-  "lasvegas",
-  "movimento",
-  "viagem",
-  "empreendedorismo"
-], mentions: [],
+    hashtags: ["losangeles", "lasvegas", "movimento", "viagem", "empreendedorismo"],
+    mentions: [],
     permalink: "https://www.instagram.com/reel/DXNbns2j4Kl/"
   },
   {
@@ -316,13 +270,8 @@ export const postsRaw: PostRaw[] = [
     media_product_type: "FEED",
     caption: "Conheço o preço da liberdade.Eu pago.\n\n#mundo #liberdade #vivendo #life #good",
     likes: 12, comments: 1, reach: null, views: null, saved: null, total_interactions: 13,
-    hashtags: [
-  "mundo",
-  "liberdade",
-  "vivendo",
-  "life",
-  "good"
-], mentions: [],
+    hashtags: ["mundo", "liberdade", "vivendo", "life", "good"],
+    mentions: [],
     permalink: "https://www.instagram.com/p/DXKvqEJiZ6p/"
   },
   {
@@ -332,75 +281,118 @@ export const postsRaw: PostRaw[] = [
     media_product_type: "FEED",
     caption: "Ninguém fala muito da Croácia…\nmas deveria.\n\nÁgua transparente de verdade.\nCidade histórica colada no mar.\nE uma paz que você não encontra fácil.\n\nTem lugar que é bonito.\nE tem lugar que te faz parar.\n\nEsse aqui é a segunda opção.\n\n#croacia #paradise #photographer #instagood #europa",
     likes: 14, comments: 1, reach: null, views: null, saved: null, total_interactions: 15,
-    hashtags: [
-  "croacia",
-  "paradise",
-  "photographer",
-  "instagood",
-  "europa"
-], mentions: [],
+    hashtags: ["croacia", "paradise", "photographer", "instagood", "europa"],
+    mentions: [],
     permalink: "https://www.instagram.com/p/DW_4KJtAPQA/"
-  },
-  {
-    id: "18084408851056630",
-    date: "2026-04-10T14:46:38Z",
-    type: "VIDEO",
-    media_product_type: "REELS",
-    caption: "Tudo que você constrói te traz pra momentos assim.\n\nAlmoçar no Rio Sena navegando por Paris é uma experiência incrível… um belo menu … passando pelos principais pontos turísticos da cidade com aquela champa 🥂 geladinha. Not a price 😉\n\n#paris #trip #viagem #europa #photography",
-    likes: 9, comments: 2, reach: null, views: null, saved: null, total_interactions: 11,
-    hashtags: [
-  "paris",
-  "trip",
-  "viagem",
-  "europa",
-  "photography"
-], mentions: [],
-    permalink: "https://www.instagram.com/reel/DW9HKuGgMmr/"
   }
 ];
 
 // ─────────────────────────────────────────────────────────────
 // CAMADA 2 — ANALYTICS TABLES
 // ─────────────────────────────────────────────────────────────
-export const profileMetrics = { followers: 61246, following: 299, posts_total: 3011, follower_following_ratio: 204.8, posts_per_week_estimated: 4.1, reels_share_pct: 45.0, feed_image_share_pct: 30.0, carousel_share_pct: 25.0, source: 'Instagram MCP', collected_at: "2026-05-15T14:10:19Z" };
+export const profileMetrics = {"followers": 61223, "following": 299, "posts_total": 3012, "follower_following_ratio": 204.8, "posts_per_week_estimated": 3.1, "reels_share_pct": 40.0, "feed_image_share_pct": 35.0, "carousel_share_pct": 25.0, "source": "Instagram MCP", "collected_at": "2026-05-17T14:09:24Z"};
 
 export const calculatedFields = {
-  avg_likes_last_20: 12.1, avg_comments_last_20: 1.4, avg_views_last_20: 232, avg_reach_last_20: 157, avg_interactions_last_20: 13.5,
-  median_likes: 10.5, median_comments: 1.0, avg_caption_length: 144.4, avg_hashtags_per_post: 3.75, avg_mentions_per_post: 0.05,
-  posting_frequency_per_week: 4.1, follower_following_ratio: 204.8, engagement_rate_avg_pct: 0.022, top_3_content_formats: [
-  "REELS",
-  "IMAGE",
-  "CAROUSEL_ALBUM"
-], top_5_content_topics: ['Viagem & Lifestyle', 'Empreendedorismo', 'Autoridade', 'Tecnologia/IA', 'Reflexão & Propósito'], top_5_words: [
-  "photography",
-  "trip",
-  "instagood",
-  "europa",
-  "seattle"
-],
-  best_post_by_interactions: { id: "18591759310050140", interactions: 40, caption_preview: "No meio de tudo que eu construo… é aqui que eu lembro o porquê. 🇺🇸 In the middle of everything I build… this is whe…", reach: null },
-  best_reel_by_views: { id: "18077326622537902", views: 244, caption_preview: "Existem países que parecem secretos. Escondidos entre montanhas, silêncio, história e mar. Montenegro foi um deles …", reach: 220 },
-  worst_post_by_interactions: { id: "17882203086418670", interactions: 0, caption_preview: "Clássicos são clássicos. Se foi para os E.U.A e não provou um @fiveguys você não conheceu os E.U.A. #hamburg #fiveg…" },
-  most_common_posting_day: "Quarta", most_common_posting_hour: "12:00", estimated_content_pillars: ['Viagem & Lifestyle', 'Empreendedorismo', 'Autoridade', 'Tecnologia/IA', 'Reflexão & Propósito'], estimated_target_audience: 'Empreendedores 28-45 anos, Brasil, interessados em liberdade financeira, viagens e construção de negócios', estimated_business_model: 'Posicionamento de autoridade → tráfego para saiba-mais.ai → conversão em serviços/consultorias', estimated_primary_cta: 'Tráfego para link na bio (saiba-mais.ai)', estimated_conversion_path: 'Conteúdo orgânico → perfil → link bio → landing page',
+  "avg_likes_last_20": 11.9,
+  "avg_comments_last_20": 1.4,
+  "avg_views_last_20": 0,
+  "avg_reach_last_20": 0,
+  "avg_interactions_last_20": 13.3,
+  "median_likes": 10.5,
+  "median_comments": 1.0,
+  "avg_caption_length": 139.8,
+  "avg_hashtags_per_post": 3.5,
+  "avg_mentions_per_post": 0.1,
+  "posting_frequency_per_week": 3.1,
+  "follower_following_ratio": 204.8,
+  "engagement_rate_avg_pct": 0.022,
+  "top_3_content_formats": [
+    "REELS",
+    "IMAGE",
+    "CAROUSEL_ALBUM"
+  ],
+  "top_5_content_topics": [
+    "Viagem & Lifestyle",
+    "Empreendedorismo",
+    "Autoridade",
+    "Reflexão & Propósito",
+    "Tecnologia/IA"
+  ],
+  "top_5_words": [
+    "photography",
+    "trip",
+    "instagood",
+    "mundo",
+    "europa"
+  ],
+  "best_post_by_interactions": {
+    "id": "18591759310050140",
+    "interactions": 40,
+    "caption_preview": "No meio de tudo que eu construo… é aqui que eu lembro o porquê. 🇺🇸 In the middle of everything I build… this is where …",
+    "reach": null
+  },
+  "best_reel_by_views": {
+    "id": "",
+    "views": 0,
+    "caption_preview": "",
+    "reach": null
+  },
+  "worst_post_by_interactions": {
+    "id": "17882203086418670",
+    "interactions": 0,
+    "caption_preview": "Clássicos são clássicos. Se foi para os E.U.A e não provou um @fiveguys você não conheceu os E.U.A. #hamburg #fiveguys…"
+  },
+  "most_common_posting_day": "Quinta",
+  "most_common_posting_hour": "15:00",
+  "estimated_content_pillars": [
+    "Viagem & Lifestyle",
+    "Empreendedorismo",
+    "Autoridade",
+    "Reflexão & Propósito",
+    "Tecnologia/IA"
+  ],
+  "estimated_target_audience": "Empreendedores 28-45 anos, Brasil, interessados em liberdade financeira, viagens e construção de negócios",
+  "estimated_business_model": "Posicionamento de autoridade → tráfego para saiba-mais.ai → conversão em serviços/consultorias",
+  "estimated_primary_cta": "Tráfego para link na bio (saiba-mais.ai)",
+  "estimated_conversion_path": "Conteúdo orgânico → perfil → link bio → landing page"
 };
 
-export const postingPatterns = { most_active_day: "Quarta", most_active_hour: "12:00", posts_per_week_estimated: 4.1, days_distribution: {
-  "Quinta": 2,
-  "Quarta": 4,
-  "Terça": 4,
-  "Segunda": 3,
-  "Sábado": 3,
-  "Sexta": 3,
-  "Domingo": 1
-}, format_distribution: {
-  "REELS": 9,
-  "IMAGE": 6,
-  "CAROUSEL_ALBUM": 5
-}, format_distribution_pct: {
-  "REELS": 45.0,
-  "IMAGE": 30.0,
-  "CAROUSEL_ALBUM": 25.0
-}, funnel_distribution: { topo: 17, meio: 3, fundo: 0 }, content_temp_distribution: { frio: 5, morno: 11, quente: 4 }, consistency: "4.1 posts/semana nos 20 posts recentes", seasonality: 'Publicação ligada a viagens, bastidores e marcos de autoridade' };
+export const postingPatterns = {
+  "most_active_day": "Quinta",
+  "most_active_hour": "15:00",
+  "posts_per_week_estimated": 3.1,
+  "days_distribution": {
+    "Sexta": 3,
+    "Quinta": 4,
+    "Quarta": 2,
+    "Terça": 4,
+    "Segunda": 3,
+    "Sábado": 3,
+    "Domingo": 1
+  },
+  "format_distribution": {
+    "IMAGE": 7,
+    "REELS": 8,
+    "CAROUSEL_ALBUM": 5
+  },
+  "format_distribution_pct": {
+    "IMAGE": 35.0,
+    "REELS": 40.0,
+    "CAROUSEL_ALBUM": 25.0
+  },
+  "funnel_distribution": {
+    "topo": 17,
+    "meio": 3,
+    "fundo": 0
+  },
+  "content_temp_distribution": {
+    "frio": 5,
+    "morno": 10,
+    "quente": 5
+  },
+  "consistency": "3.1 posts/semana nos últimos 90 dias (40 posts capturados)",
+  "seasonality": "Publicação ligada a viagens, bastidores e marcos de autoridade"
+};
 
 export const contentTaxonomy: ContentTaxonomy[] = [
   { id: '18587161180034708', category: 'lifestyle', intent: 'entreter', funnel: 'topo', temp: 'quente', authority_score: 5, commercial_score: 3, hook: 'Eu achei que era apenas uma loja de sardinhas' },
@@ -427,7 +419,7 @@ export const topPostsByInteractions = [
     "id": "18591759310050140",
     "date": "2026-04-24",
     "type": "IMAGE",
-    "caption_preview": "No meio de tudo que eu construo… é aqui que eu lembro o porquê. 🇺🇸 In the middle of everything I build… this is whe…",
+    "caption_preview": "No meio de tudo que eu construo… é aqui que eu lembro o porquê. 🇺🇸 In the middle of everything I build… this is where …",
     "total_interactions": 40,
     "reach": "N/A",
     "views": "N/A",
@@ -447,7 +439,7 @@ export const topPostsByInteractions = [
     "id": "18110982055878581",
     "date": "2026-04-27",
     "type": "VIDEO",
-    "caption_preview": "Entrei achando que era só um mercado saí entendendo por que lugares assim duram séculos, um dos mercados mais antig…",
+    "caption_preview": "Entrei achando que era só um mercado saí entendendo por que lugares assim duram séculos, um dos mercados mais antigos …",
     "total_interactions": 25,
     "reach": "N/A",
     "views": "N/A",
@@ -458,7 +450,7 @@ export const topPostsByInteractions = [
     "date": "2026-05-08",
     "type": "IMAGE",
     "caption_preview": "Bad Boys 😎🐕",
-    "total_interactions": 23,
+    "total_interactions": 24,
     "reach": "N/A",
     "views": "N/A",
     "saved": 0
@@ -475,80 +467,53 @@ export const topPostsByInteractions = [
   }
 ];
 
-export const topPostsByReach = [
-  {
-    "id": "18077326622537902",
-    "date": "2026-05-14",
-    "type": "VIDEO",
-    "caption_preview": "Existem países que parecem secretos. Escondidos entre montanhas, silêncio, história e mar. Montenegro foi um deles …",
-    "total_interactions": 7,
-    "reach": "220",
-    "views": "244",
-    "saved": 0
-  },
-  {
-    "id": "18129566545517711",
-    "date": "2026-05-13",
-    "type": "IMAGE",
-    "caption_preview": "Pequenos detalhes contam grandes histórias. #jornada #negocios #historia #aprendizado #photography",
-    "total_interactions": 6,
-    "reach": "149",
-    "views": "246",
-    "saved": 1
-  },
-  {
-    "id": "18109003246906463",
-    "date": "2026-05-11",
-    "type": "IMAGE",
-    "caption_preview": "O silêncio te reorganiza.",
-    "total_interactions": 14,
-    "reach": "147",
-    "views": "259",
-    "saved": 0
-  },
-  {
-    "id": "17882203086418670",
-    "date": "2026-05-12",
-    "type": "IMAGE",
-    "caption_preview": "Clássicos são clássicos. Se foi para os E.U.A e não provou um @fiveguys você não conheceu os E.U.A. #hamburg #fiveg…",
-    "total_interactions": 0,
-    "reach": "112",
-    "views": "179",
-    "saved": 0
-  }
-];
+export const topPostsByReach = [];
 
-export const topReelsByViews = [
-  {
-    "id": "18077326622537902",
-    "date": "2026-05-14",
-    "type": "VIDEO",
-    "caption_preview": "Existem países que parecem secretos. Escondidos entre montanhas, silêncio, história e mar. Montenegro foi um deles …",
-    "total_interactions": 7,
-    "reach": "220",
-    "views": "244",
-    "saved": 0
-  }
-];
+export const topReelsByViews = [];
 
-export const captionAnalysis = { avg_length_chars: 144, avg_hashtags_per_post: 3.75, avg_mentions_per_post: 0.05, dominant_tone: 'Inspiracional com densidade filosófica', common_opening_style: 'Frase curta + contraste/reflexão', narrative_format: 'Abertura impactante → desenvolvimento → fecho reflexivo', presence_of_questions: 'Baixa — oportunidade de elevar comentários com CTA direto', presence_of_storytelling: 'Alta — conteúdo recente mantém narrativa aspiracional', presence_of_cta: 'Baixa — gap crítico de conversão para link da bio', most_frequent_cta: 'Nenhum CTA dominante — gap crítico', most_used_emojis: ['✈️', '🌍', '🏆', '🚀', '🔥'], top_words: [
-  "photography",
-  "trip",
-  "instagood",
-  "europa",
-  "seattle",
-  "canada",
-  "instagram"
-], multilingual_posts_count: 3, multilingual_languages: ['PT', 'EN', 'ES'] };
+export const captionAnalysis = {
+  "avg_length_chars": 140,
+  "avg_hashtags_per_post": 3.5,
+  "avg_mentions_per_post": 0.1,
+  "dominant_tone": "Inspiracional com densidade filosófica",
+  "common_opening_style": "Frase curta + contraste/reflexão",
+  "narrative_format": "Abertura impactante → desenvolvimento → fecho reflexivo",
+  "presence_of_questions": "Baixa — oportunidade de elevar comentários com CTA direto",
+  "presence_of_storytelling": "Alta — conteúdo recente mantém narrativa aspiracional",
+  "presence_of_cta": "Baixa — gap crítico de conversão para link da bio",
+  "most_frequent_cta": "Nenhum CTA dominante — gap crítico",
+  "most_used_emojis": [
+    "✈️",
+    "🌍",
+    "🏆",
+    "🚀",
+    "🔥"
+  ],
+  "top_words": [
+    "photography",
+    "trip",
+    "instagood",
+    "mundo",
+    "europa",
+    "lugar",
+    "seattle"
+  ],
+  "multilingual_posts_count": 2,
+  "multilingual_languages": [
+    "PT",
+    "EN",
+    "ES"
+  ]
+};
 
 export const hashtagsAnalysis = [
   {
     "hashtag": "photography",
-    "count": 9
+    "count": 8
   },
   {
     "hashtag": "trip",
-    "count": 7
+    "count": 6
   },
   {
     "hashtag": "instagood",
@@ -556,7 +521,7 @@ export const hashtagsAnalysis = [
   },
   {
     "hashtag": "europa",
-    "count": 3
+    "count": 2
   },
   {
     "hashtag": "seattle",
@@ -630,7 +595,7 @@ export const brandPositioning = {
 // CAMADA 3 — EXECUTIVE SUMMARY
 // ─────────────────────────────────────────────────────────────
 export const executiveSummary = {
-  overview: 'Perfil creator/business de empreendedor serial com posicionamento de autoridade aspiracional. Nicho: empreendedorismo + lifestyle premium + viagens. 61.241 seguidores. 4,2 posts/semana estimados e ER disponível de 0.028% calculado apenas por likes+comentários.',
+  overview: 'Perfil creator/business de empreendedor serial com posicionamento de autoridade aspiracional. Nicho: empreendedorismo + lifestyle premium + viagens. 61.223 seguidores. 4,2 posts/semana estimados e ER disponível de 0.028% calculado apenas por likes+comentários.',
   positioning: 'Combinação de mobilidade global + construção empresarial real + prova de conquista (govtech, empresas vendidas). Promessa central: liberdade como resultado de estrutura.',
   content_pattern: 'Inspiração + autoridade + lifestyle. Falta pilar de conversão explícito. 45% Reels, 30% carrossel e 25% imagem nos 20 posts recentes; carrossel e imagem aparecem agregados como FEED no conector.',
   best_format: 'Imagem/autoridade Govtech lidera com 57 interações, 363 de alcance e 739 views; entre Reels, Istambul lidera com 25 interações, 381 de alcance e 538 views.',
@@ -732,7 +697,7 @@ export const dataQuality = { source: 'Instagram MCP', collection_date: "15/05/20
 export const dashboardData = {
   meta: {
     profile: profileIdentity,
-    lastUpdated: "15/05/2026 às 11:10",
+    lastUpdated: "17/05/2026 às 14:09",
     dashboardCadence: 'Atualização semanal aos domingos',
     designPhilosophy: 'Editorial executivo cinematográfico',
   },
@@ -1039,7 +1004,7 @@ export const strategistInsights = {
   overallDiagnosis: {
     grade: 'C+',
     summary: 'Perfil com autoridade real e estética forte, mas conversão próxima de zero. Você tem o produto, falta o funil.',
-    mainProblem: 'Você está construindo audiência passiva. 62k seguidores que admiram mas não agem. O problema não é alcance — é ausência de CTA, funil e consistência estratégica.',
+    mainProblem: 'Você está construindo audiência passiva. 61.223 seguidores que admiram mas não agem. O problema não é alcance — é ausência de CTA, funil e consistência estratégica.',
   },
   criticalActions: [
     {

@@ -1,0 +1,129 @@
+{
+  "18216707638322293": {
+    "data": [
+      {
+        "name": "shares",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 0
+          }
+        ],
+        "title": "Shares",
+        "description": "The number of shares of your post.",
+        "id": "18216707638322293/insights/shares/lifetime"
+      },
+      {
+        "name": "comments",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 1
+          }
+        ],
+        "title": "Comments",
+        "description": "The number of comments on your post.",
+        "id": "18216707638322293/insights/comments/lifetime"
+      },
+      {
+        "name": "likes",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 4
+          }
+        ],
+        "title": "Likes",
+        "description": "The number of likes on your post.",
+        "id": "18216707638322293/insights/likes/lifetime"
+      },
+      {
+        "name": "saved",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 0
+          }
+        ],
+        "title": "Saved",
+        "description": "The number of saves of your post.",
+        "id": "18216707638322293/insights/saved/lifetime"
+      },
+      {
+        "name": "total_interactions",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 5
+          }
+        ],
+        "title": "Post interactions",
+        "description": "The number of likes, saves, comments and shares on your post minus the number of unlikes, unsaves and deleted comments.",
+        "id": "18216707638322293/insights/total_interactions/lifetime"
+      },
+      {
+        "name": "reach",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 145
+          }
+        ],
+        "title": "Accounts reached",
+        "description": "The number of unique accounts that have seen this post, at least once. Reach is different from impressions, which may include multiple views of your post by the same accounts. This metric is estimated.",
+        "id": "18216707638322293/insights/reach/lifetime"
+      },
+      {
+        "name": "views",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 282
+          }
+        ],
+        "title": "Views",
+        "description": "The number of times your post was played or displayed.",
+        "id": "18216707638322293/insights/views/lifetime"
+      }
+    ]
+  },
+  "18077326622537902": {},
+  "18129566545517711": {},
+  "17882203086418670": {},
+  "18109003246906463": {},
+  "18048556742591637": {},
+  "18004667222739565": {},
+  "18462194005101879": {},
+  "18099295883038166": {},
+  "18101215795990406": {},
+  "18338572129171422": {},
+  "18098472605102842": {},
+  "18110982055878581": {},
+  "18115128127783856": {},
+  "18591759310050140": {},
+  "17943920478168349": {},
+  "18118097605678754": {},
+  "17866159815613734": {},
+  "18117398149663032": {},
+  "18223237996314109": {},
+  "18084408851056630": {},
+  "18081224582118555": {},
+  "18088641608186963": {},
+  "18573299488004222": {},
+  "17911774722356878": {},
+  "18092030957147327": {},
+  "18001864238860156": {},
+  "18587161180034708": {},
+  "18083718791367809": {},
+  "18107565679641223": {},
+  "17879123688488066": {},
+  "17875028724542272": {},
+  "18095251325061078": {},
+  "18073296557439826": {},
+  "18095218777975373": {},
+  "17843399397693823": {},
+  "18309309439286598": {},
+  "17979414452985483": {},
+  "18108083959685505": {},
+  "17874991773416016": {}
+}
