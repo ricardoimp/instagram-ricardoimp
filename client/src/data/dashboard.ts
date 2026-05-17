@@ -1,7 +1,7 @@
 // Script Mestre — Auditoria Completa de Perfil @ricardoimp
 // Estrutura de 4 camadas: raw_data | analytics_tables | executive_summary | scorecards
-// Última coleta: 17/05/2026 às 14:09 — Instagram MCP
-// 20 posts recentes analisados | alcance, views e salvos coletados quando disponíveis
+// Última coleta: 17/05/2026 às 13:09 — Instagram MCP + Meta Ads MCP
+// 20 posts recentes analisados | insights completos disponíveis nos 5 posts mais recentes; demais lacunas preservadas
 
 // ─────────────────────────────────────────────────────────────
 // TIPOS
@@ -61,7 +61,7 @@ export const profileIdentity = {
   value_proposition: 'Construir empresas enquanto vive o mundo — liberdade como resultado de estrutura', cta_bio: 'Link na bio (👇🏼)',
   languages: ['PT', 'EN', 'ES'], verification: false, niche_primary: 'Empreendedorismo & Lifestyle Premium', sub_niches: ['Viagens', 'Tecnologia/IA', 'Govtech', 'Liberdade financeira'],
   persona_apparent: 'Empreendedor aspiracional com lastro real de conquista', funnel_stage_predominant: 'awareness' as const, authority_presence: true, social_proof_presence: true, commercial_offer_presence: false,
-  website: "http://saiba-mais.ai", collected_at: "2026-05-17T14:09:24Z"
+  website: "http://saiba-mais.ai", collected_at: "2026-05-17T16:09:00Z"
 };
 
 export const postsRaw: PostRaw[] = [
@@ -71,7 +71,7 @@ export const postsRaw: PostRaw[] = [
     type: "IMAGE",
     media_product_type: "FEED",
     caption: "Nem sempre o que é restrito dever ser obedecido.\nVá além! 🔥 \n\nWhat is restricted should not always be obeyed.\nGo further! 🔥\n\nNo siempre se debe obedecer lo restringido.\n¡Ve más allá! 🔥",
-    likes: 4, comments: 1, reach: null, views: null, saved: null, total_interactions: 5,
+    likes: 4, comments: 1, reach: 145, views: 282, saved: 0, total_interactions: 5,
     hashtags: [],
     mentions: [],
     permalink: "https://www.instagram.com/p/DYXyJHUBycO/"
@@ -82,7 +82,7 @@ export const postsRaw: PostRaw[] = [
     type: "VIDEO",
     media_product_type: "REELS",
     caption: "Existem países que parecem secretos. \nEscondidos entre montanhas, silêncio, história e mar.\n\nMontenegro foi um deles pra mim.\n\nUm pequeno país dos Bálcãs, no sudeste da Europa, entre a Croácia, Sérvia, Bósnia e o mar Adriático.\n\nUm lugar que mistura vilas medievais, montanhas gigantes e um litoral que parece cenário de filme.\n\nE o mais curioso:\nquase ninguém fala sobre ele... mas eu falo!\n\n#trip #photography #instagood #loveit #europa",
-    likes: 8, comments: 1, reach: null, views: null, saved: null, total_interactions: 9,
+    likes: 8, comments: 1, reach: 257, views: 303, saved: 0, total_interactions: 9,
     hashtags: ["trip", "photography", "instagood", "loveit", "europa"],
     mentions: [],
     permalink: "https://www.instagram.com/reel/DYVdle8gJRX/"
@@ -93,7 +93,7 @@ export const postsRaw: PostRaw[] = [
     type: "IMAGE",
     media_product_type: "FEED",
     caption: "Pequenos detalhes contam grandes histórias.\n\n#jornada #negocios #historia #aprendizado #photography",
-    likes: 5, comments: 0, reach: null, views: null, saved: null, total_interactions: 5,
+    likes: 5, comments: 0, reach: 158, views: 262, saved: 1, total_interactions: 6,
     hashtags: ["jornada", "negocios", "historia", "aprendizado", "photography"],
     mentions: [],
     permalink: "https://www.instagram.com/p/DYSJJs5gnQT/"
@@ -104,7 +104,7 @@ export const postsRaw: PostRaw[] = [
     type: "IMAGE",
     media_product_type: "FEED",
     caption: "Clássicos são clássicos.\n\nSe foi para os E.U.A e não provou um @fiveguys você não conheceu os E.U.A.\n\n#hamburg #fiveguys #eua #food #photography",
-    likes: 0, comments: 0, reach: null, views: null, saved: null, total_interactions: 0,
+    likes: 0, comments: 0, reach: 115, views: 188, saved: 0, total_interactions: 0,
     hashtags: ["hamburg", "fiveguys", "eua", "food", "photography"],
     mentions: ["fiveguys"],
     permalink: "https://www.instagram.com/p/DYPinOHxG7X/"
@@ -115,7 +115,7 @@ export const postsRaw: PostRaw[] = [
     type: "IMAGE",
     media_product_type: "FEED",
     caption: "O silêncio te reorganiza.",
-    likes: 13, comments: 1, reach: null, views: null, saved: null, total_interactions: 14,
+    likes: 13, comments: 1, reach: 153, views: 264, saved: 0, total_interactions: 14,
     hashtags: [],
     mentions: [],
     permalink: "https://www.instagram.com/p/DYMj9kKgBsF/"
@@ -290,21 +290,21 @@ export const postsRaw: PostRaw[] = [
 // ─────────────────────────────────────────────────────────────
 // CAMADA 2 — ANALYTICS TABLES
 // ─────────────────────────────────────────────────────────────
-export const profileMetrics = {"followers": 61223, "following": 299, "posts_total": 3012, "follower_following_ratio": 204.8, "posts_per_week_estimated": 3.1, "reels_share_pct": 40.0, "feed_image_share_pct": 35.0, "carousel_share_pct": 25.0, "source": "Instagram MCP", "collected_at": "2026-05-17T14:09:24Z"};
+export const profileMetrics = {"followers": 61229, "following": 300, "posts_total": 3012, "follower_following_ratio": 204.1, "posts_per_week_estimated": 4.1, "reels_share_pct": 40.0, "feed_image_share_pct": 35.0, "carousel_share_pct": 25.0, "source": "Instagram MCP", "collected_at": "2026-05-17T16:09:00Z"};
 
 export const calculatedFields = {
   "avg_likes_last_20": 11.9,
   "avg_comments_last_20": 1.4,
-  "avg_views_last_20": 0,
-  "avg_reach_last_20": 0,
-  "avg_interactions_last_20": 13.3,
+  "avg_views_last_20": 260,
+  "avg_reach_last_20": 166,
+  "avg_interactions_last_20": 13.4,
   "median_likes": 10.5,
   "median_comments": 1.0,
   "avg_caption_length": 139.8,
   "avg_hashtags_per_post": 3.5,
   "avg_mentions_per_post": 0.1,
   "posting_frequency_per_week": 3.1,
-  "follower_following_ratio": 204.8,
+  "follower_following_ratio": 204.1,
   "engagement_rate_avg_pct": 0.022,
   "top_3_content_formats": [
     "REELS",
@@ -360,7 +360,7 @@ export const calculatedFields = {
 export const postingPatterns = {
   "most_active_day": "Quinta",
   "most_active_hour": "15:00",
-  "posts_per_week_estimated": 3.1,
+  "posts_per_week_estimated": 4.1,
   "days_distribution": {
     "Sexta": 3,
     "Quinta": 4,
@@ -390,7 +390,7 @@ export const postingPatterns = {
     "morno": 10,
     "quente": 5
   },
-  "consistency": "3.1 posts/semana nos últimos 90 dias (40 posts capturados)",
+  "consistency": "4.1 posts/semana no recorte dos 20 posts recentes",
   "seasonality": "Publicação ligada a viagens, bastidores e marcos de autoridade"
 };
 
@@ -467,9 +467,71 @@ export const topPostsByInteractions = [
   }
 ];
 
-export const topPostsByReach = [];
+export const topPostsByReach = [
+  {
+    "id": "18077326622537902",
+    "date": "2026-05-14",
+    "type": "VIDEO",
+    "caption_preview": "Montenegro foi um deles pra mim — país pequeno, forte em paisagem e narrativa.",
+    "total_interactions": 9,
+    "reach": 257,
+    "views": 303,
+    "saved": 0
+  },
+  {
+    "id": "18129566545517711",
+    "date": "2026-05-13",
+    "type": "IMAGE",
+    "caption_preview": "Pequenos detalhes contam grandes histórias.",
+    "total_interactions": 6,
+    "reach": 158,
+    "views": 262,
+    "saved": 1
+  },
+  {
+    "id": "18109003246906463",
+    "date": "2026-05-11",
+    "type": "IMAGE",
+    "caption_preview": "O silêncio te reorganiza.",
+    "total_interactions": 14,
+    "reach": 153,
+    "views": 264,
+    "saved": 0
+  },
+  {
+    "id": "18216707638322293",
+    "date": "2026-05-15",
+    "type": "IMAGE",
+    "caption_preview": "Nem sempre o que é restrito deve ser obedecido. Vá além.",
+    "total_interactions": 5,
+    "reach": 145,
+    "views": 282,
+    "saved": 0
+  },
+  {
+    "id": "17882203086418670",
+    "date": "2026-05-12",
+    "type": "IMAGE",
+    "caption_preview": "Clássicos são clássicos — Five Guys nos EUA.",
+    "total_interactions": 0,
+    "reach": 115,
+    "views": 188,
+    "saved": 0
+  }
+];
 
-export const topReelsByViews = [];
+export const topReelsByViews = [
+  {
+    "id": "18077326622537902",
+    "date": "2026-05-14",
+    "type": "VIDEO",
+    "caption_preview": "Montenegro foi um deles pra mim — país pequeno, forte em paisagem e narrativa.",
+    "total_interactions": 9,
+    "reach": 257,
+    "views": 303,
+    "saved": 0
+  }
+];
 
 export const captionAnalysis = {
   "avg_length_chars": 140,
@@ -595,28 +657,28 @@ export const brandPositioning = {
 // CAMADA 3 — EXECUTIVE SUMMARY
 // ─────────────────────────────────────────────────────────────
 export const executiveSummary = {
-  overview: 'Perfil creator/business de empreendedor serial com posicionamento de autoridade aspiracional. Nicho: empreendedorismo + lifestyle premium + viagens. 61.223 seguidores. 4,2 posts/semana estimados e ER disponível de 0.028% calculado apenas por likes+comentários.',
+  overview: 'Perfil creator/business de empreendedor serial com posicionamento de autoridade aspiracional. Nicho: empreendedorismo + lifestyle premium + viagens. 61.229 seguidores. 4,1 posts/semana estimados e ER disponível de 0.022% calculado apenas por likes+comentários.',
   positioning: 'Combinação de mobilidade global + construção empresarial real + prova de conquista (govtech, empresas vendidas). Promessa central: liberdade como resultado de estrutura.',
-  content_pattern: 'Inspiração + autoridade + lifestyle. Falta pilar de conversão explícito. 45% Reels, 30% carrossel e 25% imagem nos 20 posts recentes; carrossel e imagem aparecem agregados como FEED no conector.',
-  best_format: 'Imagem/autoridade Govtech lidera com 57 interações, 363 de alcance e 739 views; entre Reels, Istambul lidera com 25 interações, 381 de alcance e 538 views.',
+  content_pattern: 'Inspiração + autoridade + lifestyle. Falta pilar de conversão explícito. 40% Reels, 25% carrossel e 35% imagem nos 20 posts recentes; carrossel e imagem aparecem agregados como FEED no conector.',
+  best_format: 'Nos cinco posts com insights completos nesta coleta, Montenegro lidera Reach com 257 e 303 views; “O silêncio te reorganiza” lidera interações recentes com 14.',
   best_topics: ['Conexão emocional real (neto/família)', 'Negócios/autoridade (sala de operações, govtech)', 'Viagem com tese (Marrocos contraste, Croácia paz)'],
   strengths: [
     'Posicionamento único: empreendedor que viaja o mundo com lastro real e verificável',
     'Prova de conquista concreta (govtech, 7 empresas, 37 países, 2 vendidas)',
     'Estética visual premium e consistente — coerência de marca forte',
-    'Capacidade de conexão emocional (post do neto: 39 interações, melhor da semana)',
+    'Capacidade de conexão emocional continua forte; “O silêncio te reorganiza” lidera os 5 posts com insight completo nesta coleta',
     'Trilinguismo como diferencial de alcance internacional (PT/EN/ES)',
   ],
   weaknesses: [
     'Ausência de CTA consistente — menos de 30% dos posts têm chamada para ação',
     'Reels com estética forte, mas views recentes ainda variam muito; o maior sinal veio de tese clara + contexto de viagem',
     'Funil comercial subaproveitado — saiba-mais.ai não mencionado nos posts',
-    'Meta Ads voltou com entrega mensurável: 36.188 impressões e 671 Cliques (todos), mas spend retornou R$0 e precisa validação',
-    'Frequência estimada em 4,2 posts/semana, ainda sem série recorrente clara',
+    'Meta Ads voltou com entrega mensurável: 36.835 Impressões, 990 Cliques (todos) e 884 Link clicks, mas Valor usado retornou R$0 e precisa validação',
+    'Frequência estimada em 4,1 posts/semana, ainda sem série recorrente clara',
   ],
   opportunities: [
     'Criar CTA fixo em todos os posts: "Link na bio para [benefício específico]"',
-    'Escalar padrão do post do neto: âncora emocional real + construção empresarial',
+    'Escalar padrão de frases curtas + narrativa real: âncora emocional, contraste e CTA explícito',
     'Transformar Reels em veículo de argumento: tese nos primeiros 2 segundos',
     'Criar série semanal recorrente: "Bastidor de decisão" ou "O que aprendi construindo"',
     'Validar gasto R$0 e rastreamento Meta antes de escalar orçamento',
@@ -628,15 +690,15 @@ export const executiveSummary = {
   ],
   recommended_kpis: [
     'Taxa de engajamento por post (meta: >0.1%)',
-    'Alcance médio por post recente: 258',
-    'Views por post recente: média 454; meta >500 em Reels com tese forte',
+    'Reach médio disponível nos 5 posts recentes: 166',
+    'Views médias disponíveis nos 5 posts recentes: 260; meta >500 em Reels com tese forte',
     'Salvamentos por post (indicador de conteúdo de valor)',
     'Crescimento líquido de seguidores por semana',
     'Shares por post (amplificação orgânica)',
     'Cliques no link da bio (indisponível no conector atual)',
   ],
   risks: [
-    'Seguidores em 61.241 nesta coleta — monitorar variação semanal',
+    'Seguidores em 61.229 nesta coleta — monitorar variação semanal',
     'Dependência de conteúdo orgânico sem estratégia de mídia paga funcional',
     'Conteúdo de viagem sem tese pode atrair audiência que não converte',
     'Ausência de série recorrente reduz fidelização e expectativa da audiência',
@@ -649,11 +711,11 @@ export const executiveSummary = {
 export const scorecards: Scorecard[] = [
   { key: 'clareza_bio', label: 'Clareza da Bio', value: 8, interpretation: 'Bio clara, com proposta de valor, números reais e CTA implícito. Falta CTA mais direto.', tone: 'positive' },
   { key: 'branding', label: 'Branding', value: 7, interpretation: 'Estética visual premium e consistente. Paleta e tom reconhecíveis. Falta assinatura intelectual fixa.', tone: 'positive' },
-  { key: 'consistencia_editorial', label: 'Consistência Editorial', value: 6, interpretation: 'Temas coerentes mas sem série recorrente. Frequência estimada em 4,2 posts/semana.', tone: 'neutral' },
-  { key: 'frequencia', label: 'Frequência', value: 7, interpretation: '4,2 posts/semana estimados nos 20 posts recentes. Meta: manter cadência com Stories diários.', tone: 'positive' },
-  { key: 'diversidade_formatos', label: 'Diversidade de Formatos', value: 7, interpretation: 'Boa distribuição: 45% Reels, 30% carrossel e 25% imagem nos 20 posts recentes; carrossel e imagem aparecem agregados como FEED no conector. Stories ausentes na análise.', tone: 'positive' },
+  { key: 'consistencia_editorial', label: 'Consistência Editorial', value: 6, interpretation: 'Temas coerentes mas sem série recorrente. Frequência estimada em 4,1 posts/semana.', tone: 'neutral' },
+  { key: 'frequencia', label: 'Frequência', value: 7, interpretation: '4,1 posts/semana estimados nos 20 posts recentes. Meta: manter cadência com Stories diários.', tone: 'positive' },
+  { key: 'diversidade_formatos', label: 'Diversidade de Formatos', value: 7, interpretation: 'Boa distribuição: 40% Reels, 25% carrossel e 35% imagem nos 20 posts recentes; carrossel e imagem aparecem agregados como FEED no conector. Stories ausentes na análise.', tone: 'positive' },
   { key: 'uso_cta', label: 'Uso de CTA', value: 5, interpretation: 'Gap crítico — menos de 30% dos posts têm CTA explícito. Maior oportunidade de melhoria imediata.', tone: 'warning' },
-  { key: 'potencial_conversao', label: 'Potencial de Conversão', value: 5, interpretation: 'Funil subaproveitado. Link na bio ativo mas pouco mencionado nos posts. ER disponível de 0.028% por likes+comentários.', tone: 'warning' },
+  { key: 'potencial_conversao', label: 'Potencial de Conversão', value: 5, interpretation: 'Funil subaproveitado. Link na bio ativo mas pouco mencionado nos posts. ER disponível de 0.022% por likes+comentários.', tone: 'warning' },
   { key: 'autoridade', label: 'Autoridade', value: 8, interpretation: 'Forte — govtech, 7 empresas, 37 países, prova social real. Quando aparece, converte bem.', tone: 'positive' },
   { key: 'prova_social', label: 'Prova Social', value: 6, interpretation: 'Presente mas subutilizada. Depoimentos e bastidores de conquista poderiam aparecer mais.', tone: 'neutral' },
   { key: 'profissionalizacao', label: 'Profissionalização', value: 8, interpretation: 'Perfil profissional, visual coerente, bio estruturada, website ativo.', tone: 'positive' },
@@ -666,30 +728,47 @@ export const scorecards: Scorecard[] = [
 // ─────────────────────────────────────────────────────────────
 export const metaAds = {
   accounts: [
-    { accountId: 'act_1158819016166775', name: 'Ricardo Impellizieri / MM Lite', businessName: 'Conta com insights retornados', currency: 'BRL', status: 'ACTIVE', last30d: '36.188 Impressões · 671 Cliques (todos) · 669 Link clicks · Valor usado R$0 retornado pela API' },
+    { accountId: 'act_1158819016166775', name: 'Ricardo Impellizieri / MM Lite', businessName: 'Conta com insights retornados', currency: 'BRL', status: 'ACTIVE', last30d: '36.835 Impressões · 990 Cliques (todos) · 884 Link clicks · CTR (todos) 2,69% · Valor usado R$0 retornado pela API' },
     { accountId: 'act_9525474394174655', name: 'Ricardo Impellizieri', businessName: 'loggica intermediacoes de negócios', currency: 'BRL', status: 'ACTIVE', last30d: 'Sem insights nos últimos 30 dias retornados pelo conector' },
     { accountId: 'act_265574476787926', name: '265574476787926', businessName: 'SANDRO JOSE RICARDO IMPELLIZIERI DE OLIVEIRA', currency: 'BRL', status: 'ACTIVE', last30d: 'Sem insights nos últimos 30 dias retornados pelo conector' },
   ],
   activeCampaign: {
-    name: 'Traffic Campaign',
+    name: 'Traffic Campaign + MM_LITE_DEFAULT_AD_CAMPAIGN_GROUP',
     objective: 'OUTCOME_TRAFFIC',
     status: 'ACTIVE',
     dailyBudget: 'Não retornado',
-    createdAt: '22 set 2025',
-    reading: 'Últimos 30 dias com entrega real retornada: Traffic Campaign gerou 29.545 impressões, 14.773 de alcance, 666 Cliques (todos), 664 Link clicks e CTR (todos) 2,25%, com spend R$0 informado pela API. A campanha MM_LITE_DEFAULT_AD_CAMPAIGN_GROUP gerou 6.643 impressões, 4.398 de alcance e 5 Cliques (todos), CTR (todos) 0,075%.',
+    createdAt: 'Período analisado: 17 abr a 16 mai 2026',
+    reading: 'Últimos 30 dias com entrega real retornada: Traffic Campaign gerou 28.091 Impressões, Reach 14.094, 295 Cliques (todos), 270 Link clicks e CTR (todos) 1,05%. MM_LITE_DEFAULT_AD_CAMPAIGN_GROUP gerou 8.744 Impressões, Reach 6.568, 695 Cliques (todos), 614 Link clicks e CTR (todos) 7,95%. Total: 36.835 Impressões, 990 Cliques (todos), 884 Link clicks, CTR (todos) 2,69% e Valor usado R$0 informado pela API.',
   },
   nextSteps: [
-    'Validar no Ads Manager por que o gasto retornou R$0 mesmo com impressões e cliques registrados.',
-    'Manter Traffic Campaign como referência, mas revisar rastreamento, evento de destino e UTMs antes de escalar.',
-    'Pausar ou revisar MM_LITE_DEFAULT_AD_CAMPAIGN_GROUP: volume razoável, CTR muito baixo.',
-    'Aplicar recomendação oficial Meta de variações criativas, estimada em redução de 3% no custo por resultado.',
+    'Validar no Ads Manager por que Valor usado retorna R$0 mesmo com Impressões e Cliques (todos) registrados.',
+    'Priorizar análise da MM_LITE_DEFAULT_AD_CAMPAIGN_GROUP: tem maior CTR (todos), mas precisa confirmar qualidade do tráfego e destino.',
+    'Revisar UTMs, evento de destino e página saiba-mais.ai antes de qualquer escala de orçamento.',
+    'Manter blocos sem insights como indisponíveis até o conector retornar dados confiáveis.',
   ],
 };
 
 // ─────────────────────────────────────────────────────────────
 // DATA QUALITY
 // ─────────────────────────────────────────────────────────────
-export const dataQuality = { source: 'Instagram MCP', collection_date: "15/05/2026 às 11:10", posts_analyzed: 20, period: '20 posts recentes', limitations: ['Métricas de stories e demografia não estavam disponíveis nesta integração', 'Insights por post retornaram alcance, views e salvos quando disponíveis', 'Análise qualitativa inferida por caption, formato e sinais públicos'], confidence_level: 'Alta para perfil/posts; média para recomendações qualitativas' };
+export const dataQuality = {
+  source: 'Instagram MCP + Meta Ads MCP',
+  collection_date: "17/05/2026 às 13:09",
+  collected_at: "2026-05-17T16:09:00Z",
+  posts_analyzed: 20,
+  posts_with_insights: 5,
+  completeness_pct: 25,
+  period: '20 posts recentes + Meta Ads últimos 30 dias',
+  limitations: [
+    'Métricas de Stories e demografia não estavam disponíveis nesta integração',
+    'Insights completos por post retornaram para os 5 posts mais recentes; demais posts mantêm lacunas visíveis',
+    'Valor usado no Meta Ads retornou R$0 apesar de haver Impressões e Cliques (todos)',
+    'Análise qualitativa inferida por caption, formato e sinais públicos'
+  ],
+  confidence_level: 'Alta para perfil e mídia paga retornada; média para recomendações qualitativas',
+  confidence_global: 'Alta para perfil e mídia paga; média para leitura qualitativa',
+  collection_notes: 'Coleta feita em 17/05/2026. Instagram retornou perfil, 20 posts recentes e insights completos nos 5 posts mais recentes. Meta Ads retornou dados dos últimos 30 dias na conta com entrega ativa; contas sem retorno permanecem marcadas como indisponíveis.'
+};
 
 // ─────────────────────────────────────────────────────────────
 // OBJETO PRINCIPAL (compatibilidade com Home.tsx existente)
@@ -697,33 +776,33 @@ export const dataQuality = { source: 'Instagram MCP', collection_date: "15/05/20
 export const dashboardData = {
   meta: {
     profile: profileIdentity,
-    lastUpdated: "17/05/2026 às 14:09",
+    lastUpdated: "17/05/2026 às 13:09",
     dashboardCadence: 'Atualização semanal aos domingos',
     designPhilosophy: 'Editorial executivo cinematográfico',
   },
   executive: {
     summary: {
       profileStrength: executiveSummary.overview,
-      instagramReading: 'Nos 20 posts recentes, a leitura confiável nesta coleta é likes + comentários. O post Govtech lidera com 57 interações, 363 de alcance e 739 views. O post do neto vem com 40 interações, 429 de alcance e 803 views. Alcance, views e salvos retornaram para os 20 posts recentes.',
-      adsReading: 'Meta Ads retornou entrega real nos últimos 30 dias: 36.188 impressões e 671 Cliques (todos) somando Traffic Campaign e MM Lite. O ponto crítico é a API retornar spend R$0, o que exige validação no Ads Manager antes de escalar.',
-      criticalPoint: 'Gap crítico permanece: conteúdo tem autoridade, mas CTA explícito ainda é baixo. Sem CTA e sem rastreamento consistente, alcance vira vaidade e cliques não viram receita medida.',
+      instagramReading: 'Nos 20 posts recentes, a leitura confiável ampla é likes + comentários. Insights completos retornaram nos 5 posts mais recentes: Montenegro lidera Reach com 257 e 303 views; “O silêncio te reorganiza” lidera interações nesse recorte com 14.',
+      adsReading: 'Meta Ads retornou entrega real nos últimos 30 dias: 36.835 Impressões, 990 Cliques (todos), 884 Link clicks e CTR (todos) 2,69%. O ponto crítico é a API retornar Valor usado R$0, o que exige validação no Ads Manager antes de escalar.',
+      criticalPoint: 'Gap crítico permanece: conteúdo tem autoridade, mas CTA explícito ainda é baixo. Sem CTA e sem rastreamento consistente, alcance vira vaidade e tráfego não vira receita medida.',
     },
     kpis: [
-      { label: 'Seguidores', value: '61.246', delta: 'coleta atual', tone: 'positive' as const },
-      { label: 'Seguindo', value: '299', delta: 'ratio 204.8:1', tone: 'positive' as const },
-      { label: 'Publicações', value: '3.011', delta: '4.1 posts/semana', tone: 'positive' as const },
-      { label: 'Anúncios Meta', value: '36,2 mil impr.', delta: '671 cliques · spend R$0', tone: 'warning' as const },
+      { label: 'Seguidores', value: '61.229', delta: 'coleta atual', tone: 'positive' as const },
+      { label: 'Seguindo', value: '300', delta: 'ratio 204.1:1', tone: 'positive' as const },
+      { label: 'Publicações', value: '3.012', delta: '4.1 posts/semana', tone: 'positive' as const },
+      { label: 'Anúncios Meta', value: '36,8 mil impr.', delta: '990 Cliques (todos) · R$0', tone: 'warning' as const },
     ],
     conversion: [
       { label: 'ER disponível', value: '0.022%', note: 'Likes + comentários / seguidores' },
-      { label: 'Alcance médio', value: '157', note: 'Média dos 20 posts recentes com insight retornado' },
-      { label: 'Views médias', value: '232', note: 'Média dos 20 posts recentes com insight retornado' },
+      { label: 'Reach médio', value: '166', note: 'Média dos 5 posts recentes com insight completo retornado' },
+      { label: 'Views médias', value: '260', note: 'Média dos 5 posts recentes com insight completo retornado' },
     ],
     alerts: [
       'Gap de CTA: menos de 30% dos posts têm chamada para ação — maior oportunidade imediata.',
-      'Govtech e neto lideram em interação; views e alcance já retornaram nesta coleta para os 20 posts recentes.',
+      'Montenegro lidera Reach nos insights disponíveis; “O silêncio te reorganiza” lidera interações entre os 5 posts recentes com insight completo.',
       'Monitorar variação semanal de seguidores para separar oscilação normal de perda estrutural.',
-      'Meta Ads tem entrega e cliques; validar por que a API retorna spend R$0 antes de escalar.',
+      'Meta Ads tem entrega e Cliques (todos); validar por que a API retorna Valor usado R$0 antes de escalar.',
     ],
   },
   deepAnalysis: {
@@ -733,9 +812,9 @@ export const dashboardData = {
       misalignment: 'A proposta central (liberdade como estratégia) está na bio mas não nos posts. Menos de 30% dos posts têm CTA explícito. O link da bio (saiba-mais.ai) não é mencionado em nenhum post analisado.',
     },
     formatPerformance: [
-      { format: 'Reels', reach: '100–381', depth: 'Alta variação — depende do argumento', engagement: 'Istambul: 25 interações · 381 alcance · 538 views', followers: 'N/A', clicks: 'N/A', signal: 'Melhor formato para escala quando a tese aparece cedo. Média recente: 454 views no conjunto analisado.' },
-      { format: 'Posts estáticos (Imagem)', reach: '199–495', depth: 'Alta quando há âncora emocional ou autoridade', engagement: 'Govtech: 57 interações · Neto: 40 interações', followers: 'N/A', clicks: 'N/A', signal: 'Melhor formato para engajamento profundo quando há prova real ou vínculo humano.' },
-      { format: 'Carrosséis', reach: '101–328', depth: 'Consistente quando há tese visual', engagement: 'Marrocos: 31 interações · 328 alcance · 841 views', followers: 'N/A', clicks: 'N/A', signal: 'Bom para atmosfera e narrativa visual; precisa CTA de salvamento para virar ativo de valor.' },
+      { format: 'Reels', reach: '257 no Reel de Montenegro', depth: 'Alta variação — depende do argumento', engagement: 'Montenegro: 9 interações · Reach 257 · 303 views', followers: 'N/A', clicks: 'N/A', signal: 'Melhor formato para escala quando a tese aparece cedo. Média disponível: 303 views no Reel com insight completo.' },
+      { format: 'Posts estáticos (Imagem)', reach: '115–158 nos 4 posts recentes com insight', depth: 'Alta quando há âncora emocional ou autoridade', engagement: '“O silêncio te reorganiza”: 14 interações · Reach 153 · 264 views', followers: 'N/A', clicks: 'N/A', signal: 'Melhor formato recente para interação quando a frase é curta, memorável e emocional.' },
+      { format: 'Carrosséis', reach: 'N/A', depth: 'Dados indisponíveis nos 5 insights recentes coletados', engagement: 'N/A', followers: 'N/A', clicks: 'N/A', signal: 'Manter bloco como lacuna até o conector retornar insights de carrosséis recentes.' },
       { format: 'Stories', reach: 'N/A', depth: 'Dados indisponíveis no conector atual', engagement: 'N/A', followers: 'N/A', clicks: 'N/A', signal: 'Bloco preparado para receber dados. Recomendação: Stories diários para aumentar frequência sem sobrecarregar feed.' },
     ],
     rankings: topPostsByInteractions.map((p, i) => ({
@@ -751,7 +830,7 @@ export const dashboardData = {
   },
   audience: {
     layers: [
-      { title: 'Quem responde melhor', text: 'Conteúdo com âncora emocional real (família, conquista, bastidor) concentra o melhor sinal. Govtech (57 interações) e post do neto (40 interações) confirmam que surpresa e conexão humana superam viagem pura.' },
+      { title: 'Quem responde melhor', text: 'Conteúdo com âncora emocional real, tese curta e bastidor concreto concentra melhor sinal. Nesta coleta, “O silêncio te reorganiza” lidera interações entre os posts com insight completo; Montenegro lidera Reach.' },
       { title: 'Quem consome sem avançar', text: 'Reels de movimento puro (LA→LV, Canadá) atraem views mas geram poucas interações. Audiência assiste mas não comenta, não salva, não compartilha — consumo passivo.' },
       { title: 'Padrão oculto confirmado', text: 'Quando o conteúdo combina cenário forte com tese emocional ou âncora de construção, o engajamento sobe. Trilinguismo (PT/EN/ES) pode estar ampliando alcance — monitorar.' },
     ],
@@ -763,19 +842,19 @@ export const dashboardData = {
     opportunities: executiveSummary.opportunities,
     weeklyPlan: [
       { type: 'Reel', title: 'Experiência premium com tese', hook: 'Entrei achando que era X. Saí entendendo Y.', concept: 'Replicar estrutura do Reel de Istambul: descoberta + surpresa + aprendizado de negócio.', structure: 'Abertura de descoberta → surpresa → tese de negócio → fechamento.', cta: '"Qual foi sua última descoberta que mudou sua perspectiva? Comenta."' },
-      { type: 'Image', title: 'Âncora emocional real', hook: 'No meio de tudo que construo…', concept: 'Replicar estrutura do post do neto: momento humano real + âncora de construção empresarial.', structure: 'Foto forte → legenda emocional → conexão com propósito → CTA de engajamento.', cta: '"O que te lembra o porquê de tudo isso? Comenta."' },
+      { type: 'Image', title: 'Âncora emocional real', hook: 'O silêncio te reorganiza.', concept: 'Replicar estrutura de frase curta memorável com imagem forte e ligação direta à liberdade estratégica.', structure: 'Foto forte → frase curta → conexão com propósito → CTA de engajamento.', cta: '"Qual frase reorganizou sua semana? Comenta."' },
       { type: 'Carrossel', title: 'Contraste + tese', hook: '[Lugar] não é sobre [o óbvio]. É sobre [a tese].', concept: 'Replicar estrutura do Marrocos: visual impactante + frase de contraste + tese de vida/negócio.', structure: 'Slide 1: visual forte → Slide 2-4: desenvolvimento → Slide final: CTA.', cta: '"Salva para lembrar quando precisar de perspectiva."' },
       { type: 'Stories', title: 'Bastidor de decisão diário', hook: 'Uma decisão que parece pequena e muda o ano inteiro.', concept: 'Stories diários com bastidores de decisão, viagem ou empresa.', structure: 'Story 1: contexto → Story 2: decisão → Story 3: consequência + CTA.', cta: '"Quer ver mais bastidores assim?"' },
       { type: 'Reel', title: 'Argumento nos 2 primeiros segundos', hook: '[Tese direta e afiada]', concept: 'Testar Reels onde a tese aparece antes da paisagem — validar hipótese de retenção.', structure: 'Tese → evidência visual → desenvolvimento → fechamento com CTA.', cta: '"Link na bio para [benefício específico]."' },
     ],
     abTests: [
       { name: 'CTA explícito vs sem CTA', hypothesis: 'Posts com CTA explícito ("link na bio", "comenta X") geram mais cliques e comentários do que posts sem CTA. Hipótese baseada no gap atual: <30% dos posts têm CTA.', measure: 'Comparar comentários, cliques e salvamentos entre posts com e sem CTA nos próximos 30 dias.' },
-      { name: 'Âncora emocional real vs viagem pura', hypothesis: 'Posts com âncora emocional real ou prova concreta geram mais interações do que viagem pura. Confirmado: Govtech (57) e neto (40) acima dos Reels de movimento simples.', measure: 'Comparar total_interactions, comentários e reach nos próximos 3 ciclos.' },
+      { name: 'Âncora emocional real vs viagem pura', hypothesis: 'Posts com âncora emocional real ou prova concreta tendem a gerar mais interações do que viagem pura. Nesta coleta, frase curta emocional lidera interações no recorte com insight completo.', measure: 'Comparar total_interactions, comentários e reach nos próximos 3 ciclos.' },
       { name: 'Trilinguismo vs português apenas', hypothesis: 'Posts com legenda em PT/EN/ES ampliam alcance internacional. Testar sistematicamente.', measure: 'Comparar reach médio entre posts trilíngues e posts apenas em português nos próximos 30 dias.' },
     ],
     autoAlerts: [
       'ATIVO: Monitorar variação semanal de seguidores nas próximas 2 semanas.',
-      'ATIVO: Campanha Meta com entrega mensurável, mas Valor usado retornou R$0. Validar cobrança/rastreamento antes de novo investimento.',
+      'ATIVO: Campanha Meta com entrega mensurável, mas Valor usado retornou R$0. Validar cobrança, UTMs e rastreamento antes de novo investimento.',
       'Alerta quando ER médio cair abaixo de 0.02% por duas semanas seguidas.',
       'Alerta quando Reel ficar abaixo de 300 views — abaixo do patamar mínimo saudável atual.',
       'Alerta quando post sem CTA superar post com CTA em interações (validar hipótese).',
@@ -1059,14 +1138,14 @@ export const strategistInsights = {
   contentFormula: {
     title: 'Fórmula que funciona para @ricardoimp',
     formula: 'Cenário premium + âncora emocional real + tese de negócio + CTA direto',
-    proof: 'Govtech (57 interações, 363 alcance) e Post do Neto (40 interações, 429 alcance) confirmam: quando você combina prova real ou âncora emocional com tese de construção, o engajamento sobe.',
+    proof: 'Nesta coleta, Montenegro liderou Reach entre posts com insight completo e “O silêncio te reorganiza” liderou interações nesse recorte. A hipótese prática: tese curta + imagem forte + CTA tende a superar viagem pura sem chamada.',
     antiFormula: 'Reel de movimento puro sem argumento = views sem ação. LA→LV e Canadá provam isso.',
   },
   growthTargets: {
     followers30d: '+500 seguidores em 30 dias (meta conservadora com estratégia ativa)',
     followers90d: '+2.000 seguidores em 90 dias (com série semanal + Stories diários)',
-    erTarget: '0,08% ER médio (hoje 0,028% — meta realista em 60 dias)',
-    reachTarget: '600 alcance médio por post (hoje 258)',
+    erTarget: '0,08% ER médio (hoje 0,022% — meta realista em 60 dias)',
+    reachTarget: '600 Reach médio por post (hoje 166 nos 5 posts com insight completo)',
   },
   weeklyChecklist: [
     { day: 'Domingo', task: 'Planejar 4-5 posts da semana. Definir CTA de cada um.' },
@@ -1095,7 +1174,7 @@ export const sponsoredGuide = {
   whatToSponsor: [
     {
       rank: 1,
-      content: 'Post Govtech (melhor engajamento — 57 interações)',
+      content: 'Post com tese curta emocional (melhor sinal nos insights completos recentes)',
       why: 'Já provou autoridade e intenção de negócio organicamente. Patrocinar prova real tende a atrair audiência mais qualificada do que viagem pura.',
       objective: 'REACH',
       budget: 'R$25-50/dia por 5-7 dias',
