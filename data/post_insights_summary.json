@@ -1,52 +1,57 @@
 [
   {
-    "post_id": "18216707638322293",
-    "shares": 0,
-    "comments": 1,
-    "likes": 4,
-    "saved": 0,
-    "total_interactions": 5,
-    "reach": 145,
-    "views": 282
-  },
-  {
-    "post_id": "18077326622537902",
-    "shares": 0,
-    "comments": 1,
-    "likes": 8,
-    "saved": 0,
-    "total_interactions": 9,
-    "reach": 257,
-    "views": 303
-  },
-  {
-    "post_id": "18129566545517711",
-    "shares": 0,
-    "comments": 0,
-    "likes": 5,
-    "saved": 1,
-    "total_interactions": 6,
-    "reach": 158,
-    "views": 262
-  },
-  {
-    "post_id": "17882203086418670",
-    "shares": 0,
-    "comments": 0,
-    "likes": 0,
-    "saved": 0,
-    "total_interactions": 0,
+    "id": "17949953874176423",
+    "date": "2026-05-24",
+    "type": "CAROUSEL_ALBUM",
+    "caption_preview": "Uma das maiores mesquitas do mundo, a Mesquita Hassan II. Foi aqui que eu entendi que grandes muralhas não foram construídas…",
+    "total_interactions": 2,
     "reach": 115,
-    "views": 188
+    "views": 203,
+    "saved": 0,
+    "shares": 0
   },
   {
-    "post_id": "18109003246906463",
-    "shares": 0,
-    "comments": 1,
-    "likes": 13,
+    "id": "17989495916985445",
+    "date": "2026-05-22",
+    "type": "CAROUSEL_ALBUM",
+    "caption_preview": "Pode parecer clichê…. mas Miami é foda. #miami #eua #vivendo #instagood #photography",
+    "total_interactions": 10,
+    "reach": 182,
+    "views": 395,
     "saved": 0,
-    "total_interactions": 14,
-    "reach": 153,
-    "views": 264
+    "shares": 0
+  },
+  {
+    "id": "18321827566257292",
+    "date": "2026-05-19",
+    "type": "VIDEO",
+    "caption_preview": "Ideias mudam empresas. Ambiente muda ideias.",
+    "total_interactions": 2,
+    "reach": 196,
+    "views": 267,
+    "saved": 0,
+    "shares": 0
+  },
+  {
+    "id": "17981631668843076",
+    "date": "2026-05-19",
+    "type": "IMAGE",
+    "caption_preview": "Boa comida também faz parte da viagem. #foodlover #photography #travel",
+    "total_interactions": 4,
+    "reach": 167,
+    "views": 273,
+    "saved": 0,
+    "shares": 0
+  },
+  {
+    "id": "18003707414868383",
+    "date": "2026-05-17",
+    "type": "VIDEO",
+    "caption_preview": "Entre pousos e decolagens, a vida muda de direção. O mundo abre nossa cabeça. E a cada volta, nos tornamos outra pessoa 🌍 #tr…",
+    "total_interactions": 3,
+    "reach": 192,
+    "views": 212,
+    "saved": 0,
+    "shares": 0
   }
 ]
