@@ -1,6 +1,6 @@
 // Script Mestre — Auditoria Completa de Perfil @ricardoimp
 // Estrutura de 4 camadas: raw_data | analytics_tables | executive_summary | scorecards
-// Última coleta: 25/05/2026 às 03:05 — Instagram MCP + Meta Ads MCP
+// Última coleta: 29/05/2026 às 11:04 — Instagram MCP + Meta Ads MCP
 // 20 posts recentes analisados | insights completos disponíveis nos 5 posts mais recentes; demais lacunas preservadas
 
 // ─────────────────────────────────────────────────────────────
@@ -91,22 +91,66 @@ export const profileIdentity = {
   "social_proof_presence": true,
   "commercial_offer_presence": false,
   "website": "http://saiba-mais.ai",
-  "collected_at": "2026-05-25T03:05:21-03:00"
+  "collected_at": "2026-05-29T11:04:50-03:00"
 };
 
 export const postsRaw: PostRaw[] = [
+  {
+    "id": "18098997766886178",
+    "date": "2026-05-28T22:59:19Z",
+    "type": "VIDEO",
+    "media_product_type": "REELS",
+    "caption": "Parece mentira.\nParece IA.\nMas é real. \n\nViagens que ficam para sempre.\n\n#banff #canada #photo #trip #instagram",
+    "likes": 6,
+    "comments": 3,
+    "reach": 197,
+    "views": 251,
+    "saved": 1,
+    "total_interactions": 10,
+    "hashtags": [
+      "banff",
+      "canada",
+      "photo",
+      "trip",
+      "instagram"
+    ],
+    "mentions": [],
+    "permalink": "https://www.instagram.com/reel/DY5mDRQgtMV/"
+  },
+  {
+    "id": "18066157604694717",
+    "date": "2026-05-26T22:31:41Z",
+    "type": "IMAGE",
+    "media_product_type": "FEED",
+    "caption": "Quem conhece o silêncio…\nsabe que ele diz muito.\n\n#banff #canada #silencio #instagood #lifestyle",
+    "likes": 14,
+    "comments": 2,
+    "reach": 189,
+    "views": 325,
+    "saved": 0,
+    "total_interactions": 16,
+    "hashtags": [
+      "banff",
+      "canada",
+      "silencio",
+      "instagood",
+      "lifestyle"
+    ],
+    "mentions": [],
+    "permalink": "https://www.instagram.com/p/DY0ZEGpAdo8/"
+  },
   {
     "id": "17949953874176423",
     "date": "2026-05-24T21:16:16Z",
     "type": "CAROUSEL_ALBUM",
     "media_product_type": "FEED",
     "caption": "Uma das maiores mesquitas do mundo, a Mesquita Hassan II.\n\nFoi aqui que eu entendi que grandes muralhas não foram construídas apenas para mostrar poder…\nalgumas foram construídas para guardar o silêncio.\n\nCada detalhe desse lugar parece diminuir o barulho do mundo lá fora.\n\nE talvez seja exatamente por isso que certas construções atravessam séculos:\n\nporque elas não impressionam apenas os olhos…\nimpressionam a alma.\n\nViajar modifica… solidifica e reconstrói 🔥\n\n#hassan #casablanca #marrocos #trip #photographer",
-    "likes": 2,
+    "likes": 4,
     "comments": 0,
-    "reach": 115,
-    "views": 203,
-    "saved": 0,
-    "total_interactions": 2,
+    "reach": 171,
+    "views": 311,
+    "saved": 1,
+    "total_interactions": 5,
     "hashtags": [
       "hassan",
       "casablanca",
@@ -123,12 +167,12 @@ export const postsRaw: PostRaw[] = [
     "type": "CAROUSEL_ALBUM",
     "media_product_type": "FEED",
     "caption": "Pode parecer clichê….\nmas Miami é foda.\n\n#miami #eua #vivendo #instagood #photography",
-    "likes": 9,
+    "likes": 10,
     "comments": 1,
-    "reach": 182,
-    "views": 395,
+    "reach": 194,
+    "views": 426,
     "saved": 0,
-    "total_interactions": 10,
+    "total_interactions": 11,
     "hashtags": [
       "miami",
       "eua",
@@ -145,12 +189,12 @@ export const postsRaw: PostRaw[] = [
     "type": "VIDEO",
     "media_product_type": "REELS",
     "caption": "Ideias mudam empresas.\nAmbiente muda ideias.",
-    "likes": 2,
+    "likes": 3,
     "comments": 0,
-    "reach": 196,
-    "views": 267,
+    "reach": 199,
+    "views": 268,
     "saved": 0,
-    "total_interactions": 2,
+    "total_interactions": 3,
     "hashtags": [],
     "mentions": [],
     "permalink": "https://www.instagram.com/reel/DYiUqfmgeho/"
@@ -163,9 +207,9 @@ export const postsRaw: PostRaw[] = [
     "caption": "Boa comida também faz parte da viagem.\n\n#foodlover #photography #travel",
     "likes": 4,
     "comments": 0,
-    "reach": 167,
-    "views": 273,
-    "saved": 0,
+    "reach": null,
+    "views": null,
+    "saved": null,
     "total_interactions": 4,
     "hashtags": [
       "foodlover",
@@ -183,9 +227,9 @@ export const postsRaw: PostRaw[] = [
     "caption": "Entre pousos e decolagens, \na vida muda de direção.\n\nO mundo abre nossa cabeça. \nE a cada volta, nos tornamos outra pessoa 🌍\n\n#trip #world #photography #viajar #instagram \n\nvideo by @fernandohessel",
     "likes": 3,
     "comments": 0,
-    "reach": 192,
-    "views": 212,
-    "saved": 0,
+    "reach": null,
+    "views": null,
+    "saved": null,
     "total_interactions": 3,
     "hashtags": [
       "trip",
@@ -221,12 +265,12 @@ export const postsRaw: PostRaw[] = [
     "type": "VIDEO",
     "media_product_type": "REELS",
     "caption": "Existem países que parecem secretos. \nEscondidos entre montanhas, silêncio, história e mar.\n\nMontenegro foi um deles pra mim.\n\nUm pequeno país dos Bálcãs, no sudeste da Europa, entre a Croácia, Sérvia, Bósnia e o mar Adriático.\n\nUm lugar que mistura vilas medievais, montanhas gigantes e um litoral que parece cenário de filme.\n\nE o mais curioso:\nquase ninguém fala sobre ele... mas eu falo!\n\n#trip #photography #instagood #loveit #europa",
-    "likes": 9,
+    "likes": 10,
     "comments": 1,
     "reach": null,
     "views": null,
     "saved": null,
-    "total_interactions": 10,
+    "total_interactions": 11,
     "hashtags": [
       "trip",
       "photography",
@@ -456,44 +500,6 @@ export const postsRaw: PostRaw[] = [
     ],
     "mentions": [],
     "permalink": "https://www.instagram.com/reel/DXo7KozAHJr/"
-  },
-  {
-    "id": "18115128127783856",
-    "date": "2026-04-26T15:35:43Z",
-    "type": "CAROUSEL_ALBUM",
-    "media_product_type": "FEED",
-    "caption": "Quanto mais eu vou…\nmais eu entendo que não é sobre ir.",
-    "likes": 22,
-    "comments": 1,
-    "reach": null,
-    "views": null,
-    "saved": null,
-    "total_interactions": 23,
-    "hashtags": [],
-    "mentions": [],
-    "permalink": "https://www.instagram.com/p/DXmaEoSFKsK/"
-  },
-  {
-    "id": "18591759310050140",
-    "date": "2026-04-24T15:49:40Z",
-    "type": "IMAGE",
-    "media_product_type": "FEED",
-    "caption": "No meio de tudo que eu construo…\né aqui que eu lembro o porquê.\n\n🇺🇸\nIn the middle of everything I build…\nthis is where I remember why.\n\n🇪🇸\nEn medio de todo lo que construyo…\nes aquí donde recuerdo el porqué.\n\n#grandson #photography #família #family #instagood",
-    "likes": 35,
-    "comments": 5,
-    "reach": null,
-    "views": null,
-    "saved": null,
-    "total_interactions": 40,
-    "hashtags": [
-      "grandson",
-      "photography",
-      "família",
-      "family",
-      "instagood"
-    ],
-    "mentions": [],
-    "permalink": "https://www.instagram.com/p/DXhReNcAJlQ/"
   }
 ];
 
@@ -501,35 +507,35 @@ export const postsRaw: PostRaw[] = [
 // CAMADA 2 — ANALYTICS TABLES
 // ─────────────────────────────────────────────────────────────
 export const profileMetrics = {
-"followers": 61165,
-"following": 300,
-"posts_total": 3017,
-"follower_following_ratio": 203.9,
-"posts_per_week_estimated": 4.7,
-"reels_share_pct": 45.0,
-"feed_image_share_pct": 35.0,
-"carousel_share_pct": 20.0,
-"source": "Instagram MCP",
-"collected_at": "2026-05-25T03:05:21-03:00"
+  "followers": 61120,
+  "following": 299,
+  "posts_total": 3019,
+  "follower_following_ratio": 204.4,
+  "posts_per_week_estimated": 4.7,
+  "reels_share_pct": 50.0,
+  "feed_image_share_pct": 35.0,
+  "carousel_share_pct": 15.0,
+  "source": "Instagram MCP",
+  "collected_at": "2026-05-29T11:04:50-03:00"
 };
 
 export const calculatedFields = {
-  "avg_likes_last_20": 9.1,
+  "avg_likes_last_20": 7.5,
   "avg_comments_last_20": 0.8,
-  "avg_views_last_20": 270,
-  "avg_reach_last_20": 170.4,
-  "avg_views_available": 270,
-  "avg_reach_available": 170.4,
-  "avg_interactions_last_20": 9.9,
-  "avg_interactions_available_insights": 4.2,
-  "median_likes": 5,
-  "median_comments": 1,
-  "avg_caption_length": 145.1,
-  "avg_hashtags_per_post": 3.1,
+  "avg_views_last_20": 316.2,
+  "avg_reach_last_20": 190.0,
+  "avg_views_available": 316.2,
+  "avg_reach_available": 190.0,
+  "avg_interactions_last_20": 8.3,
+  "avg_interactions_available_insights": 9.0,
+  "median_likes": 5.0,
+  "median_comments": 0.5,
+  "avg_caption_length": 139.7,
+  "avg_hashtags_per_post": 3.4,
   "avg_mentions_per_post": 0.1,
   "posting_frequency_per_week": 4.7,
-  "follower_following_ratio": 203.9,
-  "engagement_rate_avg_pct": 0.016,
+  "follower_following_ratio": 204.4,
+  "engagement_rate_avg_pct": 0.014,
   "top_3_content_formats": [
     "REELS",
     "IMAGE",
@@ -546,20 +552,20 @@ export const calculatedFields = {
     "photography",
     "trip",
     "instagood",
-    "viajar",
-    "mundo"
+    "canada",
+    "instagram"
   ],
   "best_post_by_interactions": {
-    "id": "18591759310050140",
-    "interactions": 40,
-    "caption_preview": "No meio de tudo que eu construo… é aqui que eu lembro o porquê. 🇺🇸 In the middle of everything I build… this is where I remem…",
+    "id": "18110982055878581",
+    "interactions": 25,
+    "caption_preview": "Entrei achando que era só um mercado saí entendendo por que lugares assim duram séculos, um dos mercados mais antigos de ista…",
     "reach": null
   },
   "best_post_by_reach": {
     "id": "18321827566257292",
-    "reach": 196,
+    "reach": 199,
     "caption_preview": "Ideias mudam empresas. Ambiente muda ideias.",
-    "views": 267
+    "views": 268
   },
   "worst_post_by_interactions": {
     "id": "17882203086418670",
@@ -567,7 +573,7 @@ export const calculatedFields = {
     "caption_preview": "Clássicos são clássicos. Se foi para os E.U.A e não provou um @fiveguys você não conheceu os E.U.A. #hamburg #fiveguys #eua #…"
   },
   "most_common_posting_day": "Terça",
-  "most_common_posting_hour": "15:00",
+  "most_common_posting_hour": "12:00",
   "estimated_content_pillars": [
     "Viagem & Lifestyle",
     "Reflexão & Propósito",
@@ -583,26 +589,26 @@ export const calculatedFields = {
 
 export const postingPatterns = {
   "most_active_day": "Terça",
-  "most_active_hour": "15:00",
+  "most_active_hour": "12:00",
   "posts_per_week_estimated": 4.7,
   "days_distribution": {
-    "Domingo": 3,
-    "Sexta": 4,
-    "Terça": 5,
-    "Quinta": 3,
+    "Quinta": 4,
+    "Terça": 6,
+    "Domingo": 2,
+    "Sexta": 3,
     "Quarta": 1,
     "Segunda": 3,
     "Sábado": 1
   },
   "format_distribution": {
-    "CAROUSEL_ALBUM": 4,
-    "REELS": 9,
-    "IMAGE": 7
+    "REELS": 10,
+    "IMAGE": 7,
+    "CAROUSEL_ALBUM": 3
   },
   "format_distribution_pct": {
-    "CAROUSEL_ALBUM": 20.0,
-    "REELS": 45.0,
-    "IMAGE": 35.0
+    "REELS": 50.0,
+    "IMAGE": 35.0,
+    "CAROUSEL_ALBUM": 15.0
   },
   "funnel_distribution": {
     "topo": 17,
@@ -614,7 +620,7 @@ export const postingPatterns = {
     "morno": 10,
     "quente": 4
   },
-  "consistency": "4.7 posts/semana no recorte dos 20 posts recentes",
+  "consistency": "4,7 posts/semana no recorte dos 20 posts recentes",
   "seasonality": "Publicação ligada a viagens, bastidores, reflexão curta e marcos de autoridade"
 };
 
@@ -640,16 +646,6 @@ export const contentTaxonomy: ContentTaxonomy[] = [
 
 export const topPostsByInteractions = [
   {
-    "id": "18591759310050140",
-    "date": "2026-04-24",
-    "type": "IMAGE",
-    "caption_preview": "No meio de tudo que eu construo… é aqui que eu lembro o porquê. 🇺🇸 In the middle of everything I build… this is where I remem…",
-    "total_interactions": 40,
-    "reach": "N/A",
-    "views": "N/A",
-    "saved": "N/A"
-  },
-  {
     "id": "18110982055878581",
     "date": "2026-04-27",
     "type": "VIDEO",
@@ -670,14 +666,14 @@ export const topPostsByInteractions = [
     "saved": "N/A"
   },
   {
-    "id": "18115128127783856",
-    "date": "2026-04-26",
-    "type": "CAROUSEL_ALBUM",
-    "caption_preview": "Quanto mais eu vou… mais eu entendo que não é sobre ir.",
-    "total_interactions": 23,
-    "reach": "N/A",
-    "views": "N/A",
-    "saved": "N/A"
+    "id": "18066157604694717",
+    "date": "2026-05-26",
+    "type": "IMAGE",
+    "caption_preview": "Quem conhece o silêncio… sabe que ele diz muito. #banff #canada #silencio #instagood #lifestyle",
+    "total_interactions": 16,
+    "reach": 189,
+    "views": 325,
+    "saved": 0
   },
   {
     "id": "18109003246906463",
@@ -688,6 +684,16 @@ export const topPostsByInteractions = [
     "reach": "N/A",
     "views": "N/A",
     "saved": "N/A"
+  },
+  {
+    "id": "17989495916985445",
+    "date": "2026-05-22",
+    "type": "CAROUSEL_ALBUM",
+    "caption_preview": "Pode parecer clichê…. mas Miami é foda. #miami #eua #vivendo #instagood #photography",
+    "total_interactions": 11,
+    "reach": 194,
+    "views": 426,
+    "saved": 0
   }
 ];
 
@@ -697,39 +703,39 @@ export const topPostsByReach = [
     "date": "2026-05-19",
     "type": "VIDEO",
     "caption_preview": "Ideias mudam empresas. Ambiente muda ideias.",
-    "total_interactions": 2,
-    "reach": 196,
-    "views": 267,
+    "total_interactions": 3,
+    "reach": 199,
+    "views": 268,
     "saved": 0
   },
   {
-    "id": "18003707414868383",
-    "date": "2026-05-17",
+    "id": "18098997766886178",
+    "date": "2026-05-28",
     "type": "VIDEO",
-    "caption_preview": "Entre pousos e decolagens, a vida muda de direção. O mundo abre nossa cabeça. E a cada volta, nos tornamos outra pessoa 🌍 #tr…",
-    "total_interactions": 3,
-    "reach": 192,
-    "views": 212,
-    "saved": 0
+    "caption_preview": "Parece mentira. Parece IA. Mas é real. Viagens que ficam para sempre. #banff #canada #photo #trip #instagram",
+    "total_interactions": 10,
+    "reach": 197,
+    "views": 251,
+    "saved": 1
   },
   {
     "id": "17989495916985445",
     "date": "2026-05-22",
     "type": "CAROUSEL_ALBUM",
     "caption_preview": "Pode parecer clichê…. mas Miami é foda. #miami #eua #vivendo #instagood #photography",
-    "total_interactions": 10,
-    "reach": 182,
-    "views": 395,
+    "total_interactions": 11,
+    "reach": 194,
+    "views": 426,
     "saved": 0
   },
   {
-    "id": "17981631668843076",
-    "date": "2026-05-19",
+    "id": "18066157604694717",
+    "date": "2026-05-26",
     "type": "IMAGE",
-    "caption_preview": "Boa comida também faz parte da viagem. #foodlover #photography #travel",
-    "total_interactions": 4,
-    "reach": 167,
-    "views": 273,
+    "caption_preview": "Quem conhece o silêncio… sabe que ele diz muito. #banff #canada #silencio #instagood #lifestyle",
+    "total_interactions": 16,
+    "reach": 189,
+    "views": 325,
     "saved": 0
   },
   {
@@ -737,10 +743,10 @@ export const topPostsByReach = [
     "date": "2026-05-24",
     "type": "CAROUSEL_ALBUM",
     "caption_preview": "Uma das maiores mesquitas do mundo, a Mesquita Hassan II. Foi aqui que eu entendi que grandes muralhas não foram construídas…",
-    "total_interactions": 2,
-    "reach": 115,
-    "views": 203,
-    "saved": 0
+    "total_interactions": 5,
+    "reach": 171,
+    "views": 311,
+    "saved": 1
   }
 ];
 
@@ -750,26 +756,26 @@ export const topReelsByViews = [
     "date": "2026-05-19",
     "type": "VIDEO",
     "caption_preview": "Ideias mudam empresas. Ambiente muda ideias.",
-    "total_interactions": 2,
-    "reach": 196,
-    "views": 267,
+    "total_interactions": 3,
+    "reach": 199,
+    "views": 268,
     "saved": 0
   },
   {
-    "id": "18003707414868383",
-    "date": "2026-05-17",
+    "id": "18098997766886178",
+    "date": "2026-05-28",
     "type": "VIDEO",
-    "caption_preview": "Entre pousos e decolagens, a vida muda de direção. O mundo abre nossa cabeça. E a cada volta, nos tornamos outra pessoa 🌍 #tr…",
-    "total_interactions": 3,
-    "reach": 192,
-    "views": 212,
-    "saved": 0
+    "caption_preview": "Parece mentira. Parece IA. Mas é real. Viagens que ficam para sempre. #banff #canada #photo #trip #instagram",
+    "total_interactions": 10,
+    "reach": 197,
+    "views": 251,
+    "saved": 1
   }
 ];
 
 export const captionAnalysis = {
-  "avg_length_chars": 145,
-  "avg_hashtags_per_post": 3.1,
+  "avg_length_chars": 140,
+  "avg_hashtags_per_post": 3.4,
   "avg_mentions_per_post": 0.1,
   "dominant_tone": "Inspiracional com densidade filosófica e estética de viagem premium",
   "common_opening_style": "Frase curta + contraste/reflexão",
@@ -789,12 +795,12 @@ export const captionAnalysis = {
     "photography",
     "trip",
     "instagood",
+    "canada",
+    "instagram",
     "viajar",
-    "mundo",
-    "silêncio",
-    "séculos"
+    "banff"
   ],
-  "multilingual_posts_count": 2,
+  "multilingual_posts_count": 1,
   "multilingual_languages": [
     "PT",
     "EN",
@@ -805,30 +811,34 @@ export const captionAnalysis = {
 export const hashtagsAnalysis = [
   {
     "hashtag": "photography",
-    "count": 10
+    "count": 9
   },
   {
     "hashtag": "trip",
-    "count": 7
+    "count": 8
   },
   {
     "hashtag": "instagood",
     "count": 6
   },
   {
+    "hashtag": "canada",
+    "count": 4
+  },
+  {
+    "hashtag": "instagram",
+    "count": 4
+  },
+  {
     "hashtag": "viajar",
     "count": 3
   },
   {
-    "hashtag": "instagram",
-    "count": 3
-  },
-  {
-    "hashtag": "eua",
+    "hashtag": "banff",
     "count": 2
   },
   {
-    "hashtag": "canada",
+    "hashtag": "eua",
     "count": 2
   },
   {
@@ -837,10 +847,6 @@ export const hashtagsAnalysis = [
   },
   {
     "hashtag": "turquia",
-    "count": 2
-  },
-  {
-    "hashtag": "reels",
     "count": 2
   }
 ];
@@ -891,7 +897,7 @@ export const brandPositioning = {
 // CAMADA 3 — EXECUTIVE SUMMARY
 // ─────────────────────────────────────────────────────────────
 export const executiveSummary = {
-  overview: 'Perfil creator/business de empreendedor serial com posicionamento de autoridade aspiracional. Nicho: empreendedorismo + lifestyle premium + viagens. 61.165 seguidores. 4,7 posts/semana estimados e ER disponível de 0.022% calculado apenas por likes+comentários.',
+  overview: 'Perfil creator/business de empreendedor serial com posicionamento de autoridade aspiracional. Nicho: empreendedorismo + lifestyle premium + viagens. 61.120 seguidores. 4,7 posts/semana estimados e ER disponível de 0.022% calculado apenas por likes+comentários.',
   positioning: 'Combinação de mobilidade global + construção empresarial real + prova de conquista (govtech, empresas vendidas). Promessa central: liberdade como resultado de estrutura.',
   content_pattern: 'Inspiração + autoridade + lifestyle. Falta pilar de conversão explícito. 40% Reels, 25% carrossel e 35% imagem nos 20 posts recentes; carrossel e imagem aparecem agregados como FEED no conector.',
   best_format: 'Nos cinco posts com insights completos nesta coleta, o Reel “Ideias mudam empresas. Ambiente muda ideias.” lidera Reach com 196 e o carrossel de Miami lidera views com 395; o carrossel de Miami lidera interações recentes com 10.',
@@ -1008,7 +1014,7 @@ export const metaAds = {
 // ─────────────────────────────────────────────────────────────
 export const dataQuality = {
   "source": "Instagram MCP + Meta Ads MCP",
-  "collection_date": "25/05/2026 às 03:05",
+  "collection_date": "29/05/2026 às 11:04",
   "collected_at": "2026-05-25T03:05:21-03:00",
   "posts_analyzed": 20,
   "posts_with_insights": 5,
@@ -1023,7 +1029,7 @@ export const dataQuality = {
   ],
   "confidence_level": "Alta para perfil e mídia paga retornada; média para recomendações qualitativas",
   "confidence_global": "Alta para perfil e mídia paga; média para leitura qualitativa",
-  "collection_notes": "Coleta feita em 25/05/2026 às 03:05. Instagram retornou perfil, 20 posts recentes e insights completos nos 5 posts mais recentes. Meta Ads retornou dados dos últimos 30 dias apenas na conta act_1158819016166775; contas sem retorno permanecem marcadas como indisponíveis."
+  "collection_notes": "Coleta feita em 29/05/2026 às 11:04. Instagram retornou perfil, 20 posts recentes e insights completos nos 5 posts mais recentes. Meta Ads retornou dados dos últimos 30 dias apenas na conta act_1158819016166775; contas sem retorno permanecem marcadas como indisponíveis."
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -1032,7 +1038,7 @@ export const dataQuality = {
 export const dashboardData = {
   meta: {
     profile: profileIdentity,
-    lastUpdated: "25/05/2026 às 03:05",
+    lastUpdated: "29/05/2026 às 11:04",
     dashboardCadence: 'Atualização semanal aos domingos',
     designPhilosophy: 'Editorial executivo cinematográfico',
   },
