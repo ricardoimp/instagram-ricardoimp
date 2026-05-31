@@ -1,7 +1,7 @@
 // Script Mestre — Auditoria Completa de Perfil @ricardoimp
 // Estrutura de 4 camadas: raw_data | analytics_tables | executive_summary | scorecards
-// Última coleta: 31/05/2026 às 11:05 — Instagram MCP
-// 20 posts recentes analisados | insights completos disponíveis nos 5 posts mais recentes; demais lacunas preservadas
+// Última coleta: 31/05/2026 às 14:01 — Instagram MCP
+// 20 posts recentes analisados | insights completos retornados nesta rodada para 1 post; demais lacunas preservadas como indisponíveis
 
 // ─────────────────────────────────────────────────────────────
 // TIPOS
@@ -91,7 +91,7 @@ export const profileIdentity = {
   "social_proof_presence": true,
   "commercial_offer_presence": false,
   "website": "http://saiba-mais.ai",
-  "collected_at": "2026-05-31T11:05:32-03:00"
+  "collected_at": "2026-05-31T14:01:25-03:00"
 };
 
 export const postsRaw: PostRaw[] = [
@@ -507,7 +507,7 @@ export const postsRaw: PostRaw[] = [
 // CAMADA 2 — ANALYTICS TABLES
 // ─────────────────────────────────────────────────────────────
 export const profileMetrics = {
-  "followers": 61116,
+  "followers": 61115,
   "following": 299,
   "posts_total": 3019,
   "follower_following_ratio": 204.4,
@@ -516,20 +516,20 @@ export const profileMetrics = {
   "feed_image_share_pct": 35.0,
   "carousel_share_pct": 15.0,
   "source": "Instagram MCP",
-  "collected_at": "2026-05-31T11:05:32-03:00"
+  "collected_at": "2026-05-31T14:01:25-03:00"
 };
 
 export const calculatedFields = {
   "avg_likes_last_20": 7.7,
   "avg_comments_last_20": 0.8,
-  "avg_views_last_20": 337.6,
-  "avg_reach_last_20": 200.2,
-  "avg_views_available": 337.6,
-  "avg_reach_available": 200.2,
+  "avg_views_last_20": 563.0,
+  "avg_reach_last_20": 397.0,
+  "avg_views_available": 563.0,
+  "avg_reach_available": 397.0,
   "avg_interactions_last_20": 8.6,
-  "avg_interactions_available_insights": 9.8,
-  "median_likes": 5.0,
-  "median_comments": 0.5,
+  "avg_interactions_available_insights": 28,
+  "median_likes": 5,
+  "median_comments": 1,
   "avg_caption_length": 139.7,
   "avg_hashtags_per_post": 3.4,
   "avg_mentions_per_post": 0.1,
@@ -557,15 +557,15 @@ export const calculatedFields = {
   ],
   "best_post_by_interactions": {
     "id": "18110982055878581",
-    "interactions": 25,
+    "interactions": 28,
     "caption_preview": "Entrei achando que era só um mercado saí entendendo por que lugares assim duram séculos, um dos mercados mais antigos…",
-    "reach": null
+    "reach": 397
   },
   "best_post_by_reach": {
-    "id": "18098997766886178",
-    "reach": 228,
-    "caption_preview": "Parece mentira. Parece IA. Mas é real. Viagens que ficam para sempre. #banff #canada #photo #trip #instagram",
-    "views": 316
+    "id": "18110982055878581",
+    "reach": 397,
+    "caption_preview": "Entrei achando que era só um mercado saí entendendo por que lugares assim duram séculos, um dos mercados mais antigos…",
+    "views": 563
   },
   "worst_post_by_interactions": {
     "id": "17882203086418670",
@@ -650,10 +650,10 @@ export const topPostsByInteractions = [
     "date": "2026-04-27",
     "type": "VIDEO",
     "caption_preview": "Entrei achando que era só um mercado saí entendendo por que lugares assim duram séculos, um dos mercados mais antigos…",
-    "total_interactions": 25,
-    "reach": "N/A",
-    "views": "N/A",
-    "saved": "N/A"
+    "total_interactions": 28,
+    "reach": 397,
+    "views": 563,
+    "saved": 1
   },
   {
     "id": "18004667222739565",
@@ -671,9 +671,9 @@ export const topPostsByInteractions = [
     "type": "IMAGE",
     "caption_preview": "Quem conhece o silêncio… sabe que ele diz muito. #banff #canada #silencio #instagood #lifestyle",
     "total_interactions": 18,
-    "reach": 202,
-    "views": 350,
-    "saved": 0
+    "reach": "N/A",
+    "views": "N/A",
+    "saved": "N/A"
   },
   {
     "id": "18109003246906463",
@@ -690,86 +690,36 @@ export const topPostsByInteractions = [
     "date": "2026-05-28",
     "type": "VIDEO",
     "caption_preview": "Parece mentira. Parece IA. Mas é real. Viagens que ficam para sempre. #banff #canada #photo #trip #instagram",
-    "total_interactions": 12,
-    "reach": 228,
-    "views": 316,
-    "saved": 1
+    "total_interactions": 11,
+    "reach": "N/A",
+    "views": "N/A",
+    "saved": "N/A"
   }
 ];
 
 export const topPostsByReach = [
   {
-    "id": "18098997766886178",
-    "date": "2026-05-28",
+    "id": "18110982055878581",
+    "date": "2026-04-27",
     "type": "VIDEO",
-    "caption_preview": "Parece mentira. Parece IA. Mas é real. Viagens que ficam para sempre. #banff #canada #photo #trip #instagram",
-    "total_interactions": 12,
-    "reach": 228,
-    "views": 316,
-    "saved": 1
-  },
-  {
-    "id": "18066157604694717",
-    "date": "2026-05-26",
-    "type": "IMAGE",
-    "caption_preview": "Quem conhece o silêncio… sabe que ele diz muito. #banff #canada #silencio #instagood #lifestyle",
-    "total_interactions": 18,
-    "reach": 202,
-    "views": 350,
-    "saved": 0
-  },
-  {
-    "id": "18321827566257292",
-    "date": "2026-05-19",
-    "type": "VIDEO",
-    "caption_preview": "Ideias mudam empresas. Ambiente muda ideias.",
-    "total_interactions": 3,
-    "reach": 200,
-    "views": 270,
-    "saved": 0
-  },
-  {
-    "id": "17989495916985445",
-    "date": "2026-05-22",
-    "type": "CAROUSEL_ALBUM",
-    "caption_preview": "Pode parecer clichê…. mas Miami é foda. #miami #eua #vivendo #instagood #photography",
-    "total_interactions": 11,
-    "reach": 195,
-    "views": 434,
-    "saved": 0
-  },
-  {
-    "id": "17949953874176423",
-    "date": "2026-05-24",
-    "type": "CAROUSEL_ALBUM",
-    "caption_preview": "Uma das maiores mesquitas do mundo, a Mesquita Hassan II. Foi aqui que eu entendi que grandes muralhas não foram const…",
-    "total_interactions": 5,
-    "reach": 176,
-    "views": 318,
+    "caption_preview": "Entrei achando que era só um mercado saí entendendo por que lugares assim duram séculos, um dos mercados mais antigos…",
+    "total_interactions": 28,
+    "reach": 397,
+    "views": 563,
     "saved": 1
   }
 ];
 
 export const topReelsByViews = [
   {
-    "id": "18098997766886178",
-    "date": "2026-05-28",
+    "id": "18110982055878581",
+    "date": "2026-04-27",
     "type": "VIDEO",
-    "caption_preview": "Parece mentira. Parece IA. Mas é real. Viagens que ficam para sempre. #banff #canada #photo #trip #instagram",
-    "total_interactions": 12,
-    "reach": 228,
-    "views": 316,
+    "caption_preview": "Entrei achando que era só um mercado saí entendendo por que lugares assim duram séculos, um dos mercados mais antigos…",
+    "total_interactions": 28,
+    "reach": 397,
+    "views": 563,
     "saved": 1
-  },
-  {
-    "id": "18321827566257292",
-    "date": "2026-05-19",
-    "type": "VIDEO",
-    "caption_preview": "Ideias mudam empresas. Ambiente muda ideias.",
-    "total_interactions": 3,
-    "reach": 200,
-    "views": 270,
-    "saved": 0
   }
 ];
 
@@ -903,7 +853,22 @@ export const executiveSummary = {
   "best_format": "Nos posts com insights completos, o melhor alcance atual é 228 no post “Parece mentira. Parece IA. Mas é real. Viagens que ficam para sempre.…”.",
   "best_topic": "Viagem com reflexão curta continua sendo o principal eixo de consistência; posts de autoridade/negócios devem ganhar mais frequência para converter melhor.",
   "critical_gap": "O perfil sustenta percepção premium, mas ainda apresenta CTA fraco e pouca ponte explícita para oferta/link da bio.",
-  "priority_action": "Transformar 2 posts por semana em ponte comercial leve: história curta → aprendizado de negócio → CTA para saiba-mais.ai."
+  "priority_action": "Transformar 2 posts por semana em ponte comercial leve: história curta → aprendizado de negócio → CTA para saiba-mais.ai.",
+  "strengths": [
+    "Autoridade real na bio: 7 empresas, 2 vendidas e 37 países.",
+    "Estética premium consistente com narrativa de liberdade.",
+    "Reel de Istambul retornou o melhor insight completo da rodada: 397 de reach, 563 views e 28 interações."
+  ],
+  "weaknesses": [
+    "CTA explícito segue baixo frente ao tamanho da audiência.",
+    "Conteúdo de viagem pura ainda gera admiração passiva, mas pouca conversão medida.",
+    "Meta Ads ficou indisponível nesta atualização, impedindo leitura confiável de mídia paga."
+  ],
+  "opportunities": [
+    "Converter dois posts por semana em ponte direta para saiba-mais.ai.",
+    "Usar o formato do Reel de Istambul como matriz: descoberta + contexto + aprendizado.",
+    "Criar Stories diários para aquecer audiência sem alterar a estética do feed."
+  ]
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -944,45 +909,19 @@ export const scorecards: Scorecard[] = [
 // META ADS
 // ─────────────────────────────────────────────────────────────
 export const metaAds = {
-  "accounts": [
-    {
-      "accountId": "act_1158819016166775",
-      "name": "Notifica - 691557262472251 (Read-Only)",
-      "businessName": "Conta com insights retornados",
-      "currency": "USD",
-      "status": "ACTIVE",
-      "last30d": "32.524 Impressões · 992 Cliques (todos) · CTR (todos) 3,05% · Valor usado US$0 retornado pela API · Dados de 25/05 são parciais"
-    },
-    {
-      "accountId": "act_9525474394174655",
-      "name": "Ricardo Impellizieri",
-      "businessName": "loggica intermediacoes de negócios",
-      "currency": "BRL",
-      "status": "ACTIVE",
-      "last30d": "Sem insights nos últimos 30 dias retornados pelo conector"
-    },
-    {
-      "accountId": "act_265574476787926",
-      "name": "265574476787926",
-      "businessName": "SANDRO JOSE RICARDO IMPELLIZIERI DE OLIVEIRA",
-      "currency": "BRL",
-      "status": "ACTIVE",
-      "last30d": "Sem insights nos últimos 30 dias retornados pelo conector"
-    }
-  ],
+  "accounts": [],
   "activeCampaign": {
-    "name": "Traffic Campaign + MM_LITE_DEFAULT_AD_CAMPAIGN_GROUP",
-    "objective": "OUTCOME_TRAFFIC",
-    "status": "ACTIVE",
-    "dailyBudget": "Não retornado",
-    "createdAt": "Período analisado: últimos 30 dias; inclui 25/05/2026, dado parcial e sujeito a mudança",
-    "reading": "Últimos 30 dias com entrega retornada na conta act_1158819016166775: Traffic Campaign gerou 22.760 Impressões, 295 Cliques (todos), CTR (todos) 1,30% e Valor usado US$0. MM_LITE_DEFAULT_AD_CAMPAIGN_GROUP gerou 9.764 Impressões, 697 Cliques (todos), CTR (todos) 7,14% e Valor usado US$0. Soma retornada: 32.524 Impressões, 992 Cliques (todos), CTR (todos) ponderado de 3,05% e Valor usado US$0 informado pela API."
+    "name": "Indisponível nesta atualização",
+    "objective": "N/A",
+    "status": "N/A",
+    "dailyBudget": "N/A",
+    "createdAt": "Consulta executada em 31/05/2026 às 14:01; o conector Meta Marketing não retornou contas/campanhas executáveis.",
+    "reading": "Bloco indisponível nesta rodada. Nenhuma métrica de Meta Ads foi usada ou estimada."
   },
   "nextSteps": [
-    "Validar no Ads Manager por que Valor usado retorna US$0 mesmo com Impressões e Cliques (todos) registrados.",
-    "Priorizar leitura da MM_LITE_DEFAULT_AD_CAMPAIGN_GROUP: CTR (todos) 7,14%, mas precisa confirmar qualidade do tráfego e destino.",
-    "Revisar UTMs, evento de destino e página saiba-mais.ai antes de qualquer escala de orçamento.",
-    "Manter contas e campanhas sem insights como indisponíveis até o conector retornar dados confiáveis."
+    "Reexecutar leitura do conector Meta Ads na próxima atualização.",
+    "Manter campanhas e contas como indisponíveis até retorno válido da API.",
+    "Não escalar orçamento nem inferir performance sem dados de Spend, Impressions, Reach, Clicks (all) ou Link clicks retornados pelo conector."
   ]
 };
 
@@ -990,14 +929,14 @@ export const metaAds = {
 // DATA QUALITY
 // ─────────────────────────────────────────────────────────────
 export const dataQuality = {
-  "completeness_pct": 64,
+  "completeness_pct": 58,
   "posts_analyzed": 20,
-  "posts_with_insights": 5,
+  "posts_with_insights": 1,
   "metrics_available": [
     "likes",
     "comments",
     "total_interactions",
-    "reach/views/saved nos 5 posts mais recentes"
+    "reach/views/saved no post que retornou insight completo nesta rodada"
   ],
   "metrics_unavailable": [
     "demografia histórica detalhada",
@@ -1006,12 +945,12 @@ export const dataQuality = {
   ],
   "limitations": [
     "O conector retorna lista de posts recentes e insights por post, mas não fornece todo o histórico demográfico/funil no mesmo endpoint.",
-    "Reach, views e salvamentos foram atualizados apenas para os posts com insights consultados nesta rodada.",
+    "Reach, views e salvamentos foram atualizados apenas para o post com insight completo retornado nesta rodada.",
     "Stories históricos seguem indisponíveis porque expiram em 24h."
   ],
   "confidence_global": "Média-alta para conteúdo recente; limitada para funil e audiência histórica",
-  "collection_notes": "Coleta Instagram MCP executada em 31/05/2026 às 11:05; 41 posts localizados dentro de 90 dias e 20 usados na leitura principal.",
-  "collected_at": "2026-05-31T11:05:32-03:00"
+  "collection_notes": "Coleta Instagram MCP executada em 31/05/2026 às 14:01; 20 posts recentes analisados. Meta Ads consultado, mas sem retorno válido de contas/campanhas/insights.",
+  "collected_at": "2026-05-31T14:01:25-03:00"
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -1020,33 +959,33 @@ export const dataQuality = {
 export const dashboardData = {
   meta: {
     profile: profileIdentity,
-    lastUpdated: '31/05/2026 às 11:05',
+    lastUpdated: '31/05/2026 às 14:01',
     dashboardCadence: 'Atualização semanal aos domingos',
     designPhilosophy: 'Editorial executivo cinematográfico',
   },
   executive: {
     summary: {
       profileStrength: executiveSummary.overview,
-      instagramReading: 'Nos 20 posts recentes, a leitura confiável ampla é likes + comentários. Insights completos retornaram nos 5 posts mais recentes: o Reel “Ideias mudam empresas. Ambiente muda ideias.” lidera Reach com 196; o carrossel de Miami lidera interações no recorte com 10 e 395 views.',
-      adsReading: 'Meta Ads retornou entrega real nos últimos 30 dias apenas na conta act_1158819016166775: 32.524 Impressões, 992 Cliques (todos), CTR (todos) 3,05% e Valor usado US$0. As demais contas permanecem como indisponíveis no período.',
+      instagramReading: 'Nos 20 posts recentes, a leitura confiável ampla é likes + comentários. Insights completos retornaram nesta rodada para 1 post: o Reel de Istambul registrou Reach 397, 563 views, 28 interações e 1 salvamento.',
+      adsReading: 'Meta Ads indisponível nesta atualização: o conector não retornou contas, campanhas ou insights válidos. Nenhuma métrica foi estimada.',
       criticalPoint: 'Gap crítico permanece: conteúdo tem autoridade, mas CTA explícito ainda é baixo. Sem CTA e sem rastreamento consistente, alcance orgânico e tráfego pago não viram receita medida.',
     },
     kpis: [
-      { label: 'Seguidores', value: '61.165', delta: 'coleta atual', tone: 'positive' as const },
-      { label: 'Seguindo', value: '300', delta: 'ratio 203.9:1', tone: 'positive' as const },
-      { label: 'Publicações', value: '3.017', delta: '4.7 posts/semana', tone: 'positive' as const },
-      { label: 'Anúncios Meta', value: '32,5 mil impr.', delta: '992 Cliques (todos) · US$0', tone: 'warning' as const },
+      { label: 'Seguidores', value: '61,115'.replace(',', '.'), delta: 'coleta atual', tone: 'positive' as const },
+      { label: 'Seguindo', value: '299', delta: 'ratio 204.4:1', tone: 'positive' as const },
+      { label: 'Publicações', value: '3,019'.replace(',', '.'), delta: '3.2 posts/semana', tone: 'positive' as const },
+      { label: 'Anúncios Meta', value: 'Indisponível', delta: 'conector sem retorno válido', tone: 'warning' as const },
     ],
     conversion: [
-      { label: 'ER disponível', value: '0.016%', note: 'Likes + comentários / seguidores' },
-      { label: 'Reach médio', value: '170.4', note: 'Média dos 5 posts recentes com insight completo retornado' },
-      { label: 'Views médias', value: '270.0', note: 'Média dos 5 posts recentes com insight completo retornado' },
+      { label: 'ER disponível', value: '0.0141%', note: 'Interações médias / seguidores nos 20 posts recentes' },
+      { label: 'Reach disponível', value: '397', note: 'Único post com insight completo retornado nesta rodada' },
+      { label: 'Views disponíveis', value: '563', note: 'Único post com insight completo retornado nesta rodada' },
     ],
     alerts: [
       'Gap de CTA: menos de 30% dos posts têm chamada para ação — maior oportunidade imediata.',
       'O Reel “Ideias mudam empresas. Ambiente muda ideias.” lidera Reach nos insights disponíveis; o carrossel de Miami lidera interações entre os 5 posts recentes com insight completo.',
       'Monitorar variação semanal de seguidores para separar oscilação normal de perda estrutural.',
-      'Meta Ads tem entrega e Cliques (todos); validar por que a API retorna Valor usado US$0 antes de escalar.',
+      'Meta Ads indisponível nesta rodada; manter bloco sem métricas até retorno válido do conector.',
     ],
   },
   deepAnalysis: {
@@ -1276,7 +1215,7 @@ export const timingAnalysis = {
     "reason": "Recomendado pelo engajamento médio recente."
   }
 ],
-  postingFrequency: { current: '4.7 posts/semana', recommended: '4-5 posts/semana', gap: 'Aumentar cadência com consistência e CTA por post.', storiesRecommended: '1-2 Stories/dia', storiesCurrent: 'Não monitorado' },
+  postingFrequency: { current: '3.2 posts/semana', recommended: '4-5 posts/semana', gap: 'Aumentar cadência com consistência e CTA por post.', storiesRecommended: '1-2 Stories/dia', storiesCurrent: 'Não monitorado' },
 };
 
 // ─────────────────────────────────────────────────────────────
