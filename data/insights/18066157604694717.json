@@ -1,0 +1,91 @@
+{
+  "success": true,
+  "result": {
+    "data": [
+      {
+        "name": "shares",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 0
+          }
+        ],
+        "title": "Shares",
+        "description": "The number of shares of your post.",
+        "id": "18066157604694717/insights/shares/lifetime"
+      },
+      {
+        "name": "comments",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 2
+          }
+        ],
+        "title": "Comments",
+        "description": "The number of comments on your post.",
+        "id": "18066157604694717/insights/comments/lifetime"
+      },
+      {
+        "name": "likes",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 16
+          }
+        ],
+        "title": "Likes",
+        "description": "The number of likes on your post.",
+        "id": "18066157604694717/insights/likes/lifetime"
+      },
+      {
+        "name": "saved",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 0
+          }
+        ],
+        "title": "Saved",
+        "description": "The number of saves of your post.",
+        "id": "18066157604694717/insights/saved/lifetime"
+      },
+      {
+        "name": "total_interactions",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 18
+          }
+        ],
+        "title": "Post interactions",
+        "description": "The number of likes, saves, comments and shares on your post minus the number of unlikes, unsaves and deleted comments.",
+        "id": "18066157604694717/insights/total_interactions/lifetime"
+      },
+      {
+        "name": "reach",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 202
+          }
+        ],
+        "title": "Accounts reached",
+        "description": "The number of unique accounts that have seen this post, at least once. Reach is different from impressions, which may include multiple views of your post by the same accounts. This metric is estimated.",
+        "id": "18066157604694717/insights/reach/lifetime"
+      },
+      {
+        "name": "views",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 350
+          }
+        ],
+        "title": "Views",
+        "description": "The number of times your post was played or displayed.",
+        "id": "18066157604694717/insights/views/lifetime"
+      }
+    ]
+  }
+}

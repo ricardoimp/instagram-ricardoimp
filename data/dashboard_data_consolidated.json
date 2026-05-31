@@ -1,160 +1,146 @@
 {
-  "generated_at_brt": "29/05/2026 às 11:04",
-  "collected_at": "2026-05-29T11:04:50-03:00",
-  "instagram_account": {
-    "username": "ricardoimp",
-    "name": "Ricardo Impellizieri",
-    "followers": 61120,
+  "lastUpdated": "31/05/2026 às 11:05",
+  "collected_at": "2026-05-31T11:05:32-03:00",
+  "profile": {
+    "followers": 61116,
     "following": 299,
-    "posts": 3019,
-    "website": "http://saiba-mais.ai",
-    "bio": "Construo empresas enquanto viajo o mundo ✈️\n🏆7 empresas • 2 vendidas\n🌎37 países visitados\n👇🏼Liberdade é estratégia!"
+    "posts_total": 3019,
+    "follower_following_ratio": 204.4,
+    "posts_per_week_estimated": 3.2,
+    "reels_share_pct": 50.0,
+    "feed_image_share_pct": 35.0,
+    "carousel_share_pct": 15.0,
+    "source": "Instagram MCP",
+    "collected_at": "2026-05-31T11:05:32-03:00"
   },
-  "recent_posts_count": 20,
-  "posts_with_insights_count": 5,
-  "posts_sample": [
+  "posts_90_days_found": 41,
+  "posts_analyzed": 20,
+  "top_interactions": [
     {
-      "id": "18098997766886178",
-      "date": "2026-05-28T22:59:19Z",
+      "id": "18110982055878581",
+      "date": "2026-04-27",
       "type": "VIDEO",
-      "media_product_type": "REELS",
-      "caption": "Parece mentira.\nParece IA.\nMas é real. \n\nViagens que ficam para sempre.\n\n#banff #canada #photo #trip #instagram",
-      "likes": 6,
-      "comments": 3,
-      "reach": 197,
-      "views": 251,
-      "saved": 1,
-      "total_interactions": 10,
-      "hashtags": [
-        "banff",
-        "canada",
-        "photo",
-        "trip",
-        "instagram"
-      ],
-      "mentions": [],
-      "permalink": "https://www.instagram.com/reel/DY5mDRQgtMV/"
+      "caption_preview": "Entrei achando que era só um mercado saí entendendo por que lugares assim duram séculos, um dos mercados mais antigos…",
+      "total_interactions": 25,
+      "reach": "N/A",
+      "views": "N/A",
+      "saved": "N/A"
+    },
+    {
+      "id": "18004667222739565",
+      "date": "2026-05-08",
+      "type": "IMAGE",
+      "caption_preview": "Bad Boys 😎🐕",
+      "total_interactions": 24,
+      "reach": "N/A",
+      "views": "N/A",
+      "saved": "N/A"
     },
     {
       "id": "18066157604694717",
-      "date": "2026-05-26T22:31:41Z",
+      "date": "2026-05-26",
       "type": "IMAGE",
-      "media_product_type": "FEED",
-      "caption": "Quem conhece o silêncio…\nsabe que ele diz muito.\n\n#banff #canada #silencio #instagood #lifestyle",
-      "likes": 14,
-      "comments": 2,
-      "reach": 189,
-      "views": 325,
-      "saved": 0,
-      "total_interactions": 16,
-      "hashtags": [
-        "banff",
-        "canada",
-        "silencio",
-        "instagood",
-        "lifestyle"
-      ],
-      "mentions": [],
-      "permalink": "https://www.instagram.com/p/DY0ZEGpAdo8/"
+      "caption_preview": "Quem conhece o silêncio… sabe que ele diz muito. #banff #canada #silencio #instagood #lifestyle",
+      "total_interactions": 18,
+      "reach": 202,
+      "views": 350,
+      "saved": 0
     },
     {
-      "id": "17949953874176423",
-      "date": "2026-05-24T21:16:16Z",
-      "type": "CAROUSEL_ALBUM",
-      "media_product_type": "FEED",
-      "caption": "Uma das maiores mesquitas do mundo, a Mesquita Hassan II.\n\nFoi aqui que eu entendi que grandes muralhas não foram construídas apenas para mostrar poder…\nalgumas foram construídas para guardar o silêncio.\n\nCada detalhe desse lugar parece diminuir o barulho do mundo lá fora.\n\nE talvez seja exatamente por isso que certas construções atravessam séculos:\n\nporque elas não impressionam apenas os olhos…\nimpressionam a alma.\n\nViajar modifica… solidifica e reconstrói 🔥\n\n#hassan #casablanca #marrocos #trip #photographer",
-      "likes": 4,
-      "comments": 0,
-      "reach": 171,
-      "views": 311,
-      "saved": 1,
-      "total_interactions": 5,
-      "hashtags": [
-        "hassan",
-        "casablanca",
-        "marrocos",
-        "trip",
-        "photographer"
-      ],
-      "mentions": [],
-      "permalink": "https://www.instagram.com/p/DYvHTSjlP61/"
+      "id": "18109003246906463",
+      "date": "2026-05-11",
+      "type": "IMAGE",
+      "caption_preview": "O silêncio te reorganiza.",
+      "total_interactions": 14,
+      "reach": "N/A",
+      "views": "N/A",
+      "saved": "N/A"
     },
     {
-      "id": "17989495916985445",
-      "date": "2026-05-22T20:46:59Z",
-      "type": "CAROUSEL_ALBUM",
-      "media_product_type": "FEED",
-      "caption": "Pode parecer clichê….\nmas Miami é foda.\n\n#miami #eua #vivendo #instagood #photography",
-      "likes": 10,
-      "comments": 1,
-      "reach": 194,
-      "views": 426,
-      "saved": 0,
-      "total_interactions": 11,
-      "hashtags": [
-        "miami",
-        "eua",
-        "vivendo",
-        "instagood",
-        "photography"
-      ],
-      "mentions": [],
-      "permalink": "https://www.instagram.com/p/DYp6XJclKNZ/"
+      "id": "18098997766886178",
+      "date": "2026-05-28",
+      "type": "VIDEO",
+      "caption_preview": "Parece mentira. Parece IA. Mas é real. Viagens que ficam para sempre. #banff #canada #photo #trip #instagram",
+      "total_interactions": 12,
+      "reach": 228,
+      "views": 316,
+      "saved": 1
+    }
+  ],
+  "top_reach": [
+    {
+      "id": "18098997766886178",
+      "date": "2026-05-28",
+      "type": "VIDEO",
+      "caption_preview": "Parece mentira. Parece IA. Mas é real. Viagens que ficam para sempre. #banff #canada #photo #trip #instagram",
+      "total_interactions": 12,
+      "reach": 228,
+      "views": 316,
+      "saved": 1
+    },
+    {
+      "id": "18066157604694717",
+      "date": "2026-05-26",
+      "type": "IMAGE",
+      "caption_preview": "Quem conhece o silêncio… sabe que ele diz muito. #banff #canada #silencio #instagood #lifestyle",
+      "total_interactions": 18,
+      "reach": 202,
+      "views": 350,
+      "saved": 0
     },
     {
       "id": "18321827566257292",
-      "date": "2026-05-19T22:06:11Z",
+      "date": "2026-05-19",
       "type": "VIDEO",
-      "media_product_type": "REELS",
-      "caption": "Ideias mudam empresas.\nAmbiente muda ideias.",
-      "likes": 3,
-      "comments": 0,
-      "reach": 199,
-      "views": 268,
-      "saved": 0,
+      "caption_preview": "Ideias mudam empresas. Ambiente muda ideias.",
       "total_interactions": 3,
-      "hashtags": [],
-      "mentions": [],
-      "permalink": "https://www.instagram.com/reel/DYiUqfmgeho/"
-    }
-  ],
-  "instagram_aggregates": {
-    "avg_likes_last_20": 7.5,
-    "avg_comments_last_20": 0.8,
-    "avg_reach_available": 190.0,
-    "avg_views_available": 316.2,
-    "avg_interactions_last_20": 8.3
-  },
-  "meta_totals_last_30d": {
-    "available": true,
-    "account_id": "act_1158819016166775",
-    "currency": "USD",
-    "impressions": 32524,
-    "clicks_all": 992,
-    "ctr_all_pct": 3.05,
-    "spend": 0,
-    "partial_today": true
-  },
-  "meta_campaigns_last_30d": [
-    {
-      "campaign_name": "Traffic Campaign",
-      "impressions": 22760,
-      "clicks_all": 295,
-      "spend": 0,
-      "ctr_all_pct": 1.3
+      "reach": 200,
+      "views": 270,
+      "saved": 0
     },
     {
-      "campaign_name": "MM_LITE_DEFAULT_AD_CAMPAIGN_GROUP",
-      "impressions": 9764,
-      "clicks_all": 697,
-      "spend": 0,
-      "ctr_all_pct": 7.14
+      "id": "17989495916985445",
+      "date": "2026-05-22",
+      "type": "CAROUSEL_ALBUM",
+      "caption_preview": "Pode parecer clichê…. mas Miami é foda. #miami #eua #vivendo #instagood #photography",
+      "total_interactions": 11,
+      "reach": 195,
+      "views": 434,
+      "saved": 0
+    },
+    {
+      "id": "17949953874176423",
+      "date": "2026-05-24",
+      "type": "CAROUSEL_ALBUM",
+      "caption_preview": "Uma das maiores mesquitas do mundo, a Mesquita Hassan II. Foi aqui que eu entendi que grandes muralhas não foram const…",
+      "total_interactions": 5,
+      "reach": 176,
+      "views": 318,
+      "saved": 1
     }
   ],
-  "unavailable_blocks": [
-    "Stories",
-    "demografia da audiência",
-    "insights Meta Ads das contas act_265574476787926 e act_9525474394174655",
-    "Link clicks do Meta Ads nesta coleta"
-  ]
+  "data_quality": {
+    "completeness_pct": 64,
+    "posts_analyzed": 20,
+    "posts_with_insights": 5,
+    "metrics_available": [
+      "likes",
+      "comments",
+      "total_interactions",
+      "reach/views/saved nos 5 posts mais recentes"
+    ],
+    "metrics_unavailable": [
+      "demografia histórica detalhada",
+      "stories históricos",
+      "cliques no link por post"
+    ],
+    "limitations": [
+      "O conector retorna lista de posts recentes e insights por post, mas não fornece todo o histórico demográfico/funil no mesmo endpoint.",
+      "Reach, views e salvamentos foram atualizados apenas para os posts com insights consultados nesta rodada.",
+      "Stories históricos seguem indisponíveis porque expiram em 24h."
+    ],
+    "confidence_global": "Média-alta para conteúdo recente; limitada para funil e audiência histórica",
+    "collection_notes": "Coleta Instagram MCP executada em 31/05/2026 às 11:05; 41 posts localizados dentro de 90 dias e 20 usados na leitura principal.",
+    "collected_at": "2026-05-31T11:05:32-03:00"
+  }
 }

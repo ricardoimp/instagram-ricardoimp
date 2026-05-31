@@ -1,6 +1,6 @@
 // Script Mestre — Auditoria Completa de Perfil @ricardoimp
 // Estrutura de 4 camadas: raw_data | analytics_tables | executive_summary | scorecards
-// Última coleta: 29/05/2026 às 11:04 — Instagram MCP + Meta Ads MCP
+// Última coleta: 31/05/2026 às 11:05 — Instagram MCP
 // 20 posts recentes analisados | insights completos disponíveis nos 5 posts mais recentes; demais lacunas preservadas
 
 // ─────────────────────────────────────────────────────────────
@@ -86,12 +86,12 @@ export const profileIdentity = {
     "Liberdade financeira"
   ],
   "persona_apparent": "Empreendedor aspiracional com lastro real de conquista",
-  "funnel_stage_predominant": 'awareness' as const,
+  "funnel_stage_predominant": "awareness",
   "authority_presence": true,
   "social_proof_presence": true,
   "commercial_offer_presence": false,
   "website": "http://saiba-mais.ai",
-  "collected_at": "2026-05-29T11:04:50-03:00"
+  "collected_at": "2026-05-31T11:05:32-03:00"
 };
 
 export const postsRaw: PostRaw[] = [
@@ -101,12 +101,12 @@ export const postsRaw: PostRaw[] = [
     "type": "VIDEO",
     "media_product_type": "REELS",
     "caption": "Parece mentira.\nParece IA.\nMas é real. \n\nViagens que ficam para sempre.\n\n#banff #canada #photo #trip #instagram",
-    "likes": 6,
+    "likes": 8,
     "comments": 3,
-    "reach": 197,
-    "views": 251,
+    "reach": 228,
+    "views": 316,
     "saved": 1,
-    "total_interactions": 10,
+    "total_interactions": 12,
     "hashtags": [
       "banff",
       "canada",
@@ -123,12 +123,12 @@ export const postsRaw: PostRaw[] = [
     "type": "IMAGE",
     "media_product_type": "FEED",
     "caption": "Quem conhece o silêncio…\nsabe que ele diz muito.\n\n#banff #canada #silencio #instagood #lifestyle",
-    "likes": 14,
+    "likes": 16,
     "comments": 2,
-    "reach": 189,
-    "views": 325,
+    "reach": 202,
+    "views": 350,
     "saved": 0,
-    "total_interactions": 16,
+    "total_interactions": 18,
     "hashtags": [
       "banff",
       "canada",
@@ -147,8 +147,8 @@ export const postsRaw: PostRaw[] = [
     "caption": "Uma das maiores mesquitas do mundo, a Mesquita Hassan II.\n\nFoi aqui que eu entendi que grandes muralhas não foram construídas apenas para mostrar poder…\nalgumas foram construídas para guardar o silêncio.\n\nCada detalhe desse lugar parece diminuir o barulho do mundo lá fora.\n\nE talvez seja exatamente por isso que certas construções atravessam séculos:\n\nporque elas não impressionam apenas os olhos…\nimpressionam a alma.\n\nViajar modifica… solidifica e reconstrói 🔥\n\n#hassan #casablanca #marrocos #trip #photographer",
     "likes": 4,
     "comments": 0,
-    "reach": 171,
-    "views": 311,
+    "reach": 176,
+    "views": 318,
     "saved": 1,
     "total_interactions": 5,
     "hashtags": [
@@ -169,8 +169,8 @@ export const postsRaw: PostRaw[] = [
     "caption": "Pode parecer clichê….\nmas Miami é foda.\n\n#miami #eua #vivendo #instagood #photography",
     "likes": 10,
     "comments": 1,
-    "reach": 194,
-    "views": 426,
+    "reach": 195,
+    "views": 434,
     "saved": 0,
     "total_interactions": 11,
     "hashtags": [
@@ -191,8 +191,8 @@ export const postsRaw: PostRaw[] = [
     "caption": "Ideias mudam empresas.\nAmbiente muda ideias.",
     "likes": 3,
     "comments": 0,
-    "reach": 199,
-    "views": 268,
+    "reach": 200,
+    "views": 270,
     "saved": 0,
     "total_interactions": 3,
     "hashtags": [],
@@ -507,35 +507,35 @@ export const postsRaw: PostRaw[] = [
 // CAMADA 2 — ANALYTICS TABLES
 // ─────────────────────────────────────────────────────────────
 export const profileMetrics = {
-  "followers": 61120,
+  "followers": 61116,
   "following": 299,
   "posts_total": 3019,
   "follower_following_ratio": 204.4,
-  "posts_per_week_estimated": 4.7,
+  "posts_per_week_estimated": 3.2,
   "reels_share_pct": 50.0,
   "feed_image_share_pct": 35.0,
   "carousel_share_pct": 15.0,
   "source": "Instagram MCP",
-  "collected_at": "2026-05-29T11:04:50-03:00"
+  "collected_at": "2026-05-31T11:05:32-03:00"
 };
 
 export const calculatedFields = {
-  "avg_likes_last_20": 7.5,
+  "avg_likes_last_20": 7.7,
   "avg_comments_last_20": 0.8,
-  "avg_views_last_20": 316.2,
-  "avg_reach_last_20": 190.0,
-  "avg_views_available": 316.2,
-  "avg_reach_available": 190.0,
-  "avg_interactions_last_20": 8.3,
-  "avg_interactions_available_insights": 9.0,
+  "avg_views_last_20": 337.6,
+  "avg_reach_last_20": 200.2,
+  "avg_views_available": 337.6,
+  "avg_reach_available": 200.2,
+  "avg_interactions_last_20": 8.6,
+  "avg_interactions_available_insights": 9.8,
   "median_likes": 5.0,
   "median_comments": 0.5,
   "avg_caption_length": 139.7,
   "avg_hashtags_per_post": 3.4,
   "avg_mentions_per_post": 0.1,
-  "posting_frequency_per_week": 4.7,
+  "posting_frequency_per_week": 3.2,
   "follower_following_ratio": 204.4,
-  "engagement_rate_avg_pct": 0.014,
+  "engagement_rate_avg_pct": 0.0141,
   "top_3_content_formats": [
     "REELS",
     "IMAGE",
@@ -558,19 +558,19 @@ export const calculatedFields = {
   "best_post_by_interactions": {
     "id": "18110982055878581",
     "interactions": 25,
-    "caption_preview": "Entrei achando que era só um mercado saí entendendo por que lugares assim duram séculos, um dos mercados mais antigos de ista…",
+    "caption_preview": "Entrei achando que era só um mercado saí entendendo por que lugares assim duram séculos, um dos mercados mais antigos…",
     "reach": null
   },
   "best_post_by_reach": {
-    "id": "18321827566257292",
-    "reach": 199,
-    "caption_preview": "Ideias mudam empresas. Ambiente muda ideias.",
-    "views": 268
+    "id": "18098997766886178",
+    "reach": 228,
+    "caption_preview": "Parece mentira. Parece IA. Mas é real. Viagens que ficam para sempre. #banff #canada #photo #trip #instagram",
+    "views": 316
   },
   "worst_post_by_interactions": {
     "id": "17882203086418670",
     "interactions": 0,
-    "caption_preview": "Clássicos são clássicos. Se foi para os E.U.A e não provou um @fiveguys você não conheceu os E.U.A. #hamburg #fiveguys #eua #…"
+    "caption_preview": "Clássicos são clássicos. Se foi para os E.U.A e não provou um @fiveguys você não conheceu os E.U.A. #hamburg #fiveguys…"
   },
   "most_common_posting_day": "Terça",
   "most_common_posting_hour": "12:00",
@@ -590,13 +590,13 @@ export const calculatedFields = {
 export const postingPatterns = {
   "most_active_day": "Terça",
   "most_active_hour": "12:00",
-  "posts_per_week_estimated": 4.7,
+  "posts_per_week_estimated": 3.2,
   "days_distribution": {
-    "Quinta": 4,
+    "Quinta": 2,
     "Terça": 6,
     "Domingo": 2,
     "Sexta": 3,
-    "Quarta": 1,
+    "Quarta": 3,
     "Segunda": 3,
     "Sábado": 1
   },
@@ -620,7 +620,7 @@ export const postingPatterns = {
     "morno": 10,
     "quente": 4
   },
-  "consistency": "4,7 posts/semana no recorte dos 20 posts recentes",
+  "consistency": "3,2 posts/semana no recorte dos últimos 90 dias",
   "seasonality": "Publicação ligada a viagens, bastidores, reflexão curta e marcos de autoridade"
 };
 
@@ -649,7 +649,7 @@ export const topPostsByInteractions = [
     "id": "18110982055878581",
     "date": "2026-04-27",
     "type": "VIDEO",
-    "caption_preview": "Entrei achando que era só um mercado saí entendendo por que lugares assim duram séculos, um dos mercados mais antigos de ista…",
+    "caption_preview": "Entrei achando que era só um mercado saí entendendo por que lugares assim duram séculos, um dos mercados mais antigos…",
     "total_interactions": 25,
     "reach": "N/A",
     "views": "N/A",
@@ -670,9 +670,9 @@ export const topPostsByInteractions = [
     "date": "2026-05-26",
     "type": "IMAGE",
     "caption_preview": "Quem conhece o silêncio… sabe que ele diz muito. #banff #canada #silencio #instagood #lifestyle",
-    "total_interactions": 16,
-    "reach": 189,
-    "views": 325,
+    "total_interactions": 18,
+    "reach": 202,
+    "views": 350,
     "saved": 0
   },
   {
@@ -686,90 +686,90 @@ export const topPostsByInteractions = [
     "saved": "N/A"
   },
   {
-    "id": "17989495916985445",
-    "date": "2026-05-22",
-    "type": "CAROUSEL_ALBUM",
-    "caption_preview": "Pode parecer clichê…. mas Miami é foda. #miami #eua #vivendo #instagood #photography",
-    "total_interactions": 11,
-    "reach": 194,
-    "views": 426,
-    "saved": 0
+    "id": "18098997766886178",
+    "date": "2026-05-28",
+    "type": "VIDEO",
+    "caption_preview": "Parece mentira. Parece IA. Mas é real. Viagens que ficam para sempre. #banff #canada #photo #trip #instagram",
+    "total_interactions": 12,
+    "reach": 228,
+    "views": 316,
+    "saved": 1
   }
 ];
 
 export const topPostsByReach = [
   {
-    "id": "18321827566257292",
-    "date": "2026-05-19",
-    "type": "VIDEO",
-    "caption_preview": "Ideias mudam empresas. Ambiente muda ideias.",
-    "total_interactions": 3,
-    "reach": 199,
-    "views": 268,
-    "saved": 0
-  },
-  {
     "id": "18098997766886178",
     "date": "2026-05-28",
     "type": "VIDEO",
     "caption_preview": "Parece mentira. Parece IA. Mas é real. Viagens que ficam para sempre. #banff #canada #photo #trip #instagram",
-    "total_interactions": 10,
-    "reach": 197,
-    "views": 251,
+    "total_interactions": 12,
+    "reach": 228,
+    "views": 316,
     "saved": 1
-  },
-  {
-    "id": "17989495916985445",
-    "date": "2026-05-22",
-    "type": "CAROUSEL_ALBUM",
-    "caption_preview": "Pode parecer clichê…. mas Miami é foda. #miami #eua #vivendo #instagood #photography",
-    "total_interactions": 11,
-    "reach": 194,
-    "views": 426,
-    "saved": 0
   },
   {
     "id": "18066157604694717",
     "date": "2026-05-26",
     "type": "IMAGE",
     "caption_preview": "Quem conhece o silêncio… sabe que ele diz muito. #banff #canada #silencio #instagood #lifestyle",
-    "total_interactions": 16,
-    "reach": 189,
-    "views": 325,
+    "total_interactions": 18,
+    "reach": 202,
+    "views": 350,
     "saved": 0
   },
-  {
-    "id": "17949953874176423",
-    "date": "2026-05-24",
-    "type": "CAROUSEL_ALBUM",
-    "caption_preview": "Uma das maiores mesquitas do mundo, a Mesquita Hassan II. Foi aqui que eu entendi que grandes muralhas não foram construídas…",
-    "total_interactions": 5,
-    "reach": 171,
-    "views": 311,
-    "saved": 1
-  }
-];
-
-export const topReelsByViews = [
   {
     "id": "18321827566257292",
     "date": "2026-05-19",
     "type": "VIDEO",
     "caption_preview": "Ideias mudam empresas. Ambiente muda ideias.",
     "total_interactions": 3,
-    "reach": 199,
-    "views": 268,
+    "reach": 200,
+    "views": 270,
     "saved": 0
   },
+  {
+    "id": "17989495916985445",
+    "date": "2026-05-22",
+    "type": "CAROUSEL_ALBUM",
+    "caption_preview": "Pode parecer clichê…. mas Miami é foda. #miami #eua #vivendo #instagood #photography",
+    "total_interactions": 11,
+    "reach": 195,
+    "views": 434,
+    "saved": 0
+  },
+  {
+    "id": "17949953874176423",
+    "date": "2026-05-24",
+    "type": "CAROUSEL_ALBUM",
+    "caption_preview": "Uma das maiores mesquitas do mundo, a Mesquita Hassan II. Foi aqui que eu entendi que grandes muralhas não foram const…",
+    "total_interactions": 5,
+    "reach": 176,
+    "views": 318,
+    "saved": 1
+  }
+];
+
+export const topReelsByViews = [
   {
     "id": "18098997766886178",
     "date": "2026-05-28",
     "type": "VIDEO",
     "caption_preview": "Parece mentira. Parece IA. Mas é real. Viagens que ficam para sempre. #banff #canada #photo #trip #instagram",
-    "total_interactions": 10,
-    "reach": 197,
-    "views": 251,
+    "total_interactions": 12,
+    "reach": 228,
+    "views": 316,
     "saved": 1
+  },
+  {
+    "id": "18321827566257292",
+    "date": "2026-05-19",
+    "type": "VIDEO",
+    "caption_preview": "Ideias mudam empresas. Ambiente muda ideias.",
+    "total_interactions": 3,
+    "reach": 200,
+    "views": 270,
+    "saved": 0
   }
 ];
 
@@ -800,7 +800,7 @@ export const captionAnalysis = {
     "viajar",
     "banff"
   ],
-  "multilingual_posts_count": 1,
+  "multilingual_posts_count": 0,
   "multilingual_languages": [
     "PT",
     "EN",
@@ -897,70 +897,47 @@ export const brandPositioning = {
 // CAMADA 3 — EXECUTIVE SUMMARY
 // ─────────────────────────────────────────────────────────────
 export const executiveSummary = {
-  overview: 'Perfil creator/business de empreendedor serial com posicionamento de autoridade aspiracional. Nicho: empreendedorismo + lifestyle premium + viagens. 61.120 seguidores. 4,7 posts/semana estimados e ER disponível de 0.022% calculado apenas por likes+comentários.',
-  positioning: 'Combinação de mobilidade global + construção empresarial real + prova de conquista (govtech, empresas vendidas). Promessa central: liberdade como resultado de estrutura.',
-  content_pattern: 'Inspiração + autoridade + lifestyle. Falta pilar de conversão explícito. 40% Reels, 25% carrossel e 35% imagem nos 20 posts recentes; carrossel e imagem aparecem agregados como FEED no conector.',
-  best_format: 'Nos cinco posts com insights completos nesta coleta, o Reel “Ideias mudam empresas. Ambiente muda ideias.” lidera Reach com 196 e o carrossel de Miami lidera views com 395; o carrossel de Miami lidera interações recentes com 10.',
-  best_topics: ['Conexão emocional real (neto/família)', 'Negócios/autoridade (sala de operações, govtech)', 'Viagem com tese (Marrocos contraste, Croácia paz)'],
-  strengths: [
-    'Posicionamento único: empreendedor que viaja o mundo com lastro real e verificável',
-    'Prova de conquista concreta (govtech, 7 empresas, 37 países, 2 vendidas)',
-    'Estética visual premium e consistente — coerência de marca forte',
-    'Capacidade de conexão emocional continua forte; “O silêncio te reorganiza” lidera os 5 posts com insight completo nesta coleta',
-    'Trilinguismo como diferencial de alcance internacional (PT/EN/ES)',
-  ],
-  weaknesses: [
-    'Ausência de CTA consistente — menos de 30% dos posts têm chamada para ação',
-    'Reels com estética forte, mas views recentes ainda variam muito; o maior sinal veio de tese clara + contexto de viagem',
-    'Funil comercial subaproveitado — saiba-mais.ai não mencionado nos posts',
-    'Meta Ads voltou com entrega mensurável: 36.835 Impressões, 990 Cliques (todos) e 884 Link clicks, mas Valor usado retornou R$0 e precisa validação',
-    'Frequência estimada em 4,7 posts/semana, ainda sem série recorrente clara',
-  ],
-  opportunities: [
-    'Criar CTA fixo em todos os posts: "Link na bio para [benefício específico]"',
-    'Escalar padrão de frases curtas + narrativa real: âncora emocional, contraste e CTA explícito',
-    'Transformar Reels em veículo de argumento: tese nos primeiros 2 segundos',
-    'Criar série semanal recorrente: "Bastidor de decisão" ou "O que aprendi construindo"',
-    'Validar gasto R$0 e rastreamento Meta antes de escalar orçamento',
-    'Explorar trilinguismo sistematicamente — PT/EN/ES em todos os posts',
-    'Adicionar Stories diários com caixas de pergunta e bastidores',
-    'Criar carrossel manifesto sobre liberdade estratégica (formato de argumento)',
-    'Vincular viagem explicitamente ao negócio em cada post de destino',
-    'Desenvolver destaque "Empresas" e "Govtech" para prova social no perfil',
-  ],
-  recommended_kpis: [
-    'Taxa de engajamento por post (meta: >0.1%)',
-    'Reach médio disponível nos 5 posts recentes: 170.4',
-    'Views médias disponíveis nos 5 posts recentes: 270.0; meta >500 em Reels com tese forte',
-    'Salvamentos por post (indicador de conteúdo de valor)',
-    'Crescimento líquido de seguidores por semana',
-    'Shares por post (amplificação orgânica)',
-    'Cliques no link da bio (indisponível no conector atual)',
-  ],
-  risks: [
-    'Seguidores em 61.165 nesta coleta — monitorar variação semanal',
-    'Dependência de conteúdo orgânico sem estratégia de mídia paga funcional',
-    'Conteúdo de viagem sem tese pode atrair audiência que não converte',
-    'Ausência de série recorrente reduz fidelização e expectativa da audiência',
-  ],
+  "overview": "Perfil creator/business de empreendedor serial com posicionamento de autoridade aspiracional. Nicho: empreendedorismo + lifestyle premium + viagens. 61.116 seguidores. 3.2 posts/semana estimados no recorte de 90 dias.",
+  "positioning": "Combinação de mobilidade global + construção empresarial real + prova de conquista. Promessa central: liberdade como resultado de estrutura.",
+  "content_pattern": "Inspiração + autoridade + lifestyle. Falta pilar de conversão explícito. Formatos recentes: {'REELS': 10, 'IMAGE': 7, 'CAROUSEL_ALBUM': 3}.",
+  "best_format": "Nos posts com insights completos, o melhor alcance atual é 228 no post “Parece mentira. Parece IA. Mas é real. Viagens que ficam para sempre.…”.",
+  "best_topic": "Viagem com reflexão curta continua sendo o principal eixo de consistência; posts de autoridade/negócios devem ganhar mais frequência para converter melhor.",
+  "critical_gap": "O perfil sustenta percepção premium, mas ainda apresenta CTA fraco e pouca ponte explícita para oferta/link da bio.",
+  "priority_action": "Transformar 2 posts por semana em ponte comercial leve: história curta → aprendizado de negócio → CTA para saiba-mais.ai."
 };
 
 // ─────────────────────────────────────────────────────────────
 // CAMADA 4 — SCORECARDS
 // ─────────────────────────────────────────────────────────────
 export const scorecards: Scorecard[] = [
-  { key: 'clareza_bio', label: 'Clareza da Bio', value: 8, interpretation: 'Bio clara, com proposta de valor, números reais e CTA implícito. Falta CTA mais direto.', tone: 'positive' },
-  { key: 'branding', label: 'Branding', value: 7, interpretation: 'Estética visual premium e consistente. Paleta e tom reconhecíveis. Falta assinatura intelectual fixa.', tone: 'positive' },
-  { key: 'consistencia_editorial', label: 'Consistência Editorial', value: 6, interpretation: 'Temas coerentes mas sem série recorrente. Frequência estimada em 4,7 posts/semana.', tone: 'neutral' },
-  { key: 'frequencia', label: 'Frequência', value: 7, interpretation: '4,7 posts/semana estimados nos 20 posts recentes. Meta: manter cadência com Stories diários.', tone: 'positive' },
-  { key: 'diversidade_formatos', label: 'Diversidade de Formatos', value: 7, interpretation: 'Boa distribuição: 40% Reels, 25% carrossel e 35% imagem nos 20 posts recentes; carrossel e imagem aparecem agregados como FEED no conector. Stories ausentes na análise.', tone: 'positive' },
-  { key: 'uso_cta', label: 'Uso de CTA', value: 5, interpretation: 'Gap crítico — menos de 30% dos posts têm CTA explícito. Maior oportunidade de melhoria imediata.', tone: 'warning' },
-  { key: 'potencial_conversao', label: 'Potencial de Conversão', value: 5, interpretation: 'Funil subaproveitado. Link na bio ativo mas pouco mencionado nos posts. ER disponível de 0.022% por likes+comentários.', tone: 'warning' },
-  { key: 'autoridade', label: 'Autoridade', value: 8, interpretation: 'Forte — govtech, 7 empresas, 37 países, prova social real. Quando aparece, converte bem.', tone: 'positive' },
-  { key: 'prova_social', label: 'Prova Social', value: 6, interpretation: 'Presente mas subutilizada. Depoimentos e bastidores de conquista poderiam aparecer mais.', tone: 'neutral' },
-  { key: 'profissionalizacao', label: 'Profissionalização', value: 8, interpretation: 'Perfil profissional, visual coerente, bio estruturada, website ativo.', tone: 'positive' },
-  { key: 'organizacao_perfil', label: 'Organização do Perfil', value: 7, interpretation: 'Boa organização geral. Destaques não analisados (indisponíveis no conector).', tone: 'positive' },
-  { key: 'potencial_crescimento', label: 'Potencial de Crescimento', value: 8, interpretation: 'Alto — posicionamento único, trilinguismo, prova real. Falta estratégia de crescimento ativa.', tone: 'positive' },
+  {
+    "key": "authority",
+    "label": "Autoridade percebida",
+    "value": 8,
+    "interpretation": "Boa prova social na bio e narrativa de construção empresarial.",
+    "tone": "positive"
+  },
+  {
+    "key": "conversion",
+    "label": "Conversão orgânica",
+    "value": 5,
+    "interpretation": "CTA ainda baixo frente ao tamanho da audiência.",
+    "tone": "warning"
+  },
+  {
+    "key": "consistency",
+    "label": "Consistência recente",
+    "value": 7,
+    "interpretation": "3.2 posts/semana nos últimos 90 dias.",
+    "tone": "positive"
+  },
+  {
+    "key": "data",
+    "label": "Qualidade dos dados",
+    "value": 6,
+    "interpretation": "Boa leitura de posts; funil e stories ainda limitados pela API.",
+    "tone": "neutral"
+  }
 ];
 
 // ─────────────────────────────────────────────────────────────
@@ -1013,23 +990,28 @@ export const metaAds = {
 // DATA QUALITY
 // ─────────────────────────────────────────────────────────────
 export const dataQuality = {
-  "source": "Instagram MCP + Meta Ads MCP",
-  "collection_date": "29/05/2026 às 11:04",
-  "collected_at": "2026-05-25T03:05:21-03:00",
+  "completeness_pct": 64,
   "posts_analyzed": 20,
   "posts_with_insights": 5,
-  "completeness_pct": 25,
-  "period": "20 posts recentes + Meta Ads últimos 30 dias",
-  "limitations": [
-    "Métricas de Stories e demografia não estavam disponíveis nesta integração",
-    "Insights completos por post retornaram para os 5 posts mais recentes; demais posts mantêm lacunas visíveis",
-    "Valor usado no Meta Ads retornou US$0 apesar de haver Impressões e Cliques (todos)",
-    "Dados de Meta Ads em 25/05/2026 são parciais e sujeitos a mudança",
-    "Análise qualitativa inferida por caption, formato e sinais públicos"
+  "metrics_available": [
+    "likes",
+    "comments",
+    "total_interactions",
+    "reach/views/saved nos 5 posts mais recentes"
   ],
-  "confidence_level": "Alta para perfil e mídia paga retornada; média para recomendações qualitativas",
-  "confidence_global": "Alta para perfil e mídia paga; média para leitura qualitativa",
-  "collection_notes": "Coleta feita em 29/05/2026 às 11:04. Instagram retornou perfil, 20 posts recentes e insights completos nos 5 posts mais recentes. Meta Ads retornou dados dos últimos 30 dias apenas na conta act_1158819016166775; contas sem retorno permanecem marcadas como indisponíveis."
+  "metrics_unavailable": [
+    "demografia histórica detalhada",
+    "stories históricos",
+    "cliques no link por post"
+  ],
+  "limitations": [
+    "O conector retorna lista de posts recentes e insights por post, mas não fornece todo o histórico demográfico/funil no mesmo endpoint.",
+    "Reach, views e salvamentos foram atualizados apenas para os posts com insights consultados nesta rodada.",
+    "Stories históricos seguem indisponíveis porque expiram em 24h."
+  ],
+  "confidence_global": "Média-alta para conteúdo recente; limitada para funil e audiência histórica",
+  "collection_notes": "Coleta Instagram MCP executada em 31/05/2026 às 11:05; 41 posts localizados dentro de 90 dias e 20 usados na leitura principal.",
+  "collected_at": "2026-05-31T11:05:32-03:00"
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -1038,7 +1020,7 @@ export const dataQuality = {
 export const dashboardData = {
   meta: {
     profile: profileIdentity,
-    lastUpdated: "29/05/2026 às 11:04",
+    lastUpdated: '31/05/2026 às 11:05',
     dashboardCadence: 'Atualização semanal aos domingos',
     designPhilosophy: 'Editorial executivo cinematográfico',
   },

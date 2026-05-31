@@ -1,0 +1,91 @@
+{
+  "success": true,
+  "result": {
+    "data": [
+      {
+        "name": "shares",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 0
+          }
+        ],
+        "title": "Shares",
+        "description": "The number of shares of your reel.",
+        "id": "18098997766886178/insights/shares/lifetime"
+      },
+      {
+        "name": "comments",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 3
+          }
+        ],
+        "title": "Comments",
+        "description": "The number of comments on your reel.",
+        "id": "18098997766886178/insights/comments/lifetime"
+      },
+      {
+        "name": "likes",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 8
+          }
+        ],
+        "title": "Likes",
+        "description": "The number of likes on your reel.",
+        "id": "18098997766886178/insights/likes/lifetime"
+      },
+      {
+        "name": "saved",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 1
+          }
+        ],
+        "title": "Saved",
+        "description": "The number of saves of your reel.",
+        "id": "18098997766886178/insights/saved/lifetime"
+      },
+      {
+        "name": "total_interactions",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 12
+          }
+        ],
+        "title": "Reels interactions",
+        "description": "The number of likes, saves, comments and shares on your reels minus the number of unlikes, unsaves and deleted comments.",
+        "id": "18098997766886178/insights/total_interactions/lifetime"
+      },
+      {
+        "name": "reach",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 228
+          }
+        ],
+        "title": "Accounts reached",
+        "description": "The number of unique accounts that have seen this reel, at least once. Reach is different from impressions, which may include multiple views of your reel by the same accounts. This metric is estimated.",
+        "id": "18098997766886178/insights/reach/lifetime"
+      },
+      {
+        "name": "views",
+        "period": "lifetime",
+        "values": [
+          {
+            "value": 316
+          }
+        ],
+        "title": "Views",
+        "description": "The number of times your reels was played or displayed.",
+        "id": "18098997766886178/insights/views/lifetime"
+      }
+    ]
+  }
+}
