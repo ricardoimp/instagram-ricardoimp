@@ -582,9 +582,9 @@ export const calculatedFields = {
     "Experiência premium"
   ],
   "estimated_target_audience": "Empreendedores 28-45 anos, Brasil, interessados em liberdade financeira, viagens e construção de negócios",
-  "estimated_business_model": "Posicionamento de autoridade → tráfego para saiba-mais.ai → conversão em serviços/consultorias",
-  "estimated_primary_cta": "Tráfego para link na bio (saiba-mais.ai)",
-  "estimated_conversion_path": "Conteúdo orgânico → perfil → link bio → landing page"
+  "estimated_business_model": "Posicionamento de autoridade empresarial — o perfil cria impressão de competência, estilo de vida e credibilidade para quem visita.",
+  "estimated_primary_cta": "N/A — perfil de posicionamento, sem objetivo de conversão direta.",
+  "estimated_conversion_path": "N/A — objetivo é impressão e autoridade percebida, não funil de vendas."
 };
 
 export const postingPatterns = {
@@ -610,10 +610,10 @@ export const postingPatterns = {
     "IMAGE": 35.0,
     "CAROUSEL_ALBUM": 15.0
   },
-  "funnel_distribution": {
-    "topo": 17,
-    "meio": 3,
-    "fundo": 0
+  "authority_distribution": {
+    "lifestyle_viagem": 14,
+    "autoridade_negocios": 4,
+    "reflexao_proposito": 2
   },
   "content_temp_distribution": {
     "frio": 6,
@@ -730,10 +730,10 @@ export const captionAnalysis = {
   "dominant_tone": "Inspiracional com densidade filosófica e estética de viagem premium",
   "common_opening_style": "Frase curta + contraste/reflexão",
   "narrative_format": "Abertura impactante → desenvolvimento → fecho reflexivo",
-  "presence_of_questions": "Baixa — oportunidade de elevar comentários com CTA direto",
-  "presence_of_storytelling": "Alta — conteúdo recente mantém narrativa aspiracional",
-  "presence_of_cta": "Baixa — gap crítico de conversão para link da bio",
-  "most_frequent_cta": "Nenhum CTA dominante — gap crítico",
+  "presence_of_questions": "Baixa — oportunidade de elevar diálogo e percepção de proximidade com a audiência.",
+  "presence_of_storytelling": "Alta — conteúdo recente mantém narrativa aspiracional e autoridade implícita.",
+  "presence_of_cta": "N/A — perfil de posicionamento, não de conversão direta.",
+  "most_frequent_cta": "N/A — objetivo do perfil é impressão e autoridade, não ação imediata.",
   "most_used_emojis": [
     "✈️",
     "🌍",
@@ -803,7 +803,7 @@ export const hashtagsAnalysis = [
 
 export const commercialSignals = {
   direct_sales_detected: false,
-  lead_capture_detected: true,
+  lead_capture_detected: false,
   whatsapp_traffic: false,
   site_traffic: true,
   link_bio_active: true,
@@ -812,11 +812,12 @@ export const commercialSignals = {
   testimonials_detected: false,
   scarcity_detected: false,
   urgency_detected: false,
-  products_identified: ['saiba-mais.ai (plataforma/serviço)', 'Consultoria/posicionamento (inferido)'],
-  perceived_ticket: 'Alto (premium positioning)',
-  commercial_maturity: 'Médio-alto — autoridade construída, funil subaproveitado',
-  commercial_intensity_score: 4,
-  is_inferred: true,
+  products_identified: ['Posicionamento empresarial', 'Autoridade de marca pessoal'],
+  perceived_ticket: 'N/A — perfil de posicionamento, não de venda direta',
+  commercial_maturity: 'N/A — objetivo do perfil é construção de impressão e autoridade',
+  commercial_intensity_score: 0,
+  is_inferred: false,
+  positioning_note: 'Perfil usado exclusivamente para posicionamento empresarial. Não há objetivo de conversão, venda ou captacao de leads pelo Instagram.',
 };
 
 export const brandPositioning = {
@@ -847,27 +848,27 @@ export const brandPositioning = {
 // CAMADA 3 — EXECUTIVE SUMMARY
 // ─────────────────────────────────────────────────────────────
 export const executiveSummary = {
-  "overview": "Perfil creator/business de empreendedor serial com posicionamento de autoridade aspiracional. Nicho: empreendedorismo + lifestyle premium + viagens. 61.116 seguidores. 3.2 posts/semana estimados no recorte de 90 dias.",
-  "positioning": "Combinação de mobilidade global + construção empresarial real + prova de conquista. Promessa central: liberdade como resultado de estrutura.",
-  "content_pattern": "Inspiração + autoridade + lifestyle. Falta pilar de conversão explícito. Formatos recentes: {'REELS': 10, 'IMAGE': 7, 'CAROUSEL_ALBUM': 3}.",
-  "best_format": "Nos posts com insights completos, o melhor alcance atual é 228 no post “Parece mentira. Parece IA. Mas é real. Viagens que ficam para sempre.…”.",
-  "best_topic": "Viagem com reflexão curta continua sendo o principal eixo de consistência; posts de autoridade/negócios devem ganhar mais frequência para converter melhor.",
-  "critical_gap": "O perfil sustenta percepção premium, mas ainda apresenta CTA fraco e pouca ponte explícita para oferta/link da bio.",
-  "priority_action": "Transformar 2 posts por semana em ponte comercial leve: história curta → aprendizado de negócio → CTA para saiba-mais.ai.",
+  "overview": "Perfil de posicionamento empresarial de empreendedor serial. Objetivo: criar impressão de autoridade, competência e estilo de vida real para quem visita o perfil. 62.558 seguidores. 3.2 posts/semana no recorte de 90 dias.",
+  "positioning": "Combinação de mobilidade global + construção empresarial real + prova de conquista. Promessa central: liberdade como resultado de estrutura e decisão estratégica.",
+  "content_pattern": "Inspiração + autoridade + lifestyle premium. Formatos recentes: Reels 50%, Imagem 35%, Carrossel 15%. Conteúdo de negócios/govtech aparece em menos de 20% dos posts — oportunidade de elevar percepção de autoridade empresarial.",
+  "best_format": "Carrossel lidera interações médias (22,0). Reel de Istambul lidera em reach e views com insight completo: 397 reach, 563 views, 28 interações.",
+  "best_topic": "Viagem com tese de negócio ou reflexão curta gera maior engajamento. Posts de autoridade empresarial (govtech, sala de operações) ativam audiência mais qualificada.",
+  "critical_gap": "O perfil sustenta percepção premium forte, mas o conteúdo de autoridade empresarial aparece com baixa frequência. A impressão de quem visita é mais de viajante do que de empreendedor serial.",
+  "priority_action": "Aumentar frequência de conteúdo de bastidor empresarial: decisões, empresas, govtech. Meta: 2 posts de autoridade por semana para reforçar a impressão de negócios.",
   "strengths": [
-    "Autoridade real na bio: 7 empresas, 2 vendidas e 37 países.",
-    "Estética premium consistente com narrativa de liberdade.",
-    "Reel de Istambul retornou o melhor insight completo da rodada: 397 de reach, 563 views e 28 interações."
+    "Autoridade real e verificável na bio: 7 empresas, 2 vendidas, 37 países, govtech.",
+    "Estética premium consistente — perfil transmite vida de alto padrão com credibilidade.",
+    "Reel de Istambul: melhor combinação de reach (397), views (563) e interações (28) da rodada."
   ],
   "weaknesses": [
-    "CTA explícito segue baixo frente ao tamanho da audiência.",
-    "Conteúdo de viagem pura ainda gera admiração passiva, mas pouca conversão medida.",
-    "Meta Ads ficou indisponível nesta atualização, impedindo leitura confiável de mídia paga."
+    "Conteúdo de viagem pura domina o feed — dilui a percepção de autoridade empresarial.",
+    "Posts de negócios/govtech aparecem em menos de 20% do conteúdo recente.",
+    "Meta Ads indisponível nesta atualização — sem leitura de mídia paga."
   ],
   "opportunities": [
-    "Converter dois posts por semana em ponte direta para saiba-mais.ai.",
-    "Usar o formato do Reel de Istambul como matriz: descoberta + contexto + aprendizado.",
-    "Criar Stories diários para aquecer audiência sem alterar a estética do feed."
+    "Elevar frequência de conteúdo de bastidor empresarial para fortalecer impressão de empreendedor.",
+    "Usar o formato do Reel de Istambul como matriz: descoberta + contexto + aprendizado de negócio.",
+    "Stories diários de bastidor de decisão para manter presença sem alterar a estética do feed."
   ]
 };
 
@@ -879,28 +880,28 @@ export const scorecards: Scorecard[] = [
     "key": "authority",
     "label": "Autoridade percebida",
     "value": 8,
-    "interpretation": "Boa prova social na bio e narrativa de construção empresarial.",
+    "interpretation": "Prova social forte na bio: 7 empresas, 2 vendidas, govtech, 37 países. Perfil transmite credibilidade real.",
     "tone": "positive"
   },
   {
-    "key": "conversion",
-    "label": "Conversão orgânica",
-    "value": 5,
-    "interpretation": "CTA ainda baixo frente ao tamanho da audiência.",
-    "tone": "warning"
+    "key": "impression",
+    "label": "Impressão de marca",
+    "value": 7,
+    "interpretation": "Estética premium consistente. Percepção de vida de alto padrão com lastro real — mas conteúdo empresarial aparece pouco.",
+    "tone": "positive"
   },
   {
     "key": "consistency",
     "label": "Consistência recente",
     "value": 7,
-    "interpretation": "3.2 posts/semana nos últimos 90 dias.",
+    "interpretation": "3.2 posts/semana nos últimos 90 dias. Cadencia sólida para posicionamento de longo prazo.",
     "tone": "positive"
   },
   {
     "key": "data",
     "label": "Qualidade dos dados",
     "value": 6,
-    "interpretation": "Boa leitura de posts; funil e stories ainda limitados pela API.",
+    "interpretation": "Boa leitura de posts e interações. Stories e histórico demográfico ainda limitados pela API.",
     "tone": "neutral"
   }
 ];
@@ -968,7 +969,7 @@ export const dashboardData = {
       profileStrength: executiveSummary.overview,
       instagramReading: 'Coleta 01/07/2026: insights reais de todos os 20 posts. Média de 16,4 interações, reach médio 320, views médios 554. Melhor post: carrossel Quinta 11h com 49 interações, reach 604, 1.426 views. Maior reach: imagem Domingo 12h com 855 reach, 1.563 views. Carrossel lidera formatos: avg 22 interações vs 15,2 vídeo vs 14,1 imagem.',
       adsReading: 'Meta Ads indisponível nesta atualização: o conector não retornou contas, campanhas ou insights válidos. Nenhuma métrica foi estimada.',
-      criticalPoint: 'Gap crítico permanece: conteúdo tem autoridade, mas CTA explícito ainda é baixo. Sem CTA e sem rastreamento consistente, alcance orgânico e tráfego pago não viram receita medida.',
+      criticalPoint: 'O perfil transmite autoridade e estética premium com consistência. Gap principal: conteúdo de autoridade empresarial aparece em menos de 20% dos posts. A impressão de empreendedor serial precisa ser reforçada com mais bastidores de empresa, govtech e decisões.',
     },
     kpis: [
       { label: 'Seguidores', value: '62.558', delta: 'coleta 01/07/2026 09:00', tone: 'positive' as const },
@@ -977,23 +978,23 @@ export const dashboardData = {
       { label: 'Anúncios Meta', value: 'Indisponível', delta: 'conector sem retorno válido', tone: 'warning' as const },
     ],
     conversion: [
-      { label: 'ER médio', value: '0.0262%', note: 'Interações médias (16,4) / seguidores (62.558) — todos os 20 posts' },
+      { label: 'Engajamento médio', value: '0.0262%', note: 'Interações médias (16,4) / seguidores (62.558) — todos os 20 posts' },
       { label: 'Reach médio', value: '320', note: 'Média real dos 20 posts com insights completos' },
       { label: 'Views médios', value: '554', note: 'Média real dos 20 posts com insights completos' },
     ],
 alerts: [
-      'Melhor dia real: Quinta (avg 30 interações). Melhor hora: 11h. Janela ouro: Quinta às 10-11h com carrossel.',
+      'Melhor dia real: Quinta (avg 30 interações). Janela ouro: Quinta 10-11h com carrossel de tese empresarial.',
       'Maior reach do período: imagem Domingo 12h com 855 reach e 1.563 views. Carrossel 04/06 lidera interações com 49.',
-      'Carrossel é o formato com melhor média de interações (22,0) e views (671). Priorizar carrosséis na Quinta.',
-      'Gap de CTA: menos de 30% dos posts têm chamada para ação — maior oportunidade imediata.',
-      'Meta Ads indisponível nesta rodada; manter bloco sem métricas até retorno válido do conector.',
+      'Carrossel é o formato com melhor média de interações (22,0). Posts de autoridade empresarial lideram authority_score (9/10).',
+      'Gap de posicionamento: conteúdo de autoridade empresarial representa menos de 20% do feed. Meta: elevar para 40%.',
+      'Meta Ads indisponível nesta rodada — sem métricas de mídia paga.',
     ],
   },
   deepAnalysis: {
     positioning: {
       seenAs: 'Empreendedor aspiracional com lastro real — alguém que construiu empresas de verdade (govtech, 7 empresas, 2 vendidas) enquanto viaja o mundo. A combinação de mobilidade + conquista + trilinguismo cria uma percepção de autoridade premium rara no nicho.',
-      tension: 'O perfil inspira muito e converte pouco. O conteúdo de viagem pura atrai admiração passiva. O conteúdo de negócios/autoridade (sala de operações, govtech) gera engajamento mais qualificado mas aparece menos de 20% das vezes.',
-      misalignment: 'A proposta central (liberdade como estratégia) está na bio mas não nos posts. Menos de 30% dos posts têm CTA explícito. O link da bio (saiba-mais.ai) não é mencionado em nenhum post analisado.',
+      tension: 'O perfil inspira muito e o conteúdo de viagem pura domina o feed (70%). O conteúdo de negócios/autoridade (sala de operações, govtech) gera a impressão mais qualificada mas aparece menos de 20% das vezes. A percepção de quem visita tende a ser de viajante premium, não de empreendedor serial.',
+      misalignment: 'A proposta central (liberdade como estratégia, 7 empresas, govtech) está na bio mas não se reflete na proporção do conteúdo. Posts de autoridade empresarial precisam aparecer com mais frequência para alinhar a impressão do feed com a identidade real do perfil.',
     },
     formatPerformance: [
       { format: 'Reels', reach: '257 no Reel de Montenegro', depth: 'Alta variação — depende do argumento', engagement: 'Montenegro: 9 interações · Reach 196 · 267 views', followers: 'N/A', clicks: 'N/A', signal: 'Melhor formato para escala quando a tese aparece cedo. Média disponível: 303 views no Reel com insight completo.' },
@@ -1009,7 +1010,7 @@ alerts: [
         : i === 1 ? 'Âncora emocional real (neto). Melhor post de imagem do período — prova que conexão humana supera estética de viagem.'
         : i === 2 ? 'Viagem com tese simples de contraste. Carrossel com maior tração visual: 841 views.'
         : i === 3 ? 'Reel de viagem com descoberta clara. Melhor Reel por interação e alcance no recorte recente.'
-        : 'Reflexão curta com boa resposta para carrossel; oportunidade de incluir CTA de comentário/salvamento.',
+        : 'Reflexão curta com boa resposta para carrossel. Reforça percepção de profundidade e autoridade emocional.',
     })),
   },
   audience: {
@@ -1025,23 +1026,23 @@ alerts: [
     whatIsWrong: executiveSummary.weaknesses,
     opportunities: executiveSummary.opportunities,
     weeklyPlan: [
-      { type: 'Reel', title: 'Experiência premium com tese', hook: 'Entrei achando que era X. Saí entendendo Y.', concept: 'Replicar estrutura do Reel de Istambul: descoberta + surpresa + aprendizado de negócio.', structure: 'Abertura de descoberta → surpresa → tese de negócio → fechamento.', cta: '"Qual foi sua última descoberta que mudou sua perspectiva? Comenta."' },
-      { type: 'Image', title: 'Âncora emocional real', hook: 'O silêncio te reorganiza.', concept: 'Replicar estrutura de frase curta memorável com imagem forte e ligação direta à liberdade estratégica.', structure: 'Foto forte → frase curta → conexão com propósito → CTA de engajamento.', cta: '"Qual frase reorganizou sua semana? Comenta."' },
-      { type: 'Carrossel', title: 'Contraste + tese', hook: '[Lugar] não é sobre [o óbvio]. É sobre [a tese].', concept: 'Replicar estrutura do Marrocos: visual impactante + frase de contraste + tese de vida/negócio.', structure: 'Slide 1: visual forte → Slide 2-4: desenvolvimento → Slide final: CTA.', cta: '"Salva para lembrar quando precisar de perspectiva."' },
-      { type: 'Stories', title: 'Bastidor de decisão diário', hook: 'Uma decisão que parece pequena e muda o ano inteiro.', concept: 'Stories diários com bastidores de decisão, viagem ou empresa.', structure: 'Story 1: contexto → Story 2: decisão → Story 3: consequência + CTA.', cta: '"Quer ver mais bastidores assim?"' },
-      { type: 'Reel', title: 'Argumento nos 2 primeiros segundos', hook: '[Tese direta e afiada]', concept: 'Testar Reels onde a tese aparece antes da paisagem — validar hipótese de retenção.', structure: 'Tese → evidência visual → desenvolvimento → fechamento com CTA.', cta: '"Link na bio para [benefício específico]."' },
+      { type: 'Reel', title: 'Experiência premium com tese', hook: 'Entrei achando que era X. Saí entendendo Y.', concept: 'Replicar estrutura do Reel de Istambul: descoberta + surpresa + aprendizado de negócio. Formato que melhor combina alcance e impressão de autoridade.', structure: 'Abertura de descoberta → surpresa → tese de negócio → fechamento com identidade.', cta: '' },
+      { type: 'Image', title: 'Âncora emocional real', hook: 'O silêncio te reorganiza.', concept: 'Frase curta memorável com imagem forte e ligação direta à liberdade estratégica. Gera impressão de profundidade e reflexão.', structure: 'Foto forte → frase curta → conexão com propósito → fechamento reflexivo.', cta: '' },
+      { type: 'Carrossel', title: 'Contraste + tese de negócio', hook: '[Lugar] não é sobre [o óbvio]. É sobre [a tese].', concept: 'Visual impactante + frase de contraste + tese de vida/negócio. Melhor formato por interações médias (22,0).', structure: 'Slide 1: visual forte → Slide 2-4: desenvolvimento → Slide final: fechamento com identidade.', cta: '' },
+      { type: 'Stories', title: 'Bastidor de decisão diário', hook: 'Uma decisão que parece pequena e muda o ano inteiro.', concept: 'Stories diários com bastidores de decisão, viagem ou empresa. Reforça impressão de autoridade no dia a dia.', structure: 'Story 1: contexto → Story 2: decisão → Story 3: consequência e aprendizado.', cta: '' },
+      { type: 'Reel', title: 'Argumento nos 2 primeiros segundos', hook: '[Tese direta e afiada]', concept: 'Reels onde a tese aparece antes da paisagem — valida retenção e reforça percepção de empreendedor que pensa enquanto viaja.', structure: 'Tese → evidência visual → desenvolvimento → fechamento com identidade.', cta: '' },
     ],
     abTests: [
-      { name: 'CTA explícito vs sem CTA', hypothesis: 'Posts com CTA explícito ("link na bio", "comenta X") geram mais cliques e comentários do que posts sem CTA. Hipótese baseada no gap atual: <30% dos posts têm CTA.', measure: 'Comparar comentários, cliques e salvamentos entre posts com e sem CTA nos próximos 30 dias.' },
-      { name: 'Âncora emocional real vs viagem pura', hypothesis: 'Posts com âncora emocional real ou prova concreta tendem a gerar mais interações do que viagem pura. Nesta coleta, frase curta emocional lidera interações no recorte com insight completo.', measure: 'Comparar total_interactions, comentários e reach nos próximos 3 ciclos.' },
-      { name: 'Trilinguismo vs português apenas', hypothesis: 'Posts com legenda em PT/EN/ES ampliam alcance internacional. Testar sistematicamente.', measure: 'Comparar reach médio entre posts trilíngues e posts apenas em português nos próximos 30 dias.' },
+      { name: 'Autoridade empresarial vs viagem pura', hypothesis: 'Posts com bastidor empresarial ou tese de negócio geram percepção mais qualificada e mais interações do que viagem pura. Nesta coleta, govtech/sala de operações lidera authority_score (9/10).', measure: 'Comparar total_interactions e reach entre posts de autoridade e posts de viagem pura nos próximos 3 ciclos.' },
+      { name: 'Âncora emocional real vs estética pura', hypothesis: 'Posts com âncora emocional real (neto, decisão, conquista) geram mais interações do que posts de estética pura. Nesta coleta, frase curta emocional lidera interações.', measure: 'Comparar total_interactions e comentários nos próximos 3 ciclos.' },
+      { name: 'Trilinguismo vs português apenas', hypothesis: 'Posts com legenda em PT/EN/ES ampliam alcance internacional e reforçam percepção de empreendedor global.', measure: 'Comparar reach médio entre posts trilíngues e posts apenas em português nos próximos 30 dias.' },
     ],
     autoAlerts: [
       'ATIVO: Monitorar variação semanal de seguidores nas próximas 2 semanas.',
-      'ATIVO: Campanha Meta com entrega mensurável, mas Valor usado retornou R$0. Validar cobrança, UTMs e rastreamento antes de novo investimento.',
+      'Meta Ads indisponível nesta rodada — sem dados de mídia paga.',
       'Alerta quando ER médio cair abaixo de 0.02% por duas semanas seguidas.',
       'Alerta quando Reel ficar abaixo de 300 views — abaixo do patamar mínimo saudável atual.',
-      'Alerta quando post sem CTA superar post com CTA em interações (validar hipótese).',
+      'Monitorar proporção de conteúdo de autoridade vs lifestyle: meta é 40% autoridade empresarial.',
     ],
   },
   metaAds,
@@ -1101,7 +1102,7 @@ export const timingAnalysis = {
   { "day": "Sábado", "recommended": true, "score": 7, "label": "FORTE", "reason": "Avg 19.7 interações em 3 posts. Forte para Reels às 19h." },
   { "day": "Domingo", "recommended": true, "score": 5, "label": "MÉDIO", "reason": "Avg 14.5 interações em 4 posts. Melhor reach do período às 12h." }
 ],
-  postingFrequency: { current: '3.2 posts/semana', recommended: '4-5 posts/semana', gap: 'Aumentar cadência com consistência e CTA por post.', storiesRecommended: '1-2 Stories/dia', storiesCurrent: 'Não monitorado' },
+  postingFrequency: { current: '3.2 posts/semana', recommended: '4-5 posts/semana', gap: 'Aumentar cadência com consistência e elevar proporção de conteúdo de autoridade empresarial.', storiesRecommended: '1-2 Stories/dia', storiesCurrent: 'Não monitorado' },
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -1150,79 +1151,79 @@ export const storiesData = {
 // ─────────────────────────────────────────────────────────────
 export const strategistInsights = {
   overallDiagnosis: {
-    grade: 'C+',
-    summary: 'Perfil com autoridade real e estética forte, mas conversão próxima de zero. Você tem o produto, falta o funil.',
-    mainProblem: 'Você está construindo audiência passiva. 61.165 seguidores que admiram mas não agem. O problema não é alcance — é ausência de CTA, funil e consistência estratégica.',
+    grade: 'B+',
+    summary: 'Perfil de posicionamento empresarial com autoridade real e estética premium. O objetivo é criar impressão de competência, vida de alto padrão e credibilidade empresarial — e isso está sendo entregue.',
+    mainProblem: 'O feed é dominado por viagem pura (70%). A impressão de quem visita é mais de viajante do que de empreendedor serial com 7 empresas e govtech. O conteúdo de autoridade empresarial precisa aparecer com mais frequência para reforçar a percepção correta.',
   },
   criticalActions: [
     {
       priority: 1,
-      urgency: 'IMEDIATO',
-      action: 'Adicionar CTA em 100% dos posts',
-      detail: 'Hoje menos de 30% dos seus posts têm chamada para ação. Isso significa que 70% do seu conteúdo não gera nenhum movimento. CTA mínimo: "Comenta X", "Salva para quando precisar", "Link na bio para Y".',
-      expectedImpact: '+40-60% em comentários e cliques',
-      howTo: 'Última linha de toda legenda = CTA. Sem exceção. Teste 3 formatos: pergunta direta, comando de salvar, link na bio.',
+      urgency: 'ESTA SEMANA',
+      action: 'Publicar 2 posts de bastidor empresarial por semana',
+      detail: 'Posts de autoridade (govtech, sala de operações, decisões empresariais) geram a impressão mais qualificada. Hoje são menos de 20% do conteúdo. Elevar para 40% muda a percepção de quem visita o perfil.',
+      expectedImpact: 'Reforço significativo da percepção de empreendedor serial vs viajante.',
+      howTo: 'Toda semana: 1 post de bastidor de empresa/decisão + 1 post de viagem com tese de negócio. Alterne os formatos.',
     },
     {
       priority: 2,
       urgency: 'ESTA SEMANA',
-      action: 'Criar série semanal recorrente',
-      detail: 'Perfis que crescem têm séries. Você precisa de um formato que sua audiência espere toda semana. Sugestão: "Decisão da semana" — toda quarta, um bastidor de uma decisão empresarial real.',
-      expectedImpact: '+25-35% em seguidores/mês por consistência',
+      action: 'Criar série semanal de autoridade recorrente',
+      detail: 'Perfis de posicionamento forte têm séries que a audiência espera. Sugestão: "Decisão da semana" — toda quinta, um bastidor de uma decisão empresarial real. Reforça consistência e percepção de liderança.',
+      expectedImpact: 'Audiência passa a associar o perfil a decisões e liderança empresarial.',
       howTo: 'Escolha um formato. Publique 4 semanas seguidas. Meça. Ajuste. Não mude o formato antes de 4 semanas.',
     },
     {
       priority: 3,
       urgency: 'ESTA SEMANA',
-      action: 'Ativar Stories diários',
-      detail: 'Você não tem presença em Stories. Isso é invisibilidade no algoritmo. Perfis sem Stories diários perdem posição no feed de seguidores. Mínimo: 1 Story/dia.',
-      expectedImpact: '+15-20% de alcance orgânico nos posts',
-      howTo: 'Regra simples: toda vez que publicar um post, publique 1 Story relacionado. Bastidor, contexto ou enquete.',
+      action: 'Ativar Stories diários de bastidor',
+      detail: 'Stories de bastidor empresarial (decisões, viagens de trabalho, bastidores de empresa) reforçam a impressão de autoridade no dia a dia. Perfis sem Stories diários perdem visibilidade no algoritmo.',
+      expectedImpact: '+15-20% de alcance orgânico nos posts + reforço diário da percepção de autoridade.',
+      howTo: 'Regra simples: toda vez que publicar um post, publique 1 Story de bastidor relacionado. Contexto, decisão ou reflexao.',
     },
     {
       priority: 4,
-      urgency: 'PRÓXIMOS 7 DIAS',
-      action: 'Mencionar o link da bio em todo Reel',
-      detail: 'O link saiba-mais.ai não aparece em nenhum post analisado. Você tem um ativo de conversão invisível. Cada Reel sem menção ao link é receita desperdiçada.',
-      expectedImpact: '+50-100 cliques/semana no link da bio',
-      howTo: 'Nos últimos 3 segundos de todo Reel: "Acessa o link na bio para [benefício específico]". Nos carrosséis: último slide = CTA com link.',
+      urgency: 'PRÓXIMOS 14 DIAS',
+      action: 'Criar carrossel manifesto de posicionamento',
+      detail: 'Um carrossel de 8-10 slides explicando sua filosofia de liberdade estratégica e como você constrói empresas enquanto viaja o mundo. Conteúdo evergreen que define a percepção de quem visita o perfil.',
+      expectedImpact: 'Potencial de 3-5x o alcance médio. Define a narrativa central do perfil para novos visitantes.',
+      howTo: 'Slide 1: "A maioria das pessoas acha que liberdade é sorte. Errado." → Slides 2-9: seus princípios e provas reais → Slide 10: fechamento com identidade.',
     },
     {
       priority: 5,
       urgency: 'PRÓXIMOS 14 DIAS',
-      action: 'Criar carrossel manifesto sobre liberdade estratégica',
-      detail: 'Você tem a tese mais forte do seu nicho — "liberdade é estratégia" — mas ela não está em nenhum post. Um carrossel de 8-10 slides explicando sua filosofia pode viralizar e atrair seguidores qualificados.',
-      expectedImpact: 'Potencial de 3-5x o alcance médio. Conteúdo evergreen que continua gerando seguidores por meses.',
-      howTo: 'Slide 1: "A maioria das pessoas acha que liberdade é sorte. Errado." → Slides 2-9: seus 7 princípios → Slide 10: CTA + link.',
+      action: 'Criar destaque "Empresas" e "Bastidores" no perfil',
+      detail: 'Novos visitantes decidem a impressão em 8 segundos. Você tem 7 empresas, 2 vendidas, govtech, 37 países — mas isso não aparece de forma visual. Destaques com provas reais reforçam a percepção de autoridade imediatamente.',
+      expectedImpact: 'Impressão de empreendedor serial fica imediata para qualquer visitante.',
+      howTo: 'Criar 5-8 Stories com: empresa, resultado, número, foto. Salvar em destaque "Empresas" e "Bastidores".',
     },
     {
       priority: 6,
       urgency: 'PRÓXIMOS 30 DIAS',
-      action: 'Criar destaque "Prova Social" no perfil',
-      detail: 'Novos visitantes decidem seguir em 8 segundos. Você tem 7 empresas, 2 vendidas, govtech, 37 países — mas isso não aparece de forma visual no perfil. Um destaque com prints, resultados e conquistas converte visitante em seguidor.',
-      expectedImpact: '+10-15% na taxa de conversão de visitante para seguidor',
-      howTo: 'Criar 5-8 Stories com: empresa, resultado, número, foto. Salvar em destaque "Resultados" ou "Empresas".',
+      action: 'Elevar frequência de conteúdo trilingual',
+      detail: 'Trilinguismo (PT/EN/ES) é um diferencial raro que amplia alcance internacional e reforça percepção de empreendedor global. Testar sistematicamente legendas em 3 idiomas nos posts de autoridade.',
+      expectedImpact: 'Ampliação de alcance internacional + reforço da percepção de empreendedor global.',
+      howTo: 'Nos posts de autoridade: legenda em PT + versão curta em EN no primeiro comentário. Medir variação de reach.',
     },
   ],
   contentFormula: {
-    title: 'Fórmula que funciona para @ricardoimp',
-    formula: 'Cenário premium + âncora emocional real + tese de negócio + CTA direto',
-    proof: 'Nesta coleta, Montenegro liderou Reach entre posts com insight completo e “O silêncio te reorganiza” liderou interações nesse recorte. A hipótese prática: tese curta + imagem forte + CTA tende a superar viagem pura sem chamada.',
-    antiFormula: 'Reel de movimento puro sem argumento = views sem ação. LA→LV e Canadá provam isso.',
+    title: 'Fórmula de posicionamento para @ricardoimp',
+    formula: 'Cenário premium + âncora emocional real + tese de negócio ou decisão empresarial',
+    proof: 'Reel de Istambul liderou reach (397) e views (563). Post de govtech/sala de operações lidera authority_score (9/10). A combinação de cenario forte + tese de negócio é a fórmula que entrega a impressão correta.',
+    antiFormula: 'Reel de movimento puro sem argumento = views sem impressão de autoridade. Viagem pura sem tese dilui a percepção de empreendedor.',
   },
   growthTargets: {
-    followers30d: '+500 seguidores em 30 dias (meta conservadora com estratégia ativa)',
+    followers30d: '+500 seguidores em 30 dias (meta conservadora com conteúdo de autoridade ativo)',
     followers90d: '+2.000 seguidores em 90 dias (com série semanal + Stories diários)',
-    erTarget: '0,08% ER médio (hoje 0,022% — meta realista em 60 dias)',
-    reachTarget: '600 Reach médio por post (hoje 166 nos 5 posts com insight completo)',
+    erTarget: '0,08% ER médio (hoje 0,026% — meta realista em 60 dias)',
+    reachTarget: '600 Reach médio por post (hoje 320 na média dos 20 posts)',
   },
   weeklyChecklist: [
-    { day: 'Domingo', task: 'Planejar 4-5 posts da semana. Definir CTA de cada um.' },
-    { day: 'Segunda', task: 'Story de bastidor ou enquete. Sem post de feed.' },
-    { day: 'Quarta', task: 'Post principal da semana (Reel ou carrossel). Melhor dia.' },
-    { day: 'Quinta', task: 'Story de engajamento (caixa de perguntas).' },
+    { day: 'Domingo', task: 'Planejar 4-5 posts da semana. Definir quais são de autoridade empresarial e quais são de lifestyle.' },
+    { day: 'Segunda', task: 'Story de bastidor ou reflexão de decisão. Sem post de feed.' },
+    { day: 'Quarta', task: 'Post de autoridade empresarial (bastidor, govtech, decisão). Melhor dia para impressão qualificada.' },
+    { day: 'Quinta', task: 'Melhor dia real (avg 30 interações): carrossel com tese de negócio ou viagem com aprendizado.' },
     { day: 'Sexta', task: 'Post emocional ou de autoridade. Segundo melhor dia.' },
-    { day: 'Sábado', task: 'Reel premium ou carrossel de viagem com tese. Melhor dia para Reels.' },
+    { day: 'Sábado', task: 'Reel premium ou carrossel de viagem com tese. Melhor dia para Reels (avg 19.7 interações).' },
     { day: 'Domingo', task: 'Story reflexivo + análise rápida do que performou na semana.' },
   ],
 };
@@ -1233,48 +1234,48 @@ export const strategistInsights = {
 // ─────────────────────────────────────────────────────────────
 export const sponsoredGuide = {
   currentStatus: {
-    campaign: 'Traffic Campaign',
-    status: 'ATIVA — COM ENTREGA, MAS VALOR USADO R$0 NA API',
-    budget: 'Não retornado',
-    objective: 'OUTCOME_TRAFFIC',
-    problem: 'A campanha entregou 29.545 impressões e 666 Cliques (todos), mas o Valor usado retornou R$0. Antes de escalar, é preciso validar cobrança, evento de destino, UTMs e consistência do Ads Manager.',
-    recommendation: 'MANTER EM OBSERVAÇÃO. Não escalar orçamento antes de validar gasto, rastreamento e qualidade do tráfego.',
+    campaign: 'Indisponível',
+    status: 'INDISPONÍVEL — CONECTOR META ADS SEM RETORNO VÁLIDO',
+    budget: 'N/A',
+    objective: 'N/A',
+    problem: 'O conector Meta Ads não retornou dados válidos nesta atualização. Nenhuma métrica foi estimada.',
+    recommendation: 'Aguardar retorno válido do conector antes de qualquer análise de mídia paga.',
   },
   whatToSponsor: [
     {
       rank: 1,
-      content: 'Post com tese curta emocional (melhor sinal nos insights completos recentes)',
-      why: 'Já provou autoridade e intenção de negócio organicamente. Patrocinar prova real tende a atrair audiência mais qualificada do que viagem pura.',
+      content: 'Post com tese curta emocional + autoridade empresarial',
+      why: 'Conteúdo que combina cenário forte com tese de negócio já provou autoridade organicamente. Patrocinar amplifica o alcance da impressão de empreendedor serial.',
       objective: 'REACH',
       budget: 'R$25-50/dia por 5-7 dias',
-      expectedResult: '15.000-30.000 alcance adicional',
+      expectedResult: '15.000-30.000 alcance adicional para audiência qualificada',
       audience: 'Empreendedores 30-50 anos, Brasil + Portugal + Argentina',
     },
     {
       rank: 2,
-      content: 'Post do Neto (âncora emocional — 40 interações)',
-      why: 'Conteúdo emocional com alta taxa de comentários. Ideal para engajamento e novos seguidores.',
+      content: 'Post do Neto (âncora emocional — 24 interações)',
+      why: 'Conteúdo emocional com alta taxa de interações. Reforça percepção humana e acessível do empreendedor.',
       objective: 'ENGAGEMENT',
       budget: 'R$20-35/dia por 5 dias',
-      expectedResult: '+200-400 interações, +50-100 seguidores',
+      expectedResult: '+200-400 interações, +50-100 novos seguidores qualificados',
       audience: 'Homens 35-55, empreendedores, pais, Brasil',
     },
     {
       rank: 3,
       content: 'Carrossel manifesto (a criar — "Liberdade é estratégia")',
-      why: 'Conteúdo de autoridade evergreen. Ideal para atrair seguidores qualificados que se identificam com a tese.',
-      objective: 'REACH + FOLLOWS',
+      why: 'Conteúdo de posicionamento evergreen. Amplifica a percepção de autoridade para novos visitantes do perfil.',
+      objective: 'REACH',
       budget: 'R$50-100/dia por 7-10 dias',
-      expectedResult: '+500-1.000 seguidores qualificados',
-      audience: 'Empreendedores 28-50, interesse em liberdade financeira, negócios, viagens',
+      expectedResult: '+500-1.000 seguidores qualificados que se identificam com a tese',
+      audience: 'Empreendedores 28-50, interesse em liberdade, negócios, viagens',
     },
     {
       rank: 4,
       content: 'Reel de bastidor empresarial (a criar)',
-      why: 'Conteúdo de bastidor com prova de resultado converte melhor para tráfego qualificado para o link da bio.',
-      objective: 'TRAFFIC (link na bio)',
+      why: 'Bastidor com prova real (govtech, decisão, empresa) é o formato mais eficaz para reforçar impressão de empreendedor serial para novos públicos.',
+      objective: 'REACH',
       budget: 'R$30-60/dia por 7 dias',
-      expectedResult: '300-600 cliques no link da bio',
+      expectedResult: '20.000-40.000 alcance qualificado',
       audience: 'Interessados em empreendedorismo, IA, govtech, 25-45 anos',
     },
   ],
@@ -1282,12 +1283,12 @@ export const sponsoredGuide = {
     {
       step: 1,
       title: 'Escolha o conteúdo certo',
-      detail: 'Nunca patrocine conteúdo que não performou organicamente. Se não funcionou de graça, dinheiro não resolve. Regra: só patrocinar post com ER acima da média do perfil (>0.031%).',
+      detail: 'Só patrocine conteúdo que já performou organicamente. Regra: post com ER acima da média do perfil (>0.026%) ou que já gerou impressão de autoridade mensurável.',
     },
     {
       step: 2,
-      title: 'Defina o objetivo correto',
-      detail: 'REACH: para novos seguidores e visibilidade. ENGAGEMENT: para comentários e interações. TRAFFIC: para cliques no link. Nunca use LINK_CLICKS em conteúdo de topo de funil.',
+      title: 'Defina o objetivo de posicionamento',
+      detail: 'REACH: para ampliar alcance da impressão de autoridade. ENGAGEMENT: para reforçar percepção de proximidade. Objetivo do perfil é posicionamento — priorizar REACH sobre tráfego.',
     },
     {
       step: 3,
@@ -1302,19 +1303,19 @@ export const sponsoredGuide = {
     {
       step: 5,
       title: 'Meça os resultados certos',
-      detail: 'Para REACH: CPM (custo por mil). Para ENGAGEMENT: custo por interação. Para TRAFFIC: CPC (custo por clique). Benchmark: CPM < R$8, CPC < R$1,50.',
+      detail: 'Para REACH: CPM (custo por mil impressoes). Para ENGAGEMENT: custo por interação. Benchmark de posicionamento: CPM < R$8.',
     },
     {
       step: 6,
-      title: 'Escale o que funciona',
-      detail: 'Se uma campanha tiver CPM < R$6 ou CPC < R$1, dobre o orçamento. Se estiver acima de R$12 CPM, pause e teste nova criativa ou audiência.',
+      title: 'Otimize o que funciona',
+      detail: 'Se uma campanha tiver CPM < R$6, aumente o orçamento. Se estiver acima de R$12 CPM, pause e teste nova criativa ou audiência.',
     },
   ],
   monthlyBudgetSuggestion: {
-    conservative: 'R$300/mês — 2 campanhas de R$150 cada',
-    moderate: 'R$600/mês — 3-4 campanhas rotativas',
-    aggressive: 'R$1.200/mês — campanha sempre ativa + testes A/B',
-    recommendation: 'Começar com R$300/mês. Testar 2 conteúdos diferentes. Escalar o que funcionar no mês seguinte.',
+    conservative: 'R$300/mês — 2 campanhas de posicionamento de R$150 cada',
+    moderate: 'R$600/mês — 3-4 campanhas rotativas de autoridade',
+    aggressive: 'R$1.200/mês — campanha de posicionamento sempre ativa + testes A/B de criativo',
+    recommendation: 'Começar com R$300/mês. Testar 2 conteúdos de autoridade diferentes. Otimizar o que gerar melhor CPM no mês seguinte.',
   },
   audienceSegments: [
     { name: 'Core', description: 'Empreendedores brasileiros 30-50 anos', size: '2-5M', priority: 'Alta' },
