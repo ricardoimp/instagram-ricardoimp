@@ -959,7 +959,7 @@ export const dataQuality = {
 export const dashboardData = {
   meta: {
     profile: profileIdentity,
-    lastUpdated: '01/07/2026 às 20:15',
+    lastUpdated: '01/07/2026 às 09:00',
     dashboardCadence: 'Atualização semanal aos domingos',
     designPhilosophy: 'Editorial executivo cinematográfico',
   },
@@ -971,9 +971,9 @@ export const dashboardData = {
       criticalPoint: 'Gap crítico permanece: conteúdo tem autoridade, mas CTA explícito ainda é baixo. Sem CTA e sem rastreamento consistente, alcance orgânico e tráfego pago não viram receita medida.',
     },
     kpis: [
-      { label: 'Seguidores', value: '61.021', delta: 'coleta 01/07/2026', tone: 'positive' as const },
-      { label: 'Seguindo', value: '299', delta: 'ratio 204.1:1', tone: 'positive' as const },
-      { label: 'Publicações', value: '3.022', delta: '3.2 posts/semana', tone: 'positive' as const },
+      { label: 'Seguidores', value: '62.558', delta: 'coleta 01/07/2026 09:00', tone: 'positive' as const },
+      { label: 'Seguindo', value: '300', delta: 'ratio 208.5:1', tone: 'positive' as const },
+      { label: 'Publicações', value: '3.028', delta: '3.2 posts/semana', tone: 'positive' as const },
       { label: 'Anúncios Meta', value: 'Indisponível', delta: 'conector sem retorno válido', tone: 'warning' as const },
     ],
     conversion: [
