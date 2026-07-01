@@ -1,7 +1,7 @@
 // Script Mestre — Auditoria Completa de Perfil @ricardoimp
 // Estrutura de 4 camadas: raw_data | analytics_tables | executive_summary | scorecards
-// Última coleta: 01/07/2026 às 20:15 — Instagram MCP
-// 20 posts recentes analisados | insights completos retornados nesta rodada para 2 posts; demais lacunas preservadas como indisponíveis
+// Última coleta: 01/07/2026 às 09:00 — Instagram MCP
+// 20 posts recentes | insights completos para todos os 20 posts via conector nativo
 
 // ─────────────────────────────────────────────────────────────
 // TIPOS
@@ -966,7 +966,7 @@ export const dashboardData = {
   executive: {
     summary: {
       profileStrength: executiveSummary.overview,
-      instagramReading: 'Nos 20 posts recentes (coleta 01/07/2026), insights completos retornaram para 2 posts: carrossel de 04/06 registrou Reach 494, 1.260 views, 46 interações (melhor do período); imagem de 02/06 registrou Reach 164, 324 views, 5 interações. Carrossel lidera como melhor formato com média de 18,2 interações. Melhor horário real observado nas terças: 19h31 com 19 interações.',
+      instagramReading: 'Coleta 01/07/2026: insights reais de todos os 20 posts. Média de 16,4 interações, reach médio 320, views médios 554. Melhor post: carrossel Quinta 11h com 49 interações, reach 604, 1.426 views. Maior reach: imagem Domingo 12h com 855 reach, 1.563 views. Carrossel lidera formatos: avg 22 interações vs 15,2 vídeo vs 14,1 imagem.',
       adsReading: 'Meta Ads indisponível nesta atualização: o conector não retornou contas, campanhas ou insights válidos. Nenhuma métrica foi estimada.',
       criticalPoint: 'Gap crítico permanece: conteúdo tem autoridade, mas CTA explícito ainda é baixo. Sem CTA e sem rastreamento consistente, alcance orgânico e tráfego pago não viram receita medida.',
     },
@@ -977,14 +977,15 @@ export const dashboardData = {
       { label: 'Anúncios Meta', value: 'Indisponível', delta: 'conector sem retorno válido', tone: 'warning' as const },
     ],
     conversion: [
-      { label: 'ER disponível', value: '0.0141%', note: 'Interações médias / seguidores nos 20 posts recentes' },
-      { label: 'Reach disponível', value: '494', note: 'Melhor post com insight completo — carrossel 04/06' },
-      { label: 'Views disponíveis', value: '1.260', note: 'Melhor post com insight completo — carrossel 04/06' },
+      { label: 'ER médio', value: '0.0262%', note: 'Interações médias (16,4) / seguidores (62.558) — todos os 20 posts' },
+      { label: 'Reach médio', value: '320', note: 'Média real dos 20 posts com insights completos' },
+      { label: 'Views médios', value: '554', note: 'Média real dos 20 posts com insights completos' },
     ],
-    alerts: [
+alerts: [
+      'Melhor dia real: Quinta (avg 30 interações). Melhor hora: 11h. Janela ouro: Quinta às 10-11h com carrossel.',
+      'Maior reach do período: imagem Domingo 12h com 855 reach e 1.563 views. Carrossel 04/06 lidera interações com 49.',
+      'Carrossel é o formato com melhor média de interações (22,0) e views (671). Priorizar carrosséis na Quinta.',
       'Gap de CTA: menos de 30% dos posts têm chamada para ação — maior oportunidade imediata.',
-      'O Reel “Ideias mudam empresas. Ambiente muda ideias.” lidera Reach nos insights disponíveis; o carrossel de Miami lidera interações entre os 5 posts recentes com insight completo.',
-      'Monitorar variação semanal de seguidores para separar oscilação normal de perda estrutural.',
       'Meta Ads indisponível nesta rodada; manter bloco sem métricas até retorno válido do conector.',
     ],
   },
@@ -1064,156 +1065,41 @@ export type DashboardData = typeof dashboardData;
 // Calculado a partir dos timestamps reais dos posts com insights
 // ─────────────────────────────────────────────────────────────
 export const timingAnalysis = {
-  note: 'Baseado nos 20 posts recentes com timestamps reais — BRT (UTC-3). Atualizado em 01/07/2026 às 20:15.',
+  note: 'Baseado nos 20 posts recentes com insights reais coletados via conector nativo — BRT (UTC-3). Atualizado em 01/07/2026 às 09:00.',
   bestDays: [
-  {
-    "day": "Sexta",
-    "avgEngagement": 24.7,
-    "postsAnalyzed": 3,
-    "score": 10,
-    "label": "MELHOR",
-    "color": "gold"
-  },
-  {
-    "day": "Domingo",
-    "avgEngagement": 23.0,
-    "postsAnalyzed": 1,
-    "score": 9,
-    "label": "MELHOR",
-    "color": "gold"
-  },
-  {
-    "day": "Sábado",
-    "avgEngagement": 16.7,
-    "postsAnalyzed": 3,
-    "score": 7,
-    "label": "FORTE",
-    "color": "green"
-  },
-  {
-    "day": "Segunda",
-    "avgEngagement": 14.0,
-    "postsAnalyzed": 3,
-    "score": 6,
-    "label": "MÉDIO",
-    "color": "yellow"
-  },
-  {
-    "day": "Quinta",
-    "avgEngagement": 9.5,
-    "postsAnalyzed": 2,
-    "score": 4,
-    "label": "EVITAR",
-    "color": "red"
-  },
-  {
-    "day": "Terça",
-    "avgEngagement": 8.0,
-    "postsAnalyzed": 4,
-    "score": 3,
-    "label": "EVITAR",
-    "color": "red"
-  },
-  {
-    "day": "Quarta",
-    "avgEngagement": 7.5,
-    "postsAnalyzed": 4,
-    "score": 3,
-    "label": "EVITAR",
-    "color": "red"
-  }
+  { "day": "Quinta", "avgEngagement": 30.0, "postsAnalyzed": 3, "score": 10, "label": "MELHOR", "color": "gold" },
+  { "day": "Sábado", "avgEngagement": 19.7, "postsAnalyzed": 3, "score": 7, "label": "FORTE", "color": "green" },
+  { "day": "Sexta", "avgEngagement": 16.7, "postsAnalyzed": 3, "score": 6, "label": "MÉDIO", "color": "yellow" },
+  { "day": "Domingo", "avgEngagement": 14.5, "postsAnalyzed": 4, "score": 5, "label": "MÉDIO", "color": "yellow" },
+  { "day": "Segunda", "avgEngagement": 12.0, "postsAnalyzed": 1, "score": 4, "label": "EVITAR", "color": "red" },
+  { "day": "Terça", "avgEngagement": 10.2, "postsAnalyzed": 4, "score": 3, "label": "EVITAR", "color": "red" },
+  { "day": "Quarta", "avgEngagement": 9.0, "postsAnalyzed": 2, "score": 3, "label": "EVITAR", "color": "red" }
 ],
   bestHours: [
-  {
-    "hour": "18h",
-    "avgEngagement": 22.0,
-    "postsAnalyzed": 2,
-    "score": 10,
-    "label": "MELHOR",
-    "color": "gold"
-  },
-  {
-    "hour": "08h",
-    "avgEngagement": 18.5,
-    "postsAnalyzed": 2,
-    "score": 8,
-    "label": "FORTE",
-    "color": "green"
-  },
-  {
-    "hour": "13h",
-    "avgEngagement": 17.5,
-    "postsAnalyzed": 2,
-    "score": 8,
-    "label": "FORTE",
-    "color": "green"
-  },
-  {
-    "hour": "12h",
-    "avgEngagement": 14.0,
-    "postsAnalyzed": 7,
-    "score": 6,
-    "label": "MÉDIO",
-    "color": "yellow"
-  },
-  {
-    "hour": "11h",
-    "avgEngagement": 11.0,
-    "postsAnalyzed": 2,
-    "score": 5,
-    "label": "MÉDIO",
-    "color": "yellow"
-  },
-  {
-    "hour": "19h",
-    "avgEngagement": 9.5,
-    "postsAnalyzed": 2,
-    "score": 4,
-    "label": "EVITAR",
-    "color": "red"
-  }
+  { "hour": "11h", "avgEngagement": 31.0, "postsAnalyzed": 2, "score": 10, "label": "MELHOR", "color": "gold" },
+  { "hour": "10h", "avgEngagement": 30.0, "postsAnalyzed": 1, "score": 10, "label": "MELHOR", "color": "gold" },
+  { "hour": "19h", "avgEngagement": 18.6, "postsAnalyzed": 5, "score": 6, "label": "MÉDIO", "color": "yellow" },
+  { "hour": "14h", "avgEngagement": 18.0, "postsAnalyzed": 1, "score": 6, "label": "MÉDIO", "color": "yellow" },
+  { "hour": "12h", "avgEngagement": 17.2, "postsAnalyzed": 4, "score": 6, "label": "MÉDIO", "color": "yellow" },
+  { "hour": "09h", "avgEngagement": 11.0, "postsAnalyzed": 1, "score": 4, "label": "EVITAR", "color": "red" },
+  { "hour": "17h", "avgEngagement": 10.5, "postsAnalyzed": 2, "score": 3, "label": "EVITAR", "color": "red" },
+  { "hour": "18h", "avgEngagement": 8.5, "postsAnalyzed": 2, "score": 3, "label": "EVITAR", "color": "red" },
+  { "hour": "16h", "avgEngagement": 7.0, "postsAnalyzed": 1, "score": 2, "label": "EVITAR", "color": "red" },
+  { "hour": "15h", "avgEngagement": 0.0, "postsAnalyzed": 1, "score": 0, "label": "EVITAR", "color": "red" }
 ],
   optimalWindows: [
-    { label: 'Janela #1 — Ouro', day: 'Sexta', hour: '18h', expectedEng: 'acima da média recente', rationale: 'Melhor combinação observada no recorte atual.' },
-    { label: 'Janela #2 — Prata', day: 'Domingo', hour: '08h', expectedEng: 'boa consistência', rationale: 'Segunda melhor faixa do período.' },
-    { label: 'Janela #3 — Bronze', day: 'Sábado', hour: '13h', expectedEng: 'teste recomendado', rationale: 'Janela alternativa para validação.' },
+    { label: 'Janela #1 — Ouro', day: 'Quinta', hour: '11h', expectedEng: '31 interações médias', rationale: 'Melhor combinação real: carrossel 04/06 com 49 interações e carrossel 05/06 com 30 interações, ambos na Quinta às 10-11h.' },
+    { label: 'Janela #2 — Prata', day: 'Sábado', hour: '19h', expectedEng: '28 interações', rationale: 'Reel da Suíça: 28 interações, reach 407, views 538.' },
+    { label: 'Janela #3 — Bronze', day: 'Domingo', hour: '12h', expectedEng: '22 interações médias', rationale: 'Imagem com maior reach do período: 855 reach, 1.563 views, 33 interações.' },
   ],
   weeklyCalendar: [
-  {
-    "day": "Segunda",
-    "recommended": false,
-    "reason": "Usar para Stories ou testes."
-  },
-  {
-    "day": "Terça",
-    "recommended": false,
-    "reason": "Usar para Stories ou testes."
-  },
-  {
-    "day": "Quarta",
-    "recommended": false,
-    "reason": "Usar para Stories ou testes."
-  },
-  {
-    "day": "Quinta",
-    "recommended": false,
-    "reason": "Usar para Stories ou testes."
-  },
-  {
-    "day": "Sexta",
-    "recommended": true,
-    "reason": "Recomendado pelo engajamento médio recente."
-  },
-  {
-    "day": "Sábado",
-    "recommended": true,
-    "reason": "Recomendado pelo engajamento médio recente."
-  },
-  {
-    "day": "Domingo",
-    "recommended": true,
-    "reason": "Recomendado pelo engajamento médio recente."
-  }
+  { "day": "Segunda", "recommended": false, "score": 4, "label": "EVITAR", "reason": "Avg 12 interações em 1 post. Usar para Stories." },
+  { "day": "Terça", "recommended": false, "score": 3, "label": "EVITAR", "reason": "Avg 10.2 interações em 4 posts. Usar para Stories ou testes." },
+  { "day": "Quarta", "recommended": false, "score": 3, "label": "EVITAR", "reason": "Avg 9 interações em 2 posts. Usar para Stories." },
+  { "day": "Quinta", "recommended": true, "score": 10, "label": "MELHOR", "reason": "Avg 30 interações em 3 posts. Melhor dia real. Priorizar carrosseis às 10-11h." },
+  { "day": "Sexta", "recommended": true, "score": 6, "label": "MÉDIO", "reason": "Avg 16.7 interações em 3 posts. Bom para imagens e Reels às 11h ou 19h." },
+  { "day": "Sábado", "recommended": true, "score": 7, "label": "FORTE", "reason": "Avg 19.7 interações em 3 posts. Forte para Reels às 19h." },
+  { "day": "Domingo", "recommended": true, "score": 5, "label": "MÉDIO", "reason": "Avg 14.5 interações em 4 posts. Melhor reach do período às 12h." }
 ],
   postingFrequency: { current: '3.2 posts/semana', recommended: '4-5 posts/semana', gap: 'Aumentar cadência com consistência e CTA por post.', storiesRecommended: '1-2 Stories/dia', storiesCurrent: 'Não monitorado' },
 };
