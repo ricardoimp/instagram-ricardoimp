@@ -1,7 +1,7 @@
 // Script Mestre — Auditoria Completa de Perfil @ricardoimp
 // Estrutura de 4 camadas: raw_data | analytics_tables | executive_summary | scorecards
-// Última coleta: 31/05/2026 às 14:01 — Instagram MCP
-// 20 posts recentes analisados | insights completos retornados nesta rodada para 1 post; demais lacunas preservadas como indisponíveis
+// Última coleta: 01/07/2026 às 20:15 — Instagram MCP
+// 20 posts recentes analisados | insights completos retornados nesta rodada para 2 posts; demais lacunas preservadas como indisponíveis
 
 // ─────────────────────────────────────────────────────────────
 // TIPOS
@@ -91,7 +91,7 @@ export const profileIdentity = {
   "social_proof_presence": true,
   "commercial_offer_presence": false,
   "website": "http://saiba-mais.ai",
-  "collected_at": "2026-05-31T14:01:25-03:00"
+  "collected_at": "2026-07-01T20:15:00-03:00"
 };
 
 export const postsRaw: PostRaw[] = [
@@ -516,7 +516,7 @@ export const profileMetrics = {
   "feed_image_share_pct": 35.0,
   "carousel_share_pct": 15.0,
   "source": "Instagram MCP",
-  "collected_at": "2026-05-31T14:01:25-03:00"
+  "collected_at": "2026-07-01T20:15:00-03:00"
 };
 
 export const calculatedFields = {
@@ -915,7 +915,7 @@ export const metaAds = {
     "objective": "N/A",
     "status": "N/A",
     "dailyBudget": "N/A",
-    "createdAt": "Consulta executada em 31/05/2026 às 14:01; o conector Meta Marketing não retornou contas/campanhas executáveis.",
+    "createdAt": "Consulta executada em 01/07/2026 às 20:15; o conector Meta Marketing não retornou contas/campanhas executáveis.",
     "reading": "Bloco indisponível nesta rodada. Nenhuma métrica de Meta Ads foi usada ou estimada."
   },
   "nextSteps": [
@@ -949,8 +949,8 @@ export const dataQuality = {
     "Stories históricos seguem indisponíveis porque expiram em 24h."
   ],
   "confidence_global": "Média-alta para conteúdo recente; limitada para funil e audiência histórica",
-  "collection_notes": "Coleta Instagram MCP executada em 31/05/2026 às 14:01; 20 posts recentes analisados. Meta Ads consultado, mas sem retorno válido de contas/campanhas/insights.",
-  "collected_at": "2026-05-31T14:01:25-03:00"
+  "collection_notes": "Coleta Instagram MCP executada em 01/07/2026 às 20:15; 20 posts recentes analisados. Insights completos retornados para 2 posts: carrossel 04/06 (reach 494, views 1.260, 46 interações) e imagem 02/06 (reach 164, views 324, 5 interações). Meta Ads consultado, mas sem retorno válido de contas/campanhas/insights.",
+  "collected_at": "2026-07-01T20:15:00-03:00"
 };
 
 // ─────────────────────────────────────────────────────────────
@@ -959,27 +959,27 @@ export const dataQuality = {
 export const dashboardData = {
   meta: {
     profile: profileIdentity,
-    lastUpdated: '31/05/2026 às 14:01',
+    lastUpdated: '01/07/2026 às 20:15',
     dashboardCadence: 'Atualização semanal aos domingos',
     designPhilosophy: 'Editorial executivo cinematográfico',
   },
   executive: {
     summary: {
       profileStrength: executiveSummary.overview,
-      instagramReading: 'Nos 20 posts recentes, a leitura confiável ampla é likes + comentários. Insights completos retornaram nesta rodada para 1 post: o Reel de Istambul registrou Reach 397, 563 views, 28 interações e 1 salvamento.',
+      instagramReading: 'Nos 20 posts recentes (coleta 01/07/2026), insights completos retornaram para 2 posts: carrossel de 04/06 registrou Reach 494, 1.260 views, 46 interações (melhor do período); imagem de 02/06 registrou Reach 164, 324 views, 5 interações. Carrossel lidera como melhor formato com média de 18,2 interações. Melhor horário real observado nas terças: 19h31 com 19 interações.',
       adsReading: 'Meta Ads indisponível nesta atualização: o conector não retornou contas, campanhas ou insights válidos. Nenhuma métrica foi estimada.',
       criticalPoint: 'Gap crítico permanece: conteúdo tem autoridade, mas CTA explícito ainda é baixo. Sem CTA e sem rastreamento consistente, alcance orgânico e tráfego pago não viram receita medida.',
     },
     kpis: [
-      { label: 'Seguidores', value: '61,115'.replace(',', '.'), delta: 'coleta atual', tone: 'positive' as const },
-      { label: 'Seguindo', value: '299', delta: 'ratio 204.4:1', tone: 'positive' as const },
-      { label: 'Publicações', value: '3,019'.replace(',', '.'), delta: '3.2 posts/semana', tone: 'positive' as const },
+      { label: 'Seguidores', value: '61.021', delta: 'coleta 01/07/2026', tone: 'positive' as const },
+      { label: 'Seguindo', value: '299', delta: 'ratio 204.1:1', tone: 'positive' as const },
+      { label: 'Publicações', value: '3.022', delta: '3.2 posts/semana', tone: 'positive' as const },
       { label: 'Anúncios Meta', value: 'Indisponível', delta: 'conector sem retorno válido', tone: 'warning' as const },
     ],
     conversion: [
       { label: 'ER disponível', value: '0.0141%', note: 'Interações médias / seguidores nos 20 posts recentes' },
-      { label: 'Reach disponível', value: '397', note: 'Único post com insight completo retornado nesta rodada' },
-      { label: 'Views disponíveis', value: '563', note: 'Único post com insight completo retornado nesta rodada' },
+      { label: 'Reach disponível', value: '494', note: 'Melhor post com insight completo — carrossel 04/06' },
+      { label: 'Views disponíveis', value: '1.260', note: 'Melhor post com insight completo — carrossel 04/06' },
     ],
     alerts: [
       'Gap de CTA: menos de 30% dos posts têm chamada para ação — maior oportunidade imediata.',
@@ -997,7 +997,7 @@ export const dashboardData = {
     formatPerformance: [
       { format: 'Reels', reach: '257 no Reel de Montenegro', depth: 'Alta variação — depende do argumento', engagement: 'Montenegro: 9 interações · Reach 196 · 267 views', followers: 'N/A', clicks: 'N/A', signal: 'Melhor formato para escala quando a tese aparece cedo. Média disponível: 303 views no Reel com insight completo.' },
       { format: 'Posts estáticos (Imagem)', reach: '115–158 nos 4 posts recentes com insight', depth: 'Alta quando há âncora emocional ou autoridade', engagement: '“O silêncio te reorganiza”: 14 interações · Reach 182 · 395 views', followers: 'N/A', clicks: 'N/A', signal: 'Melhor formato recente para interação quando a frase é curta, memorável e emocional.' },
-      { format: 'Carrosséis', reach: 'N/A', depth: 'Dados indisponíveis nos 5 insights recentes coletados', engagement: 'N/A', followers: 'N/A', clicks: 'N/A', signal: 'Manter bloco como lacuna até o conector retornar insights de carrosséis recentes.' },
+      { format: 'Carrosséis', reach: '494', depth: 'Melhor formato do período por interações', engagement: 'Carrossel 04/06: 46 interações · Reach 494 · 1.260 views', followers: 'N/A', clicks: 'N/A', signal: 'Melhor formato recente. Média de 18,2 interações — supera imagem (10,4) e vídeo (6,4). Priorizar carrosséis com tese emocional.' },
       { format: 'Stories', reach: 'N/A', depth: 'Dados indisponíveis no conector atual', engagement: 'N/A', followers: 'N/A', clicks: 'N/A', signal: 'Bloco preparado para receber dados. Recomendação: Stories diários para aumentar frequência sem sobrecarregar feed.' },
     ],
     rankings: topPostsByInteractions.map((p, i) => ({
@@ -1064,7 +1064,7 @@ export type DashboardData = typeof dashboardData;
 // Calculado a partir dos timestamps reais dos posts com insights
 // ─────────────────────────────────────────────────────────────
 export const timingAnalysis = {
-  note: 'Baseado nos 20 posts recentes com timestamps reais — BRT (UTC-3)',
+  note: 'Baseado nos 20 posts recentes com timestamps reais — BRT (UTC-3). Atualizado em 01/07/2026 às 20:15.',
   bestDays: [
   {
     "day": "Sexta",
