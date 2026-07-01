@@ -346,7 +346,7 @@ export default function Home() {
                         <p className="text-[0.68rem] uppercase tracking-[0.22em] text-white/38">#{index + 1} · {ranking.title}</p>
                         <h4 className="mt-2 text-base font-semibold text-white">{ranking.item}</h4>
                       </div>
-                      <span className="rounded-full border border-white/8 bg-white/6 px-3 py-1 text-[0.68rem] uppercase tracking-[0.18em] text-[#d4b08b]">
+                      <span className="shrink-0 max-w-[120px] rounded-full border border-white/8 bg-white/6 px-3 py-1 text-[0.68rem] uppercase tracking-[0.12em] text-[#d4b08b] text-right leading-tight">
                         {ranking.metric}
                       </span>
                     </div>

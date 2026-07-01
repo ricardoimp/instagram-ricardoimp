@@ -1004,7 +1004,7 @@ alerts: [
     rankings: topPostsByInteractions.map((p, i) => ({
       title: `#${i + 1} por engajamento`,
       item: p.caption_preview,
-      metric: `${p.total_interactions} interações · alcance ${p.reach} · views ${p.views}`,
+      metric: `${p.total_interactions} int · ${p.reach !== 'N/A' ? p.reach + ' reach' : 'N/A'}`,
       why: i === 0 ? 'Autoridade concreta + ambição declarada. Melhor engajamento do período e prova de que negócios/Govtech ativam audiência qualificada.'
         : i === 1 ? 'Âncora emocional real (neto). Melhor post de imagem do período — prova que conexão humana supera estética de viagem.'
         : i === 2 ? 'Viagem com tese simples de contraste. Carrossel com maior tração visual: 841 views.'
