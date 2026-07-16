@@ -889,7 +889,12 @@ export default function Home() {
             const bestDay = timingAnalysis.bestDays[0];
             const bestHour = timingAnalysis.bestHours[0];
             const optWindow = timingAnalysis.optimalWindows[0];
-            const bestHourNum = bestHour ? parseInt(String(bestHour.hour).replace('h','').split(':')[0]) : -1;
+            // Melhor horário específico do dia atual
+            const todayWindow = timingAnalysis.optimalWindows.find(w => w.day.toLowerCase().startsWith(diaAtual.toLowerCase().slice(0,3))) ||
+              timingAnalysis.weeklyCalendar.find(w => w.day.toLowerCase().startsWith(diaAtual.toLowerCase().slice(0,3))) as any;
+            const todayBestHour = todayWindow?.hour ?? bestHour?.hour ?? '—';
+            const todayBestHourNum = todayBestHour !== '—' ? parseInt(String(todayBestHour).replace('h','').split(':')[0]) : -1;
+            const bestHourNum = todayBestHourNum >= 0 ? todayBestHourNum : (bestHour ? parseInt(String(bestHour.hour).replace('h','').split(':')[0]) : -1);
             const isNowBestDay = bestDay ? diaAtual.toLowerCase().startsWith(bestDay.day.toLowerCase().slice(0,3)) : false;
             const isNowBestHour = bestHourNum >= 0 && Math.abs(horaAtual - bestHourNum) <= 1;
             const isIdeal = isNowBestDay && isNowBestHour;
@@ -918,7 +923,7 @@ export default function Home() {
                     <p className="text-[0.62rem] uppercase tracking-[0.18em] text-white/40 mb-2">Hora atual (BRT)</p>
                     <p className="text-2xl font-black text-white">{String(horaAtual).padStart(2,'0')}h</p>
                     <p className={`mt-1 text-xs font-semibold ${isNowBestHour ? 'text-emerald-300' : 'text-white/40'}`}>
-                      {isNowBestHour ? '✓ Hora top' : `Top: ${bestHour?.hour ?? '—'}`}
+                      {isNowBestHour ? '✓ Hora top' : `Top hoje: ${todayBestHour}`}
                     </p>
                   </div>
                   <div className="rounded-[1.2rem] border border-[#d4b08b]/20 bg-[#d4b08b]/8 p-4 text-center">
@@ -933,8 +938,8 @@ export default function Home() {
                     <p className="text-sm font-bold text-white">{bestDay?.day ?? '—'} <span className="text-[#d4b08b] font-normal text-xs">· eng. médio {bestDay?.avgEngagement.toFixed(1) ?? '—'}</span></p>
                   </div>
                   <div className="rounded-[1.1rem] border border-white/6 bg-white/3 px-4 py-3">
-                    <p className="text-[0.62rem] uppercase tracking-[0.16em] text-white/36 mb-1">Melhor hora geral</p>
-                    <p className="text-sm font-bold text-white">{bestHour?.hour ?? '—'} <span className="text-[#d4b08b] font-normal text-xs">· {bestHour?.label ?? ''}</span></p>
+                    <p className="text-[0.62rem] uppercase tracking-[0.16em] text-white/36 mb-1">Melhor hora hoje</p>
+                    <p className="text-sm font-bold text-white">{todayBestHour} <span className="text-[#d4b08b] font-normal text-xs">· baseado no dia atual</span></p>
                   </div>
                 </div>
                 <p className="mt-3 text-[0.68rem] text-white/32 text-center">Baseado em {timingAnalysis.bestDays.reduce((a,d)=>a+d.postsAnalyzed,0)} posts · Atualiza em tempo real com o relógio do seu dispositivo</p>

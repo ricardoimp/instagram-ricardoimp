@@ -1094,13 +1094,13 @@ export const timingAnalysis = {
     { label: 'Janela #3 — Bronze', day: 'Domingo', hour: '12h', expectedEng: '22 interações médias', rationale: 'Imagem com maior reach do período: 855 reach, 1.563 views, 33 interações.' },
   ],
   weeklyCalendar: [
-  { "day": "Segunda", "recommended": false, "score": 4, "label": "EVITAR", "reason": "Avg 12 interações em 1 post. Usar para Stories." },
-  { "day": "Terça", "recommended": false, "score": 3, "label": "EVITAR", "reason": "Avg 10.2 interações em 4 posts. Usar para Stories ou testes." },
-  { "day": "Quarta", "recommended": false, "score": 3, "label": "EVITAR", "reason": "Avg 9 interações em 2 posts. Usar para Stories." },
-  { "day": "Quinta", "recommended": true, "score": 10, "label": "MELHOR", "reason": "Avg 30 interações em 3 posts. Melhor dia real. Priorizar carrosseis às 10-11h." },
-  { "day": "Sexta", "recommended": true, "score": 6, "label": "MÉDIO", "reason": "Avg 16.7 interações em 3 posts. Bom para imagens e Reels às 11h ou 19h." },
-  { "day": "Sábado", "recommended": true, "score": 7, "label": "FORTE", "reason": "Avg 19.7 interações em 3 posts. Forte para Reels às 19h." },
-  { "day": "Domingo", "recommended": true, "score": 5, "label": "MÉDIO", "reason": "Avg 14.5 interações em 4 posts. Melhor reach do período às 12h." }
+  { "day": "Segunda", "hour": "19h", "recommended": false, "score": 4, "label": "EVITAR", "reason": "Avg 12 interações em 1 post. Usar para Stories." },
+  { "day": "Terça", "hour": "19h", "recommended": false, "score": 3, "label": "EVITAR", "reason": "Avg 10.2 interações em 4 posts. Usar para Stories ou testes." },
+  { "day": "Quarta", "hour": "19h", "recommended": false, "score": 3, "label": "EVITAR", "reason": "Avg 9 interações em 2 posts. Usar para Stories." },
+  { "day": "Quinta", "hour": "11h", "recommended": true, "score": 10, "label": "MELHOR", "reason": "Avg 30 interações em 3 posts. Melhor dia real. Priorizar carrosseis às 10-11h." },
+  { "day": "Sexta", "hour": "11h", "recommended": true, "score": 6, "label": "MÉDIO", "reason": "Avg 16.7 interações em 3 posts. Bom para imagens e Reels às 11h ou 19h." },
+  { "day": "Sábado", "hour": "19h", "recommended": true, "score": 7, "label": "FORTE", "reason": "Avg 19.7 interações em 3 posts. Forte para Reels às 19h." },
+  { "day": "Domingo", "hour": "12h", "recommended": true, "score": 5, "label": "MÉDIO", "reason": "Avg 14.5 interações em 4 posts. Melhor reach do período às 12h." }
 ],
   postingFrequency: { current: '3.2 posts/semana', recommended: '4-5 posts/semana', gap: 'Aumentar cadência com consistência e elevar proporção de conteúdo de autoridade empresarial.', storiesRecommended: '1-2 Stories/dia', storiesCurrent: 'Não monitorado' },
 };
